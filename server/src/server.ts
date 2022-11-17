@@ -5,6 +5,8 @@ import Logging from './library/Logger';
 
 const app = express();
 
+app.use(express.json());
+
 app.get('/', (req, res, next) => res.send({ message: 'Welcome to STORY.AI' }));
 
 app.use((req, res, next) => {
