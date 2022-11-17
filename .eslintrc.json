@@ -7,8 +7,7 @@
     "plugin:react/recommended",
     "standard",
     "eslint:recommended",
-    "important-stuff",
-    "prettier"
+    "important-stuff"
   ],
   "parserOptions": {
     "ecmaVersion": "latest",
@@ -17,6 +16,8 @@
   "plugins": ["react", "eslint-plugin-css-modules"],
   "rules": {
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "semi": ["error", "always"],
+    "comma-dangle": ["error", "always-multiline"],
     "react/function-component-definition": [
       2,
       {
