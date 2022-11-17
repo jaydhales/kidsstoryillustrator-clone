@@ -2,18 +2,18 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
-import './DashboaardSidebar.css';
+import './DashboardSidebar.css';
 
-export const DashboaardSidebar = () => {
-  return <div>DashboaardSidebar</div>;
+export const DashboardSidebar = () => {
+  return <div>DashboardSidebar</div>;
 };
 
 // These are the types of the props that are passed to the component
 
-DashboaardSidebar.propTypes = {};
+DashboardSidebar.propTypes = {};
 
 // These are their default values
 
-DashboaardSidebar.defaultProps = {};
+DashboardSidebar.defaultProps = {};
 
-export default DashboaardSidebar;
+export default DashboardSidebar;
