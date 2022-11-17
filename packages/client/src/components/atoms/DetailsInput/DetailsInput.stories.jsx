@@ -1,15 +1,15 @@
 import React from 'react';
 
-import NavLink from '.';
+import DetailsInput from '.';
 
 export default {
-    title: 'atoms/NavLink',
-    component: NavLink,
+    title: 'atoms/DetailsInput',
+    component: DetailsInput,
     argTypes: {
     },
 };
 
-const Template = (args) => <NavLink {...args} />;
+const Template = (args) => <DetailsInput {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {

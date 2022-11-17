@@ -1,15 +1,15 @@
 import React from 'react';
 
-import NavLink from '.';
+import HelpHero from '.';
 
 export default {
-    title: 'atoms/NavLink',
-    component: NavLink,
+    title: 'molecules/HelpHero',
+    component: HelpHero,
     argTypes: {
     },
 };
 
-const Template = (args) => <NavLink {...args} />;
+const Template = (args) => <HelpHero {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {

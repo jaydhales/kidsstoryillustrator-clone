@@ -1,15 +1,15 @@
 import React from 'react';
 
-import NavLink from '.';
+import Error from '.';
 
 export default {
-    title: 'atoms/NavLink',
-    component: NavLink,
+    title: 'pages/Error',
+    component: Error,
     argTypes: {
     },
 };
 
-const Template = (args) => <NavLink {...args} />;
+const Template = (args) => <Error {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {

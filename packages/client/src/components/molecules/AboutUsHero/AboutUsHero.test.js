@@ -3,8 +3,8 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
-import NavLink from './NavLink';
+import AboutUsHero from './AboutUsHero';
 
 test('component is rendered', () => {
-    render(<NavLink />);
+    render(<AboutUsHero />);
 });

@@ -1,15 +1,15 @@
 import React from 'react';
 
-import NavLink from '.';
+import BlogPost from '.';
 
 export default {
-    title: 'atoms/NavLink',
-    component: NavLink,
+    title: 'molecules/BlogPost',
+    component: BlogPost,
     argTypes: {
     },
 };
 
-const Template = (args) => <NavLink {...args} />;
+const Template = (args) => <BlogPost {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {

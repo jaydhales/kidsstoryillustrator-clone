@@ -1,15 +1,15 @@
 import React from 'react';
 
-import NavLink from '.';
+import StoryPreviewCard from '.';
 
 export default {
-    title: 'atoms/NavLink',
-    component: NavLink,
+    title: 'atoms/StoryPreviewCard',
+    component: StoryPreviewCard,
     argTypes: {
     },
 };
 
-const Template = (args) => <NavLink {...args} />;
+const Template = (args) => <StoryPreviewCard {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {

@@ -1,15 +1,15 @@
 import React from 'react';
 
-import NavLink from '.';
+import SearchBar from '.';
 
 export default {
-    title: 'atoms/NavLink',
-    component: NavLink,
+    title: 'atoms/SearchBar',
+    component: SearchBar,
     argTypes: {
     },
 };
 
-const Template = (args) => <NavLink {...args} />;
+const Template = (args) => <SearchBar {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {

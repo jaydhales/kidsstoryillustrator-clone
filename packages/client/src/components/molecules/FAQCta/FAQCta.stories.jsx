@@ -1,15 +1,15 @@
 import React from 'react';
 
-import NavLink from '.';
+import FAQCta from '.';
 
 export default {
-    title: 'atoms/NavLink',
-    component: NavLink,
+    title: 'molecules/FAQCta',
+    component: FAQCta,
     argTypes: {
     },
 };
 
-const Template = (args) => <NavLink {...args} />;
+const Template = (args) => <FAQCta {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {

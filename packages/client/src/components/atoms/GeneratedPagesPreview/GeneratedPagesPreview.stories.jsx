@@ -1,15 +1,15 @@
 import React from 'react';
 
-import NavLink from '.';
+import GeneratedPagesPreview from '.';
 
 export default {
-    title: 'atoms/NavLink',
-    component: NavLink,
+    title: 'atoms/GeneratedPagesPreview',
+    component: GeneratedPagesPreview,
     argTypes: {
     },
 };
 
-const Template = (args) => <NavLink {...args} />;
+const Template = (args) => <GeneratedPagesPreview {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {

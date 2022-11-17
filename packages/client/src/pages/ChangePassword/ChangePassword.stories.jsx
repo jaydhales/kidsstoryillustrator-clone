@@ -1,15 +1,15 @@
 import React from 'react';
 
-import NavLink from '.';
+import ChangePassword from '.';
 
 export default {
-    title: 'atoms/NavLink',
-    component: NavLink,
+    title: 'pages/ChangePassword',
+    component: ChangePassword,
     argTypes: {
     },
 };
 
-const Template = (args) => <NavLink {...args} />;
+const Template = (args) => <ChangePassword {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {

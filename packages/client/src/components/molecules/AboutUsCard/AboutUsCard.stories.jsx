@@ -1,15 +1,15 @@
 import React from 'react';
 
-import NavLink from '.';
+import AboutUsCard from '.';
 
 export default {
-    title: 'atoms/NavLink',
-    component: NavLink,
+    title: 'molecules/AboutUsCard',
+    component: AboutUsCard,
     argTypes: {
     },
 };
 
-const Template = (args) => <NavLink {...args} />;
+const Template = (args) => <AboutUsCard {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {

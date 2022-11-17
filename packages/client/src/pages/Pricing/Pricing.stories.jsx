@@ -1,15 +1,15 @@
 import React from 'react';
 
-import NavLink from '.';
+import Pricing from '.';
 
 export default {
-    title: 'atoms/NavLink',
-    component: NavLink,
+    title: 'pages/Pricing',
+    component: Pricing,
     argTypes: {
     },
 };
 
-const Template = (args) => <NavLink {...args} />;
+const Template = (args) => <Pricing {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
