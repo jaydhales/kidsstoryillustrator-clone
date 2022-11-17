@@ -2,13 +2,18 @@
   "blocks": [
     {
       "type": "component",
-      "path": "src/components",
-      "files": ["JSX", "CSS", "TEST"]
+      "path": "src/components/molecules",
+      "files": ["JSX", "CSS", "TEST", "STORY"]
+    },
+    {
+      "type": "atom",
+      "path": "src/components/atoms",
+      "files": ["JSX", "CSS", "TEST", "STORY"]
     },
     {
       "type": "page",
       "path": "src/pages",
-      "files": ["JSX", "CSS", "TEST"]
+      "files": ["JSX", "CSS", "TEST", "STORY"]
     },
     {
       "type": "reducer",
@@ -25,8 +30,8 @@
   ],
   "fileFormats": {
     "JSX": {
-      "name": "<name>.jsx",
-      "template": "DEFAULT"
+      "name": "index.jsx",
+      "template": "./template/blockName.jsx"
     },
     "JS": {
       "name": "<name>.js",
@@ -34,10 +39,11 @@
     },
     "TEST": {
       "name": "<name>.test.js",
-      "template": "DEFAULT"
+      "template": "./template/blockName.test.jsx"
     },
     "CSS": {
-      "name": "<name>.css"
+      "name": "<name>.css",
+      "template": "./template/blockName.css"
     },
     "SCSS": {
       "name": "<name>.scss"
@@ -55,6 +61,10 @@
     "ACTION":{
       "name": "<name>.jsx",
       "template": "DEFAULT"
+    },
+    "STORY":{
+      "name": "<name>.story.jsx",
+      "template": "./template/blockName.story.jsx"
     }
   }    
 }
