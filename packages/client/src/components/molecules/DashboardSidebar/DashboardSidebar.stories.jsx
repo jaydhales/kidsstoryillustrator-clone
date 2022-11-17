@@ -1,15 +1,15 @@
 import React from 'react';
 
-import DashboaardSidebar from '.';
+import DashboardSidebar from '.';
 
 export default {
-    title: 'molecules/DashboaardSidebar',
-    component: DashboaardSidebar,
+    title: 'molecules/DashboardSidebar',
+    component: DashboardSidebar,
     argTypes: {
     },
 };
 
-const Template = (args) => <DashboaardSidebar {...args} />;
+const Template = (args) => <DashboardSidebar {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
