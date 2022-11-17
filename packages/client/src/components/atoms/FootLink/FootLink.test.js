@@ -7,4 +7,4 @@ import FootLink from '.';
 
 test('component is rendered', () => {
     render(<FootLink />);
-})
+});
