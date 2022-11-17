@@ -1,0 +1,42 @@
+{
+  "name": "kidsstoryillustrator.web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "lerna run start",
+    "start:client": "lerna run start --scope=web-client",
+    "start:server": "lerna run start --scope=server",
+    "bootstrap": "lerna bootstrap",
+    "build": "lerna run build",
+    "test": "lerna run test",
+    "lint": "lerna run lint",
+    "format": "lerna run format"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/workshopapps/kidsstoryillustrator.web.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/workshopapps/kidsstoryillustrator.web/issues"
+  },
+  "homepage": "https://github.com/workshopapps/kidsstoryillustrator.web#readme",
+  "devDependencies": {
+    "eslint": "^8.27.0",
+    "eslint-config-important-stuff": "^1.1.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-css-modules": "^2.11.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.5.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.31.10",
+    "lerna": "^6.0.3",
+    "prettier": "^2.7.1"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}
