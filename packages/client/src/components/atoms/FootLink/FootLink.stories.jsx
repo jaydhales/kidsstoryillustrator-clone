@@ -1,15 +1,15 @@
 import React from 'react';
 
-import Footer from '.';
+import FootLink from '.';
 
 export default {
-    title: 'Footer',
-    component: Footer,
+    title: 'atoms/FootLink',
+    component: FootLink,
     argTypes: {
     },
 };
 
-const Template = (args) => <Footer {...args} />;
+const Template = (args) => <FootLink {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {

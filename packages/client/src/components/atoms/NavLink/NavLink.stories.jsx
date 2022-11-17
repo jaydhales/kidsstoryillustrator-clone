@@ -1,15 +1,15 @@
 import React from 'react';
 
-import FootLink from '.';
+import NavLink from '.';
 
 export default {
-    title: 'FootLink',
-    component: FootLink,
+    title: 'Atoms/NavLink',
+    component: NavLink,
     argTypes: {
     },
 };
 
-const Template = (args) => <FootLink {...args} />;
+const Template = (args) => <NavLink {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {

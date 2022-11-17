@@ -1,15 +1,15 @@
 import React from 'react';
 
-import NavLink from '.';
+import Layout from '.';
 
 export default {
-    title: 'NavLink',
-    component: NavLink,
+    title: 'Molecules/Layout',
+    component: Layout,
     argTypes: {
     },
 };
 
-const Template = (args) => <NavLink {...args} />;
+const Template = (args) => <Layout {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {

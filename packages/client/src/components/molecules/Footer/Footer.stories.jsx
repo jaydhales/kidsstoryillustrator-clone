@@ -1,15 +1,15 @@
 import React from 'react';
 
-import Navbar from './Navbar';
+import Footer from '.';
 
 export default {
-    title: 'Navbar',
-    component: Navbar,
+    title: 'Molecules/Footer',
+    component: Footer,
     argTypes: {
     },
 };
 
-const Template = (args) => <Navbar {...args} />;
+const Template = (args) => <Footer {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {

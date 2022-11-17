@@ -1,15 +1,15 @@
 import React from 'react';
 
-import Layout from '.';
+import Navbar from '.';
 
 export default {
-    title: 'Layout',
-    component: Layout,
+    title: 'Molecules/Navbar',
+    component: Navbar,
     argTypes: {
     },
 };
 
-const Template = (args) => <Layout {...args} />;
+const Template = (args) => <Navbar {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
