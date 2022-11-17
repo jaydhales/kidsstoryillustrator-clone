@@ -1,3 +1,4 @@
+
 ## Creating new components
 first install lego-build globally
 ```bash
@@ -19,3 +20,5 @@ lego-build atom <atomName>
 ```bash
 lego-build rename <oldName>:<blockType> to  <newName>
 ```
+
+Visit [lego-build](https://lego-build.github.io/) for more information on how to use it.
