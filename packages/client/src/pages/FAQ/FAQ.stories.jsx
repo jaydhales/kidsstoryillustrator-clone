@@ -3,7 +3,7 @@ import React from 'react';
 import FAQ from '.';
 
 export default {
-    title: 'FAQ',
+    title: 'Pages/FAQ',
     component: FAQ,
     argTypes: {
     },

@@ -1,15 +1,15 @@
 import React from 'react';
 
-import HowToUse from './HowToUse';
+import CreateStory from '.';
 
 export default {
-    title: 'HowToUse',
-    component: HowToUse,
+    title: 'Pages/CreateStory',
+    component: CreateStory,
     argTypes: {
     },
 };
 
-const Template = (args) => <HowToUse {...args} />;
+const Template = (args) => <CreateStory {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {

@@ -1,15 +1,15 @@
 import React from 'react';
 
-import BlogDetails from '.';
+import About from '.';
 
 export default {
-    title: 'BlogDetails',
-    component: BlogDetails,
+    title: 'Pages/About',
+    component: About,
     argTypes: {
     },
 };
 
-const Template = (args) => <BlogDetails {...args} />;
+const Template = (args) => <About {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
@@ -17,12 +17,15 @@ Primary.args = {
 
 export const Secondary = Template.bind({});
 Secondary.args = {
+    main: true,
 };
 
 export const Large = Template.bind({});
 Large.args = {
+    main: false,
 };
 
 export const Small = Template.bind({});
 Small.args = {
+    main: true,
 };

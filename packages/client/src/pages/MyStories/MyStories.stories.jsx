@@ -1,15 +1,15 @@
 import React from 'react';
 
-import CreateStory from '.';
+import MyStories from '.';
 
 export default {
-    title: 'CreateStory',
-    component: CreateStory,
+    title: 'Pages/MyStories',
+    component: MyStories,
     argTypes: {
     },
 };
 
-const Template = (args) => <CreateStory {...args} />;
+const Template = (args) => <MyStories {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {

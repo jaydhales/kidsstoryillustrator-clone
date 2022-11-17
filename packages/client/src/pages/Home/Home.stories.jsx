@@ -1,15 +1,15 @@
 import React from 'react';
 
-import Blog from '.';
+import Home from '.';
 
 export default {
-    title: 'Blog',
-    component: Blog,
+    title: 'Pages/Home',
+    component: Home,
     argTypes: {
     },
 };
 
-const Template = (args) => <Blog {...args} />;
+const Template = (args) => <Home {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {

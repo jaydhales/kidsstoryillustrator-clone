@@ -1,15 +1,15 @@
 import React from 'react';
 
-import Help from '.';
+import Privacy from '.';
 
 export default {
-    title: 'Help',
-    component: Help,
+    title: 'Pages/Privacy',
+    component: Privacy,
     argTypes: {
     },
 };
 
-const Template = (args) => <Help {...args} />;
+const Template = (args) => <Privacy {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {

@@ -1,15 +1,15 @@
 import React from 'react';
 
-import DashBoard from './DashBoard';
+import BlogDetails from '.';
 
 export default {
-    title: 'DashBoard',
-    component: DashBoard,
+    title: 'Pages/BlogDetails',
+    component: BlogDetails,
     argTypes: {
     },
 };
 
-const Template = (args) => <DashBoard {...args} />;
+const Template = (args) => <BlogDetails {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
