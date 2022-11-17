@@ -3,17 +3,17 @@
     {
       "type": "component",
       "path": "src/components/molecules",
-      "files": ["JSX", "CSS", "TEST", "STORY"]
+      "files": ["JSX", "CSS", "TEST", "STORY", "MOLECULE_MDX"]
     },
     {
       "type": "atom",
       "path": "src/components/atoms",
-      "files": ["JSX", "CSS", "TEST", "STORY"]
+      "files": ["JSX", "CSS", "TEST", "STORY", "ATOM_MDX"]
     },
     {
       "type": "page",
       "path": "src/pages",
-      "files": ["JSX", "CSS", "TEST", "STORY"]
+      "files": ["JSX", "CSS", "TEST", "STORY", "PAGE_MDX"]
     },
     {
       "type": "reducer",
@@ -63,8 +63,20 @@
       "template": "DEFAULT"
     },
     "STORY":{
-      "name": "<name>.story.jsx",
-      "template": "./template/blockName.story.jsx"
+      "name": "<name>.stories.jsx",
+      "template": "./template/blockName.stories.jsx"
+    },
+    "ATOM_MDX":{
+      "name": "<name>.stories.mdx",
+      "template": "./template/atoms.stories.mdx"
+    },
+    "MOLECULE_MDX":{
+      "name": "<name>.stories.mdx",
+      "template": "./template/molecules.stories.mdx"
+    },
+    "PAGE_MDX":{
+      "name": "<name>.stories.mdx",
+      "template": "./template/pages.stories.mdx"
     }
   }    
 }
