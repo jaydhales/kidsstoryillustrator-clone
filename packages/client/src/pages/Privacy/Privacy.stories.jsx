@@ -3,7 +3,7 @@ import React from 'react';
 import Privacy from '.';
 
 export default {
-    title: 'Pages/Privacy',
+    title: 'pages/Privacy',
     component: Privacy,
     argTypes: {
     },

@@ -3,7 +3,7 @@ import React from 'react';
 import Help from '.';
 
 export default {
-    title: 'Pages/Help',
+    title: 'pages/Help',
     component: Help,
     argTypes: {
     },

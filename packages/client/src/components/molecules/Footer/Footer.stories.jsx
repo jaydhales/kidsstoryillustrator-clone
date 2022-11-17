@@ -3,7 +3,7 @@ import React from 'react';
 import Footer from '.';
 
 export default {
-    title: 'Molecules/Footer',
+    title: 'molecules/Footer',
     component: Footer,
     argTypes: {
     },

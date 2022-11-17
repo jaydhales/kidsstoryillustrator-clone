@@ -3,7 +3,7 @@ import React from 'react';
 import HowToUse from '.';
 
 export default {
-    title: 'Pages/HowToUse',
+    title: 'pages/HowToUse',
     component: HowToUse,
     argTypes: {
     },
@@ -14,6 +14,7 @@ const Template = (args) => <HowToUse {...args} />;
 export const Primary = Template.bind({});
 Primary.args = {
 };
+
 export const Secondary = Template.bind({});
 Secondary.args = {
 };

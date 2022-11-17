@@ -3,7 +3,7 @@ import React from 'react';
 import DashBoard from '.';
 
 export default {
-    title: 'Pages/DashBoard',
+    title: 'pages/DashBoard',
     component: DashBoard,
     argTypes: {
     },

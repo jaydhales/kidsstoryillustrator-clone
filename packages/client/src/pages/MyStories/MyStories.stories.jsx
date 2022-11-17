@@ -3,7 +3,7 @@ import React from 'react';
 import MyStories from '.';
 
 export default {
-    title: 'Pages/MyStories',
+    title: 'pages/MyStories',
     component: MyStories,
     argTypes: {
     },

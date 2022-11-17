@@ -3,8 +3,8 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
-import CreateStory from './CreateStory';
+import Login from './Login';
 
 test('component is rendered', () => {
-    render(<CreateStory />);
+    render(<Login />);
 });

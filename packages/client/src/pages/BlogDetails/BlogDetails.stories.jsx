@@ -3,7 +3,7 @@ import React from 'react';
 import BlogDetails from '.';
 
 export default {
-    title: 'Pages/BlogDetails',
+    title: 'pages/BlogDetails',
     component: BlogDetails,
     argTypes: {
     },

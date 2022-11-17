@@ -3,7 +3,7 @@ import React from 'react';
 import Home from '.';
 
 export default {
-    title: 'Pages/Home',
+    title: 'pages/Home',
     component: Home,
     argTypes: {
     },

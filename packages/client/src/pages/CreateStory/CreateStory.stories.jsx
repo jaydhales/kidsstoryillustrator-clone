@@ -3,7 +3,7 @@ import React from 'react';
 import CreateStory from '.';
 
 export default {
-    title: 'Pages/CreateStory',
+    title: 'pages/CreateStory',
     component: CreateStory,
     argTypes: {
     },

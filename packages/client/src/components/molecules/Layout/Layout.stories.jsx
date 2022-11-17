@@ -3,7 +3,7 @@ import React from 'react';
 import Layout from '.';
 
 export default {
-    title: 'Molecules/Layout',
+    title: 'molecules/Layout',
     component: Layout,
     argTypes: {
     },

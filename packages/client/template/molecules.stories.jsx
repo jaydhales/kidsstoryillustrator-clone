@@ -3,7 +3,7 @@ import React from 'react';
 import blockName from '.';
 
 export default {
-    title: 'blockName',
+    title: 'molecules/blockName',
     component: blockName,
     argTypes: {
     },
