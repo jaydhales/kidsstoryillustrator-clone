@@ -1,24 +1,42 @@
 import express from 'express';
 const router = express.Router();
-import { getAllStories, getStoryById, getStoryByEmail } from '../controllers/story';
-// story routes
+import { getAllStories, getStoryById, getStoryByEmail } from '../controllers/get-story';
+import { createStory, updateStory, deleteStory } from '../controllers/post-story';
+import { createUser, updateUser, deleteUser } from '../controllers/user';
+
+
+// get routes 
 router.route('/get-story')
   .get(getAllStories)
-  .post()
-  .put()
-  .delete()
+  .delete(deleteUser)
 
 router.route('/get-story/:id')
   .get(getStoryById)
-  .post()
-  .put()
   .delete()
 
 router.route('/get-by-email/:email')
   .get(getStoryByEmail)
-  .post()
-  .put()
   .delete()
 
+
+// post routes
+router.route('/create-story')
+  .post(createStory)
+
+router.route('/update-story/:id')
+  .put(updateStory)
+
+router.route('/delete-story/:id')
+  .delete(deleteStory)
+
+// user routes
+router.route('/create-user')
+  .post(createUser)
+
+router.route('/update-user')
+  .put(updateUser)
+
+router.route('/delete-user')
+  .delete(deleteUser)
 
 export default router
