@@ -1,7 +1,14 @@
-export const getAllStories = function (req, res) {
+export const getAllStories = async function (req, res) {
+ try {
+  const 
   return res.status(200).json({
-    message: "fetch your stories here"
+    status: "success",
+    message: "fetch your stories here",
+    data: payload,
   })
+ } catch (error) {
+  
+ }
 }
 
 export const getStoryById = function (req, res) {

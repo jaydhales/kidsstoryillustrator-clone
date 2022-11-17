@@ -9,6 +9,7 @@ const app = express();
 app.use(express.json());
 
 app.get('/', (req, res, next) => res.send({ message: 'Welcome to STORY.AI' }));
+
 app.use('/story', routes )
 
 app.use((req, res, next) => {
