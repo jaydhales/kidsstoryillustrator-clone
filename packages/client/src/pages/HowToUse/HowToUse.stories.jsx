@@ -3,26 +3,21 @@ import React from 'react';
 import HowToUse from '.';
 
 export default {
-    title: 'pages/HowToUse',
-    component: HowToUse,
-    argTypes: {
-    },
+  title: 'pages/HowToUse',
+  component: HowToUse,
+  argTypes: {},
 };
 
-const Template = (args) => <HowToUse {...args} />;
+const Template = args => <HowToUse {...args} />;
 
 export const Primary = Template.bind({});
-Primary.args = {
-};
+Primary.args = {};
 
 export const Secondary = Template.bind({});
-Secondary.args = {
-};
+Secondary.args = {};
 
 export const Large = Template.bind({});
-Large.args = {
-};
+Large.args = {};
 
 export const Small = Template.bind({});
-Small.args = {
-};
+Small.args = {};

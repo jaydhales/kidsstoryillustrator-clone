@@ -6,5 +6,5 @@ import userEvent from '@testing-library/user-event';
 import DashboardTable from '.';
 
 test('component is rendered', () => {
-    render(<DashboardTable />);
+  render(<DashboardTable />);
 });

@@ -3,26 +3,21 @@ import React from 'react';
 import CreateStory from '.';
 
 export default {
-    title: 'pages/CreateStory',
-    component: CreateStory,
-    argTypes: {
-    },
+  title: 'pages/CreateStory',
+  component: CreateStory,
+  argTypes: {},
 };
 
-const Template = (args) => <CreateStory {...args} />;
+const Template = args => <CreateStory {...args} />;
 
 export const Primary = Template.bind({});
-Primary.args = {
-};
+Primary.args = {};
 
 export const Secondary = Template.bind({});
-Secondary.args = {
-};
+Secondary.args = {};
 
 export const Large = Template.bind({});
-Large.args = {
-};
+Large.args = {};
 
 export const Small = Template.bind({});
-Small.args = {
-};
+Small.args = {};

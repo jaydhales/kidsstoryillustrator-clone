@@ -6,5 +6,5 @@ import userEvent from '@testing-library/user-event';
 import DashboardSidebar from '.';
 
 test('component is rendered', () => {
-    render(<DashboardSidebar />);
+  render(<DashboardSidebar />);
 });

@@ -3,26 +3,21 @@ import React from 'react';
 import DetailsInput from '.';
 
 export default {
-    title: 'atoms/DetailsInput',
-    component: DetailsInput,
-    argTypes: {
-    },
+  title: 'atoms/DetailsInput',
+  component: DetailsInput,
+  argTypes: {},
 };
 
-const Template = (args) => <DetailsInput {...args} />;
+const Template = args => <DetailsInput {...args} />;
 
 export const Primary = Template.bind({});
-Primary.args = {
-};
+Primary.args = {};
 
 export const Secondary = Template.bind({});
-Secondary.args = {
-};
+Secondary.args = {};
 
 export const Large = Template.bind({});
-Large.args = {
-};
+Large.args = {};
 
 export const Small = Template.bind({});
-Small.args = {
-};
+Small.args = {};

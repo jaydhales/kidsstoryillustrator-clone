@@ -3,26 +3,21 @@ import React from 'react';
 import Footer from '.';
 
 export default {
-    title: 'molecules/Footer',
-    component: Footer,
-    argTypes: {
-    },
+  title: 'molecules/Footer',
+  component: Footer,
+  argTypes: {},
 };
 
-const Template = (args) => <Footer {...args} />;
+const Template = args => <Footer {...args} />;
 
 export const Primary = Template.bind({});
-Primary.args = {
-};
+Primary.args = {};
 
 export const Secondary = Template.bind({});
-Secondary.args = {
-};
+Secondary.args = {};
 
 export const Large = Template.bind({});
-Large.args = {
-};
+Large.args = {};
 
 export const Small = Template.bind({});
-Small.args = {
-};
+Small.args = {};

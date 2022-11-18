@@ -3,26 +3,21 @@ import React from 'react';
 import FAQCta from '.';
 
 export default {
-    title: 'molecules/FAQCta',
-    component: FAQCta,
-    argTypes: {
-    },
+  title: 'molecules/FAQCta',
+  component: FAQCta,
+  argTypes: {},
 };
 
-const Template = (args) => <FAQCta {...args} />;
+const Template = args => <FAQCta {...args} />;
 
 export const Primary = Template.bind({});
-Primary.args = {
-};
+Primary.args = {};
 
 export const Secondary = Template.bind({});
-Secondary.args = {
-};
+Secondary.args = {};
 
 export const Large = Template.bind({});
-Large.args = {
-};
+Large.args = {};
 
 export const Small = Template.bind({});
-Small.args = {
-};
+Small.args = {};

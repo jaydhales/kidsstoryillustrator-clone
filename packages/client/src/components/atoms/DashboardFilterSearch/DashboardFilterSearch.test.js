@@ -6,5 +6,5 @@ import userEvent from '@testing-library/user-event';
 import DashboardFilterSearch from '.';
 
 test('component is rendered', () => {
-    render(<DashboardFilterSearch />);
+  render(<DashboardFilterSearch />);
 });

@@ -6,5 +6,5 @@ import userEvent from '@testing-library/user-event';
 import blockName from '.';
 
 test('component is rendered', () => {
-    render(<blockName />);
+  render(<blockName />);
 });

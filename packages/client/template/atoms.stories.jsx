@@ -3,26 +3,21 @@ import React from 'react';
 import blockName from '.';
 
 export default {
-    title: 'atoms/blockName',
-    component: blockName,
-    argTypes: {
-    },
+  title: 'atoms/blockName',
+  component: blockName,
+  argTypes: {},
 };
 
-const Template = (args) => <blockName {...args} />;
+const Template = args => <blockName {...args} />;
 
 export const Primary = Template.bind({});
-Primary.args = {
-};
+Primary.args = {};
 
 export const Secondary = Template.bind({});
-Secondary.args = {
-};
+Secondary.args = {};
 
 export const Large = Template.bind({});
-Large.args = {
-};
+Large.args = {};
 
 export const Small = Template.bind({});
-Small.args = {
-};
+Small.args = {};

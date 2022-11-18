@@ -3,7 +3,7 @@ export { default as Blog } from './Blog';
 export { default as BlogDetails } from './BlogDetails';
 export { default as ChangePassword } from './ChangePassword';
 export { default as CreateStory } from './CreateStory';
-export { default as Dashboard } from './Dashboard';
+export { default as Dashboard } from './DashBoard';
 export { default as Error } from './Error';
 export { default as FAQ } from './FAQ';
 export { default as ForgotPassword } from './ForgotPassword';

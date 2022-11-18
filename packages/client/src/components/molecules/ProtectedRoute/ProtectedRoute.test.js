@@ -6,5 +6,5 @@ import userEvent from '@testing-library/user-event';
 import ProtectedRoute from './ProtectedRoute';
 
 test('component is rendered', () => {
-    render(<ProtectedRoute />);
+  render(<ProtectedRoute />);
 });

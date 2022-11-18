@@ -3,26 +3,21 @@ import React from 'react';
 import MyStories from '.';
 
 export default {
-    title: 'pages/MyStories',
-    component: MyStories,
-    argTypes: {
-    },
+  title: 'pages/MyStories',
+  component: MyStories,
+  argTypes: {},
 };
 
-const Template = (args) => <MyStories {...args} />;
+const Template = args => <MyStories {...args} />;
 
 export const Primary = Template.bind({});
-Primary.args = {
-};
+Primary.args = {};
 
 export const Secondary = Template.bind({});
-Secondary.args = {
-};
+Secondary.args = {};
 
 export const Large = Template.bind({});
-Large.args = {
-};
+Large.args = {};
 
 export const Small = Template.bind({});
-Small.args = {
-};
+Small.args = {};

@@ -3,26 +3,21 @@ import React from 'react';
 import Features from '.';
 
 export default {
-    title: 'molecules/Features',
-    component: Features,
-    argTypes: {
-    },
+  title: 'molecules/Features',
+  component: Features,
+  argTypes: {},
 };
 
-const Template = (args) => <Features {...args} />;
+const Template = args => <Features {...args} />;
 
 export const Primary = Template.bind({});
-Primary.args = {
-};
+Primary.args = {};
 
 export const Secondary = Template.bind({});
-Secondary.args = {
-};
+Secondary.args = {};
 
 export const Large = Template.bind({});
-Large.args = {
-};
+Large.args = {};
 
 export const Small = Template.bind({});
-Small.args = {
-};
+Small.args = {};

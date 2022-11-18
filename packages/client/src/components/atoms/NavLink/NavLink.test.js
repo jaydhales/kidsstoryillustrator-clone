@@ -6,5 +6,5 @@ import userEvent from '@testing-library/user-event';
 import NavLink from '.';
 
 test('component is rendered', () => {
-    render(<NavLink />);
+  render(<NavLink />);
 });

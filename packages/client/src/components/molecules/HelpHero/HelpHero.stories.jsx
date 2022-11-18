@@ -3,26 +3,21 @@ import React from 'react';
 import HelpHero from '.';
 
 export default {
-    title: 'molecules/HelpHero',
-    component: HelpHero,
-    argTypes: {
-    },
+  title: 'molecules/HelpHero',
+  component: HelpHero,
+  argTypes: {},
 };
 
-const Template = (args) => <HelpHero {...args} />;
+const Template = args => <HelpHero {...args} />;
 
 export const Primary = Template.bind({});
-Primary.args = {
-};
+Primary.args = {};
 
 export const Secondary = Template.bind({});
-Secondary.args = {
-};
+Secondary.args = {};
 
 export const Large = Template.bind({});
-Large.args = {
-};
+Large.args = {};
 
 export const Small = Template.bind({});
-Small.args = {
-};
+Small.args = {};

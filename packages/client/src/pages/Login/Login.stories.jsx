@@ -3,26 +3,21 @@ import React from 'react';
 import Login from '.';
 
 export default {
-    title: 'pages/Login',
-    component: Login,
-    argTypes: {
-    },
+  title: 'pages/Login',
+  component: Login,
+  argTypes: {},
 };
 
-const Template = (args) => <Login {...args} />;
+const Template = args => <Login {...args} />;
 
 export const Primary = Template.bind({});
-Primary.args = {
-};
+Primary.args = {};
 
 export const Secondary = Template.bind({});
-Secondary.args = {
-};
+Secondary.args = {};
 
 export const Large = Template.bind({});
-Large.args = {
-};
+Large.args = {};
 
 export const Small = Template.bind({});
-Small.args = {
-};
+Small.args = {};

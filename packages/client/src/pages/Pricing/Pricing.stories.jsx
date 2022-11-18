@@ -3,26 +3,21 @@ import React from 'react';
 import Pricing from '.';
 
 export default {
-    title: 'pages/Pricing',
-    component: Pricing,
-    argTypes: {
-    },
+  title: 'pages/Pricing',
+  component: Pricing,
+  argTypes: {},
 };
 
-const Template = (args) => <Pricing {...args} />;
+const Template = args => <Pricing {...args} />;
 
 export const Primary = Template.bind({});
-Primary.args = {
-};
+Primary.args = {};
 
 export const Secondary = Template.bind({});
-Secondary.args = {
-};
+Secondary.args = {};
 
 export const Large = Template.bind({});
-Large.args = {
-};
+Large.args = {};
 
 export const Small = Template.bind({});
-Small.args = {
-};
+Small.args = {};

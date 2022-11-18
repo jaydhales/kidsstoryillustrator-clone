@@ -3,26 +3,21 @@ import React from 'react';
 import GeneratedPagesPreview from '.';
 
 export default {
-    title: 'atoms/GeneratedPagesPreview',
-    component: GeneratedPagesPreview,
-    argTypes: {
-    },
+  title: 'atoms/GeneratedPagesPreview',
+  component: GeneratedPagesPreview,
+  argTypes: {},
 };
 
-const Template = (args) => <GeneratedPagesPreview {...args} />;
+const Template = args => <GeneratedPagesPreview {...args} />;
 
 export const Primary = Template.bind({});
-Primary.args = {
-};
+Primary.args = {};
 
 export const Secondary = Template.bind({});
-Secondary.args = {
-};
+Secondary.args = {};
 
 export const Large = Template.bind({});
-Large.args = {
-};
+Large.args = {};
 
 export const Small = Template.bind({});
-Small.args = {
-};
+Small.args = {};

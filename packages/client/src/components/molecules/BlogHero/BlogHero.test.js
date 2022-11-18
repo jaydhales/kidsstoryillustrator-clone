@@ -6,5 +6,5 @@ import userEvent from '@testing-library/user-event';
 import BlogHero from '.';
 
 test('component is rendered', () => {
-    render(<BlogHero />);
+  render(<BlogHero />);
 });

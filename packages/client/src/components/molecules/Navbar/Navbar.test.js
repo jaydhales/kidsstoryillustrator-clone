@@ -6,5 +6,5 @@ import userEvent from '@testing-library/user-event';
 import Navbar from './Navbar';
 
 test('component is rendered', () => {
-    render(<Navbar />);
+  render(<Navbar />);
 });

@@ -6,5 +6,5 @@ import userEvent from '@testing-library/user-event';
 import Layout from './Layout';
 
 test('component is rendered', () => {
-    render(<Layout />);
+  render(<Layout />);
 });

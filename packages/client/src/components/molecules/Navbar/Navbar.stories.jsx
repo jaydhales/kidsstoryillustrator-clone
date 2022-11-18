@@ -3,26 +3,21 @@ import React from 'react';
 import Navbar from '.';
 
 export default {
-    title: 'molecules/Navbar',
-    component: Navbar,
-    argTypes: {
-    },
+  title: 'molecules/Navbar',
+  component: Navbar,
+  argTypes: {},
 };
 
-const Template = (args) => <Navbar {...args} />;
+const Template = args => <Navbar {...args} />;
 
 export const Primary = Template.bind({});
-Primary.args = {
-};
+Primary.args = {};
 
 export const Secondary = Template.bind({});
-Secondary.args = {
-};
+Secondary.args = {};
 
 export const Large = Template.bind({});
-Large.args = {
-};
+Large.args = {};
 
 export const Small = Template.bind({});
-Small.args = {
-};
+Small.args = {};

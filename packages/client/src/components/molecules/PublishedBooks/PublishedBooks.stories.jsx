@@ -3,26 +3,21 @@ import React from 'react';
 import PublishedBooks from '.';
 
 export default {
-    title: 'molecules/PublishedBooks',
-    component: PublishedBooks,
-    argTypes: {
-    },
+  title: 'molecules/PublishedBooks',
+  component: PublishedBooks,
+  argTypes: {},
 };
 
-const Template = (args) => <PublishedBooks {...args} />;
+const Template = args => <PublishedBooks {...args} />;
 
 export const Primary = Template.bind({});
-Primary.args = {
-};
+Primary.args = {};
 
 export const Secondary = Template.bind({});
-Secondary.args = {
-};
+Secondary.args = {};
 
 export const Large = Template.bind({});
-Large.args = {
-};
+Large.args = {};
 
 export const Small = Template.bind({});
-Small.args = {
-};
+Small.args = {};

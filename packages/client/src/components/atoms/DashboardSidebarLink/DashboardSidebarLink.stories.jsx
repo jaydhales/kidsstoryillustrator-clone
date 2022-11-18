@@ -3,26 +3,21 @@ import React from 'react';
 import DashboardSidebarLink from '.';
 
 export default {
-    title: 'atoms/DashboardSidebarLink',
-    component: DashboardSidebarLink,
-    argTypes: {
-    },
+  title: 'atoms/DashboardSidebarLink',
+  component: DashboardSidebarLink,
+  argTypes: {},
 };
 
-const Template = (args) => <DashboardSidebarLink {...args} />;
+const Template = args => <DashboardSidebarLink {...args} />;
 
 export const Primary = Template.bind({});
-Primary.args = {
-};
+Primary.args = {};
 
 export const Secondary = Template.bind({});
-Secondary.args = {
-};
+Secondary.args = {};
 
 export const Large = Template.bind({});
-Large.args = {
-};
+Large.args = {};
 
 export const Small = Template.bind({});
-Small.args = {
-};
+Small.args = {};

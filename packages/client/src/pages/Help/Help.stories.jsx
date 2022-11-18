@@ -3,26 +3,21 @@ import React from 'react';
 import Help from '.';
 
 export default {
-    title: 'pages/Help',
-    component: Help,
-    argTypes: {
-    },
+  title: 'pages/Help',
+  component: Help,
+  argTypes: {},
 };
 
-const Template = (args) => <Help {...args} />;
+const Template = args => <Help {...args} />;
 
 export const Primary = Template.bind({});
-Primary.args = {
-};
+Primary.args = {};
 
 export const Secondary = Template.bind({});
-Secondary.args = {
-};
+Secondary.args = {};
 
 export const Large = Template.bind({});
-Large.args = {
-};
+Large.args = {};
 
 export const Small = Template.bind({});
-Small.args = {
-};
+Small.args = {};

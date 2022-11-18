@@ -6,5 +6,5 @@ import userEvent from '@testing-library/user-event';
 import SearchBar from '.';
 
 test('component is rendered', () => {
-    render(<SearchBar />);
+  render(<SearchBar />);
 });

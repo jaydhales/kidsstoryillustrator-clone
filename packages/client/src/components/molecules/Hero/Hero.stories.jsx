@@ -3,26 +3,21 @@ import React from 'react';
 import Hero from '.';
 
 export default {
-    title: 'molecules/Hero',
-    component: Hero,
-    argTypes: {
-    },
+  title: 'molecules/Hero',
+  component: Hero,
+  argTypes: {},
 };
 
-const Template = (args) => <Hero {...args} />;
+const Template = args => <Hero {...args} />;
 
 export const Primary = Template.bind({});
-Primary.args = {
-};
+Primary.args = {};
 
 export const Secondary = Template.bind({});
-Secondary.args = {
-};
+Secondary.args = {};
 
 export const Large = Template.bind({});
-Large.args = {
-};
+Large.args = {};
 
 export const Small = Template.bind({});
-Small.args = {
-};
+Small.args = {};

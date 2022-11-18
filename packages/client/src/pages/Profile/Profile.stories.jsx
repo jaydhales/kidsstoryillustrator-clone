@@ -3,26 +3,21 @@ import React from 'react';
 import Profile from '.';
 
 export default {
-    title: 'pages/Profile',
-    component: Profile,
-    argTypes: {
-    },
+  title: 'pages/Profile',
+  component: Profile,
+  argTypes: {},
 };
 
-const Template = (args) => <Profile {...args} />;
+const Template = args => <Profile {...args} />;
 
 export const Primary = Template.bind({});
-Primary.args = {
-};
+Primary.args = {};
 
 export const Secondary = Template.bind({});
-Secondary.args = {
-};
+Secondary.args = {};
 
 export const Large = Template.bind({});
-Large.args = {
-};
+Large.args = {};
 
 export const Small = Template.bind({});
-Small.args = {
-};
+Small.args = {};

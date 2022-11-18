@@ -3,26 +3,21 @@ import React from 'react';
 import Button from '.';
 
 export default {
-    title: 'atoms/Button',
-    component: Button,
-    argTypes: {
-    },
+  title: 'atoms/Button',
+  component: Button,
+  argTypes: {},
 };
 
-const Template = (args) => <Button {...args} />;
+const Template = args => <Button {...args} />;
 
 export const Primary = Template.bind({});
-Primary.args = {
-};
+Primary.args = {};
 
 export const Secondary = Template.bind({});
-Secondary.args = {
-};
+Secondary.args = {};
 
 export const Large = Template.bind({});
-Large.args = {
-};
+Large.args = {};
 
 export const Small = Template.bind({});
-Small.args = {
-};
+Small.args = {};

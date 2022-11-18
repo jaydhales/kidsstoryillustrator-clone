@@ -3,26 +3,21 @@ import React from 'react';
 import Blog from '.';
 
 export default {
-    title: 'pages/Blog',
-    component: Blog,
-    argTypes: {
-    },
+  title: 'pages/Blog',
+  component: Blog,
+  argTypes: {},
 };
 
-const Template = (args) => <Blog {...args} />;
+const Template = args => <Blog {...args} />;
 
 export const Primary = Template.bind({});
-Primary.args = {
-};
+Primary.args = {};
 
 export const Secondary = Template.bind({});
-Secondary.args = {
-};
+Secondary.args = {};
 
 export const Large = Template.bind({});
-Large.args = {
-};
+Large.args = {};
 
 export const Small = Template.bind({});
-Small.args = {
-};
+Small.args = {};

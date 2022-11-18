@@ -3,26 +3,21 @@ import React from 'react';
 import Home from '.';
 
 export default {
-    title: 'pages/Home',
-    component: Home,
-    argTypes: {
-    },
+  title: 'pages/Home',
+  component: Home,
+  argTypes: {},
 };
 
-const Template = (args) => <Home {...args} />;
+const Template = args => <Home {...args} />;
 
 export const Primary = Template.bind({});
-Primary.args = {
-};
+Primary.args = {};
 
 export const Secondary = Template.bind({});
-Secondary.args = {
-};
+Secondary.args = {};
 
 export const Large = Template.bind({});
-Large.args = {
-};
+Large.args = {};
 
 export const Small = Template.bind({});
-Small.args = {
-};
+Small.args = {};

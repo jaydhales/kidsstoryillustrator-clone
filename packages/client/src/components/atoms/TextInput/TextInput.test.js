@@ -6,5 +6,5 @@ import userEvent from '@testing-library/user-event';
 import TextInput from '.';
 
 test('component is rendered', () => {
-    render(<TextInput />);
+  render(<TextInput />);
 });

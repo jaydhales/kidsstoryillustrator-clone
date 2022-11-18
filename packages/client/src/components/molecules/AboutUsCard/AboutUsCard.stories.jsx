@@ -3,26 +3,21 @@ import React from 'react';
 import AboutUsCard from '.';
 
 export default {
-    title: 'molecules/AboutUsCard',
-    component: AboutUsCard,
-    argTypes: {
-    },
+  title: 'molecules/AboutUsCard',
+  component: AboutUsCard,
+  argTypes: {},
 };
 
-const Template = (args) => <AboutUsCard {...args} />;
+const Template = args => <AboutUsCard {...args} />;
 
 export const Primary = Template.bind({});
-Primary.args = {
-};
+Primary.args = {};
 
 export const Secondary = Template.bind({});
-Secondary.args = {
-};
+Secondary.args = {};
 
 export const Large = Template.bind({});
-Large.args = {
-};
+Large.args = {};
 
 export const Small = Template.bind({});
-Small.args = {
-};
+Small.args = {};

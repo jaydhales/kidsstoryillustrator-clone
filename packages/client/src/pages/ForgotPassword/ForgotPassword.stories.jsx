@@ -3,26 +3,21 @@ import React from 'react';
 import ForgotPassword from '.';
 
 export default {
-    title: 'pages/ForgotPassword',
-    component: ForgotPassword,
-    argTypes: {
-    },
+  title: 'pages/ForgotPassword',
+  component: ForgotPassword,
+  argTypes: {},
 };
 
-const Template = (args) => <ForgotPassword {...args} />;
+const Template = args => <ForgotPassword {...args} />;
 
 export const Primary = Template.bind({});
-Primary.args = {
-};
+Primary.args = {};
 
 export const Secondary = Template.bind({});
-Secondary.args = {
-};
+Secondary.args = {};
 
 export const Large = Template.bind({});
-Large.args = {
-};
+Large.args = {};
 
 export const Small = Template.bind({});
-Small.args = {
-};
+Small.args = {};

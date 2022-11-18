@@ -3,26 +3,21 @@ import React from 'react';
 import Testimonial from '.';
 
 export default {
-    title: 'molecules/Testimonial',
-    component: Testimonial,
-    argTypes: {
-    },
+  title: 'molecules/Testimonial',
+  component: Testimonial,
+  argTypes: {},
 };
 
-const Template = (args) => <Testimonial {...args} />;
+const Template = args => <Testimonial {...args} />;
 
 export const Primary = Template.bind({});
-Primary.args = {
-};
+Primary.args = {};
 
 export const Secondary = Template.bind({});
-Secondary.args = {
-};
+Secondary.args = {};
 
 export const Large = Template.bind({});
-Large.args = {
-};
+Large.args = {};
 
 export const Small = Template.bind({});
-Small.args = {
-};
+Small.args = {};
