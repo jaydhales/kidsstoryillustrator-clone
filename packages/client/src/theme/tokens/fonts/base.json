@@ -1,0 +1,25 @@
+{
+  "font": {
+      "nunito": {
+        "value": "Nunito"
+      },
+      "manrope": {
+        "value": "Manrope"
+      },
+      "weight": {
+        "nunito":{
+          "0": {
+            "value": "Regular"
+          },
+          "1": {
+            "value": "Medium"
+          }
+        },
+        "manrope": {
+          "2": {
+            "value": "Medium"
+          }
+        }
+      }
+  }
+}
