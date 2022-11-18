@@ -17,7 +17,7 @@ app.get('/', (req, res, next) => res.send({ message: 'Welcome to STORY.AI' }));
 app.use('/auth/', authRouter )
 app.use('/story/', storyRouter )
 
-app.use((req: Request, res: Response, next) => {
+app.use((req, res, next) => {
     const error = new Error('Not Found');
     Logging.error(error);
 
