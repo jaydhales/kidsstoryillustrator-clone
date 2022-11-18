@@ -3,17 +3,26 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import './Layout.css';
+import { Navbar, Footer } from '..';
 
-export const Layout = () => {
-  return <div>Layout</div>;
+export const Layout = ({ children }) => {
+  return <div>
+    <Navbar />
+        {children}
+    <Footer/>
+  </div>;
 };
 
 // These are the types of the props that are passed to the component
 
-Layout.propTypes = {};
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
+};
 
 // These are their default values
 
-Layout.defaultProps = {};
+Layout.defaultProps = {
+  children: null,
+};
 
 export default Layout;
