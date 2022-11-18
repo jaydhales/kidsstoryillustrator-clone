@@ -1,42 +1,24 @@
-# kidsstoryillustrator.web
 
-To run the project:
- - Backend:
-    ```
-    npm run start:server
-    ```
- - Frontend
-    ```
-    npm run start:client
-    ```
+## Creating new components
+first install lego-build globally
+```bash
+npm i @ogteam/lego-build -g
+```
+## creating a new page
+```bash
+lego-build page <pageName>
+```
+## creating a new component{molecule}
+```bash
+lego-build component <componentName>
+``` 
+## creating a new component{atom}
+```bash
+lego-build atom <atomName>
+```
+## renaming a component
+```bash
+lego-build rename <oldName>:<blockType> to  <newName>
+```
 
-## Project structure
-
-  
-    ├── ...
-    ├── pages # contains all page components
-    ├── packages  ├── client
-                  ├── server
-    
-                  
----------------------------------
-client
----------------------------------
-    ├── ...
-    ├── pages # contains all page components
-    ├── components  ├── molecule # contains all super components
-                    ├── atom # contains all sub components
-    ├── utils  ├── hooks   # All custom hooks
-               ├── functions # All helper functions
-               ├── redux # redux store, slices and api connection
-    ├── assets # Images
-                ├── icons # contains all icons
-    ├── testing utils # helpers for tests
-    ├──sass # reset and value partials
-    └── ... └──package.json # Contains all dependencies
-    
-    
-
-
- 
-  
+Visit [lego-build](https://lego-build.github.io/) for more information on how to use it.
