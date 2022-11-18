@@ -5,7 +5,7 @@
       "type": "borderRadius"
     },
     "Medium": {
-      "value": "$small * 2",
+      "value": "{border-radius.small} * 2",
       "type": "borderRadius"
     },
     "Large": {
