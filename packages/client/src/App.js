@@ -13,7 +13,6 @@ import {
   Error,
   FAQ,
   ForgotPassword,
-  Help,
   Home,
   HowToUse,
   Login,
@@ -50,7 +49,6 @@ const App = () => (
       <Route path="/error" element={<Error />} />
       <Route path="/faq" element={<FAQ />} />
       <Route path="/forgotPassword" element={<ForgotPassword />} />
-      <Route path="/help" element={<Help />} />
       <Route path="/howToUse" element={<HowToUse />} />
       <Route path="/login" element={<Login />} />
       <Route path="/myStories" element={<MyStories />} />
