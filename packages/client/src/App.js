@@ -1,25 +1,65 @@
-import React from 'react';
+import React, { FC, Fragment, useEffect } from 'react';
 
-import logo from './logo.svg';
+import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
+
 import './App.css';
+import {
+  About,
+  Blog,
+  BlogDetails,
+  ChangePassword,
+  CreateStory,
+  Dashboard,
+  Error,
+  FAQ,
+  ForgotPassword,
+  Help,
+  Home,
+  HowToUse,
+  Login,
+  MyStories,
+  Pricing,
+  Privacy,
+  Profile,
+  SignUp,
+  SummaryActivities,
+} from './pages';
+
+const MoveToTop = () => {
+  const navigate = useNavigate();
+  const { hash, pathname } = useLocation();
+  useEffect(() => {
+    if (hash) return;
+
+    window.scrollTo(0, 0);
+  }, [pathname, navigate, hash]);
+  return null;
+};
 
 const App = () => (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-
+  <>
+    <MoveToTop />
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/blog" element={<Blog />} />
+      <Route path="/blog/:id" element={<BlogDetails />} />
+      <Route path="/changePassword" element={<ChangePassword />} />
+      <Route path="/createStory" element={<CreateStory />} />
+      <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/error" element={<Error />} />
+      <Route path="/faq" element={<FAQ />} />
+      <Route path="/forgotPassword" element={<ForgotPassword />} />
+      <Route path="/help" element={<Help />} />
+      <Route path="/howToUse" element={<HowToUse />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/myStories" element={<MyStories />} />
+      <Route path="/pricing" element={<Pricing />} />
+      <Route path="/privacy" element={<Privacy />} />
+      <Route path="/profile" element={<Profile />} />
+      <Route path="/signup" element={<SignUp />} />
+      <Route path="/summaryActivities" element={<SummaryActivities />} />
+    </Routes>
+  </>
+);
 export default App;
