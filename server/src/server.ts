@@ -3,7 +3,7 @@ import { config } from './config/config';
 import Logging from './library/Logger';
 import routes from './routes/index';
 import swaggerUi from 'swagger-ui-express';
-import swaggerDocument from '../openapi.json';
+import swaggerDocument from '../swagger.json';
 
 const app = express();
 
