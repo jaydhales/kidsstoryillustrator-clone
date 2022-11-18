@@ -262,8 +262,8 @@
     "get-user": {
       "get": {
         "tags": ["User"],
-        "summary": "Find User by token",
-        "description": "Find User by token.",
+        "summary": "Get User Details by token",
+        "description": "Get User Details by token.",
         "operationId": "getUserByToken",
         "parameters": [
         ],
@@ -458,23 +458,6 @@
       }
     },
     "securitySchemes": {
-      "petstore_auth": {
-        "type": "oauth2",
-        "flows": {
-          "implicit": {
-            "authorizationUrl": "https://petstore3.swagger.io/oauth/authorize",
-            "scopes": {
-              "write:pets": "modify pets in your account",
-              "read:pets": "read your pets"
-            }
-          }
-        }
-      },
-      "api_key": {
-        "type": "apiKey",
-        "name": "api_key",
-        "in": "header"
-      },
       "bearerAuth": {
         "type": "http",
         "scheme": "bearer",
