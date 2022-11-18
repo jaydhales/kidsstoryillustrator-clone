@@ -6,11 +6,13 @@ import './Layout.css';
 import { Navbar, Footer } from '..';
 
 export const Layout = ({ children }) => {
-  return <div>
-    <Navbar />
-        {children}
-    <Footer/>
-  </div>;
+  return (
+    <div>
+      <Navbar />
+      {children}
+      <Footer />
+    </div>
+  );
 };
 
 // These are the types of the props that are passed to the component
