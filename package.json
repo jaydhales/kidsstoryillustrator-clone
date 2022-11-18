@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "lerna run start",
-    "start:client": "lerna run start --scope=web-client",
+    "start:client": "lerna run start --scope=client",
     "start:server": "lerna run start --scope=server",
     "bootstrap": "lerna bootstrap",
     "build": "lerna run build",
