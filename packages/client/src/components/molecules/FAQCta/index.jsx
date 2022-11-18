@@ -2,7 +2,7 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
-import './FAQCta.css';
+import './FAQCta.scss';
 
 export const FAQCta = () => {
   return <div>FAQCta</div>;

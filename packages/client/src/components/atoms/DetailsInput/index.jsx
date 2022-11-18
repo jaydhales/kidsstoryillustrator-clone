@@ -2,7 +2,7 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
-import './DetailsInput.css';
+import './DetailsInput.scss';
 
 export const DetailsInput = () => {
   return <div>DetailsInput</div>;

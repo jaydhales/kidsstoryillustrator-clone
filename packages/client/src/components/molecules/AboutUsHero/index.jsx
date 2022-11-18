@@ -2,7 +2,7 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
-import './AboutUsHero.css';
+import './AboutUsHero.scss';
 
 export const AboutUsHero = () => {
   return <div>AboutUsHero</div>;

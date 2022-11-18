@@ -2,7 +2,7 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
-import './DashboardSidebarLink.css';
+import './DashboardSidebarLink.scss';
 
 export const DashboardSidebarLink = () => {
   return <div>DashboardSidebarLink</div>;

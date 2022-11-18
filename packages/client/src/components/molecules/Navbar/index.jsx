@@ -2,7 +2,7 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
-import './Navbar.css';
+import './Navbar.scss';
 
 export const Navbar = () => {
   return <div>Navbar</div>;

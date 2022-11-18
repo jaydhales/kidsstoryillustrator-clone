@@ -2,7 +2,7 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
-import './ForgotPassword.css';
+import './ForgotPassword.scss';
 
 export const ForgotPassword = () => {
   return <div>ForgotPassword</div>;

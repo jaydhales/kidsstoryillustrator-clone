@@ -2,7 +2,7 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
-import './NavLink.css';
+import './NavLink.scss';
 
 export const NavLink = () => {
   return <div>NavLink</div>;

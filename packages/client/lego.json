@@ -3,17 +3,17 @@
     {
       "type": "component",
       "path": "src/components/molecules",
-      "files": ["JSX", "CSS", "TEST", "MOLECULE_STORY", "MOLECULE_MDX"]
+      "files": ["JSX", "SCSS", "TEST", "MOLECULE_STORY", "MOLECULE_MDX"]
     },
     {
       "type": "atom",
       "path": "src/components/atoms",
-      "files": ["JSX", "CSS", "TEST", "ATOM_STORY", "ATOM_MDX"]
+      "files": ["JSX", "SCSS", "TEST", "ATOM_STORY", "ATOM_MDX"]
     },
     {
       "type": "page",
       "path": "src/pages",
-      "files": ["JSX", "CSS", "TEST", "PAGE_STORY", "PAGE_MDX"]
+      "files": ["JSX", "SCSS", "TEST", "PAGE_STORY", "PAGE_MDX"]
     },
     {
       "type": "reducer",

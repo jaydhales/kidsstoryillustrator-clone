@@ -2,7 +2,7 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
-import './ProtectedRoute.css';
+import './ProtectedRoute.scss';
 
 export const ProtectedRoute = () => {
   return <div>ProtectedRoute</div>;

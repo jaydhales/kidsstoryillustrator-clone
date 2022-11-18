@@ -2,7 +2,7 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
-import './Profile.css';
+import './Profile.scss';
 
 export const Profile = () => {
   return <div>Profile</div>;

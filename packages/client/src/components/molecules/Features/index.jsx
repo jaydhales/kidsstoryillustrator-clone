@@ -2,7 +2,7 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
-import './Features.css';
+import './Features.scss';
 
 export const Features = () => {
   return <div>Features</div>;

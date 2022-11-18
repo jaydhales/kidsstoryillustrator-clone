@@ -2,7 +2,7 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
-import './PublishedBooks.css';
+import './PublishedBooks.scss';
 
 export const PublishedBooks = () => {
   return <div>PublishedBooks</div>;

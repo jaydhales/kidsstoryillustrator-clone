@@ -2,7 +2,7 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
-import './HowToUse.css';
+import './HowToUse.scss';
 
 export const HowToUse = () => {
   return <div>HowToUse</div>;

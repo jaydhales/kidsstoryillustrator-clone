@@ -2,7 +2,7 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
-import './Login.css';
+import './Login.scss';
 
 export const Login = () => {
   return <div>Login</div>;

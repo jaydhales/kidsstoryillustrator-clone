@@ -2,7 +2,7 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
-import './AboutUsVision.css';
+import './AboutUsVision.scss';
 
 export const AboutUsVision = () => {
   return <div>AboutUsVision</div>;

@@ -2,7 +2,7 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
-import './StoryPreviewCard.css';
+import './StoryPreviewCard.scss';
 
 export const StoryPreviewCard = () => {
   return <div>StoryPreviewCard</div>;

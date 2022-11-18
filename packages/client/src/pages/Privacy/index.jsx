@@ -2,7 +2,7 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
-import './Privacy.css';
+import './Privacy.scss';
 
 export const Privacy = () => {
   return <div>Privacy</div>;

@@ -2,7 +2,7 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
-import './Button.css';
+import './Button.scss';
 
 export const Button = () => {
   return <div>Button</div>;

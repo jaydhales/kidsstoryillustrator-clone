@@ -2,7 +2,7 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
-import './blockName.css';
+import './blockName.scss';
 
 export const blockName = () => {
   return <div>blockName</div>;

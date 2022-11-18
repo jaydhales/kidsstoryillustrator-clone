@@ -2,7 +2,7 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
-import './Pricing.css';
+import './Pricing.scss';
 
 export const Pricing = () => {
   return <div>Pricing</div>;

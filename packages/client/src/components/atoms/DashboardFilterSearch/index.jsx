@@ -2,7 +2,7 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
-import './DashboardFilterSearch.css';
+import './DashboardFilterSearch.scss';
 
 export const DashboardFilterSearch = () => {
   return <div>DashboardFilterSearch</div>;

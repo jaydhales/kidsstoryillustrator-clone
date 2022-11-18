@@ -2,7 +2,7 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
-import './DashboardTable.css';
+import './DashboardTable.scss';
 
 export const DashboardTable = () => {
   return <div>DashboardTable</div>;

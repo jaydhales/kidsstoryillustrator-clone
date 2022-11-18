@@ -2,7 +2,7 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
-import './Layout.css';
+import './Layout.scss';
 import { Navbar, Footer } from '..';
 
 export const Layout = ({ children }) => {

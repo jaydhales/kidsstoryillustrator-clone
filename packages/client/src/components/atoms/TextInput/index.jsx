@@ -2,7 +2,7 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
-import './TextInput.css';
+import './TextInput.scss';
 
 export const TextInput = () => {
   return <div>TextInput</div>;

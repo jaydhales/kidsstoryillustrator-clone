@@ -2,7 +2,7 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
-import './CreateStory.css';
+import './CreateStory.scss';
 
 export const CreateStory = () => {
   return <div>CreateStory</div>;
