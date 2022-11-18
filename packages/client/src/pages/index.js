@@ -7,7 +7,6 @@ export { default as Dashboard } from './DashBoard';
 export { default as Error } from './Error';
 export { default as FAQ } from './FAQ';
 export { default as ForgotPassword } from './ForgotPassword';
-export { default as Help } from './Help';
 export { default as Home } from './Home';
 export { default as HowToUse } from './HowToUse';
 export { default as Login } from './Login';
