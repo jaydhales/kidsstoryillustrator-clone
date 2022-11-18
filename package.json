@@ -36,9 +36,13 @@
     "eslint-plugin-react": "^7.31.10",
     "husky": "^8.0.2",
     "lerna": "^6.0.3",
-    "prettier": "^2.7.1"
+    "prettier": "^2.7.1",
+    "sass": "^1.56.1"
   },
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "overrides": {
+    "react-refresh": "0.11.0"
+  }
 }
