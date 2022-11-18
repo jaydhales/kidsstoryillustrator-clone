@@ -11,10 +11,6 @@ const storybookSchema = new Schema<IStorybook>({
         type: String,
         lowercase: true
     },
-    category: {
-        type: String,
-        lowercase: true
-    }, 
     numberOfPages: {
         type: Number
     },
@@ -22,10 +18,6 @@ const storybookSchema = new Schema<IStorybook>({
         caption: String,
         imageURL: String
     }],
-    resource: {
-        type: String,
-        lowercase: true
-    },
     createdAt: {
         type: Date,
         immutable: true,
