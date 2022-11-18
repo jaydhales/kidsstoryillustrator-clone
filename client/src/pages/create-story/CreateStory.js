@@ -2,6 +2,9 @@ import React from "react";
 import "./CreateStory.css";
 
 import right_arrow from "../../assets/create-story/arrow-right.svg";
+import placeholder_image from "../../assets/create-story/placeholder-Image.svg";
+import placeholder_page_image from "../../assets/create-story/place_index_Image.svg";
+import previous_arr_icon from "../../assets/create-story/previous-next-arrow.svg";
 
 const CreateStory = () => {
   return (
@@ -49,12 +52,38 @@ const CreateStory = () => {
                     />
                   </div>
                 </div>
-								<div className="text-context-tabs">
-									<button>Generate</button>
-								</div>
+                <div className="text-context-tabs gen-button-container">
+                  <button>Generate</button>
+                </div>
               </div>
             </div>
-            <div className="s-c-02-sub-container-02 image-context"></div>
+            <div className="s-c-02-sub-container-02 image-context">
+              <div>
+                <img src={placeholder_image} alt="" />
+              </div>
+            </div>
+          </div>
+          <div className="pages-index-container">
+            <div className="p-i-c-01">
+              <p className="p-i-c-01-pages">Pages</p>
+              <p className="p-i-c-01-new_page" > New page</p>
+            </div>
+            <div className="p-i-c-02">
+              <div>
+                <img src={previous_arr_icon} alt="" />
+                <p>Previous</p>
+              </div>
+              <div>
+                <img src={placeholder_page_image} alt="" />
+              </div>
+              <div>
+              <img src={placeholder_page_image} alt="" />
+              </div>
+              <div>
+                <img src={previous_arr_icon} alt="" />
+                <p>Previous</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
