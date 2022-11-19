@@ -11,19 +11,17 @@ export const ForgotPassword = () => {
   //  const [showError , setShowError] = useState(false);
   //  const [email , setEmail] = useState(false);
   //  const [showMessage, setShowMessage] = useState(false);
-  function onHandleSubmit (event) {
+  function onHandleSubmit(event) {
     event.preventDefault();
   }
   return (
     <>
       <Navbar>
-        <Button secondary className= "Margin-right" >
-
+        <Button secondary className="Margin-right">
           <div className="Button__inner__container">
             <p>En</p>
             <img src="/Assets/Icons/arrow-down.svg" alt="" />
           </div>
-
         </Button>
       </Navbar>
 

@@ -4,9 +4,11 @@ import PropTypes from 'prop-types';
 
 import './Button.scss';
 
-export const Button = ({ children, secondary }) => {
+export const Button = ({ children, secondary, className }) => {
   return (
-    <button className={`Button ${secondary ? 'Secondary' : 'Primary'}`}>
+    <button
+      className={`Button ${secondary ? 'Secondary' : 'Primary'} ${className}`}
+    >
       {children}
     </button>
   );
@@ -17,6 +19,7 @@ export const Button = ({ children, secondary }) => {
 Button.propTypes = {
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   secondary: PropTypes.bool,
+  className: PropTypes.string,
 };
 
 // These are their default values
