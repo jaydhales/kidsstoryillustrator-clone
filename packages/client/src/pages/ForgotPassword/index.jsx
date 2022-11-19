@@ -8,12 +8,18 @@ import './ForgotPassword.scss';
 
 export const ForgotPassword = () => {
   //  const [emailError , setEmailError] = useState(false);
+  //  const [showError , setShowError] = useState(false);
   //  const [email , setEmail] = useState(false);
   //  const [showMessage, setShowMessage] = useState(false);
 
   return (
     <div className="ForgotPassword">
-      <Navbar></Navbar>
+      <Navbar>
+        <Button secondary>
+          <p>En</p>
+          <img src="" alt="" />
+        </Button>
+      </Navbar>
 
       <div className="Form__container">
         <form action="" className="Form">
@@ -33,8 +39,8 @@ export const ForgotPassword = () => {
               placeholder="name@gmail.com"
               required
             />
-            {/* {showMessage && (
-              <p style={{ color: '#1570ef' }}>
+            {/* {showError && (
+              <p style={{ color: 'Error__text' }}>
                 Your message was sent succesfully
               </p>
             )} */}
