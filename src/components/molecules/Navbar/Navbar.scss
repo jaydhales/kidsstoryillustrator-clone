@@ -1,128 +1,126 @@
 .Navbar {
-    display: flex;
-    justify-content: space-between;
-    padding: 30px 50px;
-    position: sticky;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: #fff;
-    z-index: 7;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 50px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  z-index: 7;
 
-    @media screen and (max-width: 1200px) {
-        padding: 30px;
-    }
+  @media screen and (max-width: 1200px) {
+    padding: 30px;
+  }
+
+  @media screen and (max-width: 900px) {
+    padding: 15px 30px;
+  }
+
+  align-items: center;
+
+  &__Logo {
+    z-index: 7;
+    width: 75px;
+  }
+
+  &__container {
+    display: flex;
 
     @media screen and (max-width: 900px) {
-        padding: 15px 30px;
+      transform: translateX(-100%);
+      position: fixed;
+      inset: 0;
+      flex-direction: column;
+      background-color: #fff;
+      align-items: flex-start;
+      width: 100%;
+      padding: 80px 40px 60px 40px;
+      transition: transform 0.5s ease-in-out;
     }
 
+    justify-content: space-between;
+    width: 70%;
     align-items: center;
 
-    &__Logo {
-        z-index: 7;
-        width: 75px;
+    &__active {
+      transform: translate(0);
     }
 
-    &__container {
-        display: flex;
+    &__links {
+      display: flex;
+      justify-content: space-between;
 
+      @media screen and (max-width: 900px) {
+        flex-direction: column;
+        font-size: 2.5rem;
+      }
+
+      flex-basis: 60%;
+      height: fit-content;
+    }
+
+    &__getStarted {
+      @media screen and (max-width: 900px) {
+        width: 100%;
+        text-align: center;
+      }
+
+      background: #aa0136;
+      padding: 10px 20px;
+      color: #fff;
+      border-radius: 999px;
+      font-weight: 400;
+      cursor: pointer;
+      display: block;
+
+      &__wallet {
         @media screen and (max-width: 900px) {
-            transform: translateX(-100%);
-            position: fixed;
-            inset: 0;
-            flex-direction: column;
-            background-color: #fff;
-            align-items: flex-start;
-            width: 100%;
-            padding: 80px 40px 60px 40px;
-            transition: transform 0.5s ease-in-out;
+          width: 50%;
         }
 
-        justify-content: space-between;
-        width: 70%;
-        align-items: center;
+        width: 150px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+    }
+  }
 
-        &__active {
-            transform: translate(0);
+  &__menuIcon {
+    width: 30px;
+    height: 3px;
+    background: #000;
+    position: relative;
+    display: none;
+    border-radius: 99px;
+    cursor: pointer;
 
-        }
-
-        &__links {
-            display: flex;
-            justify-content: space-between;
-
-            @media screen and (max-width: 900px) {
-                flex-direction: column;
-                font-size: 2.5rem;
-            }
-
-            flex-basis: 60%;
-            height: fit-content;
-        }
-
-        &__getStarted {
-            @media screen and (max-width: 900px) {
-                width: 100%;
-                text-align: center;
-
-            }
-
-            background: #AA0136;
-            padding: 10px 20px;
-            color: #fff;
-            border-radius: 999px;
-            font-weight: 400;
-            cursor: pointer;
-            display: block;
-
-            &__wallet {
-                @media screen and (max-width: 900px) {
-                    width: 50%;
-                }
-
-                width: 150px;
-                text-overflow: ellipsis;
-                overflow: hidden;
-            }
-        }
+    @media screen and (max-width: 900px) {
+      display: block;
     }
 
-    &__menuIcon {
-        width: 30px;
-        height: 3px;
-        background: #000;
-        position: relative;
-        display: none;
-        border-radius: 99px;
-        cursor: pointer;
-
-        @media screen and (max-width: 900px) {
-            display: block;
-        }
-
-        &::before {
-            content: '';
-            position: absolute;
-            top: -10px;
-            left: 0;
-            width: 30px;
-            height: 3px;
-            background: #000;
-            border-radius: 99px;
-            cursor: pointer;
-        }
-
-        &::after {
-            content: '';
-            position: absolute;
-            top: 10px;
-            left: 0;
-            width: 30px;
-            height: 3px;
-            background: #000;
-            border-radius: 99px;
-            cursor: pointer;
-        }
+    &::before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: 0;
+      width: 30px;
+      height: 3px;
+      background: #000;
+      border-radius: 99px;
+      cursor: pointer;
     }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 0;
+      width: 30px;
+      height: 3px;
+      background: #000;
+      border-radius: 99px;
+      cursor: pointer;
+    }
+  }
 }
