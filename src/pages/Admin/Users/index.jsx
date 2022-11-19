@@ -1,7 +1,21 @@
 import React from 'react'
 
-export default function Index() {
+import PropTypes from "prop-types"
+
+import "./Users.css";
+
+export const User = () => {
   return (
-    <div>Index</div>
+    <div>index</div>
   )
-}
+};
+
+// These are the types of the props that are passed to the component
+
+User.PropTypes = {};
+
+// These are their default values
+
+User.defaultProps = {};
+
+export default User;

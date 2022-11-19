@@ -1,7 +1,10 @@
-import React from 'react'
-import "./AcctSetup.css"
+import React from 'react';
 
-export default function Settings() {
+import PropTypes from "prop-types";
+
+import "./AcctSetup.css";
+
+export const Settings = () => {
   return (
     <div className="container">
       <div className="side-bar">
@@ -91,3 +94,14 @@ export default function Settings() {
     </div>
   )
 }
+
+
+// These are the types of the props that are passed to the component
+
+Settings.propTypes = {};
+
+// These are their default values
+
+Settings.defaultProps = {};
+
+export default Settings;
