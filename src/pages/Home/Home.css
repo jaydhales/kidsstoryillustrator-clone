@@ -3,6 +3,9 @@
 *{
   box-sizing: border-box;
 }
+img{
+    width: 100%;
+}
 .Landing{
   display: flex;
   margin: auto;
