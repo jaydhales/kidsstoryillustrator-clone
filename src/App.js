@@ -5,6 +5,7 @@ import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import './App.scss';
 import {
   About,
+  AdminDashboard,
   Blog,
   BlogDetails,
   ChangePassword,
@@ -46,6 +47,7 @@ const App = () => (
       <Route path="/changePassword" element={<ChangePassword />} />
       <Route path="/createStory" element={<CreateStory />} />
       <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/admin/dashboard" element={<AdminDashboard />} />
       <Route path="/error" element={<Error />} />
       <Route path="/faq" element={<FAQ />} />
       <Route path="/forgotPassword" element={<ForgotPassword />} />
