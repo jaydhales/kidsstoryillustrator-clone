@@ -27,7 +27,6 @@ hr {
         letter-spacing: 0em;
          text-align: left;
         }
-        
 } 
 
 .Dashboard__Container {
@@ -43,7 +42,6 @@ hr {
 
 
     & button {
-        // width:100%;
         position: absolute;
         padding:0,10%,0,10%;
         bottom:24px;
@@ -87,7 +85,8 @@ hr {
             display: grid;
             grid-template-columns: repeat(1,1fr);
             gap: 2em;
-            padding:var(--spacing-medium);
+            padding-top:var(--spacing-medium);
+            padding-bottom:var(--spacing-large);
         &img {
                 max-width: 169px;
                 max-height:200px;
@@ -123,6 +122,9 @@ hr {
 
 }
 
+
+
+
 .grey-border {
     border: 0.5px solid #CAC4D0;
     border-radius: var(--border-radius-medium);
@@ -132,38 +134,30 @@ hr {
     flex-direction: column;
 }
 .linear__progress__indicator {
-    // padding:40px;
     width: 100%;
-    // max-width: 320px;
     border-radius: var(--border-radius-medium);
     justify-content: space-around;
-    justify-content: center;
     align-items: center;
-
+   
     & progress {
         max-width: 280px;
-        // background-color:var(--color-error-200);
     }
 }
 
-
+.red-text {
+    color: #A80136;;
+}
 
 .RecentStyles__Image__Container {
 display: grid;
 grid-template-columns: repeat(1, 1fr);
 gap:var(--spacing-medium);
-
 }
 
 
 @media screen and (min-width:480px) {
 
 }
-
-
-
-
-
 
 @media screen and (min-width:768px) {
     .Section__1 {
@@ -174,11 +168,6 @@ gap:var(--spacing-medium);
         flex-direction: row;
     }
 
-    .Create__Story__Container {
-
-        // background:url('/Assets/Images/Welcome.png');
-        
-    }
    .TrendingStyles {
        &__Image__Container {
             grid-template-columns: repeat(3, 1fr);
@@ -192,7 +181,4 @@ gap:var(--spacing-medium);
     grid-template-columns: repeat(2, 1fr);
     gap: var(--spacing-medium);
 }
-}
-@media screen and (min-width:1024px) {
-    
 }

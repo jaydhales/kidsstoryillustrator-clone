@@ -11,15 +11,14 @@ export const DashBoard = () => {
   return (
     <>
       {/* <Navbar> */}
-        {/* <Link to ="/"> */}
-        {/* <Button secondary>Upgrade to Premium </Button> */}
-        {/* </Link> */}
+      {/* <Link to ="/"> */}
+      {/* <Button secondary>Upgrade to Premium </Button> */}
+      {/* </Link> */}
       {/* </Navbar> */}
 
       <div className="Dashboard center">
-      {/* <DashboardSidebar /> */}
+        {/* <DashboardSidebar /> */}
         <div className="Dashboard__Container">
-
           <section className="Section__1">
             <section className="Welcome">
               <p>Hi John Welcome Back</p>
@@ -49,15 +48,15 @@ export const DashBoard = () => {
                   <img src="/Assets/Images/TS2.png" alt="image2" />
                   <img src="/Assets/Images/TS3.png" alt="image3" />
                 </div>
-                <p>More Illustrations</p>
+                <p className="red-text">More Illustrations</p>
               </div>
             </section>
           </section>
 
           <section className="Section__2">
             <section className="RecentStyles">
-                <p>Recent Styles</p>
-                <hr />
+              <p>Recent Styles</p>
+              <hr />
               <div className="RecentStyles__Image__Wrapper grey-border">
                 <div className="RecentStyles__Image__Container">
                   <img src="/Assets/Images/RS1.png" alt="" />
@@ -65,7 +64,7 @@ export const DashBoard = () => {
                   <img src="/Assets/Images/RS3.png" alt="" />
                   <img src="/Assets/Images/RS4.png" alt="" />
                 </div>
-                <p>More Illustrations</p>
+                <p className="red-text">More Illustrations</p>
               </div>
             </section>
 
