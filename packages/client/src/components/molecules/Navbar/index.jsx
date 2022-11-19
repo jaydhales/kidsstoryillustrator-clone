@@ -7,7 +7,7 @@ import './Navbar.scss';
 export const Navbar = ({ children }) => {
   return (
     <nav className="Navbar">
-      <img src="logodrillpress.svg" alt="logo" />
+      <img src="/Assets/Icons/" alt="logo" />
       {children}
     </nav>
   );

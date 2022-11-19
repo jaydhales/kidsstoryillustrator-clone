@@ -58,7 +58,7 @@ const App = () => (
       <Route path="/signup" element={<SignUp />} />
       <Route path="/summaryActivities" element={<SummaryActivities />} />
     </Routes> */}
-    <ForgotPassword/>
+    <ForgotPassword />
   </>
 );
 export default App;

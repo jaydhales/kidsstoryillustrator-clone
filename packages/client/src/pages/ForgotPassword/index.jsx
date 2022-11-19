@@ -11,47 +11,49 @@ export const ForgotPassword = () => {
   //  const [showError , setShowError] = useState(false);
   //  const [email , setEmail] = useState(false);
   //  const [showMessage, setShowMessage] = useState(false);
-    function onHandleSubmit (event) {
-        event.preventDefault();
-    }
+  function onHandleSubmit (event) {
+    event.preventDefault();
+  }
   return (
-    <div className="ForgotPassword">
-
+    <>
       <Navbar>
         <Button secondary>
+ 
           <p>En</p>
           <img src="" alt="" />
         </Button>
       </Navbar>
 
-      <div className="Form__container">
-        <form action="" className="Form" onSubmit={onHandleSubmit}>
-          <p className="Form__title1">Forgot Password?</p>
-          <hr />
-          <p className="Form__title2">
-            Enter your email and we ll send you a link to rest your password
-          </p>
-          <div>
-            <label htmlFor="email">Email</label> 
-            <input
-              type="email"
-              // value={email}
-              // onChange={handleInputChange}
-              id="email"
-              name="email"
-              placeholder="name@gmail.com"
-              required
-            />
-            {/* {showError && (
+      <div className="Form__main__container">
+        <div className="Form__container">
+          <form action="" className="Form" onSubmit={onHandleSubmit}>
+            <p className="Form__title1">Forgot Password?</p>
+            <hr />
+            <p className="Form__title2">
+              Enter your email and we ll send you a link to rest your password
+            </p>
+            <div>
+              <label htmlFor="email">Email</label>
+              <input
+                type="email"
+                // value={email}
+                // onChange={handleInputChange}
+                id="email"
+                name="email"
+                placeholder="name@gmail.com"
+                required
+              />
+              {/* {showError && (
               <p style={{ color: 'Error__text' }}>
                 
               </p>
             )} */}
-          </div>
-          <Button>Submit</Button>
-        </form>
+            </div>
+            <Button>Submit</Button>
+          </form>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
