@@ -17,6 +17,7 @@ code {
 
 :root {
     /* colors */
+    --color-white:#ffffff;
     --text-color-primary:#131313;
     --color-grey-100:#d9d9d9;
     --color-grey-200:#f7f8f8;

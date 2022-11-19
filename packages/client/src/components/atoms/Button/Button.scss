@@ -1,4 +1,4 @@
-.Button{
+.Button {
         display: inline-block;
         user-select: none;
         -webkit-user-select: none;
@@ -9,5 +9,20 @@
         outline: none;
         border: none;
         border-radius:var(--border-radius-small);
-        background-color: var(--color-primary-main);
+        font-family: Nunito;
+        padding:16px;
+}
+
+
+.Primary {
+    background-color: var(--color-primary-main);        
+    font-size: var(--font-size-3);
+    font-weight: 500;
+    line-height: 19px;
+    color:var(--color-white);
+}
+
+.Secondary {
+    border: 1px solid var(--color-primary-main);
+    background-color:var(--color-white);
 }
