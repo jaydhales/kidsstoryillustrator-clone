@@ -1,2 +1,12 @@
-.SignUp {
+#auth {
+  padding: 48px 16px;
+}
+
+.center-align {
+  text-align: center;
+}
+
+#logo {
+  width: 109px;
+  margin-bottom: 32px;
 }
