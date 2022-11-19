@@ -1,3 +1,43 @@
-.AboutUsHero{
-    
+.AboutUsHero {
+  padding: 0px 124px 80px 124px;
+  margin: 0;
+  font-family: 'Nunito';
+}
+.hero-header {
+  text-align: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  color: #aa0136;
+}
+.hero-text {
+  text-align: center;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 45px;
+  line-height: 52px;
+  text-align: center;
+  color: #131313;
+}
+
+@media screen and (max-width: 1024px) {
+  .AboutUsHero {
+    padding: 0px 32px 64px 32px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .AboutUsHero {
+    padding: 0px 16px 62px 16px;
+
+  }
+  .hero-header {
+    text-align: left;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .hero-text {
+    font-size: 36px;
+    text-align: left;
+    line-height: 44px;
+  }
 }

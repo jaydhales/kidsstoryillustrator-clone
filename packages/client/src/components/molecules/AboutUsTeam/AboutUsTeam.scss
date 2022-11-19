@@ -1,3 +1,123 @@
-.AboutUsTeam{
-    
+.aboutTeam {
+  display: flex;
+  align-items: stretch;
+  background-color: white;
+  font-family: 'Nunito';
+  padding: 80px 229px 0px 229px;
+}
+
+.aboutTeam > div {
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+  padding: 0px;
+}
+.aboutTeamHeader {
+  flex: 100%;
+}
+.aboutTeamHeaderTop {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 57px;
+  line-height: 0px;
+  color: #131313;
+}
+.aboutTeamHeaderBottom {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  color: #131313;
+}
+
+hr {
+  border: 2.5px solid #aa0136;
+  border-radius: 5px;
+  background-color: #aa0136;
+  width: 120px;
+}
+
+.TeamList {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 40px 160px 0px 160px;
+}
+
+.TeamListText {
+  box-sizing: border-box;
+  -ms-flex: 25%;
+  flex: 25%;
+  max-width: 25%;
+  text-align: center;
+  font-size: 28px;
+  line-height: 44px;
+  color: #131313;
+}
+.abtdot {
+  color: #aa0136;
+}
+.teamImg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 684.73px;
+  padding: 80px 0px 80px 0px;
+}
+@media screen and (max-width: 1020px) {
+  .aboutTeam {
+    padding: 64px 32px 20px 32px;
+  }
+
+  .aboutTeamHeaderTop {
+    font-size: 36px;
+    line-height: 0px;
+  }
+  .TeamList {
+    padding: 36px 45px 36px 45px;
+  }
+  .TeamListText {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+    font-size: 23px;
+    line-height: 24px;
+  }
+  .teamImg {
+    margin-left: auto;
+    margin-right: auto;
+    width: 500.73px;
+    padding: 80px 108.32px 64px 108.32px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .aboutTeam {
+    padding: 62px 26px 20px 16px;
+  }
+
+  .aboutTeamHeaderTop {
+    font-size: 32px;
+    line-height: 0px;
+  }
+  .TeamListText {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+  }
+  .teamImg {
+    margin-left: auto;
+    margin-right: auto;
+    width: 250.73px;
+    padding: 32px 30px 62px 30px;
+  }
+  hr {
+    width: 100px;
+  }
 }
