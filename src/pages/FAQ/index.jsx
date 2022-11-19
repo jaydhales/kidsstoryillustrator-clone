@@ -8,9 +8,10 @@ import "./FAQ.css";
 import FAQCategories from "../../components/molecules/FAQCategories";
 import FAQQuestions from "../../components/molecules/FAQQuestions";
 import FAQCta from "../../components/molecules/FAQCta";
+import { Layout } from '../../components/molecules';
 
 export const FAQ = () => {
-  return <div>
+  return <Layout>
     <FAQHero />
     <br/>
     <br/>
@@ -20,7 +21,7 @@ export const FAQ = () => {
     <FAQQuestions />
     <br/>
     <FAQCta />
-  </div>;
+  </Layout>;
 };
 
 // These are the types of the props that are passed to the component

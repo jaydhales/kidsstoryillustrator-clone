@@ -8,6 +8,7 @@
 .FAQHero {
 } */
 
+
 .helpHero-container{
     display: flex;
     flex-direction: column;
@@ -47,6 +48,7 @@
 .search-container img{
     position: absolute;
     padding: 1.5rem;
+    width: 30px;
 }
 
 .search-container input{

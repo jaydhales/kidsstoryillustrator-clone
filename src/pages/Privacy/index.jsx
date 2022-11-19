@@ -3,9 +3,11 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import "./Privacy.css";
+import { Layout } from '../../components/molecules';
 
 export const Privacy = () => {
- return <div className='Privacy'>
+  return<Layout>
+  <div className='Privacy'>
         <section className='privacy--content'>
       <h1 className='header'>Story AI Privacy Policy</h1>
       <p>Last updated November 16, 2022</p>
@@ -74,6 +76,7 @@ export const Privacy = () => {
       </p>
     </section>
     </div>
+  </Layout>
 };
 
 // These are the types of the props that are passed to the component
