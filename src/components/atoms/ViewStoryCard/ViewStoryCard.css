@@ -1,0 +1,24 @@
+.ViewStoryCard {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* .ViewStoryCard .story-card {
+  width: 100%;
+} */
+
+.button {
+  display: block;
+  border-radius: 9999px;
+  border: 1px solid #aa0136;
+  padding: 1rem 3rem;
+  width: max-content;
+  margin: 1rem auto;
+}
+
+@media (max-width: 720px) {
+  .story-card:not(:nth-child(1)) + .story-card:not(:nth-child(2)) {
+    display: none;
+  }
+}

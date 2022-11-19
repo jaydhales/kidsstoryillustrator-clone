@@ -11,6 +11,7 @@ export { default as Home } from "./Home";
 export { default as HowToUse } from "./HowToUse";
 export { default as Login } from "./Login";
 export { default as MyStories } from "./MyStories";
+export { default as Story } from "./Story";
 export { default as Pricing } from "./Pricing";
 export { default as Privacy } from "./Privacy";
 export { default as Profile } from "./Profile";
