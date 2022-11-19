@@ -2,7 +2,7 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
-import './BlogPostCard.scss';
+import './BlogPostCard.css';
 
 export const BlogPostCard = () => {
   return <div>BlogPostCard</div>;

@@ -2,7 +2,7 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
-import './FootLink.scss';
+import './FootLink.css';
 
 export const FootLink = () => {
   return <div>FootLink</div>;

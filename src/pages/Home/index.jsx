@@ -3,7 +3,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import "./Home.css";
-import { Navbar } from "../../components/molecules";
+import { Layout, Navbar } from "../../components/molecules";
 import illustration from './Images/illustration.svg'
 import redlogo from './Images/Red Rectangle.svg'
 import greenlogo from './Images/Green Rectangle.svg'
@@ -13,7 +13,7 @@ import AI from './Images/artificial intelligence.svg'
 import avatar from './Images/brazil.svg'
 
 export const Home = () => {
-  return <div><div>
+  return <Layout>
   <header>
       <section className='text'>
       <h1 className='header-text'>Generate Story Illustrations</h1>
@@ -116,8 +116,7 @@ export const Home = () => {
           </div>
       </div>
   </section>
-</div>
-</div>;
+</Layout>;
 };
 
 // These are the types of the props that are passed to the component
