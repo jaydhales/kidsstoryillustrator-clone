@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import PropTypes from "prop-types";
 
-import "./HowToUse.css";
+import "./HowToUse.scss";
 
 import close from "../../assets/Demo/icons/close.png";
 import bg from "../../assets/Demo/images/bg.png";
