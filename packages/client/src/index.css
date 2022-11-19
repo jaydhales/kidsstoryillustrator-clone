@@ -123,9 +123,9 @@ code {
     --border-radius-medium:16px;
     --border-radius-large:64px;
 
-    --spacing--small:8px;
+    --spacing-small:8px;
     --spacing-medium:16px;
-    --spacing--large:32px;
+    --spacing-large:32px;
     --spacing-large:64px;
 }
 

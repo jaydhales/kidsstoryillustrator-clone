@@ -18,13 +18,6 @@ body {
   flex-direction: column;
 }
 
-button,
-input,
-optgroup,
-select,
-textarea {
-  // ${font.regular}
-}
 
 *,
 *:after,
@@ -57,15 +50,6 @@ p {
   margin: 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-strong {
-  // ${font.bold}
-}
 
 button {
   background: none;
@@ -108,18 +92,6 @@ select:-moz-focusring {
 
 select::-ms-expand {
   display: none;
-}
-
-select option {
-  // color: ${color.textDarkest};
-}
-
-p {
-  line-height: 1.4285;
-
-  a {
-    // ${mixin.link()}
-  }
 }
 
 

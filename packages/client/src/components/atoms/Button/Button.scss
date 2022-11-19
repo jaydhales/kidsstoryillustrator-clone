@@ -1,3 +1,13 @@
 .Button{
-    
+        display: inline-block;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        cursor: pointer;
+        text-align: center;
+        width: 100%;
+        outline: none;
+        border: none;
+        border-radius:var(--border-radius-small);
+        background-color: var(--color-primary-main);
 }
