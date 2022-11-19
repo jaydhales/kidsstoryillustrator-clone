@@ -403,34 +403,25 @@
       "Story": {
         "type": "object",
         "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int64",
-            "example": 10
+          "author": {
+            "type": "string"
           },
-          "petId": {
-            "type": "integer",
-            "format": "int64",
-            "example": 198772
+          "title": {
+            "type": "string"
           },
-          "quantity": {
-            "type": "integer",
-            "format": "int32",
-            "example": 7
+          "numberOfPages": {
+            "type": "integer"
           },
-          "shipDate": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "status": {
-            "type": "string",
-            "description": "Order Status",
-            "example": "approved",
-            "enum": ["placed", "approved", "delivered"]
-          },
-          "complete": {
-            "type": "boolean"
-          }
+          "scenes": [
+            {
+              "caption": {
+                "type": "string"
+              },
+              "imageUrl": {
+                "type": "string"
+              }
+            }
+          ]
         },
         "xml": {
           "name": "order"
@@ -443,11 +434,15 @@
             "type": "string",
             "example": "theuser@gmail.com"
           },
-          "username": {
+          "lastname": {
             "type": "string",
-            "example": "theUser"
+            "example": "user_lastname"
           },
-          "password": {
+          "firstname": {
+            "type": "string",
+            "example": "user_firstname"
+          },
+          "hash": {
             "type": "string",
             "example": "John"
           }
