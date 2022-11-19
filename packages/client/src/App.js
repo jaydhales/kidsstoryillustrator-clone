@@ -60,6 +60,7 @@ const App = () => (
     </Routes> */}
     {/* <ForgotPassword /> */}
     <Dashboard />
+    {/* <SummaryActivities/> */}
   </>
 );
 export default App;

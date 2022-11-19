@@ -5,7 +5,9 @@ import PropTypes from 'prop-types';
 import './SummaryActivities.scss';
 
 export const SummaryActivities = () => {
-  return <div>SummaryActivities</div>;
+  return <div>
+    SummaryActivities
+    </div>;
 };
 
 // These are the types of the props that are passed to the component

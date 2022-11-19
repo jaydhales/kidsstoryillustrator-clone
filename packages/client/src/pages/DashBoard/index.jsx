@@ -10,15 +10,16 @@ import { Navbar, DashboardSidebar } from '../../components/molecules';
 export const DashBoard = () => {
   return (
     <>
-      <Navbar>
+      {/* <Navbar> */}
         {/* <Link to ="/"> */}
-        <Button secondary>Upgrade to Premium </Button>
+        {/* <Button secondary>Upgrade to Premium </Button> */}
         {/* </Link> */}
-      </Navbar>
-      <DashboardSidebar />
-      
+      {/* </Navbar> */}
+
       <div className="Dashboard center">
-        <div className='Dashboard__Container'>
+      {/* <DashboardSidebar /> */}
+        <div className="Dashboard__Container">
+
           <section className="Section__1">
             <section className="Welcome">
               <p>Hi John Welcome Back</p>
@@ -55,6 +56,8 @@ export const DashBoard = () => {
 
           <section className="Section__2">
             <section className="RecentStyles">
+                <p>Recent Styles</p>
+                <hr />
               <div className="RecentStyles__Image__Wrapper grey-border">
                 <div className="RecentStyles__Image__Container">
                   <img src="/Assets/Images/RS1.png" alt="" />

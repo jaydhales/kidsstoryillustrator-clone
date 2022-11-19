@@ -1,4 +1,5 @@
 .DashBoard {
+    width:100%;
     // display:flex;
     // flex-direction: column;
 }
@@ -9,14 +10,14 @@
     // flex-direction: column; 
 
 }
-
+hr {
+    border: 1px solid var(--color-neutral-100);
+}
 
 .Section__2 {
     // display: flex;
     // flex-direction: column;
 }
-
-
 
 .Welcome {
         &:p   {
@@ -25,18 +26,17 @@
         line-height: 30px;
         letter-spacing: 0em;
          text-align: left;
-
         }
-
-        &hr {
-            border: 1px solid var(--color-neutral-100);
-        }
+        
 } 
 
-
+.Dashboard__Container {
+    gap:var(--spacing-large);
+    // width:100%;
+}
 
 .Create__Story__Container {
-    // background:url('/Assets/Images/Welcome.png');
+    // background:url('/Assets/Images/LegoImage.png');
     position: relative;
     background-color:red;
     min-height:228px;
@@ -50,13 +50,9 @@
         left:50%;
         right:50%;
         transform: translate(-50%,-50%);
+        max-width: 230px;   
     }
 }
-
-
-
-
-
 
 
 
@@ -67,6 +63,7 @@
     display: flex;
     flex-direction:row; 
     justify-content: space-between;
+    margin-bottom:var(--spacing-large);
 }
 
 
@@ -86,27 +83,38 @@
             overflow-x: scroll;
             overflow-y: hidden;
             white-space: nowrap;
-            width: 580px;
+            width:100%;
             display: grid;
             grid-template-columns: repeat(1,1fr);
             gap: 2em;
+            padding:var(--spacing-medium);
         &img {
                 max-width: 169px;
                 max-height:200px;
         }
+
     }
+
+     &__Image__Wrapper {
+        
+    }
+
 } 
 
 .RecentStyles {
-
 &__Image__container {
             display: grid;
+            align-items: center;
             grid-template-columns: repeat(2,1fr);
 
             & img {
                     max-width: 140px;
                     max-height: 170px;
             }
+}
+
+&__Image__Wrapper {
+    padding:var(--spacing-large)
 }
 } 
 
@@ -117,6 +125,7 @@
 
 .grey-border {
     border: 0.5px solid #CAC4D0;
+    border-radius: var(--border-radius-medium);
 }
 .flex {
     display: flex;
@@ -124,7 +133,8 @@
 }
 .linear__progress__indicator {
     // padding:40px;
-    max-width: 320px;
+    width: 100%;
+    // max-width: 320px;
     border-radius: var(--border-radius-medium);
     justify-content: space-around;
     justify-content: center;
@@ -145,7 +155,20 @@ gap:var(--spacing-medium);
 
 }
 
+
+@media screen and (min-width:480px) {
+
+}
+
+
+
+
+
+
 @media screen and (min-width:768px) {
+    .Section__1 {
+        max-width: 580px;
+    }
 .Dashboard__Container {
         display: flex;
         flex-direction: row;
@@ -154,18 +177,22 @@ gap:var(--spacing-medium);
     .Create__Story__Container {
 
         // background:url('/Assets/Images/Welcome.png');
-        & button {
-            max-width: 230px;
-        }
+        
     }
    .TrendingStyles {
-
-       &__Image__container {
-           grid-template-columns: repeat(3, 1fr);
+       &__Image__Container {
+            grid-template-columns: repeat(3, 1fr);
+            // min-width: 580px;
        }
+                
     }
-}
 
+.RecentStyles__Image__Container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-medium);
+}
+}
 @media screen and (min-width:1024px) {
     
 }
