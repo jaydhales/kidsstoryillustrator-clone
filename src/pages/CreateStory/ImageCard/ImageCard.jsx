@@ -12,28 +12,16 @@ const ImageCard = ({ image_url, src, indexNo }) => {
 
   const getElementID = (e) => {
     const element_id = e.target.id;
-    // console.log(element_id);
 
     const el2 = document.getElementById(element_id);
     
     const parentPar = el2.parentElement.parentElement;
-    
-    console.log(parentPar.childElementCount)
-    for (let x = 0; x < 9; x++) {
-      for (let i = 0; i < parentPar.children[0].children[0].classList.length; i++) {
-        if (parentPar.children[0].children[0].classList.contains("check_img_off")) {
-          console.log("E dey");
-          parentPar.children[0].children[0].classList.remove("check_img_off");
-        } else {
-          parentPar.children[0].children[0].classList.add("check_img_off");
-        }
-      }
+
+    for (let x = 0; x < parentPar.childElementCount; x++) {
+      parentPar.childNodes[x].firstChild.classList.add("check_img_off");
     }
 
-    const checkImageDisplay = el2.parentElement.firstChild;
-    console.log(checkImageDisplay.classList)
-    checkImageDisplay.classList.remove("check_img_off");
-
+    el2.parentElement.firstChild.classList.remove("check_img_off");
   };
 
   useEffect(() => {

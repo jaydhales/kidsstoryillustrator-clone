@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./CreateStory.css";
 
 import PropTypes from "prop-types";
@@ -16,13 +16,21 @@ const ImageCardList = ({ list_of_image_urls, returnImageLink }) => {
   return (
     <div className="imagecard_list_container">
       {generatedImages.map((image, index) => (
-        <ImageCard image_url={image} key={index.toString()} indexNo={index} src={returnImageLink} />
+        <ImageCard
+          image_url={image}
+          key={index.toString()}
+          indexNo={index}
+          src={returnImageLink}
+        />
       ))}
     </div>
   );
-}
+};
 
-ImageCardList.propTypes = { list_of_image_urls: PropTypes.array, returnImageLink: PropTypes.func }
+ImageCardList.propTypes = {
+  list_of_image_urls: PropTypes.array,
+  returnImageLink: PropTypes.func,
+};
 
 export const CreateStory = () => {
   const [generatedImages, setGeneratedImages] = useState([]);
@@ -36,32 +44,51 @@ export const CreateStory = () => {
     return ["", "", ""];
   };
 
-  const array_of_images = ["https://i.pinimg.com/564x/7a/bc/1c/7abc1c5f9c8e10862dc8c0e906f50378.jpg", "https://i.pinimg.com/564x/30/79/b9/3079b92407584ec0ea92bb6ec39a5879.jpg", "https://i.pinimg.com/236x/ea/14/91/ea1491e09397ae136a18c646a08717f1.jpg", "https://i.pinimg.com/564x/06/51/bc/0651bc3e6b04a24c50b2dce52c5732fe.jpg", "https://i.pinimg.com/564x/03/23/f1/0323f1c65032f8807d6e0adc26f35dae.jpg", "https://i.pinimg.com/236x/72/e7/4d/72e74d029193196deb05a14a7ea37d3e.jpg", "https://i.pinimg.com/564x/9e/5d/65/9e5d65afb7a2c44d35746b6bfb11bf27.jpg", "https://i.pinimg.com/564x/3d/84/65/3d84657b1f290102bfc17a017e306624.jpg", "https://i.pinimg.com/236x/12/c8/5b/12c85b70fb9553e7cba731529399f1a9.jpg"]
+  const array_of_images = [
+    "https://i.pinimg.com/564x/7a/bc/1c/7abc1c5f9c8e10862dc8c0e906f50378.jpg",
+    "https://i.pinimg.com/564x/30/79/b9/3079b92407584ec0ea92bb6ec39a5879.jpg",
+    "https://i.pinimg.com/236x/ea/14/91/ea1491e09397ae136a18c646a08717f1.jpg",
+    "https://i.pinimg.com/564x/06/51/bc/0651bc3e6b04a24c50b2dce52c5732fe.jpg",
+    "https://i.pinimg.com/564x/03/23/f1/0323f1c65032f8807d6e0adc26f35dae.jpg",
+    "https://i.pinimg.com/236x/72/e7/4d/72e74d029193196deb05a14a7ea37d3e.jpg",
+    "https://i.pinimg.com/564x/9e/5d/65/9e5d65afb7a2c44d35746b6bfb11bf27.jpg",
+    "https://i.pinimg.com/564x/3d/84/65/3d84657b1f290102bfc17a017e306624.jpg",
+    "https://i.pinimg.com/236x/12/c8/5b/12c85b70fb9553e7cba731529399f1a9.jpg",
+  ];
 
   const getPageImageLink = (image_url) => {
     console.log("This is the image link: " + image_url);
     setPageImageLink(image_url);
-  }
+  };
 
-  const save_story = () => {
-    let currentPageContent = {
-      paragraph: pageParagraph,
-      imageLink: pageImageLink
-    }
+  useEffect(() => {
+    const save_story = () => {
+      if (pageImageLink.length < 2) {
+        console.log("No link available");
 
-    setPageContent([...pageContent, currentPageContent]);
+        console.log("Story Not Saved");
+      } else if (pageParagraph.length < 2) {
+        console.log("No Text available");
 
-    console.log("Current Page Added");
-    console.log(pageContent);
+        console.log("Story Not Saved");
+      } else {
+        let currentPageContent = {
+          paragraph: pageParagraph,
+          imageLink: pageImageLink,
+        };
+        console.log(currentPageContent);
+        setPageContent((pageContent) => [...pageContent, currentPageContent]);
 
-    if (pageParagraph.length > 0 && pageImageLink.length > 0) {
-      console.log("Story Saved Successfully");
-    }
-    else {
-      console.log("Story Not Saved");
-      console.log("Page Paragraph: " + pageParagraph, "   !Page Image Link" + pageImageLink);
-    }
-  }
+        console.log("Story Saved Successfully");
+
+        console.log("Current Page Added");
+
+        setTimeout(() => {
+          console.log(pageContent);
+        }, 2300);
+      }
+    };
+  }, []);
 
   return (
     <div className="create-story-wrapper">
@@ -114,7 +141,7 @@ export const CreateStory = () => {
                   <button>Generate</button>
                 </div>
                 <div className="text-context-tabs gen-button-container">
-                  <button onClick={save_story} >Save Page</button>
+                  <button onClick={save_story}>Save Page</button>
                 </div>
               </div>
             </div>
@@ -126,7 +153,10 @@ export const CreateStory = () => {
               </div>
             ) : (
               <div className="s-c-02-sub-container-02 image-context-alt">
-                <ImageCardList list_of_image_urls={array_of_images} returnImageLink={getPageImageLink} />
+                <ImageCardList
+                  list_of_image_urls={array_of_images}
+                  returnImageLink={getPageImageLink}
+                />
               </div>
             )}
             {/* <div>
