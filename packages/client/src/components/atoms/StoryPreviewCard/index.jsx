@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import './StoryPreviewCard.scss';
 
 export const StoryPreviewCard = () => {
-  return <div>StoryPreviewCard</div>;
+  return <div></div>;
 };
 
 // These are the types of the props that are passed to the component
