@@ -1,3 +1,8 @@
+import express from 'express';
+import { config } from './config/config';
+import Logging from './library/Logger';
+import routes from './routes/index';
+
 import express, { Request, Response } from 'express';
 import path from 'path'
 
@@ -7,9 +12,15 @@ import authRouter from './routes/user.route';
 import storyRouter from './routes/story.route';
 import './db/mongodb'
 
+
 const app = express();
 
 app.use(express.json());
+
+app.get('/', (req, res, next) => res.send({ message: 'Welcome to STORY.AI' }));
+
+app.use('/story', routes )
+
 app.use(express.static(path.join(__dirname, 'public')))
 
 app.get('/', (req, res, next) => res.send({ message: 'Welcome to STORY.AI' }));
