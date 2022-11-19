@@ -8,6 +8,7 @@ import {
   Blog,
   BlogDetails,
   ChangePassword,
+  Contact,
   CreateStory,
   Dashboard,
   Error,
@@ -44,6 +45,7 @@ const App = () => (
       <Route path="/blog" element={<Blog />} />
       <Route path="/blog/:id" element={<BlogDetails />} />
       <Route path="/changePassword" element={<ChangePassword />} />
+      <Route path ="/contact" element ={<Contact/>}/>
       <Route path="/createStory" element={<CreateStory />} />
       <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/error" element={<Error />} />

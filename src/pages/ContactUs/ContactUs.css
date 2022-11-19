@@ -1,0 +1,224 @@
+.Contact-frame_container{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 5%;
+    box-sizing: border-box;
+    border: 1px #e2e2e2 solid;
+    border-radius: 56px;
+    gap: 20px;
+}
+
+.input-container{
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    align-items: left;
+    margin: 10%;
+}
+
+.Contact-us {
+    font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 36px;
+line-height: 44px;
+}
+
+.contact-paragraph{
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+letter-spacing: 0.5px;
+
+}
+
+.Contact-frame_container label{
+    color: #000000;
+ font-weight:500;
+font-size: 16px;
+line-height:24px;
+display: flex;
+flex-direction: column;
+gap: 5px;
+margin-bottom: 10px;
+}
+
+.Contact-frame_container input{
+    width: 100%;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid #8D8E91;
+    
+}
+
+.Contact-frame_container textarea{
+    width: 100%;
+    height: 120px;
+    border-radius: 10px;
+    resize: none;
+    border: 1px solid #8D8E91;
+
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.Contact-frame_container ::placeholder{
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;   
+    letter-spacing: 0.1px;    
+    color: #8D8E91;
+    padding-left:5px;
+}
+
+
+    .chatbot_wrapper{
+        box-sizing: border-box;
+        background: #AA0136;
+        border: 1px solid #AA0136; 
+        border-top-right-radius: 56px;
+        border-bottom-right-radius: 56px ;
+       }
+
+       .input-container button{
+        border: none;
+justify-content: center;
+align-items: center;
+padding: 16px;
+width: 70%;
+height: 50px;
+background: #AA0136;
+border-radius: 56px;
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 19px;
+cursor: pointer;
+color: #FFFFFF;
+
+       }
+
+       .input-container button:hover{
+        background-color: #ee4a7e;
+        transition: 0.2s;
+       }
+
+       
+
+    .Contact-frame_container a{
+        display: flex;
+        padding: 10px;
+        gap: 10px;
+        list-style: none;
+        cursor: pointer;
+        align-items: center;
+        color:#fff;
+        font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+text-decoration: none;
+
+    }   
+
+    .Contact-frame_container a:hover{
+       font-size: 15px;
+       text-decoration: underline #777676;
+       transition: 0.4s;
+
+    }
+
+    .social-media-link a .social-media-link img{
+        cursor: pointer;
+        text-decoration: none;
+        width: 30px;
+        height: 30px;
+    }
+
+    .social-media-link img:hover{
+        width: 25px;
+        height: 25px;
+      transition: 0.2s;
+ 
+     }
+
+     .social-media-link{
+        display: flex;
+        flex-direction: row;
+     }
+
+    .flex-card img{
+        text-decoration: none;
+        width: 20px;
+        height: 20px;
+    }
+
+    .flex-card img:hover{
+        width: 25px;
+        height: 25px;
+      transition: 0.2s;
+ 
+     }
+
+    #chatbot2_icon{
+        float: right;
+        width: 230px;
+        height:  150px;
+        background-blend-mode: color, normal;
+mix-blend-mode: multiply;
+        
+    }
+
+#chatbot1{
+    width:  164px;
+    height: 140px;
+    background-blend-mode: color, normal;
+mix-blend-mode: multiply;
+}
+
+    .flex-card{
+        padding-left: 10%;
+        padding-top: 5%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    
+    }
+
+    .flex-card p{
+        color: #FFFFFF;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 40px; 
+    }
+    
+    @media only screen and (max-width: 540px){
+
+        .Contact-frame_container{
+            display: grid;
+            grid-template-rows:auto;
+            grid-template-columns: none;
+            margin: 5%;
+            box-sizing: border-box;
+            border: none;
+            border-radius: 56px;
+            gap: 20px;
+        }
+
+        .chatbot_wrapper{
+            border-radius: 0;
+        }
+
+    }
+        
+    
+
