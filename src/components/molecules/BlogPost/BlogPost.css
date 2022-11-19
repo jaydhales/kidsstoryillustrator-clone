@@ -1,21 +1,50 @@
-.BlogPost{
-    padding: 0rem 3rem;
+.BlogPost {
+  padding: 0rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .BlogPost__heading{
-    border-bottom: 1px solid #EECCD7;
+    font-size: 1.5rem;
+    font-weight: 400;
 }
-.BlogPost__card{
-display:flex;
-gap: 2rem;
-
+.BlogPost__heading-div {
+    width: 5rem;
+    height: .2rem;
+    display: block;
+  background-color:  #eeccd7;
+  border-radius: 5rem;
+  margin-top: -1rem;
+  margin-bottom: 1rem;
+}
+.BlogPost__card {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+.BlogPost__card-main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  align-items: center;
 }
 
 @media only screen and (max-width: 75em) {
 }
 @media only screen and (max-width: 56.25em) {
+  .BlogPost__card-main {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media only screen and (max-width: 37.5em) {
-    .BlogPost {
-        padding: 0rem 2rem;
-      }
+  .BlogPost__card {
+    flex-direction: column;
   }
+  .BlogPost__card-main {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .BlogPost {
+    padding: 0rem 2rem;
+  }
+}

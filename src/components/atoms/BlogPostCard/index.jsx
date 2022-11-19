@@ -1,6 +1,6 @@
 import React, { useId } from "react";
 import "./BlogPostCard.css";
-import pic8 from "./pic8.png";
+import pic8 from "./image/pic8.png";
 import PropTypes from "prop-types";
 import { SmallImg } from "../../../icons";
 
@@ -17,15 +17,19 @@ const BlogPostCard = ({
   return (
     <section className="BlogPostCard">
       <div className="BlogHeading">
-        <img src={pic8} alt=""/>
-        <div className="BlogHeading__head">
-          <h3>{heading}</h3>
-          <small>{date}</small>
+        <div className="BlogHeading__content">
+          <div className="BlogHeading__img">
+          <img src={pic8} alt="" />
+          </div>
+          <div className="BlogHeading__head">
+            <small><b>{heading}</b></small>
+            <small>{date}</small>
+          </div>
         </div>
         <SmallImg />
       </div>
       <div>
-        <img src={`/${relativeUrl ?? "places"}/${image}.png`} alt="blog card" />
+        <img src={`./${relativeUrl ?? "image"}/${image}.png`} alt="blog card" />
       </div>
       <div>
         <h3>{title}</h3>
