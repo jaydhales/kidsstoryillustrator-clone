@@ -24,17 +24,17 @@
   align-items: center;
 }
 .BlogPost__card-main {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
-  align-items: center;
 }
 
 @media only screen and (max-width: 75em) {
 }
 @media only screen and (max-width: 56.25em) {
   .BlogPost__card-main {
-
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media only screen and (max-width: 37.5em) {
@@ -42,7 +42,10 @@
     flex-direction: column;
   }
   .BlogPost__card-main {
-
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    place-items: center;
+    gap: 2rem;
   }
   .BlogPost {
     padding: 0rem 2rem;

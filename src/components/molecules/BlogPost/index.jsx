@@ -47,6 +47,7 @@ const cardDetails = [
     title: "subscriptions",
     content: "Subscriptions has been added to the functionalities of story.ai to perfectly balance the company’s regular...",
   },
+  
 ]
 
 const BlogPost = () => {
