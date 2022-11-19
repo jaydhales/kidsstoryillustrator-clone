@@ -16,12 +16,12 @@ const BlogPostCard = ({
 
   return (
     <section className="BlogPostCard">
-      <div className="BlogHeading">
-        <div className="BlogHeading__content">
-          <div className="BlogHeading__img">
-            <img src={pic8} alt="" />
+      <div className="BlogPostCard__heading">
+        <div className="BlogPostCard__content">
+          <div className="BlogPostCard__content-img">
+            <img src={pic8} alt="" className="BlogPostCard__content-image" />
           </div>
-          <div className="BlogHeading__head">
+          <div className="BlogPostCard__title">
             <small>
               <b>{heading}</b>
             </small>

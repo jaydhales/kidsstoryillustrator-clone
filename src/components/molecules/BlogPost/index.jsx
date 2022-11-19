@@ -1,6 +1,6 @@
 import React from "react";
 import BlogPostCard from "../../atoms/BlogPostCard";
-import "./BlogPost.css";
+import "./BlogPost.scss";
 
 
 const postCardDetails = [
@@ -47,7 +47,7 @@ const cardDetails = [
     title: "subscriptions",
     content: "Subscriptions has been added to the functionalities of story.ai to perfectly balance the company’s regular...",
   },
-  
+
 ]
 
 const BlogPost = () => {
