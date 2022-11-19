@@ -18,8 +18,8 @@ export const DashBoard = () => {
         <section className="Welcome">
           <p>Hi John Welcome Back</p>
           <hr />
-          <div className="">
-            <Button>Create Story</Button>
+          <div className="Create__Story__Container">
+            <Button >Create Story</Button>
           </div>
 
           <div className="Button__Container">
@@ -33,7 +33,7 @@ export const DashBoard = () => {
           <p>Trending Styles</p>
           <hr />
 
-          <div className="TrendingStyles__Image__Wrapper">
+          <div className="TrendingStyles__Image__Wrapper grey-border">
             <div className="TrendingStyles__Image__Container">
               <img src="/Assets/Images/TS1.png" alt="image1" />
               <img src="/Assets/Images/TS2.png" alt="image2" />
@@ -46,7 +46,7 @@ export const DashBoard = () => {
 
       <section className="Section__2">
         <section className="RecentStyles">
-          <div className="RecentStyles__Image__Wrapper">
+          <div className="RecentStyles__Image__Wrapper grey-border">
             <div className="RecentStyles__Image__Container">
               <img src="/Assets/Images/RS1.png" alt="" />
               <img src="/Assets/Images/RS2.png" alt="" />
@@ -57,10 +57,10 @@ export const DashBoard = () => {
           </div>
         </section>
 
-        <section className="Statistics">
+        <section className="Statistics flex">
           <div>
             <p>Creation Statistics</p>
-            <div className="linear__progress__indicator">
+            <div className="linear__progress__indicator grey-border flex" >
               <progress max="100" value="25"></progress>
               <progress max="100" value="50"></progress>
               <progress max="100" value="75"></progress>

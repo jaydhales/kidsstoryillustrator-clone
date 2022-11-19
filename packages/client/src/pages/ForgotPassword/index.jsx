@@ -11,7 +11,7 @@ export const ForgotPassword = () => {
   //  const [showError , setShowError] = useState(false);
   //  const [email , setEmail] = useState(false);
   //  const [showMessage, setShowMessage] = useState(false);
-  function onHandleSubmit(event) {
+  function onHandleSubmit (event) {
     event.preventDefault();
   }
   return (

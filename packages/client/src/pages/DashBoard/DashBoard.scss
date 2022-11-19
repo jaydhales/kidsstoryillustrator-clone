@@ -31,6 +31,19 @@
         }
 } 
 
+
+
+.Create__Story__Container {
+    // background:url('/Assets/Images/Welcome.png');
+}
+
+
+
+
+
+
+
+
 .Button__Container {
     overflow-x:scroll;
     max-width:580px;
@@ -75,9 +88,24 @@
 
 }
 
-.Border {
+.grey-border {
     border: 0.5px solid #CAC4D0;
 }
+.flex {
+    display: flex;
+    flex-direction: column;
+}
+.linear__progress__indicator {
+    padding:40px;
+    max-width: 320px;
+    border-radius: var(--border-radius-medium);
+    justify-content: space-around;
+    
+    & progress {
+        max-width: 280px;
+    }
+}
+
 
 @media screen and (min-width:768px) {
     
