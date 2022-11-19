@@ -4,6 +4,17 @@ import logoWhite from "../../assets/img/logo_white.png";
 import arrowLeft from "../../assets/img/arrow-left.png"
 
 export const ChangePassword = () => {
+  const [ password1, setPassword1 ] = React.useState("");
+  const [ password2, setPassword2 ] = React.useState("");
+  const [ errors, setErrors ] = React.useState([]);
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+
+    if(!password1|| !password2){
+      setErrors([...errors, "Fields cannot be empty"]);
+    }
+  }
 
   const goBack = () => {
     window.location.href="/forgotPassword"
@@ -33,13 +44,13 @@ export const ChangePassword = () => {
           <p>A confirmation link will be sent to your email to change your password</p>
         </header>
 
-        <form action="" className="form">
+        <form onSubmit={handleFormSubmit} className="form">
 
           <label htmlFor="pasword1" className="label" id="password1">Old Password</label><br />
-          <input type="password" placeholder="Enter Password" className="input input-password" name="password1"/>
+          <input type="password" placeholder="Enter Password" className="input input-password" name="password1" id="password1" onChange={(e) => setPassword1(e.target.value)}/>
 
           <label htmlFor="pasword2" className="label" id="password2">New Password</label><br />
-          <input type="password" placeholder="Enter Password" className="input input-password" name="password" />
+          <input type="password" placeholder="Enter Password" className="input input-password" name="password2" id="password2" onChange={(e) => setPassword2(e.target.value)}/>
 
           <button className="btn btn-primary">Reset Password</button>
         </form>

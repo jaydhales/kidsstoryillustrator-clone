@@ -118,6 +118,11 @@ body {
   display: none;
 }
 
+.error {
+  color: #A50A17;
+  margin-bottom: 8px;
+}
+
 @media screen and (min-width: 1040px){
   .two-column {
     display: flex;

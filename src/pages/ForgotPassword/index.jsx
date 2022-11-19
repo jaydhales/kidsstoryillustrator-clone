@@ -5,6 +5,16 @@ import logoWhite from "../../assets/img/logo_white.png";
 import arrowLeft from "../../assets/img/arrow-left.png"
 
 export const ForgotPassword = () => {
+  const [ email, setEmail ] = React.useState("");
+  const [ errors, setErrors ] = React.useState([]);
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+
+    if(!email){
+      setErrors([...errors, "Fields cannot be empty"])
+    }
+  }
 
   const goBack = () => {
     window.location.href="/login"
@@ -34,9 +44,11 @@ export const ForgotPassword = () => {
           <p>A confirmation link will be sent to your email to change your password</p>
         </header>
 
-        <form action="" className="form">
+        <form className="form" onSubmit={handleFormSubmit}>
           <label htmlFor="email" className="label">Email</label><br />
-          <input type="text" placeholder="Enter Email Address" className="input" name="email" />
+          <input type="text" placeholder="Enter Email Address" className="input" name="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+
+          { errors.map((error, index) => <p key={index} className="error">{error}</p>)}
 
           <button className="btn btn-primary">Reset Password</button>
         </form>

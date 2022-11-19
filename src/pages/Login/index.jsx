@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Login.css";
 import logo from "../../assets/img/logo.png";
 import logoWhite from "../../assets/img/logo_white.png";
@@ -8,6 +8,19 @@ import appleLogo from "../../assets/img/apple_logo.png";
 
 
 export const Login = () => {
+  const [ email, setEmail ] = React.useState("");
+  const [ password, setPassword ] = React.useState("");
+  const [ errors, setErrors ] = React.useState([]);
+  const [ isLoading, setIsLoading ] = React.useState(false);
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+
+    if(!email || !password ){
+      setErrors([...errors, "Fields cannot be empty"])
+    }
+  }
+
   return (
     <div className="two-column">
       <div className="branding">
@@ -29,15 +42,16 @@ export const Login = () => {
         </nav>
       </header>
 
-        <form action="" className="form">
+        <form onSubmit={handleFormSubmit} className="form">
 
           <label htmlFor="email" className="label">Email</label><br />
-          <input type="text" placeholder="Enter Email Address" className="input" name="email" />
+          <input type="text" placeholder="Enter Email Address" className="input" name="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
 
           <label htmlFor="pasword" className="label">Password</label><br />
-          <input type="password" placeholder="Enter Password" className="input input-password" name="password"/>
+          <input type="password" placeholder="Enter Password" className="input input-password" name="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} />
 
-          <button className="btn btn-primary">Log In</button>
+          { errors.map((error, index) => <p key={index} className="error">{error}</p>)}
+          <button className="btn btn-primary">{isLoading ? 'Logging in...' : 'Log In'}</button>
         </form>
 
         <a href="/forgotPassword" id="reset-password">Forgot Password</a>
