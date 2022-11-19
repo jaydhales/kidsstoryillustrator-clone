@@ -79,6 +79,7 @@ body {
   color: white;
   font-family: 'Nunito', sans-serif;
   font-size: 14px;
+  cursor: pointer;
 }
 
 .btn-primary {
@@ -97,6 +98,7 @@ body {
   background-color: transparent;
   padding: 0;
   margin-right: 8px;
+  cursor: pointer;
 }
 
 .btn-round-img {

@@ -35,12 +35,12 @@ export const Login = () => {
           <input type="text" placeholder="Enter Email Address" className="input" name="email" />
 
           <label htmlFor="pasword" className="label">Password</label><br />
-          <input type="password" placeholder="Enter Password" className="input input-password" name="username"/>
+          <input type="password" placeholder="Enter Password" className="input input-password" name="password"/>
 
           <button className="btn btn-primary">Log In</button>
         </form>
 
-        <a href="/reset-password" id="reset-password">Forgot Password</a>
+        <a href="/forgotPassword" id="reset-password">Forgot Password</a>
 
         <div className="flex or">
           <div className="hLine"></div>
