@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 import PropTypes from "prop-types";
 
-import "./Story.css";
+import "./Story.scss";
 import { Layout } from "../../components/molecules";
 import arrowLeft from "../../assets/Story/icons/arrow-left.png";
 import arrowRight from "../../assets/Story/icons/arrow-right.png";
