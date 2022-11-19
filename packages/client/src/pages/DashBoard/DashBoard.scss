@@ -1,5 +1,6 @@
 .DashBoard {
-    
+    display:flex;
+    flex-direction: column;
 }
 
 .Section__1 {
@@ -16,10 +17,23 @@
 
 
 .Welcome {
+        &:p   {
+         font-size: 22px;
+        font-weight: 500;
+        line-height: 30px;
+        letter-spacing: 0em;
+         text-align: left;
 
+        }
+
+        &:hr {
+            border: 1px solid var(--color-neutral-100);
+        }
 } 
 
 .Button__Container {
+    overflow-x:scroll;
+    max-width:580px;
 
 }
 
@@ -28,16 +42,47 @@
 
 
 .TrendingStyles {
+    font-family: Nunito;
+    font-size: var(--font-size-4);
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing:--letter-spacing-1;
+    text-align: left;
 
-
+    &__Image__Container {
+      
+        &img {
+                max-width: 169px;
+                max-height:200px;
+        }
+    }
 } 
 
 .RecentStyles {
 
+&__Image__container {
+
+            & img {
+                    max-width: 140px;
+                    max-height: 170px;
+            }
+}
 
 } 
 
 .Statistics {
 
 
+}
+
+.Border {
+    border: 0.5px solid #CAC4D0;
+}
+
+@media screen and (min-width:768px) {
+    
+}
+
+@media screen and (min-width:1024px) {
+    
 }

@@ -7,7 +7,7 @@ import './Button.scss';
 export const Button = ({ children, secondary }) => {
   return (
     <button className={`Button ${secondary ? 'Secondary' : 'Primary'}`}>
-      {children}{' '}
+      {children}
     </button>
   );
 };

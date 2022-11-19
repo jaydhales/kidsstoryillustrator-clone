@@ -32,33 +32,40 @@ export const DashBoard = () => {
         <section className="TrendingStyles">
           <p>Trending Styles</p>
           <hr />
-          <div>
-            <img src="/Assets/Images/TS1.png" alt="image1" />
-            <img src="/Assets/Images/TS2.png" alt="image2" />
-            <img src="/Assets/Images/TS3.png" alt="image3" />
+
+          <div className="TrendingStyles__Image__Container">
+            <div className="TrendingStyles__Image__Wrapper">
+              <img src="/Assets/Images/TS1.png" alt="image1" />
+              <img src="/Assets/Images/TS2.png" alt="image2" />
+              <img src="/Assets/Images/TS3.png" alt="image3" />
+            </div>
+            <p>More Illustrations</p>
           </div>
-          <p>More Illustrations</p>
         </section>
       </section>
 
       <section className="Section__2">
         <section className="RecentStyles">
-          <div>
-            <img src="/Assets/Images/RS1.png" alt="" />
-            <img src="/Assets/Images/RS2.png" alt="" />
-            <img src="/Assets/Images/RS3.png" alt="" />
-            <img src="/Assets/Images/RS4.png" alt="" />
+          <div className="RecentStyles__Image__Container">
+            <div className="RecentStyles__Image__Wrapper">
+              <img src="/Assets/Images/RS1.png" alt="" />
+              <img src="/Assets/Images/RS2.png" alt="" />
+              <img src="/Assets/Images/RS3.png" alt="" />
+              <img src="/Assets/Images/RS4.png" alt="" />
+            </div>
+            <p>More Illustrations</p>
           </div>
-          <p>More Illustrations</p>
         </section>
 
         <section className="Statistics">
-          <p></p>
-          <div className="linear__progress__indicator">
-            <progress max="100" value="25"></progress>
-            <progress max="100" value="50"></progress>
-            <progress max="100" value="75"></progress>
-            <progress max="100" value="100"></progress>
+          <div>
+            <p>Creation Statistics</p>
+            <div className="linear__progress__indicator">
+              <progress max="100" value="25"></progress>
+              <progress max="100" value="50"></progress>
+              <progress max="100" value="75"></progress>
+              <progress max="100" value="100"></progress>
+            </div>
           </div>
         </section>
       </section>
