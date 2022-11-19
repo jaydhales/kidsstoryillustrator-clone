@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 
 import "./App.css";
+
 import {
   About,
   Blog,
@@ -21,6 +22,7 @@ import {
   Pricing,
   Privacy,
   Profile,
+  ProfileEdit,
   SignUp,
   SummaryActivities,
 } from "./pages";
@@ -57,6 +59,7 @@ const App = () => (
       <Route path="/pricing" element={<Pricing />} />
       <Route path="/privacy" element={<Privacy />} />
       <Route path="/profile" element={<Profile />} />
+      <Route path="/profile/edit" element={<ProfileEdit />} />
       <Route path="/signup" element={<SignUp />} />
       <Route path="/summaryActivities" element={<SummaryActivities />} />
     </Routes>
