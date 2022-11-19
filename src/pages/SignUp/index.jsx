@@ -1,6 +1,6 @@
 
 import React, { useState } from "react";
-import "./SignUp.css";
+import "./SignUp.scss";
 import logo from "../../assets/img/logo.png";
 import googleLogo from "../../assets/img/google_logo.png";
 import facebookLogo from "../../assets/img/facebook_logo.png";
