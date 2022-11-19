@@ -1,2 +1,124 @@
-.FAQQuestions {
+/* .FAQQuestions {
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900;1000&display=swap');
+
+.helpQuestions-container{
+    width: 100%;
+    font-family: 'Nunito';
+    padding: 2rem;
 }
+
+.helpQuestions-container h3{
+    text-align: center;
+    color: #AA0136;
+    font-weight: 500;
+    font-size: 45px;
+    text-transform: capitalize;
+}
+
+.questions-container{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #E3AABC;
+    padding: .3rem;
+}
+
+.main-questions-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .8rem
+}
+
+.main-questions-container img{
+    padding-left: 1rem;
+}
+
+.main-questions-container p{
+    font-size: 18px;
+}
+
+.further-questions-container{
+    padding:  5rem;
+    
+}
+
+.further-questions-subcontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    border: 1px solid #AA0136;
+    border-radius: 12px; 
+    padding:  5rem; 
+    margin: auto;
+    
+}
+
+.further-questions-subcontainer h4{
+    font-weight: 600;
+    font-size: 36px;
+    color: #131313;
+    padding: .1rem;
+}
+
+.further-questions-subcontainer p{
+    font-weight: 400;
+    font-size: 17px;
+    padding-bottom: 1rem;
+}
+
+
+/* media queries */
+@media screen and (max-width: 900px ){
+    .helpQuestions-container h3{
+        font-size: 25px;
+    }
+
+    .helpQuestions-container{
+        padding: 1rem;
+    }
+
+    .further-questions-subcontainer img{
+        display: none
+    }
+
+    .further-questions-subcontainer p{
+        display: none
+    }
+
+    .further-questions-subcontainer{
+        width: 100%;
+        
+    }
+
+    .further-questions-subcontainer h4{
+        font-size: 15px;
+        font-weight: 800;
+        padding: .2rem;
+    }
+
+
+    .further-questions-container{
+       padding: .1rem;
+    }
+
+    .main-questions-container p{
+        font-size: 15px;
+    }
+
+    
+
+}
+
+
+@media screen and (max-width: 1024px ){
+    
+
+    .further-questions-subcontainer{
+        padding: 2rem;
+    }
+}
+
