@@ -1,8 +1,8 @@
-import React, { FC, Fragment, useEffect } from 'react';
+import React, { useEffect } from "react";
 
-import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
+import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 
-import './App.scss';
+import "./App.css";
 import {
   About,
   Blog,
@@ -22,7 +22,7 @@ import {
   Profile,
   SignUp,
   SummaryActivities,
-} from './pages';
+} from "./pages";
 
 const MoveToTop = () => {
   const navigate = useNavigate();

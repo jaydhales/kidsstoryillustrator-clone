@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-import './AboutUsVision.scss';
+import "./AboutUsVision.css";
 
 export const AboutUsVision = () => {
   return <div>AboutUsVision</div>;

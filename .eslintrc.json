@@ -1,77 +1,22 @@
 {
-  "env": {
-    "browser": true,
-    "es2021": true
-  },
-  "extends": [
-    "plugin:react/recommended",
-    "standard",
-    "eslint:recommended",
-    "important-stuff"
-  ],
-  "parserOptions": {
-    "ecmaVersion": "latest",
-    "sourceType": "module"
-  },
-  "plugins": ["react", "eslint-plugin-css-modules"],
-  "rules": {
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-    "semi": ["error", "always"],
-    "comma-dangle": ["error", "always-multiline"],
-    "react/function-component-definition": [
-      2,
-      {
-        "namedComponents": "arrow-function",
-        "unnamedComponents": "arrow-function"
-      }
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended"
     ],
-    "linebreak-style": 0,
-    "no-console": "error",
-    "no-param-reassign": 0,
-    "react/jsx-props-no-spreading": "off",
-    "import/order": [
-      "error",
-      {
-        "groups": [
-          "builtin",
-          "external",
-          "internal",
-          "parent",
-          "sibling",
-          "index"
-        ],
-        "pathGroups": [
-          {
-            "pattern": "react",
-            "group": "external",
-            "position": "before"
-          }
-        ],
-        "pathGroupsExcludedImportTypes": ["react"],
-        "newlines-between": "always",
-        "alphabetize": {
-          "order": "asc",
-          "caseInsensitive": true
-        }
-      }
+    "overrides": [
     ],
-    "import/no-cycle": "off"
-  },
-  "overrides": [
-    {
-      "files": "./packages/server/**/*.js",
-      "extends": ["standard"],
-      "rules": {
-        "no-console": "off",
-        "quotes": ["error", "double"],
-        "indent": ["error", 4],
-        "max-len": ["error", { "code": 120 }],
-        "object-curly-spacing": "off",
-        "semi": "error",
-        "no-throw-literal": "off",
-        "require-jsdoc": "off",
-        "camelcase": "off"
-      }
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        "no-unused-vars": "off"
     }
-  ]
 }

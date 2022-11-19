@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-import './Login.scss';
+import "./Login.css";
 
 export const Login = () => {
   return <div>Login</div>;

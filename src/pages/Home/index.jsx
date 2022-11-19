@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-import './Home.scss';
-import { Navbar } from '../../components/molecules';
+import "./Home.css";
+import { Navbar } from "../../components/molecules";
 
 export const Home = () => {
   return <div>Home</div>;

@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-import './DashboardTable.scss';
+import "./DashboardTable.css";
 
 export const DashboardTable = () => {
   return <div>DashboardTable</div>;

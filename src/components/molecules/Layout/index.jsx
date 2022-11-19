@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-import './Layout.scss';
-import { Navbar, Footer } from '..';
+import "./Layout.css";
+import { Navbar, Footer } from "..";
 
 export const Layout = ({ children }) => {
   return (

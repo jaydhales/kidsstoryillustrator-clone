@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-import './DashboardHeader.scss';
+import "./DashboardHeader.css";
 
 export const DashboardHeader = () => {
   return <div>DashboardHeader</div>;
