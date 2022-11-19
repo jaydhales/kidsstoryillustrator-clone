@@ -138,9 +138,10 @@ hr {
     border-radius: var(--border-radius-medium);
     justify-content: space-around;
     align-items: center;
+    padding:var(--spacing-medium)
    
     & progress {
-        max-width: 280px;
+        width: 280px;
     }
 }
 

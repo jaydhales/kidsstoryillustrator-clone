@@ -68,7 +68,7 @@ export const DashBoard = () => {
               </div>
             </section>
 
-            <section className="Statistics flex">
+            <section className="Statistics">
               <div>
                 <p>Creation Statistics</p>
                 <div className="linear__progress__indicator grey-border flex">

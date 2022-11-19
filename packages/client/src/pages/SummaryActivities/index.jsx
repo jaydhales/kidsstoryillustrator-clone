@@ -9,7 +9,11 @@ import './SummaryActivities.scss';
 // import { storiesData } from '../../data';
 
 export const SummaryActivities = () => {
-  return <div></div>;
+  return <div>
+        <div>
+         </div>
+
+  </div>;
 };
 
 // These are the types of the props that are passed to the component
