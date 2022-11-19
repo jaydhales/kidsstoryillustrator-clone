@@ -1,3 +1,28 @@
 .BlogPostCard{
-    
+display: flex;
+flex-direction: column;
+gap: 1rem;
+padding: 1rem 2rem;
+border: 1px solid rgba(67,67,67,0.1);
+width: 100%;
 }
+.BlogHeading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.BlogHeading img{
+}
+.BlogHeading__head{
+    display: flex;
+    flex-direction: column;
+}
+
+
+@media only screen and (max-width: 75em) {
+}
+@media only screen and (max-width: 56.25em) {
+}
+@media only screen and (max-width: 37.5em) {
+
+  }

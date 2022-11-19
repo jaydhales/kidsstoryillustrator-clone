@@ -1,5 +1,5 @@
 import React from "react";
-import { BlogHero, Layout } from "../../components/molecules";
+import { BlogHero, BlogPost, Layout } from "../../components/molecules";
 
 import PropTypes from "prop-types";
 
@@ -9,6 +9,7 @@ export const Blog = () => {
   return (
     <Layout>
       <BlogHero />
+      <BlogPost/>
     </Layout>
   );
 };

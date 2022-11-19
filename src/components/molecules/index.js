@@ -3,6 +3,7 @@ export { default as AboutUsHero } from "./AboutUsHero";
 export { default as AboutUsTeam } from "./AboutUsTeam";
 export { default as AboutUsVision } from "./AboutUsVision";
 export { default as BlogHero } from "./BlogHero";
+export { default as BlogPost } from "./BlogPost";
 export { default as DashboardHeader } from "./DashboardHeader";
 export { default as DashboardSidebar } from "./DashboardSidebar";
 export { default as DashboardTable } from "./DashboardTable";

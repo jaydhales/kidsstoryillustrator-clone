@@ -1,0 +1,21 @@
+.BlogPost{
+    padding: 0rem 3rem;
+}
+.BlogPost__heading{
+    border-bottom: 1px solid #EECCD7;
+}
+.BlogPost__card{
+display:flex;
+gap: 2rem;
+
+}
+
+@media only screen and (max-width: 75em) {
+}
+@media only screen and (max-width: 56.25em) {
+}
+@media only screen and (max-width: 37.5em) {
+    .BlogPost {
+        padding: 0rem 2rem;
+      }
+  }
