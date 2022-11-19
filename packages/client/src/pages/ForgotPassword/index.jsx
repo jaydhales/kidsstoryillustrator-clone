@@ -17,10 +17,13 @@ export const ForgotPassword = () => {
   return (
     <>
       <Navbar>
-        <Button secondary>
- 
-          <p>En</p>
-          <img src="" alt="" />
+        <Button secondary className= "Margin-right" >
+
+          <div className="Button__inner__container">
+            <p>En</p>
+            <img src="/Assets/Icons/arrow-down.svg" alt="" />
+          </div>
+
         </Button>
       </Navbar>
 
@@ -30,7 +33,7 @@ export const ForgotPassword = () => {
             <p className="Form__title1">Forgot Password?</p>
             <hr />
             <p className="Form__title2">
-              Enter your email and we ll send you a link to rest your password
+              Enter your email and we ll send you a link to reset your password
             </p>
             <div>
               <label htmlFor="email">Email</label>
