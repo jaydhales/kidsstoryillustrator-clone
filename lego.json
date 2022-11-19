@@ -42,7 +42,12 @@
       "type": "icon-story",
       "path": "src/assets/icons",
       "isFile": true,
-      "file": "ICON"
+      "file": "ICON_STORY"
+    },{
+      "type": "icon-mdx",
+      "path": "src/assets/icons",
+      "isFile": true,
+      "file": "ICON_MDX"
     },
     {
       "type": "reducer",
@@ -103,6 +108,10 @@
       "name": "<name>.stories.jsx",
       "template": "./template/molecules.stories.jsx"
     },
+    "ICON_STORY": {
+      "name": "<name>.stories.jsx",
+      "template": "./template/icons.stories.jsx"
+    },
     "PAGE_STORY": {
       "name": "<name>.stories.jsx",
       "template": "./template/pages.stories.jsx"
@@ -114,6 +123,10 @@
     "MOLECULE_MDX": {
       "name": "<name>.stories.mdx",
       "template": "./template/molecules.stories.mdx"
+    },
+    "ICON_MDX": {
+      "name": "<name>.stories.mdx",
+      "template": "./template/icons.stories.mdx"
     },
     "PAGE_MDX": {
       "name": "<name>.stories.mdx",
