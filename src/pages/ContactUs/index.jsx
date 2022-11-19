@@ -1,5 +1,5 @@
 import "./ContactUs.css";
-
+import "@fontsource/nunito";
 
 import React, { useState } from 'react';
 
@@ -45,6 +45,8 @@ const Contact = () => {
      <a href="tel:0l-5478-9231"> <img src="/assets/images/call-calling.svg" id="phone_icon" alt="phone"/>0l-5478-9231</a> 
      <a href="/"><img src="./assets/images/global.svg" id="global_icon" alt="global"/>www.story.ai</a>
         </ul>
+
+        <p id="social-media-link_paragraph">Social media</p>
 
         <div className="social-media-link">
       <a href="/" > <img src="/assets/images/instagram.svg" id="instagram_icon" alt="instagram"/></a>
