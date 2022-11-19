@@ -3,9 +3,14 @@ import React, { useEffect } from "react";
 import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 
 import "./App.css";
+
+
 import {
   About,
   Blog,
+  Info,
+  Settings,
+  Users,
   BlogDetails,
   ChangePassword,
   CreateStory,
@@ -57,6 +62,9 @@ const App = () => (
       <Route path="/profile" element={<Profile />} />
       <Route path="/signup" element={<SignUp />} />
       <Route path="/summaryActivities" element={<SummaryActivities />} />
+      <Route path="/acct-info" element={<Info/>} />
+      <Route path="/account-settings" element={<Settings />} />
+      <Route path="/Users" element={<Users />} /> 
     </Routes>
   </>
 );

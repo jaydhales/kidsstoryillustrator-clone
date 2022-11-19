@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+.side-bar {
+  width: 15%;
+}
+
+.wrapper {
+  width: 757px;
+  margin: 0 auto;
+}
+
+ .cover {
+  margin: 0 30px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  height: 100vh;
+  font-family: "Nunito", sans-serif;
+}
+
+.profile {
+  display: flex;
+}
+
+.header {
+  color: #aa0136;
+} */
+
+/* form section */
+ .name-section {
+  width: 78%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+
+h2 {
+  margin: 10px 0;
+}
+
+input {
+  padding: 10px 32px;
+  border: 1px solid #e4e4e4;
+  border-radius: 56px;
+  margin: 10px 0;
+}
+
+.pass-section {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.address-section {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btns {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.btn1 {
+  border: 1px solid #e4e4e4;
+  width: 120px;
+  background-color: #e4e4e4;
+  padding: 10px;
+  border-radius: 52px;
+}
+
+.btn2 {
+  border: 1px solid #aa0136;
+  width: 120px;
+  background-color: #aa0136;
+  padding: 10px;
+  color: white;
+  border-radius: 52px;
+} 
