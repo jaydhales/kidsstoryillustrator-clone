@@ -479,16 +479,13 @@
                         "example": "theuser@gmail.com"
                     },
                     "lastname": {
-                        "type": "string",
-                        "example": "user_lastname"
+                        "type": "string"
                     },
                     "firstname": {
-                        "type": "string",
-                        "example": "user_firstname"
+                        "type": "string"
                     },
                     "username": {
-                        "type": "string",
-                        "example": "user_username"
+                        "type": "string"
                     },
                     "hash": {
                         "type": "string"
@@ -518,9 +515,12 @@
                     "email": {
                         "type": "string"
                     },
-                    "username": {
+                    "firstname": {
                         "type": "string"
                     },
+                    "lastname": {
+                      "type": "string"
+                  },
                     "password": {
                         "type": "string"
                     }
