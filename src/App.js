@@ -17,6 +17,7 @@ import {
   HowToUse,
   Login,
   MyStories,
+  Story,
   Pricing,
   Privacy,
   Profile,
@@ -52,6 +53,7 @@ const App = () => (
       <Route path="/howToUse" element={<HowToUse />} />
       <Route path="/login" element={<Login />} />
       <Route path="/myStories" element={<MyStories />} />
+      <Route path="/story/:id" element={<Story />} />
       <Route path="/pricing" element={<Pricing />} />
       <Route path="/privacy" element={<Privacy />} />
       <Route path="/profile" element={<Profile />} />
