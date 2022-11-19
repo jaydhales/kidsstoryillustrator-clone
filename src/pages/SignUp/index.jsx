@@ -1,5 +1,5 @@
 import React from "react";
-import "./SignUp.css";
+import "./SignUp.scss";
 import logo from "../../assets/img/logo.png";
 import googleLogo from "../../assets/img/google_logo.png";
 import facebookLogo from "../../assets/img/facebook_logo.png";
@@ -9,10 +9,11 @@ import logoWhite from "../../assets/img/logo_white.png";
 
 export const SignUp = () => {
   return (
-    <div className="two-column">
+    <div className="Signup">
+      <div className="two-column">
       <div className="branding">
         <div className="content">
-          <img src={logoWhite} alt="logo" id="logo" />
+          <img src={logoWhite} alt="logo" id="logo2" />
           <div className="text">
             <h2>The easiest way to write kids story books </h2>
             <p>Write your stories and generate amazing pictures with the help of our ai technologies.</p>
@@ -68,6 +69,7 @@ export const SignUp = () => {
 
         </div>
       </div>
+    </div>
     </div>
   );
 };

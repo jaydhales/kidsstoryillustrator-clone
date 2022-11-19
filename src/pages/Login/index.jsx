@@ -1,5 +1,5 @@
 import React from "react";
-import "./Login.css";
+import "./Login.scss";
 import logo from "../../assets/img/logo.png";
 import logoWhite from "../../assets/img/logo_white.png";
 import googleLogo from "../../assets/img/google_logo.png";
@@ -9,7 +9,8 @@ import appleLogo from "../../assets/img/apple_logo.png";
 
 export const Login = () => {
   return (
-    <div className="two-column">
+    <div className="Login">
+      <div className="two-column">
       <div className="branding">
         <div className="content">
           <img src={logoWhite} alt="logo" id="logo" />
@@ -22,7 +23,7 @@ export const Login = () => {
       <div>
       <div id="auth">
       <header className="center-align">
-        <img src={logo} alt="logo" id="logo" />
+        <img src={logo} alt="logo" id="logo2" />
         <nav className="auth-nav">
           <a href="/login" className="link tab-link active">Login</a>
           <a href="/signup" className="link tab-link">Create Account</a>
@@ -66,6 +67,7 @@ export const Login = () => {
 
       </div>
       </div>
+    </div>
     </div>
   );
 };
