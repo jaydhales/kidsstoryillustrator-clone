@@ -1,14 +1,14 @@
 import React from 'react';
 
-import Book from './Book';
+import Draft from './Draft';
 
 export default {
-  title: 'icons/Book',
-  component: Book,
+  title: 'icons/Draft',
+  component: Draft,
   argTypes: {},
 };
 
-const Template = args => <Book {...args} />;
+const Template = args => <Draft {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {};

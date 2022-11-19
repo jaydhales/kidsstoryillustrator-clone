@@ -1,6 +1,6 @@
 import React from 'react';
 
-import blockName from '.';
+import blockName from './blockName';
 
 export default {
   title: 'icons/blockName',
