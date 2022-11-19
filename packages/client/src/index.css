@@ -127,3 +127,10 @@ body {
     --spacing-extra-large:64px;
 }
 
+.center {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

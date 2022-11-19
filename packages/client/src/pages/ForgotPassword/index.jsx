@@ -11,9 +11,9 @@ export const ForgotPassword = () => {
   //  const [showError , setShowError] = useState(false);
   //  const [email , setEmail] = useState(false);
   //  const [showMessage, setShowMessage] = useState(false);
-  function onHandleSubmit (event) {
-    event.preventDefault();
-  }
+  // function onHandleSubmit (event) {
+  //   event.preventDefault();
+  // }
   return (
     <>
       <Navbar>
@@ -24,10 +24,10 @@ export const ForgotPassword = () => {
           </div>
         </Button>
       </Navbar>
-
-      <div className="Form__main__container">
+      {/*  onSubmit={onHandleSubmit} */}
+      <div className="Form__main__container center">
         <div className="Form__container">
-          <form action="" className="Form" onSubmit={onHandleSubmit}>
+          <form action="" className="Form">
             <p className="Form__title1">Forgot Password?</p>
             <hr />
             <p className="Form__title2">
