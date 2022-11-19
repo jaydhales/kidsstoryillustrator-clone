@@ -8,7 +8,8 @@ export class ProfileEdit extends Component {
   render() {
     return (
       <>
-        <div className="profile-container">
+        <p className="progress-text"> Work In Pogress...</p>
+        {/* <div className="profile-container">
           <div className="profile-header">
             <h2>Profile</h2>
           </div>
@@ -23,7 +24,7 @@ export class ProfileEdit extends Component {
               <p>@powerdrill</p>
             </div>
           </div>
-        </div>
+        </div> */}
       </>
     );
   }
