@@ -1,6 +1,7 @@
 import React from "react";
 import "./Login.css";
 import logo from "../../assets/img/logo.png";
+import logoWhite from "../../assets/img/logo_white.png";
 import googleLogo from "../../assets/img/google_logo.png";
 import facebookLogo from "../../assets/img/facebook_logo.png";
 import appleLogo from "../../assets/img/apple_logo.png";
@@ -8,13 +9,25 @@ import appleLogo from "../../assets/img/apple_logo.png";
 
 export const Login = () => {
   return (
-    <div id="auth">
+    <div className="two-column">
+      <div className="branding">
+        <div className="content">
+          <img src={logoWhite} alt="logo" id="logo" />
+          <div className="text">
+            <h2>The easiest way to write kids story books </h2>
+            <p>Write your stories and generate amazing pictures with the help of our ai technologies.</p>
+          </div>
+        </div>
+      </div>
+      <div>
+      <div id="auth">
       <header className="center-align">
         <img src={logo} alt="logo" id="logo" />
         <nav className="auth-nav">
           <a href="/login" className="link tab-link active">Login</a>
-          <a href="/signup" className="link tab-link">Sign Up</a>
+          <a href="/signup" className="link tab-link">Create Account</a>
         </nav>
+      </header>
 
         <form action="" className="form">
 
@@ -50,7 +63,9 @@ export const Login = () => {
             <img src={appleLogo} alt="Apple logo" className="btn-round-img"/>
           </button>
         </div>
-      </header>
+
+      </div>
+      </div>
     </div>
   );
 };

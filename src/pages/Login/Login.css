@@ -1,7 +1,3 @@
-#auth {
-  padding: 48px 16px;
-}
-
 .center-align {
   text-align: center;
 }
@@ -13,10 +9,7 @@
 
 #reset-password {
   color: var(--primary-color);
-}
-
-.btn-primary {
-  margin-bottom: 32px;
+  text-align: center;
 }
 
 .or {
@@ -39,4 +32,29 @@
 
 .continue-with {
   margin: 24px 0;
+}
+
+.content {
+  padding-left: 5%;
+  padding-top: 5%;
+}
+
+.content .text {
+  margin-top: 10%;
+  color: #fff;
+}
+
+.content .text h2 {
+  font-family: 'Nunito', sans-serif;
+  font-size: 57px;
+  font-weight: 400;
+  margin-bottom: 32px;
+  line-height: 64px;
+}
+
+.content .text p {
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  width: 90%;
 }
