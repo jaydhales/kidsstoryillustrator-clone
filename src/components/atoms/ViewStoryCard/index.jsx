@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import PropTypes from "prop-types";
 
@@ -6,23 +6,52 @@ import "./ViewStoryCard.css";
 import { Link } from "react-router-dom";
 
 export const ViewStoryCard = ({ heading, id, data }) => {
+  const [isShowAll, setIsShowAll] = useState(false);
+  const [lessData, setLessData] = useState([]);
+
+  useEffect(() => {
+    let miniData = [];
+
+    for (let i = 0; i < 3; i++) {
+      miniData.push(data[i]);
+    }
+
+    setLessData(miniData);
+  }, [data]);
+
   return (
     <section className="story-collection" id={id}>
       <h3>{heading}</h3>
 
       <div className="ViewStoryCard">
-        {data.map(({ id, title, src }) => (
-          <Link to={"/story/" + id} className="story-card" key={id}>
-            <img src={src} alt="" />
+        {isShowAll
+          ? data.map(({ id, title, src }) => (
+              <Link
+                to={"/story/" + id}
+                className={isShowAll ? "story-card" : "story-card mobile"}
+                key={id}
+              >
+                <img src={src} alt="" />
 
-            <p>{title}</p>
-          </Link>
-        ))}
+                <p>{title}</p>
+              </Link>
+            ))
+          : lessData.map(({ id, title, src }) => (
+              <Link
+                to={"/story/" + id}
+                className={isShowAll ? "story-card" : "story-card mobile"}
+                key={id}
+              >
+                <img src={src} alt="" />
+
+                <p>{title}</p>
+              </Link>
+            ))}
       </div>
 
-      <a href="#" className="button">
-        See All
-      </a>
+      <button className="button" onClick={(e) => setIsShowAll(!isShowAll)}>
+        {isShowAll ? "See Less" : "See More"}
+      </button>
     </section>
   );
 };

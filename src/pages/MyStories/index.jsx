@@ -10,12 +10,16 @@ import view from "../../assets/MyStories/view-1.png";
 
 import "./MyStories.css";
 import ViewStoryCard from "../../components/atoms/ViewStoryCard";
+import { Link } from "react-router-dom";
 
 export const MyStories = () => {
   const dummyData = [
     { id: 0, title: "Holla", src: view },
     { id: 1, title: "Hollala", src: view },
     { id: 2, title: "Hollalalala", src: view },
+    { id: 3, title: "Holla", src: view },
+    { id: 4, title: "Hollala", src: view },
+    { id: 5, title: "Hollalalala", src: view },
   ];
 
   return (
@@ -23,11 +27,13 @@ export const MyStories = () => {
       <Layout>
         <SearchBar />
 
-        <section className="story-collection recently-created">
+        <section className="story-collection" id="recently-created">
           <h3>Recently Created</h3>
 
-          <img src={recent} alt="" />
-          <p>The empty house</p>
+          <Link to={"/story/" + "7"}>
+            <img src={recent} alt="" />
+            <p>The empty house</p>
+          </Link>
         </section>
 
         <ViewStoryCard

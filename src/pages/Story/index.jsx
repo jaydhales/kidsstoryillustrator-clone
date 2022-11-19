@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import PropTypes from "prop-types";
 
@@ -16,6 +17,9 @@ export const Story = () => {
     { id: 0, title: "Holla", src: view },
     { id: 1, title: "Hollala", src: view },
     { id: 2, title: "Hollalalala", src: view },
+    { id: 3, title: "Holla", src: view },
+    { id: 4, title: "Hollala", src: view },
+    { id: 5, title: "Hollalalala", src: view },
   ];
   const dummyStory = {
     title: "The friendly fox and crazy rat",
@@ -40,6 +44,7 @@ export const Story = () => {
   const [currentPage, setCurrentPage] = useState(dummyStory.pages[pageNum]);
   const [prevDisabled, setPrevDisabled] = useState(true);
   const [nextDisabled, setNextDisabled] = useState(false);
+  const navigate = useNavigate();
 
   // Change Story Page
   useEffect(() => {
@@ -79,7 +84,10 @@ export const Story = () => {
     <div className="Story">
       <Layout>
         <section className="">
-          <img src={arrowLeft} alt="" />
+          <button onClick={() => navigate(-1)}>
+            <img src={arrowLeft} alt="" />
+          </button>
+
           <div className="content">
             <h3>{dummyStory.title}</h3>
             <img src={currentPage.image} alt="" />
@@ -94,10 +102,12 @@ export const Story = () => {
               <img src={arrowLeft} alt="left arrow" /> <span>Previous</span>
             </button>
             <div className="page-pointer">
-              <i className="active" />
-              <i />
-              <i />
-              <i />
+              {dummyStory.pages.map(({ page }) => (
+                <i
+                  key={page}
+                  className={pageNum === page - 1 ? "active" : ""}
+                />
+              ))}
             </div>
             <button
               onClick={(e) => handleEvent(e, "next")}

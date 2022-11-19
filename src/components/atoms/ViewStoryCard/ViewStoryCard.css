@@ -1,12 +1,8 @@
 .ViewStoryCard {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 52px;
 }
-
-/* .ViewStoryCard .story-card {
-  width: 100%;
-} */
 
 .button {
   display: block;
@@ -18,7 +14,12 @@
 }
 
 @media (max-width: 720px) {
-  .story-card:not(:nth-child(1)) + .story-card:not(:nth-child(2)) {
+  .mobile:not(:nth-child(1)) + .mobile:not(:nth-child(2)) {
     display: none;
+  }
+
+  .ViewStoryCard {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
   }
 }
