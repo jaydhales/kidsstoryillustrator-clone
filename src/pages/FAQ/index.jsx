@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 import FAQHero from "../../components/molecules/FAQHero";
 
-import "./FAQ.css";
+import "./FAQ.scss";
 import FAQCategories from "../../components/molecules/FAQCategories";
 import FAQQuestions from "../../components/molecules/FAQQuestions";
 import FAQCta from "../../components/molecules/FAQCta";

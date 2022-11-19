@@ -1,13 +1,9 @@
-/* .FAQCategories {
-} */
-
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900;1000&display=swap');
 
-.helpCategories-container{
+.FAQCategories {
     width: 100%;
     font-family: 'Nunito';
-    
-}
+
 
 .helpContainer-text{
     display: flex;
@@ -95,12 +91,9 @@
     color: #AA0136;
 }
 
-
 /* media queries */
 @media screen and (max-width: 900px ){
-    .helpCategories-container{
-        width: 100%;
-    }
+    width: 100%;
 
     .helpContainer-text h2{
         font-size: 20px;
@@ -150,3 +143,5 @@
     }
 
 }
+}
+

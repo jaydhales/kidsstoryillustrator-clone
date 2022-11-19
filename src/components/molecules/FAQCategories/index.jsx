@@ -5,10 +5,10 @@ import PropTypes from "prop-types";
 import started from '../../../assets/Image/FAQ-asset/getting-started.png'
 import pricing from '../../../assets/Image/FAQ-asset/pricing.png'
 import features from '../../../assets/Image/FAQ-asset/features.png'
-import "./FAQCategories.css";
+import "./FAQCategories.scss";
 
 export const FAQCategories = () => {
-  return <div className="helpCategories-container"> 
+  return <div className="FAQCategories"> 
     <div className="helpContainer-text">
      <h2>Search For Help By Category</h2>
      <p>Choose a category to quickly find the help you need</p>

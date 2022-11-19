@@ -2,13 +2,13 @@ import React from "react";
 
 import PropTypes from "prop-types";
 
-import "./FAQCta.css";
+import "./FAQCta.scss";
 import smsTracking from '../../../assets/Image/FAQ-asset/sms-tracking.png'
 
 export const FAQCta = () => {
-  return <div className="cta-container">
+  return <div className="FAQCta">
     <div className="subscribe-container">
-      <img src={smsTracking} alt='/' />
+      <img src={smsTracking} alt='/' id="sms-tracking"/>
       <div className="subscribe-subcontainer">
         <h4>Subscribe to our newsletter</h4>
         <p>Stay in loop with everything you need to know about us</p>

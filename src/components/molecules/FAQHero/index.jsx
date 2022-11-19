@@ -4,16 +4,18 @@ import PropTypes from "prop-types";
 
 import searchIcon from '../../../assets/Image/FAQ-asset/search-icon.png'
 
-import "./FAQHero.css";
+import "./FAQHero.scss";
 
 export const FAQHero = () => {
-  return <div className="helpHero-container">
+  return <div className="FAQHero">
     <h1>Hello, Need help?</h1>
     <p>We are glad you are looking for an answer, our team has come up with
       the best answers for you
     </p>
     <div className="search-container">
-      <img src={searchIcon} alt='/' />
+      <div id="search-icon">
+        <img src={searchIcon} alt='search icon' />
+      </div>
       <input type='text' placeholder="Search for a question" />
     </div>
   </div>;
