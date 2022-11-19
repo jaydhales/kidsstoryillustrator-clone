@@ -2,13 +2,18 @@
   "blocks": [
     {
       "type": "component",
-      "path": "src/components",
-      "files": ["JSX", "CSS", "TEST"]
+      "path": "src/components/molecules",
+      "files": ["JSX", "SCSS", "TEST", "MOLECULE_STORY", "MOLECULE_MDX"]
+    },
+    {
+      "type": "atom",
+      "path": "src/components/atoms",
+      "files": ["JSX", "SCSS", "TEST", "ATOM_STORY", "ATOM_MDX"]
     },
     {
       "type": "page",
       "path": "src/pages",
-      "files": ["JSX", "CSS", "TEST"]
+      "files": ["JSX", "SCSS", "TEST", "PAGE_STORY", "PAGE_MDX"]
     },
     {
       "type": "reducer",
@@ -25,8 +30,8 @@
   ],
   "fileFormats": {
     "JSX": {
-      "name": "<name>.jsx",
-      "template": "DEFAULT"
+      "name": "index.jsx",
+      "template": "./template/blockName.jsx"
     },
     "JS": {
       "name": "<name>.js",
@@ -34,10 +39,11 @@
     },
     "TEST": {
       "name": "<name>.test.js",
-      "template": "DEFAULT"
+      "template": "./template/blockName.test.jsx"
     },
     "CSS": {
-      "name": "<name>.css"
+      "name": "<name>.css",
+      "template": "./template/blockName.css"
     },
     "SCSS": {
       "name": "<name>.scss"
@@ -48,14 +54,37 @@
     "MODULE_SCSS": {
       "name": "<name>.module.scss"
     },
-    "REDUCER":{
+    "REDUCER": {
       "name": "<name>.jsx",
       "template": "DEFAULT"
     },
-    "ACTION":{
+    "ACTION": {
       "name": "<name>.jsx",
       "template": "DEFAULT"
+    },
+    "ATOM_STORY": {
+      "name": "<name>.stories.jsx",
+      "template": "./template/atoms.stories.jsx"
+    },
+    "MOLECULE_STORY": {
+      "name": "<name>.stories.jsx",
+      "template": "./template/molecules.stories.jsx"
+    },
+    "PAGE_STORY": {
+      "name": "<name>.stories.jsx",
+      "template": "./template/pages.stories.jsx"
+    },
+    "ATOM_MDX": {
+      "name": "<name>.stories.mdx",
+      "template": "./template/atoms.stories.mdx"
+    },
+    "MOLECULE_MDX": {
+      "name": "<name>.stories.mdx",
+      "template": "./template/molecules.stories.mdx"
+    },
+    "PAGE_MDX": {
+      "name": "<name>.stories.mdx",
+      "template": "./template/pages.stories.mdx"
     }
-  }    
+  }
 }
-    

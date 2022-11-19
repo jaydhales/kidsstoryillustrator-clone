@@ -8,20 +8,23 @@ import "./FAQ.css";
 import FAQCategories from "../../components/molecules/FAQCategories";
 import FAQQuestions from "../../components/molecules/FAQQuestions";
 import FAQCta from "../../components/molecules/FAQCta";
-import { Layout } from '../../components/molecules';
+import { Layout, PaddingProvisionals } from "../../components/molecules";
 
 export const FAQ = () => {
-  return <Layout>
-    <FAQHero />
-    <br/>
-    <br/>
-    <FAQCategories />
-    <br/>
-    <br/>
-    <FAQQuestions />
-    <br/>
-    <FAQCta />
-  </Layout>;
+  return (
+    <Layout>
+      <FAQHero />
+
+      <PaddingProvisionals>
+        <FAQCategories />
+        <br />
+        <br />
+        <FAQQuestions />
+      </PaddingProvisionals>
+
+      <FAQCta />
+    </Layout>
+  );
 };
 
 // These are the types of the props that are passed to the component

@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 import PropTypes from "prop-types";
 
-import "./Story.css";
+import "./Story.scss";
 import { Layout } from "../../components/molecules";
 import arrowLeft from "../../assets/Story/icons/arrow-left.png";
 import arrowRight from "../../assets/Story/icons/arrow-right.png";
@@ -84,9 +84,9 @@ export const Story = () => {
     <div className="Story">
       <Layout>
         <section className="">
-          <button onClick={() => navigate(-1)}>
+          <a href="#" onClick={() => navigate(-1)} className="back">
             <img src={arrowLeft} alt="" />
-          </button>
+          </a>
 
           <div className="content">
             <h3>{dummyStory.title}</h3>
@@ -95,12 +95,13 @@ export const Story = () => {
           </div>
 
           <div className="page-nav">
-            <button
+            <a
+              href="#"
               onClick={(e) => handleEvent(e, "previous")}
               disabled={prevDisabled}
             >
               <img src={arrowLeft} alt="left arrow" /> <span>Previous</span>
-            </button>
+            </a>
             <div className="page-pointer">
               {dummyStory.pages.map(({ page }) => (
                 <i
@@ -109,12 +110,13 @@ export const Story = () => {
                 />
               ))}
             </div>
-            <button
+            <a
+              href="#"
               onClick={(e) => handleEvent(e, "next")}
               disabled={nextDisabled}
             >
               <img src={arrowRight} alt="left arrow" /> <span>Next</span>
-            </button>
+            </a>
           </div>
         </section>
 

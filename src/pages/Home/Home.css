@@ -1,86 +1,86 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
 
-*{
+* {
   box-sizing: border-box;
 }
-img{
-    width: 100%;
+img {
+  width: 100%;
 }
-.Landing{
+.Landing {
   display: flex;
   margin: auto;
   width: 80%;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   padding: 2rem 0;
 }
-h2{
+h2 {
   font-size: 36px;
   text-transform: capitalize;
   font-weight: 400;
 }
-h3{
+h3 {
   font-size: 32px;
   font-weight: 400;
 }
-img{
+img {
   max-width: 100%;
 }
-header{
+header {
   display: grid;
   grid-template-columns: 1fr 1fr;
   place-items: center;
   padding: 1em;
 }
-.header-text{
-  color: #131313;;
+.header-text {
+  color: #131313;
   font-weight: 900;
   font-size: 4rem;
 }
-p{
+p {
   font-weight: 500;
   color: #717171;
 }
-button{
+button {
   padding: 1rem;
   border-radius: 56px;
   width: 230px;
   font-weight: 500;
-  border: 1px solid #AA0136;
+  border: 1px solid #aa0136;
 }
-.create{
-  background-color: #AA0136;
+.create {
+  background-color: #aa0136;
   color: #ffffff;
 }
-.read{
+.read {
   background: transparent;
-  color: #AA0136;
+  color: #aa0136;
   font-size: 14px;
   font-weight: 500;
 }
-span{
-  color: #AA0136;
+span {
+  color: #aa0136;
 }
-.reasons--grid{
+.reasons--grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   place-items: center;
 }
-.flex{
+.flex {
   display: flex;
   align-items: center;
 }
-h4{
+h4 {
   font-size: 24px;
   font-weight: 500;
   margin-left: 10px;
 }
-.steps{
+.steps {
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 0 7em;
   grid-column-gap: 3rem;
 }
-.number{
+.number {
   height: 56px;
   width: 56px;
   border-radius: 50%;
@@ -89,62 +89,69 @@ h4{
   display: grid;
   place-items: center;
 }
-.red{
-  background-color: #EECCD7;
-  color: #AA0136;
+.red {
+  background-color: #eeccd7;
+  color: #aa0136;
 }
-.blue{
-  color: #052F4D;
-  background-color: #CEDAE3;
+.blue {
+  color: #052f4d;
+  background-color: #cedae3;
 }
-.green{
+.green {
   color: #066042;
-  background-color: rgba(6, 96, 66, 0.1);;
+  background-color: rgba(6, 96, 66, 0.1);
 }
-.orange{
-  color:  #EC9410;
-  background-color: rgba(236, 148, 16, 0.1);;
+.orange {
+  color: #ec9410;
+  background-color: rgba(236, 148, 16, 0.1);
 }
-.button--flex{
+.button--flex {
   display: flex;
   justify-content: center;
   margin: 1.5rem 0;
 }
-.button--flex button{
+.button--flex button {
   border-radius: 8px;
-  background-color: #AA0136;
+  background-color: #aa0136;
   color: #ffffff;
 }
-.testimonials{
+.testimonials {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
 }
-.testimonials > div{
+.testimonial-message {
   padding: 1rem;
   border: 1px solid #717171;
   border-radius: 8px;
 }
 
-@media screen and (min-width: 1190px){
-  .read{
+.avatar {
+  width: 64px;
+}
+
+@media screen and (min-width: 1190px) {
+  .read {
     margin-left: 1rem;
   }
 }
-@media screen and (min-width: 801px) and (max-width: 1189px){
-  .steps{
+@media screen and (min-width: 801px) and (max-width: 1189px) {
+  .steps {
     padding: 0 5em;
   }
 }
 @media screen and (max-width: 800px) {
-  header, .reasons--grid, .testimonials, .steps{
+  header,
+  .reasons--grid,
+  .testimonials,
+  .steps {
     grid-template-columns: 1fr;
     padding: 1em;
   }
-  .steps{
+  .steps {
     padding: 0 2em;
   }
-  .button--grid{
+  .button--grid {
     text-align: center;
     margin: 1em 0;
   }
