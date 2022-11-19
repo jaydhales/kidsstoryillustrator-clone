@@ -1,553 +1,555 @@
 {
-  "openapi": "3.0.3",
-  "info": {
-    "title": "Swagger API Docs for Kids Story Illustrator",
-    "description": "This is a sample Story illustrator Server based on the OpenAPI 3.0 specification." ,
-    "version": "1.0.11"
-  },
-  "servers": [
-    {
-      "url": "http://localhost/3000/"
+    "openapi": "3.0.3",
+    "info": {
+        "title": "Swagger API Docs for Kids Story Illustrator",
+        "description": "This is a sample Story illustrator Server based on the OpenAPI 3.0 specification.",
+        "version": "1.0.11"
+    },
+    "servers": [
+        {
+            "url": "http://localhost/3000/"
+        }
+    ],
+    "schemes": ["http", "https"],
+    "tags": [
+        {
+            "name": "Story",
+            "description": "Everything about your Story Books"
+        },
+        {
+            "name": "User",
+            "description": "Operations about user"
+        }
+    ],
+    "paths": {
+        "get-story": {
+            "get": {
+                "tags": ["Story"],
+                "summary": "Find All Stories in database",
+                "description": "Find All Stories in database.",
+                "operationId": "getAllStories",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Story"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Story"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "get-by-email/{email}": {
+            "get": {
+                "tags": ["Story"],
+                "summary": "Find Story by Email",
+                "description": "Find Story by Email.",
+                "operationId": "getStoryByEmail",
+                "parameters": [
+                    {
+                        "name": "email",
+                        "in": "path",
+                        "description": "email of User",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Story"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Story"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "get-story/{id}": {
+            "get": {
+                "tags": ["Story"],
+                "summary": "Find Story by Id",
+                "description": "Find Story by Id.",
+                "operationId": "getStoryById",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Story",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Story"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Story"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/update-story/{id}": {
+            "put": {
+                "tags": ["Story"],
+                "summary": "Update an existing story",
+                "description": "Update an existing story by Id",
+                "operationId": "updateStory",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Story id to update",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "description": "Update an existent story in the database",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/storyRequest"
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "$ref": "#/components/schemas/storyRequest"
+                            }
+                        },
+                        "application/x-www-form-urlencoded": {
+                            "schema": {
+                                "$ref": "#/components/schemas/storyRequest"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Story"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Story"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid ID supplied"
+                    },
+                    "404": {
+                        "description": "Story not found"
+                    },
+                    "405": {
+                        "description": "Validation exception"
+                    }
+                }
+            }
+        },
+        "/create-story": {
+            "post": {
+                "tags": ["Story"],
+                "summary": "Add a new story to the database",
+                "description": "Add a new story to the database",
+                "operationId": "addStory",
+                "requestBody": {
+                    "description": "Create a new story in the databse",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/storyRequest"
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "$ref": "#/components/schemas/storyRequest"
+                            }
+                        },
+                        "application/x-www-form-urlencoded": {
+                            "schema": {
+                                "$ref": "#/components/schemas/storyRequest"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Story"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Story"
+                                }
+                            }
+                        }
+                    },
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                }
+            }
+        },
+        "/delete-story/{id}": {
+            "delete": {
+                "tags": ["Story"],
+                "summary": "Deletes a story",
+                "description": "delete a story",
+                "operationId": "deleteStory",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Story id to delete",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "400": {
+                        "description": "Invalid Story value"
+                    }
+                }
+            }
+        },
+        "get-user": {
+            "get": {
+                "tags": ["User"],
+                "summary": "Get User Details by token",
+                "description": "Get User Details by token.",
+                "operationId": "getUserByToken",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Story"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Story"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/create-user": {
+            "post": {
+                "tags": ["User"],
+                "summary": "Create user",
+                "description": "Register a new user to the system.",
+                "operationId": "createUser",
+                "requestBody": {
+                    "description": "Created user object",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/userSignup"
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "$ref": "#/components/schemas/userSignup"
+                            }
+                        },
+                        "application/x-www-form-urlencoded": {
+                            "schema": {
+                                "$ref": "#/components/schemas/userSignup"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/User"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/User"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/login-user": {
+            "post": {
+                "tags": ["User"],
+                "summary": "Login user",
+                "description": "Authenticate an existing user.",
+                "operationId": "loginUser",
+                "requestBody": {
+                    "description": "Created user object",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/userLogin"
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "$ref": "#/components/schemas/userLogin"
+                            }
+                        },
+                        "application/x-www-form-urlencoded": {
+                            "schema": {
+                                "$ref": "#/components/schemas/userLogin"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/User"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/User"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/update-user/": {
+            "put": {
+                "tags": ["User"],
+                "summary": "Update user",
+                "description": "This can only be done by the logged in user.",
+                "operationId": "updateUser",
+                "parameters": [],
+                "requestBody": {
+                    "description": "Update an existent user in the system",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/User"
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "$ref": "#/components/schemas/User"
+                            }
+                        },
+                        "application/x-www-form-urlencoded": {
+                            "schema": {
+                                "$ref": "#/components/schemas/User"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/delete-user": {
+            "delete": {
+                "tags": ["User"],
+                "summary": "Delete user",
+                "description": "This can only be done by the logged in user.",
+                "operationId": "deleteUser",
+                "parameters": [],
+                "responses": {
+                    "400": {
+                        "description": "Invalid username supplied"
+                    },
+                    "404": {
+                        "description": "User not found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Story": {
+                "type": "object",
+                "properties": {
+                    "author": {
+                        "type": "string"
+                    },
+                    "title": {
+                        "type": "string"
+                    },
+                    "numberOfPages": {
+                        "type": "integer"
+                    },
+                    "scenes": [
+                        {
+                            "caption": {
+                                "type": "string"
+                            },
+                            "imageUrl": {
+                                "type": "string"
+                            }
+                        }
+                    ]
+                },
+                "xml": {
+                    "name": "order"
+                }
+            },
+            "User": {
+                "type": "object",
+                "properties": {
+                    "email": {
+                        "type": "string",
+                        "example": "theuser@gmail.com"
+                    },
+                    "lastname": {
+                        "type": "string",
+                        "example": "user_lastname"
+                    },
+                    "firstname": {
+                        "type": "string",
+                        "example": "user_firstname"
+                    },
+                    "username": {
+                        "type": "string",
+                        "example": "user_username"
+                    },
+                    "hash": {
+                        "type": "string"
+                    }
+                },
+                "xml": {
+                    "name": "User"
+                }
+            },
+            "storyRequest": {
+                "type": "object",
+                "properties": {
+                    "title": {
+                        "type": "string"
+                    },
+                    "text": {
+                        "type": "string"
+                    }
+                },
+                "xml": {
+                    "name": "storyRequest"
+                }
+            },
+            "userSignup": {
+                "type": "object",
+                "properties": {
+                    "email": {
+                        "type": "string"
+                    },
+                    "username": {
+                        "type": "string"
+                    },
+                    "password": {
+                        "type": "string"
+                    }
+                },
+                "xml": {
+                    "name": "userSignup"
+                }
+            },
+            "userLogin": {
+                "type": "object",
+                "properties": {
+                    "email": {
+                        "type": "string"
+                    },
+                    "password": {
+                        "type": "string"
+                    }
+                },
+                "xml": {
+                    "name": "userLogin"
+                }
+            }
+        },
+        "securitySchemes": {
+            "bearerAuth": {
+                "type": "http",
+                "scheme": "bearer",
+                "bearerFormat": "JWT"
+            }
+        }
     }
-  ],
-  "schemes": ["http", "https"],
-  "tags": [
-    {
-      "name": "Story",
-      "description": "Everything about your Story Books"
-    },
-    {
-      "name": "User",
-      "description": "Operations about user"
-    }
-  ],
-  "paths": {
-    "get-story": {
-      "get": {
-        "tags": ["Story"],
-        "summary": "Find All Stories in database",
-        "description": "Find All Stories in database.",
-        "operationId": "getAllStories",
-        "parameters": [],
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Story"
-                }
-              },
-              "application/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/Story"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "get-by-email/{email}": {
-      "get": {
-        "tags": ["Story"],
-        "summary": "Find Story by Email",
-        "description": "Find Story by Email.",
-        "operationId": "getStoryByEmail",
-        "parameters": [
-          {
-            "name": "email",
-            "in": "path",
-            "description": "email of User",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Story"
-                }
-              },
-              "application/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/Story"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "get-story/{id}": {
-      "get": {
-        "tags": ["Story"],
-        "summary": "Find Story by Id",
-        "description": "Find Story by Id.",
-        "operationId": "getStoryById",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "id of Story",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Story"
-                }
-              },
-              "application/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/Story"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/update-story/{id}": {
-      "put": {
-        "tags": ["Story"],
-        "summary": "Update an existing story",
-        "description": "Update an existing story by Id",
-        "operationId": "updateStory",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "Story id to update",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "description": "Update an existent story in the database",
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/storyRequest"
-              }
-            },
-            "application/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/storyRequest"
-              }
-            },
-            "application/x-www-form-urlencoded": {
-              "schema": {
-                "$ref": "#/components/schemas/storyRequest"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": "Successful operation",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Story"
-                }
-              },
-              "application/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/Story"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Invalid ID supplied"
-          },
-          "404": {
-            "description": "Story not found"
-          },
-          "405": {
-            "description": "Validation exception"
-          }
-        }
-      }
-    },
-    "/create-story": {
-      "post": {
-        "tags": ["Story"],
-        "summary": "Add a new story to the database",
-        "description": "Add a new story to the database",
-        "operationId": "addStory",
-        "requestBody": {
-          "description": "Create a new story in the databse",
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/storyRequest"
-              }
-            },
-            "application/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/storyRequest"
-              }
-            },
-            "application/x-www-form-urlencoded": {
-              "schema": {
-                "$ref": "#/components/schemas/storyRequest"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": "Successful operation",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Story"
-                }
-              },
-              "application/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/Story"
-                }
-              }
-            }
-          },
-          "405": {
-            "description": "Invalid input"
-          }
-        }
-      }
-    },
-    "/delete-story/{id}": {
-      "delete": {
-        "tags": ["Story"],
-        "summary": "Deletes a story",
-        "description": "delete a story",
-        "operationId": "deleteStory",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "Story id to delete",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "400": {
-            "description": "Invalid Story value"
-          }
-        }
-      }
-    },
-    "get-user": {
-      "get": {
-        "tags": ["User"],
-        "summary": "Get User Details by token",
-        "description": "Get User Details by token.",
-        "operationId": "getUserByToken",
-        "parameters": [
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Story"
-                }
-              },
-              "application/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/Story"
-                }
-              }
-            }
-          }
-        },
-        "security": [
-          {
-            "bearerAuth": []
-          }
-        ]
-      }
-    },
-    "/create-user": {
-      "post": {
-        "tags": ["User"],
-        "summary": "Create user",
-        "description": "Register a new user to the system.",
-        "operationId": "createUser",
-        "requestBody": {
-          "description": "Created user object",
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/userSignup"
-              }
-            },
-            "application/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/userSignup"
-              }
-            },
-            "application/x-www-form-urlencoded": {
-              "schema": {
-                "$ref": "#/components/schemas/userSignup"
-              }
-            }
-          }
-        },
-        "responses": {
-          "default": {
-            "description": "successful operation",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/User"
-                }
-              },
-              "application/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/User"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/login-user": {
-      "post": {
-        "tags": ["User"],
-        "summary": "Login user",
-        "description": "Authenticate an existing user.",
-        "operationId": "loginUser",
-        "requestBody": {
-          "description": "Created user object",
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/userLogin"
-              }
-            },
-            "application/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/userLogin"
-              }
-            },
-            "application/x-www-form-urlencoded": {
-              "schema": {
-                "$ref": "#/components/schemas/userLogin"
-              }
-            }
-          }
-        },
-        "responses": {
-          "default": {
-            "description": "successful operation",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/User"
-                }
-              },
-              "application/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/User"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/update-user/": {
-      "put": {
-        "tags": ["User"],
-        "summary": "Update user",
-        "description": "This can only be done by the logged in user.",
-        "operationId": "updateUser",
-        "parameters": [],
-        "requestBody": {
-          "description": "Update an existent user in the system",
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/User"
-              }
-            },
-            "application/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/User"
-              }
-            },
-            "application/x-www-form-urlencoded": {
-              "schema": {
-                "$ref": "#/components/schemas/User"
-              }
-            }
-          }
-        },
-        "responses": {
-          "default": {
-            "description": "successful operation"
-          }
-        },
-        "security": [
-          {
-            "bearerAuth": []
-          }
-        ]
-      }
-    },
-    "/delete-user": {
-      "delete": {
-        "tags": ["User"],
-        "summary": "Delete user",
-        "description": "This can only be done by the logged in user.",
-        "operationId": "deleteUser",
-        "parameters": [],
-        "responses": {
-          "400": {
-            "description": "Invalid username supplied"
-          },
-          "404": {
-            "description": "User not found"
-          }
-        },
-        "security": [
-          {
-            "bearerAuth": []
-          }
-        ]
-      }
-    }
-  },
-  "components": {
-    "schemas": {
-      "Story": {
-        "type": "object",
-        "properties": {
-          "author": {
-            "type": "string"
-          },
-          "title": {
-            "type": "string"
-          },
-          "numberOfPages": {
-            "type": "integer"
-          },
-          "scenes": [
-            {
-              "caption": {
-                "type": "string"
-              },
-              "imageUrl": {
-                "type": "string"
-              }
-            }
-          ]
-        },
-        "xml": {
-          "name": "order"
-        }
-      },
-      "User": {
-        "type": "object",
-        "properties": {
-          "email": {
-            "type": "string",
-            "example": "theuser@gmail.com"
-          },
-          "lastname": {
-            "type": "string",
-            "example": "user_lastname"
-          },
-          "firstname": {
-            "type": "string",
-            "example": "user_firstname"
-          },
-          "username": {
-            "type": "string",
-            "example": "user_username"
-          },
-          "hash": {
-            "type": "string"
-          }
-        },
-        "xml": {
-          "name": "user"
-        }
-      },
-      "storyRequest": {
-        "type": "object",
-        "properties": {
-          "title": {
-            "type": "string"
-          },
-          "text": {
-            "type": "string"
-          }
-        },
-        "xml": {
-          "name": "storyRequest"
-        }
-      }
-    },
-    "userSignup": {
-      "type": "object",
-      "properties": {
-        "email": {
-          "type": "string"
-        },
-        "username": {
-          "type": "string"
-        },
-        "password": {
-          "type": "string"
-        }
-      },
-      "userLogin": {
-        "type": "object",
-        "properties": {
-          "email": {
-            "type": "string"
-          },
-          "password": {
-            "type": "string"
-          }
-        },
-      "xml": {
-        "name": "storyRequest"
-      }
-    }
-  },
-    "securitySchemes": {
-      "bearerAuth": {
-        "type": "http",
-        "scheme": "bearer",
-        "bearerFormat": "JWT"
-      }
-    }
-  }
 }
