@@ -302,17 +302,62 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/User"
+                "$ref": "#/components/schemas/userSignup"
               }
             },
             "application/xml": {
               "schema": {
-                "$ref": "#/components/schemas/User"
+                "$ref": "#/components/schemas/userSignup"
               }
             },
             "application/x-www-form-urlencoded": {
               "schema": {
-                "$ref": "#/components/schemas/User"
+                "$ref": "#/components/schemas/userSignup"
+              }
+            }
+          }
+        },
+        "responses": {
+          "default": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/User"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/User"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/login-user": {
+      "post": {
+        "tags": ["User"],
+        "summary": "Login user",
+        "description": "Authenticate an existing user.",
+        "operationId": "loginUser",
+        "requestBody": {
+          "description": "Created user object",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/userLogin"
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/userLogin"
+              }
+            },
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "#/components/schemas/userLogin"
               }
             }
           }
@@ -442,9 +487,12 @@
             "type": "string",
             "example": "user_firstname"
           },
-          "hash": {
+          "username": {
             "type": "string",
-            "example": "John"
+            "example": "user_username"
+          },
+          "hash": {
+            "type": "string"
           }
         },
         "xml": {
@@ -466,6 +514,34 @@
         }
       }
     },
+    "userSignup": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string"
+        },
+        "username": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        }
+      },
+      "userLogin": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          }
+        },
+      "xml": {
+        "name": "storyRequest"
+      }
+    }
+  },
     "securitySchemes": {
       "bearerAuth": {
         "type": "http",
