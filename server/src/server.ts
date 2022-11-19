@@ -9,7 +9,7 @@ const app = express();
 
 app.use(express.json());
 
-app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.get('/', (req, res, next) => res.send({ message: 'Welcome to STORY.AI' }));
 
 app.use('/story', routes )

@@ -3,7 +3,6 @@ const router = express.Router();
 import { getAllStories, getStoryById, getStoryByEmail } from '../controllers/get-story';
 import { createStory, updateStory, deleteStory } from '../controllers/post-story';
 import { createUser, updateUser, deleteUser } from '../controllers/user';
-import {signupValidate} from '../middleware/authValidate'
 
 // get routes 
 router.route('/get-story')
@@ -31,7 +30,7 @@ router.route('/delete-story/:id')
 
 // user routes
 router.route('/create-user')
-  .post(signupValidate, createUser)
+  .post(createUser)
 
 router.route('/update-user')
   .put(updateUser)
