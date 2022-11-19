@@ -1,5 +1,10 @@
 # kidsstoryillustrator.web
 
+
+```
+localhost:9000/api/get-story
+```
+
 To run the project:
  - Backend:
     ```
@@ -36,7 +41,3 @@ client
     └── ... └──package.json # Contains all dependencies
     
     
-
-
- 
-  
