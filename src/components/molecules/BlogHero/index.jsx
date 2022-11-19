@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import pic1 from "./image/pic1.png"
 import pic2 from "./image/pic2.png"
 
-import "./BlogHero.css";
+import "./BlogHero.scss";
 
 export const BlogHero = () => {
   return <div className="BlogHero">

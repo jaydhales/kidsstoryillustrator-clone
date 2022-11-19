@@ -3,7 +3,7 @@ import { BlogHero, BlogPost, Layout } from "../../components/molecules";
 
 import PropTypes from "prop-types";
 
-import "./Blog.css";
+import "./Blog.scss";
 
 export const Blog = () => {
   return (

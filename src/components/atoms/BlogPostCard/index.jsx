@@ -1,5 +1,5 @@
 import React, { useId } from "react";
-import "./BlogPostCard.css";
+import "./BlogPostCard.scss";
 import pic8 from "./pic8.png";
 import PropTypes from "prop-types";
 import { SmallImg } from "../../../icons";
@@ -36,7 +36,7 @@ const BlogPostCard = ({
         alt="blog card"
         className="BlogPostCard__img"
       />
-    
+
 
       <div>
         <h3>{title}</h3>
