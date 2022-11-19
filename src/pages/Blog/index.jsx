@@ -1,11 +1,16 @@
 import React from "react";
+import { BlogHero, Layout } from "../../components/molecules";
 
 import PropTypes from "prop-types";
 
 import "./Blog.css";
 
 export const Blog = () => {
-  return <div>Blog</div>;
+  return (
+    <Layout>
+      <BlogHero />
+    </Layout>
+  );
 };
 
 // These are the types of the props that are passed to the component
