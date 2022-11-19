@@ -15,6 +15,13 @@ const loginSchema = Joi.object({
     password: Joi.string().required()
 });
 
+const createStorySchema = Joi.object({
+    title: Joi.string().required(),
+    text: Joi.string().required()
+});
+
 export const validateSignup = validator(signupSchema);
 
 export const validateLogin = validator(loginSchema);
+
+export const validateCreateStory = validator(createStorySchema);

@@ -4,6 +4,7 @@ import { getAllStories, getStoryById, getStoryByEmail } from '../controllers/get
 import { createStory, updateStory, deleteStory } from '../controllers/post-story';
 import { createUser, updateUser, deleteUser } from '../controllers/user';
 import {signupValidate} from '../middleware/authValidate'
+import { createStoryValidate } from '../middleware/storyValidate';
 
 // get routes 
 router.route('/get-story')
@@ -21,7 +22,7 @@ router.route('/get-by-email/:email')
 
 // post routes
 router.route('/create-story')
-  .post(createStory)
+  .post(createStoryValidate, createStory)
 
 router.route('/update-story/:id')
   .put(updateStory)
