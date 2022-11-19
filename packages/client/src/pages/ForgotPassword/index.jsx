@@ -11,9 +11,12 @@ export const ForgotPassword = () => {
   //  const [showError , setShowError] = useState(false);
   //  const [email , setEmail] = useState(false);
   //  const [showMessage, setShowMessage] = useState(false);
-
+    function onHandleSubmit (event) {
+        event.preventDefault();
+    }
   return (
     <div className="ForgotPassword">
+
       <Navbar>
         <Button secondary>
           <p>En</p>
@@ -22,14 +25,14 @@ export const ForgotPassword = () => {
       </Navbar>
 
       <div className="Form__container">
-        <form action="" className="Form">
-          <p className="Form__title1">Forgot Password</p>
+        <form action="" className="Form" onSubmit={onHandleSubmit}>
+          <p className="Form__title1">Forgot Password?</p>
           <hr />
           <p className="Form__title2">
             Enter your email and we ll send you a link to rest your password
           </p>
           <div>
-            <label htmlFor="email"></label>
+            <label htmlFor="email">Email</label> 
             <input
               type="email"
               // value={email}
@@ -41,11 +44,11 @@ export const ForgotPassword = () => {
             />
             {/* {showError && (
               <p style={{ color: 'Error__text' }}>
-                Your message was sent succesfully
+                
               </p>
             )} */}
           </div>
-          <Button></Button>
+          <Button>Submit</Button>
         </form>
       </div>
     </div>

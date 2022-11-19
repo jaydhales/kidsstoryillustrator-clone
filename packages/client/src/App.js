@@ -38,7 +38,7 @@ const MoveToTop = () => {
 const App = () => (
   <>
     {/* <MoveToTop /> */}
-    <Routes>
+    {/* <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/blog" element={<Blog />} />
@@ -57,7 +57,8 @@ const App = () => (
       <Route path="/profile" element={<Profile />} />
       <Route path="/signup" element={<SignUp />} />
       <Route path="/summaryActivities" element={<SummaryActivities />} />
-    </Routes>
+    </Routes> */}
+    <ForgotPassword/>
   </>
 );
 export default App;

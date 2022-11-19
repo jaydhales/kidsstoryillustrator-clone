@@ -33,8 +33,8 @@ export const DashBoard = () => {
           <p>Trending Styles</p>
           <hr />
 
-          <div className="TrendingStyles__Image__Container">
-            <div className="TrendingStyles__Image__Wrapper">
+          <div className="TrendingStyles__Image__Wrapper">
+            <div className="TrendingStyles__Image__Container">
               <img src="/Assets/Images/TS1.png" alt="image1" />
               <img src="/Assets/Images/TS2.png" alt="image2" />
               <img src="/Assets/Images/TS3.png" alt="image3" />
@@ -46,8 +46,8 @@ export const DashBoard = () => {
 
       <section className="Section__2">
         <section className="RecentStyles">
-          <div className="RecentStyles__Image__Container">
-            <div className="RecentStyles__Image__Wrapper">
+          <div className="RecentStyles__Image__Wrapper">
+            <div className="RecentStyles__Image__Container">
               <img src="/Assets/Images/RS1.png" alt="" />
               <img src="/Assets/Images/RS2.png" alt="" />
               <img src="/Assets/Images/RS3.png" alt="" />
