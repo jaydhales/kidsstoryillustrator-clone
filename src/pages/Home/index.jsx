@@ -6,7 +6,13 @@ import "./Home.css";
 import { Navbar } from "../../components/molecules";
 
 export const Home = () => {
-  return <div>Home</div>;
+  return <div>
+    <div>
+      <p>Transparent, Simple pricing.</p>
+      <p></p>
+    </div>
+    <div></div>
+  </div>;
 };
 
 // These are the types of the props that are passed to the component
