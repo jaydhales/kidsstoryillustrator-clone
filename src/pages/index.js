@@ -16,5 +16,6 @@ export { default as Story } from "./Story";
 export { default as Pricing } from "./Pricing";
 export { default as Privacy } from "./Privacy";
 export { default as Profile } from "./Profile";
+export { default as ProfileEdit } from "./Profile/ProfileEdit";
 export { default as SignUp } from "./SignUp";
 export { default as SummaryActivities } from "./SummaryActivities";
