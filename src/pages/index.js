@@ -16,3 +16,4 @@ export { default as Privacy } from './Privacy';
 export { default as Profile } from './Profile';
 export { default as SignUp } from './SignUp';
 export { default as SummaryActivities } from './SummaryActivities';
+export { default as AdminDashboard } from './AdminDashboard';

@@ -13,7 +13,7 @@
     {
       "type": "page",
       "path": "src/pages",
-      "files": ["JSX", "SCSS", "TEST", "PAGE_STORY", "PAGE_MDX"]
+      "files": ["JSX", "SCSS",  "PAGE_STORY", "PAGE_MDX"]
     },
     {
       "type": "reducer",
