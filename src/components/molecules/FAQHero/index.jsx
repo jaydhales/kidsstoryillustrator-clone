@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-import './FAQHero.scss';
+import "./FAQHero.css";
 
 export const FAQHero = () => {
   return <div>FAQHero</div>;

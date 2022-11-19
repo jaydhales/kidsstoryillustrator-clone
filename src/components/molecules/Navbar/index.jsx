@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-import './Navbar.scss';
+import "./Navbar.css";
 
 export const Navbar = () => {
   return <div>Navbar</div>;

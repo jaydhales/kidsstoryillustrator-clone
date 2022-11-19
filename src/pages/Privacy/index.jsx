@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-import './Privacy.scss';
+import "./Privacy.css";
 
 export const Privacy = () => {
   return <div>Privacy</div>;

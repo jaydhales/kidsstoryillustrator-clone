@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-import './Footer.scss';
+import "./Footer.css";
 
 export const Footer = () => {
   return <div>Footer</div>;

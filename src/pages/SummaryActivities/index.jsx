@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-import './SummaryActivities.scss';
+import "./SummaryActivities.css";
 
 export const SummaryActivities = () => {
   return <div>SummaryActivities</div>;

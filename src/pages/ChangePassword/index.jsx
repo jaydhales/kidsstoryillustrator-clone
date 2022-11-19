@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-import './ChangePassword.scss';
+import "./ChangePassword.css";
 
 export const ChangePassword = () => {
   return <div>ChangePassword</div>;

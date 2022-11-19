@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-import './Error.scss';
+import "./Error.css";
 
 export const Error = () => {
   return <div>Error</div>;

@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-import './PublishedBooks.scss';
+import "./PublishedBooks.css";
 
 export const PublishedBooks = () => {
   return <div>PublishedBooks</div>;

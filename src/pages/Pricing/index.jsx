@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-import './Pricing.scss';
+import "./Pricing.css";
 
 export const Pricing = () => {
   return <div>Pricing</div>;

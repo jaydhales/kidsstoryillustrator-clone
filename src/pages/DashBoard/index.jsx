@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-import './DashBoard.scss';
+import "./DashBoard.css";
 
 export const DashBoard = () => {
   return <div>DashBoard</div>;

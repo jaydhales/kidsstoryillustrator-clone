@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-import './HowToUse.scss';
+import "./HowToUse.css";
 
 export const HowToUse = () => {
   return <div>HowToUse</div>;
