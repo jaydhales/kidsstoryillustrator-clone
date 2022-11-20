@@ -15,6 +15,7 @@ export { default as Footer } from "./Footer";
 export { default as Hero } from "./Hero";
 export { default as Layout } from "./Layout";
 export { default as Navbar } from "./Navbar";
+export { default as PaddingProvisionals } from "./PaddingProvisionals";
 export { default as ProtectedRoute } from "./ProtectedRoute";
 export { default as PublishedBooks } from "./PublishedBooks";
 export { default as Testimonial } from "./Testimonial";

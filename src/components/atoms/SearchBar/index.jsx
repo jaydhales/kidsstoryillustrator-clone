@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-import './SearchBar.scss';
+import "./SearchBar.css";
 
 export const SearchBar = () => {
   return <div>SearchBar</div>;

@@ -1,0 +1,58 @@
+.Story {
+  section {
+    padding: 24px 0;
+  }
+
+  h3 {
+    margin: 24px 0;
+  }
+
+  p {
+    margin-top: 12px;
+  }
+
+  a.back * {
+    width: 32px;
+  }
+
+  .content {
+    margin: 1rem 0 3rem;
+  }
+
+  .content p {
+    max-width: 90%;
+  }
+
+  .page-nav {
+    display: flex;
+    justify-content: center;
+    gap: 3.5rem;
+  }
+
+  .page-nav button,
+  .page-pointer {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .page-nav button:disabled {
+    opacity: 0.5;
+  }
+
+  .page-nav img {
+    width: 32px;
+  }
+
+  .page-pointer i {
+    content: "";
+    background: #e4e4e4;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+  }
+
+  .page-pointer i.active {
+    background: #8e012d;
+  }
+}
