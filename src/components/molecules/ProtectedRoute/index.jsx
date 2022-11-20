@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import PropTypes from 'prop-types';
 
@@ -6,9 +6,10 @@ import './ProtectedRoute.scss';
 import { DashboardHeader, DashboardSidebar } from '..';
 
 export const ProtectedRoute = ({ children, className, ...props }) => {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   return (
-    <div className="protectedRoute">
-      <DashboardHeader className="header" />
+    <div className={`${isSidebarOpen ? `protectedRoute-active` : `protectedRoute`}`}>
+      <DashboardHeader className="header" openSideBar={() => setIsSidebarOpen(props => !props)} />
       <DashboardSidebar className="sidebar" />
       <section className={`body ${className}`} {...props}>
         {children}

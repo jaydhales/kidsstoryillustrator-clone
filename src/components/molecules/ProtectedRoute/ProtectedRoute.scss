@@ -1,6 +1,7 @@
 .protectedRoute {
     min-height: 100vh;
     display: grid;
+    overflow-x: hidden;
     grid-template-areas:
         'sidebar header header'
         'sidebar body body'
@@ -23,9 +24,32 @@
 
     .sidebar {
         grid-area: sidebar;
+        display: flex;
     }
 
     .body {
         grid-area: body;
     }
+}
+.protectedRoute-active{
+        min-height: 100vh;
+            display: grid;
+            grid-template-areas:
+                'header header header'
+                    'body body body'
+                    'body body body';
+            grid-template-columns: 0.22fr 1fr;
+            grid-template-rows: repeat(auto, 3);
+            .header {
+                grid-area: header;
+            }
+        
+            .sidebar {
+                display: none;
+
+            }
+        
+            .body {
+                grid-area: body;
+            }
 }
