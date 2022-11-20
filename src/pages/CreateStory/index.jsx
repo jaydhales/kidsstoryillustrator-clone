@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import "./CreateStory.css";
 
 import PropTypes from "prop-types";
@@ -9,6 +9,7 @@ import placeholder_page_image from "../../assets/images/create-story/place_index
 import add_img from "../../assets/images/create-story/add.svg";
 import previous_arr_icon from "../../assets/images/create-story/previous-next-arrow.svg";
 import ImageCard from "./ImageCard/ImageCard";
+
 
 const ImageCardList = ({ list_of_image_urls, returnImageLink }) => {
   const [generatedImages, setGeneratedImages] = useState(list_of_image_urls);
@@ -37,8 +38,10 @@ export const CreateStory = () => {
   const [imageLoadingState, setImageLoadingState] = useState(null);
 
   const [pageContent, setPageContent] = useState([]);
+
   const [pageParagraph, setPageParagraph] = useState("");
-  const [pageImageLink, setPageImageLink] = useState("");
+
+  const [pageImgLink, setPageImgLink] = useState("");
 
   const fetchImageLinks = () => {
     return ["", "", ""];
@@ -58,37 +61,45 @@ export const CreateStory = () => {
 
   const getPageImageLink = (image_url) => {
     console.log("This is the image link: " + image_url);
-    setPageImageLink(image_url);
+    setPageImgLink(image_url);
   };
 
-  useEffect(() => {
-    const save_story = () => {
-      if (pageImageLink.length < 2) {
-        console.log("No link available");
 
-        console.log("Story Not Saved");
-      } else if (pageParagraph.length < 2) {
-        console.log("No Text available");
+  const save_story_1 = () => {
+    console.log("Function Clicked");
 
-        console.log("Story Not Saved");
-      } else {
-        let currentPageContent = {
-          paragraph: pageParagraph,
-          imageLink: pageImageLink,
-        };
-        console.log(currentPageContent);
-        setPageContent((pageContent) => [...pageContent, currentPageContent]);
+    if (pageImgLink.length < 2) {
+      console.log("No link available");
+      console.log("Story Not Saved");
 
-        console.log("Story Saved Successfully");
+      return
+    } else if (pageParagraph.length < 2) {
+      console.log("No Text available");
+      console.log("Story Not Saved");
 
-        console.log("Current Page Added");
-
-        setTimeout(() => {
-          console.log(pageContent);
-        }, 2300);
-      }
+      return
+    } else {
+      // 
+    }
+    let currentPageContent = {
+      paragraph: pageParagraph,
+      imageLink: pageImgLink,
     };
-  }, []);
+
+    return currentPageContent;
+  };
+
+  const save_contents = [];
+
+  const AddedToPageList = () => {
+    const generatedPageContent = save_story_1();
+    console.log(generatedPageContent);
+
+    setPageContent([...pageContent, {
+      pageParagraphText: generatedPageContent.paragraph,
+      pageImglinkUri: generatedPageContent.imageLink
+    }]);
+  }
 
   return (
     <div className="create-story-wrapper">
@@ -114,6 +125,14 @@ export const CreateStory = () => {
               />
             </div>
           </div>
+          {/* {pageContent.map((page, index) => (
+            <div key={index}>
+              <ul>
+                <li>{page.pageParagraphText}</li>
+                <li>{page.pageImglinkUri}</li>
+              </ul>
+            </div>
+          ))} */}
           <div className="story-content-02">
             <div className="s-c-02-sub-container-01 text-context">
               <div className="text-tabs-container">
@@ -141,11 +160,11 @@ export const CreateStory = () => {
                   <button>Generate</button>
                 </div>
                 <div className="text-context-tabs gen-button-container">
-                  <button onClick={save_story}>Save Page</button>
+                  <button onClick={AddedToPageList}>Save Page</button>
                 </div>
               </div>
             </div>
-            {generatedImages.length > 0 ? (
+            {/* {generatedImages.length > 0 ? (
               <div className="s-c-02-sub-container-02 image-context">
                 <div>
                   <img src={placeholder_image} alt="" />
@@ -158,10 +177,10 @@ export const CreateStory = () => {
                   returnImageLink={getPageImageLink}
                 />
               </div>
-            )}
-            {/* <div>
+            )} */}
+            <div>
                   <img src={placeholder_image} alt="" />
-                </div> */}
+                </div>
           </div>
           <div className="pages-index-container">
             <div className="p-i-c-01">
