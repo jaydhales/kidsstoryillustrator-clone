@@ -10,7 +10,7 @@ export const ProtectedRoute = ({ children, className, ...props }) => {
   return (
     <div className={`${isSidebarOpen ? `protectedRoute-active` : `protectedRoute`}`}>
       <DashboardHeader className="header" openSideBar={() => setIsSidebarOpen(props => !props)} />
-      <DashboardSidebar className="sidebar" />
+      <DashboardSidebar className={`sidebar ${isSidebarOpen ? `sidebar-active` : ''}`} />
       <section className={`body ${className}`} {...props}>
         {children}
       </section>
