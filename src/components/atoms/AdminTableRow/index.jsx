@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 
 import './AdminTableRow.scss';
 
-export const AdminTableRow = ({ email, firstName,lastName, userType, location}) => {
+export const AdminTableRow = ({ email, firstName,lastName, userType, location, header}) => {
   return(
     <section className='AdminTableRow'>
-    <div><input type="checkbox" /> {email}</div>
+      <div>{!header && <input type="checkbox" />} {email}</div>
     <div>{ firstName }</div>
     <div>{lastName}</div>
       <div>{lastName}</div>
@@ -24,6 +24,7 @@ AdminTableRow.propTypes = {
   lastName: PropTypes.string,
   userType: PropTypes.string,
   location: PropTypes.string,
+  header: PropTypes.bool,
 };
 
 // These are their default values
@@ -34,6 +35,7 @@ AdminTableRow.defaultProps = {
   lastName: '',
   userType: '',
   location: '',
+  header: false,
 };
 
 export default AdminTableRow;
