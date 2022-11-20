@@ -98,8 +98,8 @@ export const DashboardTable = () => {
       </div>
       <div>
         <p>Showing 1 - 10 of 2,000 users</p>
-        <img src='/logo192.png' />
-        <img src='/logo192.png' />
+        <img src='/left.svg' />
+        <img src='/right.svg' />
       </div>
       </div>
     <AdminTableRow {...{
