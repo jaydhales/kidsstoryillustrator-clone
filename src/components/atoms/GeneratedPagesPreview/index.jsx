@@ -2,7 +2,7 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
-import './GeneratedPagesPreview.scss';
+import './GeneratedPagesPreview.css';
 
 export const GeneratedPagesPreview = () => {
   return <div>GeneratedPagesPreview</div>;

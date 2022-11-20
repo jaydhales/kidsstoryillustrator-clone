@@ -1,3 +1,87 @@
+
+:root {
+  --primary-color: #AA0136;
+  --primary-text-color: #131313;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.link {
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+/* login and signup page styles  */
+#auth {
+  padding: 48px 16px;
+  text-align: center;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tab-link {
+  color: #717171;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #D9D9D9;
+  display: block;
+  width: 150px;
+}
+
+.tab-link.active {
+  color: #131313;
+  border-bottom: 2px solid #3F444D;
+}
+
+.auth-nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.form {
+  text-align: left;
+}
+
+.label {
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  color: #131313;
+}
+
+.input {
+  margin-top: 12px;
+  margin-bottom: 24px;
+  border: 1px solid #BBBBBB;
+  padding: 16px 20px;
+  border-radius: 30px;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  width: 100%;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  border-radius: 30px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  border-color: transparent;
+  color: white;
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+}
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
 2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
@@ -394,3 +478,55 @@ input[type="number"] {
 body {
   font-family: "Work Sans", sans-serif;
 }
+
+.flex {
+  display: flex;
+}
+
+.btn-round {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border-color: transparent;
+  background-color: transparent;
+  padding: 0;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.btn-round-img {
+  display: block;
+  width: 100%;
+}
+
+.two-column {
+  height: 100vh;
+}
+
+.branding {
+  background-image: url('/src/assets/img/brand_bg.png');
+  background-position: center 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: none;
+}
+
+.error {
+  color: #A50A17;
+  margin-bottom: 8px;
+}
+
+@media screen and (min-width: 1040px){
+  .two-column {
+    display: flex;
+  }
+  
+  .two-column div {
+    flex: 1;
+  }
+
+  .branding {
+    display: block;
+  }
+}
+

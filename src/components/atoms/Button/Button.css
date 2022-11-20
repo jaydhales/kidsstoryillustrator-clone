@@ -1,3 +1,21 @@
-.Button{
+/* .Button{
     
+} */
+
+.FAQ-button{
+    padding: 16px;
+    background: #AA0136;
+    border-radius: 56px;
+    color: #fff;
+    width: 230px;
+    border: 1px solid #AA0136;
+}
+
+
+/* media queries */
+@media screen and (max-width: 900px ){
+  button{
+    width: 150px;
+    padding: 10px;
+  }  
 }
