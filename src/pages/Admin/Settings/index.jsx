@@ -15,7 +15,7 @@ export const Settings = () => {
             <h2>Account Settings</h2>
 
             <div className="nav-btns">
-              <button>Edit Account</button>
+              <button>Edit Account</button> 
               <button>Users(21)</button>
               <button>All Stories</button>
               <button>Subscriptions</button>
