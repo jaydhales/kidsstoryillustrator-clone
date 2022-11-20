@@ -11,9 +11,13 @@ import orangelogo from "./Images/Orange Rectangle.svg";
 import bluelogo from "./Images/Blue Rectangle.svg";
 import AI from "./Images/artificial intelligence.svg";
 import avatar from "./Images/brazil.svg";
+import { useNavigate } from "react-router-dom";
 
 
 export const Home = () => {
+
+  const navigate = useNavigate();
+
   return (
     <Layout>
       <div className="Home">
@@ -25,7 +29,7 @@ export const Home = () => {
               details
             </p>
             <div className="button--grid">
-              <button className="create">Create Stories</button>
+              <button className="create" onClick={() => navigate('/createStory')} >Create Stories</button>
               <button className="read">Read Stories</button>
             </div>
           </section>
