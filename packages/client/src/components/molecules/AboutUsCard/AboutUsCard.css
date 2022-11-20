@@ -1,13 +1,12 @@
 .goal-container {
   display: flex !important;
   align-items: stretch !important;
-  background-color: white !important;
   font-family: "Nunito" !important;
   padding: 0px 228px 0px 228px !important;
+  margin-bottom: 10%;
 }
 
 .goal-container > div {
-  background: white !important;
   text-align: center !important;
 }
 .goalLeft {
@@ -20,6 +19,8 @@
 }
 .goalheader {
   flex: 100% !important;
+  text-align: center;
+  align-items: center;
 }
 .goalimgLeft {
   width: 208.57px !important;
@@ -30,7 +31,7 @@
 .goalheadertext {
   font-style: normal !important;
   font-weight: 400 !important;
-  font-size: 57px !important;
+  font-size: 45px !important;
   letter-spacing: -0.25px !important;
   color: #131313 !important;
   line-height: 1px !important;
@@ -53,11 +54,8 @@
   color: #131313 !important;
 }
 
-.hr {
-  border: 2.5px solid #aa0136 !important;
-  border-radius: 5px !important;
-  background-color: #aa0136 !important;
-  width: 120px !important;
+.goalheadertext span {
+  text-decoration:underline 5px #aa0136;
 }
 @media screen and (max-width: 1024px) {
   .goal-container {

@@ -11,8 +11,8 @@ export const AboutUsTeam = () => {
       <div className="aboutTeam">
         <div className="aboutTeamHeader">
           <div className="aboutTeamHeaderTop">
-            <p>Our Team</p>
-            <hr />
+            <p>Ou<span>r T</span>eam</p>
+           
             <br />
           </div>
 

@@ -4,6 +4,11 @@
     padding: 50px 50px;
     display: flex;
 
+       .Footer__left__socials img {
+        width: 15%;
+        height: auto;
+    }
+
     @media screen and (max-width: 1200px) {
         padding: 30px;
         flex-direction: column-reverse;

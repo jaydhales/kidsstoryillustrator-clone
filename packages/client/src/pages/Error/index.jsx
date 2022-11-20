@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { useNavigate } from 'react-router-dom';
 import propTypes from 'prop-types';
 
 import './Error.scss';
@@ -9,6 +9,7 @@ import error2 from './asset/error2.svg';
 import error3 from './asset/error3.svg';
 
 export const Error = (props) => {
+  const navigate =  useNavigate();
   return <div className='Error'>
    <div className="error-box">
     <div className='error-story'>
@@ -31,44 +32,48 @@ export const Error = (props) => {
          : <></>}
         </div>
         <div className='error-btn'>
-          <button 
-            className='btn1'
-            >
-              { props.error === 401
-                    ? <>
-                        Create an account
-                    </>
-                    : props.error === 404 
-                    ? <>
-                        Create another story
-                    </>
-                    : props.error === 403
-                    ? <>
-                           Create another story
-                      </>
-                    : <></>}
-            </button>
           
-          <button 
-              className='btn2'
-          >
+              { props.error === 401
+                    ? <button onClick= {()=>navigate ('/signup')}
+                    className='btn1'
+                    >
+                        Create an account
+                    </button>
+                    : props.error === 404 
+                    ? <button onClick= {()=>navigate ('/signup')}   className='btn1'
+                    >
+                        Create another story
+                    </button>
+                    : props.error === 403
+                    ? <button onClick= {()=>navigate ('/signup')}                     className='btn1'
+                    >
+                           Create another story
+                      </button>
+                    : <></>}
+          
+         
                     { props.error === 401
                         ? <>
-                        
-                               Sign in
-                          </>
-                        : props.error === 404 
-                        ? <>
+                         <button onClick={()=>navigate ('/signin')}
+              className='btn2'>
+              Sign in
+          </button>
+                    </>          
+                       : props.error === 404 
+                        ? 
+                        <button onClick={()=>navigate ('/signin')}
+              className='btn2'>
                                   Go Home
-                          </>
+                          </button>
                         : props.error === 403
-                        ? <>
+                        ? 
+                        <button onClick={()=>navigate ('/signin')}
+              className='btn2'>
                                 Go Home
-                          </>
-                        : <></>}
-            </button>
-          
-        </div>
+                          </button>
+
+                        :<></>}
+       </div>   
       </div>
       <div>
       { props.error === 401
@@ -86,7 +91,6 @@ export const Error = (props) => {
           </>
          : <></>}
       </div>
-      
    </div>
   </div>;
 };

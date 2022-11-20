@@ -10,11 +10,11 @@ export const AboutUsVision = () => {
     <div className="AboutUsVision">
       <div className="missionLeft">
         <div className="missionLeftTop">
-          <p>Our Mission & Vision</p>
+          <p><span>Our </span>Mission & Vision</p>
         </div>
-        <div className="missionLine">
+        {/* <div className="missionLine">
           <hr />
-        </div>
+        </div> */}
         <div className="missionLeftBottom">
           <p>
             We aim to offer our users a means of generating images from text for

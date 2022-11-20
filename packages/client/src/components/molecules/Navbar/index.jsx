@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-
+import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import Logo  from '../../../assets/img/logo.png';
 import { NavLink } from '../../atoms';
 
 import style from './Navbar.scss';
+import { Login } from '../../../pages';
 // eslint-disable-next-line
 
 
@@ -17,7 +18,7 @@ const navLinks = [
   },
   {
     text: 'Stories',
-    to: '/stories',
+    to: '/mystories',
   },
   {
     text: 'About',
@@ -28,11 +29,12 @@ const navLinks = [
     to: '/faq',
   },{
     text: 'Contact us',
-    to: '/howToUse',
+    to: '/contact',
   },
 ];
 const Navbar = () => {
   const [dropDown, setDropDown] = useState(false);
+  const navigate=useNavigate();
   return (
     <nav className="Navbar">
       <img src={Logo} className="Navbar__Logo" />
@@ -44,7 +46,7 @@ const Navbar = () => {
           </NavLink>
         ))}
       </div>
-       <span className="Navbar__container__getStarted">
+       <span onClick={()=> navigate('/login')} className="Navbar__container__getStarted">
             Get Started
           </span>
       </div>

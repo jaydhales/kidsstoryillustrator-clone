@@ -4,70 +4,54 @@ import { Link } from 'react-router-dom';
 
 // import { Facebook, Instagram, Twitter } from '../../../assets';
 import Logo from '../../../assets/img/logo.png';
-import Facebook from '../../../assets/img/facebook_logo.png';
+import Facebook from '../../../assets/img/ri-facebook-circle-fill.svg';
+import Twitter from '../../../assets/img/ri-twitter-fill.svg';
+import Instagram from '../../../assets/img/ri-instagram-fill.svg';
+
 
 import style from './Footer.scss';
 const links = [
   {
-    heading: 'Community',
+    heading: 'Company',
     links: [
       {
-        text: 'NFT',
-        to: '/nfts',
+        text: 'About Us',
+        to: '/about',
       },
       {
-        text: 'Tokens',
-        to: '/tokens',
+        text: 'Contact Us',
+        to: '/contact',
       },
       {
-        text: 'Landlords',
-        to: '/landlords',
+        text: 'Pricing',
+        to: '/pricing',
       },
       {
-        text: 'Discord',
-        to: '/discord',
+        text: 'Create Story',
+        to: '/craeteStory',
       },
     ],
   },
   {
-    heading: 'Places',
+    heading: 'Help',
     links: [
       {
-        text: 'Castle',
-        to: '/castle',
+        text: 'FAQs',
+        to: '/faq',
       },
       {
-        text: 'Farms',
-        to: '/farms',
+        text: 'Privacy Policy',
+        to: '/privacy',
       },
-      {
-        text: 'Villa',
-        to: '/beach',
-      },
-      {
-        text: 'Learn more',
-        to: '/learn-more',
-      },
+      
     ],
   },
   {
-    heading: 'About us',
+    heading: 'Resources',
     links: [
       {
-        text: 'Road map',
-        to: '/road-map',
-      },
-      {
-        text: 'Creators',
-        to: '/creators',
-      },
-      {
-        text: 'Career',
-        to: '/career',
-      },
-      {
-        text: 'Contact us',
-        to: '/contact-us',
+        text: 'Blog',
+        to: '/blog',
       },
     ],
   },
@@ -78,9 +62,11 @@ const Footer = () => {
       <div className="Footer__left">
         <img src={Logo} className="Navbar__Logo" />
         <div className="Footer__left__socials">
+          <img src={Twitter} />
           <img src={Facebook} />
+          <img src={Instagram} />
         </div>
-        <p>&copy; 2022 Metabnb</p>
+        <p>&copy; 2022 storyai</p>
       </div>
       <div className="Footer__right">
         {links.map(({ heading, links: link }) => (

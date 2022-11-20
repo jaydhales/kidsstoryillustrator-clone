@@ -1,6 +1,7 @@
 import React from "react";
 
 import PropTypes from "prop-types";
+import { Footer, Navbar } from "../../components/molecules";
 
 import "./About.scss";
 import AboutUsCard from "../../components/molecules/AboutUsCard";
@@ -11,11 +12,15 @@ import AboutUsVision from "../../components/molecules/AboutUsVision";
 
 export const About = () => {
   return (
+    <div>
+    <Navbar/>
     <div className="About">
       <AboutUsHero />
       <AboutUsVision />
       <AboutUsCard />
       <AboutUsTeam />
+    </div>
+    <Footer/>
     </div>
   );
 };

@@ -19,8 +19,8 @@
   font-family: "Nunito" !important;
   font-style: normal !important;
   font-weight: 400 !important;
-  font-size: 57px !important;
-  line-height: 0px !important;
+  font-size: 45px !important;
+  line-height: 38px !important;
   color: #131313 !important;
 }
 .aboutTeamHeaderBottom {
@@ -32,11 +32,8 @@
   color: #131313 !important;
 }
 
-hr {
-  border: 2.5px solid #aa0136 !important;
-  border-radius: 5px !important;
-  background-color: #aa0136 !important;
-  width: 120px !important;
+ .aboutTeamHeaderTop span{
+  text-decoration: underline 5px #aa0136;
 }
 
 .TeamList {

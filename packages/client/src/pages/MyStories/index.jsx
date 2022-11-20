@@ -25,7 +25,6 @@ export const MyStories = () => {
   return (
     <div className="MyStories">
       <Layout>
-        <SearchBar />
 
         <section className="story-collection" id="recently-created">
           <h3>Recently Created</h3>

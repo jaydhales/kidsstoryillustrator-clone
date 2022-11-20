@@ -1,6 +1,7 @@
 import "./ContactUs.scss";
 
 import React, { useState } from 'react';
+import { Footer, Navbar } from "../../components/molecules";
 
 
 const Contact = () => {
@@ -13,7 +14,8 @@ const Contact = () => {
           e.preventDefault();
      }
      return (
-
+          <div>
+<Navbar/>
           <div className="ContactUs">
                <section className="Contact-frame_container">
                     <div className='input-container'>
@@ -62,7 +64,8 @@ const Contact = () => {
                     </div>
                </section>
           </div>
-
+          <Footer/>
+          </div>
 
      );
 }

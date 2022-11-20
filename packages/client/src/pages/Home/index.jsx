@@ -1,5 +1,4 @@
 import React from "react";
-
 import PropTypes from "prop-types";
 
 import "./Home.scss";
@@ -15,7 +14,6 @@ import { useNavigate } from "react-router-dom";
 
 
 export const Home = () => {
-
   const navigate = useNavigate();
 
   return (

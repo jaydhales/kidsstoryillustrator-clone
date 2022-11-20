@@ -9,15 +9,16 @@
     font-weight: 400 !important;
     font-size: 24px !important;
     color: #aa0136 !important;
+    padding-bottom: 20px;
   }
   .hero-text {
     text-align: center !important;
     font-style: normal !important;
     font-weight: 600 !important;
     font-size: 45px !important;
-    line-height: 52px !important;
+    line-height: 50px !important;
     text-align: center !important;
-    color: #131313 !important;
+    color: rgb(37, 37, 37) !important;
   }
   
   @media screen and (max-width: 1024px) {
