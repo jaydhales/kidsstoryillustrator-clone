@@ -1,0 +1,191 @@
+.Pricing{
+    .heading {
+        text-align: center;
+    }
+    
+    .title {
+        font-weight: 600;
+        font-size: 36px;
+        margin: 0;
+        margin-bottom: 8px;
+    }
+    
+    .sub-title {
+        font-weight: 500;
+        font-style: italic;
+        font-size: 14px;
+        color: #aaaaaa;
+        margin: 0;
+    }
+    
+    .plan p{
+        font-weight: 700;
+        text-align: center;
+    }
+    
+    .card {
+        display: flex;
+        justify-content: center;
+        padding: 0 100px;
+        flex-wrap: wrap;
+        margin-top: 66px;
+    }
+    
+    .card .cardone {
+        margin-right: 84px;
+    }
+    
+    .cardone {
+        border: 1px solid #cdcdcd;
+        padding: 70px 80px;
+        text-align: center;
+    }
+    
+    .cardone .title {
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 30px;
+    }
+    
+    .cardone .amount {
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 23px;
+        color: #AA0136;
+    }
+    
+    .cardtwo {
+        border: 1px solid #cdcdcd;
+        padding: 70px 80px;
+        text-align: center;
+        background-color: #AA0136;
+    }
+    
+    .cardtwo .title {
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 30px;
+        color: #FFFFFF;
+    }
+    
+    .cardtwo .amount .figure {
+        text-transform: uppercase;
+        color: #FFFFFF;
+        font-size: 10px;
+    }
+    
+    .cardtwo .amount {
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 23px;
+        color: #FFFFFF;
+    }
+    
+    .features, .featurestwo {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    .features .sub-tt, .featurestwo .sub-tt  {
+        font-size: 12px;
+        font-weight: 400;
+        color: #646363;
+        text-align: left;
+    }
+    
+    .features ul {
+        margin-bottom: 50px;
+    }
+    
+    .features ul, .featurestwo ul {
+        list-style: none;
+        padding: 0;
+        text-align: left;
+    }
+    
+    .features ul li, .featurestwo ul li {
+        font-size: 16px;
+        font-weight: 600;
+        padding: 8px 0;
+        color: #1E1E11;
+    }
+    
+    .features ul li:before, .featurestwo ul li:before{
+        font-family: "Font Awesome 5 Free";
+        content: "\f00c";
+        display: inline-block;
+        padding-right: 8px;
+        vertical-align: middle;
+        font-weight: 900;
+        color: #aa0136;
+     }
+    
+     .featurestwo .sub-tt, .featurestwo ul li, .featurestwo ul li:before {
+        color: #FFFFFF;
+     }
+    
+     button.btn-light {
+        background: #aa0136;
+        color: #fff;
+        font-family: 'Nunito';
+        border: 1px solid #aa0136;
+        font-weight: 500;
+        padding: 10px 36px;
+        border-radius: 100px;
+    }
+    
+    button.btn-lighttwo {
+        background: #FFFFFF;
+        color: #aa0136;
+        font-family: 'Nunito';
+        border: 1px solid #aa0136;
+        font-weight: 500;
+        padding: 10px 36px;
+        border-radius: 100px;
+    }
+    
+    
+    @media screen and (max-width: 480px){
+        .card {
+            padding: 0 10px;
+        }
+    }
+
+    @media screen and (max-width: 768px){
+        .card {
+            margin-bottom: 77px;
+        }
+        .card .cardone {
+            margin-right: 0px;
+            margin-bottom: 77px;
+        }
+        .card > div {
+            width: 100%;
+        }
+        .card-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #cdcdcd;
+            padding: 10px 60px;
+        }
+        .card-head2 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ffffff;
+            padding: 10px 60px;
+        }
+        .features, .featurestwo {
+            text-align: center;
+            padding: 20px 60px 0px;
+        }
+        .cardone, .cardtwo {
+            padding: 0 0 30px;
+        }
+        .cardone .title {
+            margin: 0;
+        }
+    }
+}
+

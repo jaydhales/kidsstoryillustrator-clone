@@ -1,0 +1,120 @@
+.aboutTeam {
+  display: flex !important;
+  align-items: stretch !important;
+  background-color: white !important;
+  font-family: "Nunito" !important;
+  padding: 80px 229px 0px 229px !important;
+}
+
+.aboutTeam > div {
+  text-align: center !important;
+  line-height: 75px !important;
+  font-size: 30px !important;
+  padding: 0px !important;
+}
+.aboutTeamHeader {
+  flex: 100% !important;
+}
+.aboutTeamHeaderTop {
+  font-family: "Nunito" !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-size: 45px !important;
+  line-height: 38px !important;
+  color: #131313 !important;
+}
+.aboutTeamHeaderBottom {
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  letter-spacing: 0.5px !important;
+  color: #131313 !important;
+}
+
+ .aboutTeamHeaderTop span{
+  text-decoration: underline 5px #aa0136;
+}
+
+.TeamList {
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -ms-flex-wrap: wrap !important;
+  flex-wrap: wrap !important;
+  padding: 40px 160px 0px 160px !important;
+}
+
+.TeamListText {
+  box-sizing: border-box !important;
+  -ms-flex: 25% !important;
+  flex: 25% !important;
+  max-width: 25% !important;
+  text-align: center !important;
+  font-size: 28px !important;
+  line-height: 44px !important;
+  color: #131313 !important;
+}
+.abtdot {
+  color: #aa0136 !important;
+}
+.teamImg {
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: 684.73px !important;
+  padding: 80px 0px 80px 0px !important;
+}
+@media screen and (max-width: 1020px) {
+  .aboutTeam {
+    padding: 64px 32px 20px 32px !important;
+  }
+
+  .aboutTeamHeaderTop {
+    font-size: 36px !important;
+    line-height: 0px !important;
+  }
+  .TeamList {
+    padding: 36px 45px 36px 45px !important;
+  }
+  .TeamListText {
+    -ms-flex: 50% !important;
+    flex: 50% !important;
+    max-width: 50% !important;
+    font-size: 23px !important;
+    line-height: 24px !important;
+  }
+  .teamImg {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 500.73px !important;
+    padding: 80px 108.32px 64px 108.32px !important;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .aboutTeam {
+    padding: 62px 26px 20px 16px !important;
+  }
+
+  .aboutTeamHeaderTop {
+    font-size: 32px !important;
+    line-height: 0px !important;
+  }
+  .TeamListText {
+    -ms-flex: 50% !important;
+    flex: 50% !important;
+    max-width: 50% !important;
+    font-size: 18px !important;
+    line-height: 24px !important;
+    letter-spacing: 0.1px !important;
+  }
+  .teamImg {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 250.73px !important;
+    padding: 32px 30px 62px 30px !important;
+  }
+  hr {
+    width: 100px !important;
+  }
+}
