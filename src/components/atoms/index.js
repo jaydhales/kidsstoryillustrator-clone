@@ -1,3 +1,4 @@
+export { default as AdminTableRow } from './AdminTableRow';
 export { default as BlogPostCard } from './BlogPostCard';
 export { default as Button } from './Button';
 export { default as DashboardFilterSearch } from './DashboardFilterSearch';

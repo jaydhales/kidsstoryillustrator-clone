@@ -25,6 +25,7 @@ import {
   ProfileEdit,
   SignUp,
   SummaryActivities,
+  AdminDashboard,
 } from "./pages";
 
 const MoveToTop = () => {
@@ -49,6 +50,7 @@ const App = () => (
       <Route path="/changePassword" element={<ChangePassword />} />
       <Route path="/createStory" element={<CreateStory />} />
       <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/admin/dashboard" element={<AdminDashboard />} />
       <Route path="/error" element={<Error />} />
       <Route path="/faq" element={<FAQ />} />
       <Route path="/forgotPassword" element={<ForgotPassword />} />

@@ -1,4 +1,5 @@
 export { default as About } from "./About";
+export { default as AdminDashboard } from "./AdminDashboard";
 export { default as Blog } from "./Blog";
 export { default as BlogDetails } from "./BlogDetails";
 export { default as ChangePassword } from "./ChangePassword";

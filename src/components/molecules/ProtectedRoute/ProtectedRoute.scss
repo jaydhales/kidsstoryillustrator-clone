@@ -1,0 +1,33 @@
+.protectedRoute {
+    min-height: 100vh;
+    display: grid;
+    grid-template-areas:
+        'sidebar header header'
+        'sidebar body body'
+        'sidebar body body';
+    grid-template-columns: 0.22fr 1fr;
+    grid-template-rows: repeat(auto, 3);
+
+    @media screen and (max-width: 928px) {
+        grid-template-areas:
+            'header header header'
+            'body body body'
+            'body body body';
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(auto, 3);
+    }
+
+    .header {
+        grid-area: header;
+        width: 100%;
+        background-color: red;
+    }
+
+    .sidebar {
+        grid-area: sidebar;
+    }
+
+    .body {
+        grid-area: body;
+    }
+}

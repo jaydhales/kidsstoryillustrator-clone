@@ -3,9 +3,54 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import "./DashboardTable.css";
-
+import { AdminTableRow } from '../../atoms';
+const rowDetails = [
+  {
+    email: "cyntianduka@unimaid.edu.ng",
+    firstName: "Cynthia",
+    lastName: "Nduka",
+    userType: "Premium",
+    location: "Imo, Nigeria"
+  },
+  {
+    email: "cyntianduka@unimaid.edu.ng",
+    firstName: "Cynthia",
+    lastName: "Nduka",
+    userType: "Premium",
+    location: "Imo, Nigeria" 
+  },{
+    email: "cyntianduka@unimaid.edu.ng",
+    firstName: "Cynthia",
+    lastName: "Nduka",
+    userType: "Premium",
+    location: "Imo, Nigeria" 
+  },{
+    email: "cyntianduka@unimaid.edu.ng",
+    firstName: "Cynthia",
+    lastName: "Nduka",
+    userType: "Premium",
+    location: "Imo, Nigeria" 
+  },{
+    email: "cyntianduka@unimaid.edu.ng",
+    firstName: "Cynthia",
+    lastName: "Nduka",
+    userType: "Premium",
+    location: "Imo, Nigeria" 
+  },
+  {
+    email: "cyntianduka@unimaid.edu.ng",
+    firstName: "Cynthia",
+    lastName: "Nduka",
+    userType: "Premium",
+    location: "Imo, Nigeria" 
+  }
+]
 export const DashboardTable = () => {
-  return <div>DashboardTable</div>;
+  return <div>
+    {
+      rowDetails.map((row, index) => <AdminTableRow key={row.firstName + index} {...row} /> )
+    }
+  </div>;
 };
 
 // These are the types of the props that are passed to the component

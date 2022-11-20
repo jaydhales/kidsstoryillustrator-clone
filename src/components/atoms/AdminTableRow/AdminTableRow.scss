@@ -1,0 +1,12 @@
+.AdminTableRow{
+    display: flex;
+    width: 100%;
+    span{
+        flex-basis: 20%;
+        border: 1px solid #ddd;
+        padding: 7.5px 10px;
+        &:first-child{
+            flex-basis: 30%;
+        }
+    }
+}

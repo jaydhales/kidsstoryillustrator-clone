@@ -1,19 +1,23 @@
-import React from "react";
+import React from 'react';
 
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
-import "./DashboardHeader.css";
+import './DashboardHeader.scss';
 
-export const DashboardHeader = () => {
-  return <div>DashboardHeader</div>;
+export const DashboardHeader = ({ className, ...props }) => {
+  return <div className={`${className}`}>DashboardHeader</div>;
 };
 
 // These are the types of the props that are passed to the component
 
-DashboardHeader.propTypes = {};
+DashboardHeader.propTypes = {
+  className: PropTypes.string,
+};
 
 // These are their default values
 
-DashboardHeader.defaultProps = {};
+DashboardHeader.defaultProps = {
+  className: '',
+};
 
 export default DashboardHeader;
