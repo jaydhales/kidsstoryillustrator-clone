@@ -11,6 +11,7 @@
         border-radius: 99px;
         position: relative;
         margin: auto;
+        cursor: pointer;
     }
     .head-menu::after,.head-menu::before{
         content: "";
@@ -19,6 +20,7 @@
         background-color: #222;
         border-radius: 99px;
         position: absolute;
+        cursor: pointer;
     }
         .head-menu::after{
             top: 10px;

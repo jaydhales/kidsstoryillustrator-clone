@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 
 import './DashboardHeader.scss';
 
-export const DashboardHeader = ({ className, ...props }) => {
+export const DashboardHeader = ({ className,openSideBar, ...props }) => {
   return <div className={`${className} DashboardHeader`}>
-    <div className='head-menu'></div>
+    <div className='head-menu' onClick={openSideBar}></div>
     <img src='/Logo.svg' className='head-logo'/>
   </div>;
 };
@@ -15,6 +15,7 @@ export const DashboardHeader = ({ className, ...props }) => {
 
 DashboardHeader.propTypes = {
   className: PropTypes.string,
+  openSideBar: PropTypes.func,
 };
 
 // These are their default values
