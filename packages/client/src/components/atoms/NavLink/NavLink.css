@@ -6,3 +6,13 @@
 .NavLink:hover {
   color: #8E012D;
 }
+
+@media (max-width: 890px) {
+  .NavLink {
+    color: #646363;
+    font-weight: 500;
+    font-size: 30px;
+    margin-top: 30px;
+    margin-left: 45px;
+  } 
+}
