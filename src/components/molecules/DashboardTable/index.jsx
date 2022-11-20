@@ -88,13 +88,13 @@ const rowDetails = [
   }
 ]
 export const DashboardTable = () => {
-  return <div>
+  return <div className='DashboardTable'>
     <div className='options'>
       {/* To Do add actual icons here */}
       <div>
         <input type="checkbox" />
         <img src='/sync.svg' />
-        <div className='menu'></div>
+        <span className='menu'></span>
       </div>
       <div>
         <p>Showing 1 - 10 of 2,000 users</p>

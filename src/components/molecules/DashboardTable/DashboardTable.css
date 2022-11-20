@@ -1,16 +1,52 @@
+*{
+    margin:0;
+    padding: 0;
+}
 .DashboardTable {
     background-color: #fff;
+    padding: 15px;
 }
-img{
-    width: 30px !important;
+.options img{
+    width: 15px;
+    height: 15px;
+    max-width: 15px;
+    margin: auto;
+    padding: 0 !important;
 }
 .options, .options div{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 10px;
+    width: auto;
+    flex-basis: 40%;
+}
+.options div:first-child{
+    flex-basis: 20%;
+}
+.options{
+    width: 100%;
+    padding: 30px 0;
 }
 .menu{
-    width: 10px;
-    height: 10px;
+    width: 5px !important;
+    height: 5px;
     border-radius: 99px;
+    display: block;
+    background: #787777;
+    position: relative;
+}
+.menu::after, .menu::before{
+    content: "";
+    position: absolute;
+    width: 5px !important;
+    height: 5px;
+    border-radius: 99px;
+    background: #787777;
+}
+.menu::after{
+    top: 10px;
+}
+.menu::before{
+top: -10px;
 }
