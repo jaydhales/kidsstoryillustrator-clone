@@ -1,10 +1,52 @@
 .DashboardSidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
     .CreateNewStory{
         background-color: #AA0136;
+        padding: 0px 15px;
         display: flex;
+        align-items: center;
+        gap: 10px;
+        border-radius: 99px;
+        p{
+        color: #fff;
+        font-size: 14px;
+        }
         img{
             width: 25px !important;
             height: 25px !important;
+            padding: 0 !important;
+        }
+    }
+    .sideItems-container{
+        display: flex;
+        flex-direction: column;
+        flex-basis: 60%;
+        gap: 30px;
+        width: fit-content;
+        .sidebarItem{
+            padding: 0px 15px;
+            border-radius: 99px;
+            display: flex;
+            gap: 15px;
+            background-color: #fff;
+            cursor: pointer;
+            transition: background-color 0.5s ease-in;
+            &:hover{
+            background-color: #AA0136;
+            p{
+                color: #fff ;
+            }
+        }
+            align-items: center;
+            img{
+                width: 30px !important;
+                height: 30px !important;
+                padding: 0 !important;
+            }
         }
     }
 }
