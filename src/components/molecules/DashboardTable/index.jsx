@@ -107,7 +107,8 @@ export const DashboardTable = () => {
       lastName: 'Last Name',
       email: 'Email',
       userType: 'User Type',
-      location: 'Location'
+      location: 'Location',
+      header: true,
     }} />
     {
       rowDetails.map((row, index) => <AdminTableRow key={row.firstName + index} {...row} /> )
