@@ -7,16 +7,18 @@ import AboutUsCard from "../../components/molecules/AboutUsCard";
 import AboutUsHero from "../../components/molecules/AboutUsHero";
 import AboutUsTeam from "../../components/molecules/AboutUsTeam";
 import AboutUsVision from "../../components/molecules/AboutUsVision";
-
+import { Layout, PaddingProvisionals } from "../../components/molecules";
 
 export const About = () => {
   return (
-    <div className="About">
-      <AboutUsHero />
-      <AboutUsVision />
-      <AboutUsCard />
-      <AboutUsTeam />
-    </div>
+    <Layout>
+      <div className="About">
+        <AboutUsHero />
+        <AboutUsVision />
+        <AboutUsCard />
+        <AboutUsTeam />
+      </div>
+    </Layout>
   );
 };
 
