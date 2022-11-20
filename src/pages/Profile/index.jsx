@@ -3,10 +3,12 @@ import { useNavigate, Link } from "react-router-dom";
 
 import PropTypes from "prop-types";
 
-import "./Profile.css";
+import "./Profile.scss";
 import profileIcon from "./assests/profileIconImg.png";
 import useRandomAvatarIcon from "./assests/useRandomAvatarIcon.png";
+import { Layout } from '../../components/molecules/';
 import ProfileEdit from "../../pages/Profile/ProfileEdit";
+
 
 export const Profile = () => {
   const navigate = useNavigate();
@@ -16,7 +18,8 @@ export const Profile = () => {
     navigate("/profile/edit");
   };
   return (
-    <>
+    <Layout>
+      <div className="Profile">
       <div className="profile-container">
         <div className="profile-header">
           <h2>Complete Profile</h2>
@@ -87,7 +90,8 @@ export const Profile = () => {
           </form>
         </div>
       </div>
-    </>
+    </div>
+    </Layout>
   );
 };
 
