@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import './DetailsInput.css';
 
 export const DetailsInput = () => {
-	return <div>DetailsInput</div>;
+  return <div>DetailsInput</div>;
 };
 
 // These are the types of the props that are passed to the component

@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import './DashboardFilterSearch.css';
 
 export const DashboardFilterSearch = () => {
-	return <div>DashboardFilterSearch</div>;
+  return <div>DashboardFilterSearch</div>;
 };
 
 // These are the types of the props that are passed to the component

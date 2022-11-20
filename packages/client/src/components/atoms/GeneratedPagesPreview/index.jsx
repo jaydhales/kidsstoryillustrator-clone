@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import './GeneratedPagesPreview.css';
 
 export const GeneratedPagesPreview = () => {
-	return <div>GeneratedPagesPreview</div>;
+  return <div>GeneratedPagesPreview</div>;
 };
 
 // These are the types of the props that are passed to the component

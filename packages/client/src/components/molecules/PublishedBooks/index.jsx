@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-import './PublishedBooks.css';
+import "./PublishedBooks.css";
 
 export const PublishedBooks = () => {
-	return <div>PublishedBooks</div>;
+  return <div>PublishedBooks</div>;
 };
 
 // These are the types of the props that are passed to the component

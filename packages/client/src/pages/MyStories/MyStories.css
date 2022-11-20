@@ -1,11 +1,15 @@
+.MyStories {
+  padding: 2rem;
+}
+
 .MyStories section {
-	padding: 24px 0;
+  padding: 24px 0;
 }
 
 .MyStories h3 {
-	margin: 24px 0;
+  margin: 24px 0;
 }
 
 .MyStories p {
-	margin-top: 12px;
+  margin-top: 12px;
 }

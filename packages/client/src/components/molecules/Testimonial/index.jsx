@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-import './Testimonial.css';
+import "./Testimonial.css";
 
 export const Testimonial = () => {
-	return <div>Testimonial</div>;
+  return <div>Testimonial</div>;
 };
 
 // These are the types of the props that are passed to the component

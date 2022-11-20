@@ -1,30 +1,26 @@
-import React from 'react';
+import React from "react";
 
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-import FAQHero from '../../components/molecules/FAQHero';
+import FAQHero from "../../components/molecules/FAQHero";
 
-import './FAQ.css';
-import FAQCategories from '../../components/molecules/FAQCategories';
-import FAQQuestions from '../../components/molecules/FAQQuestions';
-import FAQCta from '../../components/molecules/FAQCta';
-import { Layout, PaddingProvisionals } from '../../components/molecules';
+import "./FAQ.scss";
+import FAQCategories from "../../components/molecules/FAQCategories";
+import FAQQuestions from "../../components/molecules/FAQQuestions";
+import FAQCta from "../../components/molecules/FAQCta";
 
 export const FAQ = () => {
-	return (
-		<Layout>
-			<FAQHero />
-
-			<PaddingProvisionals>
-				<FAQCategories />
-				<br />
-				<br />
-				<FAQQuestions />
-			</PaddingProvisionals>
-
-			<FAQCta />
-		</Layout>
-	);
+  return <div>
+    <FAQHero />
+    <br/>
+    <br/>
+    <FAQCategories />
+    <br/>
+    <br/>
+    <FAQQuestions />
+    <br/>
+    <FAQCta />
+  </div>;
 };
 
 // These are the types of the props that are passed to the component

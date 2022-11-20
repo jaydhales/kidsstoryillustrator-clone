@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import './DashboardSidebarLink.css';
 
 export const DashboardSidebarLink = () => {
-	return <div>DashboardSidebarLink</div>;
+  return <div>DashboardSidebarLink</div>;
 };
 
 // These are the types of the props that are passed to the component
