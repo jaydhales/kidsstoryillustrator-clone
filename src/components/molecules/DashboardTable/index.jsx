@@ -43,11 +43,65 @@ const rowDetails = [
     lastName: "Nduka",
     userType: "Premium",
     location: "Imo, Nigeria" 
+  },
+  {
+    email: "cyntianduka@unimaid.edu.ng",
+    firstName: "Cynthia",
+    lastName: "Nduka",
+    userType: "Premium",
+    location: "Imo, Nigeria" 
+  },
+  {
+    email: "cyntianduka@unimaid.edu.ng",
+    firstName: "Cynthia",
+    lastName: "Nduka",
+    userType: "Premium",
+    location: "Imo, Nigeria" 
+  },
+  {
+    email: "cyntianduka@unimaid.edu.ng",
+    firstName: "Cynthia",
+    lastName: "Nduka",
+    userType: "Premium",
+    location: "Imo, Nigeria" 
+  },
+  {
+    email: "cyntianduka@unimaid.edu.ng",
+    firstName: "Cynthia",
+    lastName: "Nduka",
+    userType: "Premium",
+    location: "Imo, Nigeria" 
+  },
+  {
+    email: "cyntianduka@unimaid.edu.ng",
+    firstName: "Cynthia",
+    lastName: "Nduka",
+    userType: "Premium",
+    location: "Imo, Nigeria" 
+  },
+  {
+    email: "cyntianduka@unimaid.edu.ng",
+    firstName: "Cynthia",
+    lastName: "Nduka",
+    userType: "Premium",
+    location: "Imo, Nigeria" 
   }
 ]
 export const DashboardTable = () => {
   return <div>
-    <div><input type="checkbox" /></div>
+    <div className='options'>
+      {/* To Do add actual icons here */}
+      <div>
+        <input type="checkbox" />
+        <img src='/logo192.png' />
+        <div className='menu'></div>
+      </div>
+      <div>
+        <p>Showing 1 - 10 of 2,000 users</p>
+        <img src='/logo192.png' />
+        <img src='/logo192.png' />
+      </div>
+      </div>
     <AdminTableRow {...{
       firstName: 'First Name',
       lastName: 'Last Name',
