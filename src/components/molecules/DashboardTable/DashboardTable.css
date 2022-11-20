@@ -5,6 +5,7 @@
 .DashboardTable {
     background-color: #fff;
     padding: 15px;
+    border-radius: 8px;
 }
 .options img{
     width: 15px;
