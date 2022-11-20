@@ -13,8 +13,10 @@ import view4 from "../../assets/Demo/images/view-4.png";
 import tick from "../../assets/Demo/icons/tick-circle.png";
 import arrowLeft from "../../assets/Demo/icons/arrow-left.png";
 import arrowRight from "../../assets/Demo/icons/arrow-right.png";
+import { useNavigate } from "react-router-dom";
 
 export const HowToUse = () => {
+  const navigate = useNavigate();
   const demoData = [
     {
       heading: (
@@ -78,11 +80,7 @@ export const HowToUse = () => {
       ),
     },
     {
-      heading: (
-        <>
-          How <span>story.ai</span> works
-        </>
-      ),
+      heading: <>3. Save and download your story</>,
       media: <img src={view4} alt="" />,
       content: (
         <div className="list">
@@ -121,8 +119,6 @@ export const HowToUse = () => {
       setNextDisabled(false);
     }
 
-    console.log(totalPages);
-    console.log(pageNum);
   }, [pageNum]);
 
   const handleEvent = (e, action) => {
@@ -147,7 +143,7 @@ export const HowToUse = () => {
       <div className="modal">
         <div className="heading">
           <h2>{demoData[pageNum].heading}</h2>
-          <button>
+          <button onClick={(e) => navigate(-1)}>
             <img src={close} alt="close button" />
           </button>
         </div>
