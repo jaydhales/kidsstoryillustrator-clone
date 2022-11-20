@@ -3,18 +3,10 @@ import { getAllStories, getStoryById, getStoryByEmail } from '../controllers/sto
 
 const router = express.Router();
 
-router
-  .route('/get_story')
-  .get(getAllStories)
+router.route('/get_story').get(getAllStories);
 
-router
-  .route('/get_story/:id')
-  .get(getStoryById)
+router.route('/get_story/:id').get(getStoryById);
 
+router.route('/get_by_email/:email').get(getStoryByEmail);
 
-router
-  .route('/get_by_email/:email')
-  .get(getStoryByEmail)
-
-
-export default router
+export default router;
