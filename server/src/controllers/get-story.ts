@@ -6,12 +6,12 @@ export const getAllStories = async function (req: Request, res: Response) {
     return res.status(200).json({
       status: "success",
       message: "fetch your stories here",
-      data: payload,
+      // data: payload,
     })
   } catch (error) {
     return res.status(200).json({
       status: "error",
-      error: error.message
+      // error: error.message
     })
 
   }

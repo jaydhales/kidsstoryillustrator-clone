@@ -1,5 +1,5 @@
 {
-    "swagger": "2.0",
+    "openapi": "3.0.3",
     "info": {
         "title": "Swagger API Docs for Kids Story Illustrator",
         "description": "This is a sample Story illustrator Server based on the OpenAPI 3.0 specification.",
@@ -7,10 +7,10 @@
     },
     "servers": [
         {
-            "url": "localhost/9000/story"
+            "url": "/story"
         }
     ],
-    "basePath": "/story",
+    "schemes": ["http", "https"],
     "tags": [
         {
             "name": "Story",
@@ -21,20 +21,6 @@
             "description": "Operations about user"
         }
     ],
-    "consumes": [
-        "application/json"
-      ],
-      "produces": [
-        "application/json"
-      ],
-      "securityDefinitions": {
-        "ApiKeyAuth":{
-          "type": "apiKey",
-          "name": "Authorization",
-          "in": "header",
-          "description": "JWT Authorization header"
-        }
-    },
     "paths": {
         "/get-story": {
             "get": {
@@ -286,7 +272,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/Story"
+                                    "$ref": "#/components/schemas/User"
                                 }
                             }
                         }
@@ -476,8 +462,8 @@
                         }
                     ]
                 },
-                "xml": {
-                    "name": "order"
+                "json": {
+                    "name": "Story"
                 }
             },
             "User": {
@@ -500,7 +486,7 @@
                         "type": "string"
                     }
                 },
-                "xml": {
+                "json": {
                     "name": "User"
                 }
             },
@@ -514,7 +500,7 @@
                         "type": "string"
                     }
                 },
-                "xml": {
+                "json": {
                     "name": "storyRequest"
                 }
             },
@@ -537,7 +523,7 @@
                         "type": "string"
                     }
                 },
-                "xml": {
+                "json": {
                     "name": "userSignup"
                 }
             },
@@ -551,9 +537,33 @@
                         "type": "string"
                     }
                 },
-                "xml": {
+                "json": {
                     "name": "userLogin"
                 }
+            },
+            "ApiResponse": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "integer"
+                    },
+                    "type": {
+                        "type": "string"
+                    },
+                    "message": {
+                        "type": "message"
+                    }
+                },
+                "json": {
+                    "name": "##default"
+                }
+            }
+        },
+        "securitySchemes": {
+            "bearerAuth": {
+                "type": "http",
+                "scheme": "bearer",
+                "bearerFormat": "JWT"
             }
         }
     }
