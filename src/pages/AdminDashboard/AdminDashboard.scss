@@ -1,4 +1,39 @@
 .admin-dashboard{
     background-color: #E4E4E4;
     padding: 20px;
+    height: fit-content;
+}
+
+.admin-dashboard input{
+    padding: 15px 20px;
+}
+.admin-dashboard .arrow{
+    width: 15px;
+    height: 15px;
+    padding: 0 !important;
+}
+.admin-dashboard .heading{
+    display: flex;
+    flex-direction: column;
+}
+.admin-dashboard .heading span{
+    display: flex;
+    gap: 10px;
+    font-size: 16px !important;
+    margin: 0 !important;
+}
+.admin-dashboard .heading h2{
+    font-size: 22px !important;
+    color: #181818 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.admin-dashboard .heading-container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.heading-container input{
+    padding: 15px 20px !important;
+    height: 0;
 }
