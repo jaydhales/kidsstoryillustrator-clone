@@ -1,6 +1,6 @@
 .admin-dashboard{
     background-color: #E4E4E4;
-    padding: 20px;
+    padding: 30px;
     height: fit-content;
 }
 
@@ -8,23 +8,36 @@
     padding: 15px 20px;
 }
 .admin-dashboard .arrow{
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 10px;
     padding: 0 !important;
 }
 .admin-dashboard .heading{
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
 }
-.admin-dashboard .heading span{
+.admin-dashboard .heading .heading-container-texts{
     display: flex;
     gap: 10px;
+    align-items: center;
+    padding: 5px;
+}
+.admin-dashboard .heading span{
+    &:first-child{
+        color: #787777;
+        font-weight: 400;
+    }
     font-size: 16px !important;
     margin: 0 !important;
+    white-space: nowrap;
+    color: #AA0136;
+    font-weight: 700;
 }
 .admin-dashboard .heading h2{
     font-size: 22px !important;
     color: #181818 !important;
+    width: fit-content;
     padding: 0 !important;
     margin: 0 !important;
 }

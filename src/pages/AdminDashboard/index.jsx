@@ -12,7 +12,7 @@ export const AdminDashboard = () => {
                 <div className='heading-container'>
                     <div className='heading'>
                         <h2>USERS LIST</h2>
-                        <span><span>Dashboard</span> <img className='arrow' src="/right.svg" /><span>Users List</span></span>
+                        <span className='heading-container-texts'><span>Dashboard</span> <img className='arrow' src="/right.svg" /><span>Users List</span></span>
                     </div>
                     <input type="text" placeholder="Search" />
                 </div>

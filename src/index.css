@@ -9,7 +9,10 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+html, #root{
+  margin: 0 !important;
+  padding: 0 !important;
+}
 body {
   font-family: 'Roboto', sans-serif;
 }

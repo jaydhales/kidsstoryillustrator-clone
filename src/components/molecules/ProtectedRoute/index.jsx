@@ -8,7 +8,7 @@ import { DashboardHeader, DashboardSidebar } from '..';
 export const ProtectedRoute = ({ children, className, ...props }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   return (
-    <div className={`${isSidebarOpen ? `protectedRoute-active` : `protectedRoute`}`}>
+    <div className={`${!isSidebarOpen ? `protectedRoute-active` : `protectedRoute`}`}>
       <DashboardHeader className="header" openSideBar={() => setIsSidebarOpen(props => !props)} />
       <DashboardSidebar className={`sidebar ${isSidebarOpen ? `sidebar-active` : ''}`} />
       <section className={`body ${className}`} {...props}>
