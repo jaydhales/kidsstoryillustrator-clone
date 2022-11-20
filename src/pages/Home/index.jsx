@@ -20,7 +20,7 @@ export const Home = () => {
         <header>
           <section className="text">
             <h1 className="header-text">Generate Story Illustrations</h1>
-            <p>
+            <p className="lead">
               Describe your scene. Our AI will generate the illustrations in
               details
             </p>

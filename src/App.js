@@ -2,8 +2,7 @@ import React, { useEffect } from "react";
 
 import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 
-import "./App.css";
-
+import "./App.scss";
 import {
   About,
   Blog,
