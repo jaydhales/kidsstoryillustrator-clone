@@ -1,5 +1,5 @@
-import { Schema, model, Types } from 'mongoose'
-import { IUser } from '../interface'
+import { Schema, model, Types } from 'mongoose';
+import { IUser } from '../interface';
 
 const userSchema = new Schema<IUser>({
     firstName: {
@@ -20,14 +20,13 @@ const userSchema = new Schema<IUser>({
     },
     createdAt: {
         type: Date,
-        immutable: true,            
+        immutable: true,
         default: () => Date.now()
     },
     updatedAt: {
         type: Date,
         default: () => Date.now()
     }
-})
+});
 
-
-export default model<IUser>('User', userSchema)
+export default model<IUser>('User', userSchema);
