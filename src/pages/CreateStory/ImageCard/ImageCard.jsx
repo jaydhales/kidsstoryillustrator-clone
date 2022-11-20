@@ -24,17 +24,12 @@ const ImageCard = ({ image_url, src, indexNo }) => {
     el2.parentElement.firstChild.classList.remove("check_img_off");
   };
 
-  useEffect(() => {
-    // const el2 = document.getElementsByClassName('check_img_off');
-    // console.log(el2);
-  });
-
   return (
     <div
       className="imagecard"
       onClick={(e) => {
         getElementID(e);
-				src(image_url)
+				src(image_url);
       }}
     >
       <img src={check_img} className={`check_img check_img_off`} alt="" />
