@@ -1,0 +1,17 @@
+.profile-name-container {
+	margin-top: 30px;
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+	justify-content: space-between;
+	width: 20%;
+	/* border: 1px solid black; */
+}
+
+.pro-name-details {
+	/* border: 1px solid red; */
+}
+
+.progress-text {
+	font-size: 50px;
+}

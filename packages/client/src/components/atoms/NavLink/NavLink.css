@@ -1,0 +1,8 @@
+.NavLink {
+	color: #646363;
+	font-weight: 500;
+}
+.active,
+.NavLink:hover {
+	color: #8e012d;
+}

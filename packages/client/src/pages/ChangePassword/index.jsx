@@ -2,10 +2,10 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
-import './ChangePassword.scss';
+import './ChangePassword.css';
 
 export const ChangePassword = () => {
-  return <div>ChangePassword</div>;
+	return <div>ChangePassword</div>;
 };
 
 // These are the types of the props that are passed to the component

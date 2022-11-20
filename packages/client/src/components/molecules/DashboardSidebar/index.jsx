@@ -2,10 +2,10 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
-import './DashboardSidebar.scss';
+import './DashboardSidebar.css';
 
 export const DashboardSidebar = () => {
-  return <div>DashboardSidebar</div>;
+	return <div>DashboardSidebar</div>;
 };
 
 // These are the types of the props that are passed to the component

@@ -2,10 +2,10 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
-import './Features.scss';
+import './Features.css';
 
 export const Features = () => {
-  return <div>Features</div>;
+	return <div>Features</div>;
 };
 
 // These are the types of the props that are passed to the component

@@ -2,10 +2,10 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
-import './FootLink.scss';
+import './FootLink.css';
 
 export const FootLink = () => {
-  return <div>FootLink</div>;
+	return <div>FootLink</div>;
 };
 
 // These are the types of the props that are passed to the component

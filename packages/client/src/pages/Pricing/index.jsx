@@ -2,10 +2,10 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
-import './Pricing.scss';
+import './Pricing.css';
 
 export const Pricing = () => {
-  return <div>Pricing</div>;
+	return <div>Pricing</div>;
 };
 
 // These are the types of the props that are passed to the component

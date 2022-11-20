@@ -2,10 +2,10 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
-import './DashboardTable.scss';
+import './DashboardTable.css';
 
 export const DashboardTable = () => {
-  return <div>DashboardTable</div>;
+	return <div>DashboardTable</div>;
 };
 
 // These are the types of the props that are passed to the component
