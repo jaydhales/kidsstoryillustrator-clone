@@ -7,19 +7,19 @@ export const getAllStories = async function (req: Request, res: Response) {
         const allStories = await StorybookModel.find({}).populate('author');
         if (!allStories) {
             return res.status(400).json({
-                status: 'error',
+                success: true,
                 message: 'Stories not found'
             });
         } else {
             return res.status(200).json({
-                status: 'success',
+                sucess: true,
                 message: 'Stories successfully fetched',
                 data: allStories
             });
         }
-    } catch (error) {
+    } catch (error: any) {
         return res.status(500).json({
-            status: 'error',
+            success: false,
             message: 'It is not you, it is us, in a while the server will be up',
             error_message: error.message
         });
@@ -47,9 +47,9 @@ export const getStoryById = async function (req: Request, res: Response) {
         } else {
             return res.status(404).send({ success: false, message: 'Invalid story Id' });
         }
-    } catch (error) {
+    } catch (error: any) {
         return res.status(500).json({
-            status: 'error',
+            success: false,
             message: 'It is not you, it is us, in a while the server will be up',
             error_message: error.message
         });
@@ -73,9 +73,9 @@ export const getStoryByEmail = async function (req: Request, res: Response) {
             message: 'Story retrieved successfully',
             data: story
         });
-    } catch (error) {
+    } catch (error: any) {
         return res.status(500).json({
-            status: 'server error',
+            success: false,
             message: error.message
         });
     }

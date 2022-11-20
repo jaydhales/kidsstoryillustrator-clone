@@ -3,8 +3,7 @@ import { Types } from 'mongoose';
 export interface IUser {
     [x: string]: any;
     _id: Types.ObjectId;
-    firstName: string;
-    lastName: string;
+    username: string;
     email: string;
     hash: string;
     createdAt: Date;
