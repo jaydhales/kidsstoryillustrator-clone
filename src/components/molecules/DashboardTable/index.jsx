@@ -93,7 +93,7 @@ export const DashboardTable = () => {
       {/* To Do add actual icons here */}
       <div>
         <input type="checkbox" />
-        <img src='/logo192.png' />
+        <img src='/sync.svg' />
         <div className='menu'></div>
       </div>
       <div>
