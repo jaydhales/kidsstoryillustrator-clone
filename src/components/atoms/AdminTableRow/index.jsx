@@ -6,14 +6,14 @@ import './AdminTableRow.scss';
 
 export const AdminTableRow = ({ email, firstName,lastName, userType, location}) => {
   return(
-    <div className='AdminTableRow'>
-    <span>{email}</span>
-    <span>{ firstName }</span>
-    <span>{lastName}</span>
-      <span>{lastName}</span>
-      <span>{userType}</span>
-      <span>{ location }</span>
-  </div>);
+    <section className='AdminTableRow'>
+    <div><input type="checkbox" /> {email}</div>
+    <div>{ firstName }</div>
+    <div>{lastName}</div>
+      <div>{lastName}</div>
+      <div>{userType}</div>
+      <div>{ location }</div>
+  </section>);
 };
 
 // These are the types of the props that are passed to the component

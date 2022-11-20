@@ -47,6 +47,14 @@ const rowDetails = [
 ]
 export const DashboardTable = () => {
   return <div>
+    <div><input type="checkbox" /></div>
+    <AdminTableRow {...{
+      firstName: 'First Name',
+      lastName: 'Last Name',
+      email: 'Email',
+      userType: 'User Type',
+      location: 'Location'
+    }} />
     {
       rowDetails.map((row, index) => <AdminTableRow key={row.firstName + index} {...row} /> )
     }
