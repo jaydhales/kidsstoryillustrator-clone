@@ -2,7 +2,7 @@ import React from "react";
 
 import PropTypes from "prop-types";
 
-import "./About.css";
+import "./About.scss";
 import AboutUsCard from "../../components/molecules/AboutUsCard";
 import AboutUsHero from "../../components/molecules/AboutUsHero";
 import AboutUsTeam from "../../components/molecules/AboutUsTeam";
