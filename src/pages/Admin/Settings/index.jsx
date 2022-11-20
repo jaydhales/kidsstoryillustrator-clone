@@ -7,9 +7,7 @@ import "./AcctSetup.css";
 export const Settings = () => {
   return (
     <div className="container">
-      <div className="side-bar">
-
-      </div>
+      <div className="side-bar"></div>
       <div className="wrapper">
         <h1>Settings</h1>
         <div className="nav-section">
@@ -28,31 +26,31 @@ export const Settings = () => {
           </div>
         </div>
 
-        <form>
+        <form className='form-section'>
           <div className="form-name">
             <label>
               First Name <br />
-              <input type="text" placeholder="Mark" />
+              <input type="text" placeholder="Mark"  className="inputs2"/>
             </label>
             <label>
               Last Name <br />
-              <input type="text" placeholder="Essien" />
+              <input type="text" placeholder="Essien" className="inputs2" />
             </label>
           </div>
 
           <label>
             City <br />
-            <input type="text" placeholder="San Francisco" className="city" />
+            <input type="text" placeholder="San Francisco" className="city"  />
           </label>
 
           <div className="region-section">
             <label>
               State <br />
-              <input type="text" placeholder="california" />
+              <input type="text" placeholder="california" className="inputs2"/>
             </label>
             <label>
               Country <br />
-              <input type="text" placeholder="America" />
+              <input type="text" placeholder="America" className="inputs2"/>
             </label>
           </div>
         </form>
@@ -69,11 +67,11 @@ export const Settings = () => {
           <div className="mail-inputs">
             <label>
               New Email Address <br />
-              <input type="text" placeholder="America" />
+              <input type="text" placeholder="America" className="inputs2"/>
             </label>
             <label>
               Current Password <br />
-              <input type="text" placeholder="America" />
+              <input type="text" placeholder="America" className="inputs2"/>
             </label>
           </div>
 

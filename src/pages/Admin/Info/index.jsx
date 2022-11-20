@@ -1,41 +1,48 @@
 import React from "react";
-
 import PropTypes from "prop-types";
 
 import "./AccountInfo.css";
 
 export const Info = () => {
   return (
-    <div className="container">
-      <div className="side-bar"></div>
-      <div className="wrapper">
+    <div className="App1">
+      <div className="side-bar1"></div>
+      <div className="wrapper-div">
         <h2 className="header">Account Information</h2>
-        <div className="cover">
+        <div className="cover-section">
           <b>Edit profile</b>
           <div className="profile">
-            <img alt="profile-pic" />
+            <img alt="profile-pic" src="./im" />
             <div>
               <p>Ella James</p>
               <p>EllaJames@gmail.com</p>
             </div>
           </div>
           <form>
-            <div className="name-section">
+            <div className="grid-section">
               <label>
                 Full name <br />
-                <input type="text" placeholder="" />
+                <input type="text" placeholder="" className="inputs" />
               </label>
               <label>
                 Email address <br />
-                <input type="text" placeholder="enter email address" />
+                <input
+                  type="text"
+                  placeholder="enter email address"
+                  className="inputs"
+                />
               </label>
               <label>
                 Phone number <br />
-                <input type="text" placeholder="enter phone number" />
+                <input
+                  type="text"
+                  placeholder="enter phone number"
+                  className="inputs"
+                />
               </label>
               <label>
                 Birthday <br />
-                <input type="text" placeholder="dd/mm/yy" />
+                <input type="text" placeholder="dd/mm/yy" className="inputs" />
               </label>
             </div>
 
@@ -43,11 +50,19 @@ export const Info = () => {
             <div className="pass-section">
               <label>
                 Current password <br />
-                <input type="text" placeholder="enter current password" />
+                <input
+                  type="text"
+                  placeholder="enter current password"
+                  className="inputs"
+                />
               </label>
               <label>
                 New password <br />
-                <input type="text" placeholder="enter new password" />
+                <input
+                  type="text"
+                  placeholder="enter new password"
+                  className="inputs"
+                />
               </label>
             </div>
 
@@ -55,11 +70,19 @@ export const Info = () => {
             <div className="address-section">
               <label>
                 Address <br />
-                <input type="text" placeholder="enter home address" />
+                <input
+                  type="text"
+                  placeholder="enter home address"
+                  className="inputs"
+                />
               </label>
               <label>
                 House no <br />
-                <input type="text" placeholder="enter house number" />
+                <input
+                  type="text"
+                  placeholder="enter house number"
+                  className="inputs"
+                />
               </label>
             </div>
           </form>
