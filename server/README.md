@@ -1,29 +1,42 @@
-# My assigned backend tasks
-
-**1.** get all story route and controller
+# kidsstoryillustrator.web
 
 ```
-localhost:9000/story/get_story
-```
-```
-this route returns an array of all the stories from the database
+localhost:9000/api/get-story
 ```
 
+To run the project:
 
-**2.** get one story route and controller by id
+-   Backend:
+    ```
+    npm run start:server
+    ```
+-   Frontend
+    ```
+    npm run start:client
+    ```
 
-```
-localhost:9000/story/get_story/:id
-```
-```
-this route returns a single story based on a valid story id
-```
+## Project structure
 
-**3.** get one story route and controller by email
+    ├── ...
+    ├── pages # contains all page components
+    ├── packages  ├── client
+                  ├── server
 
-```
-localhost:9000/story/get_story/:email
-```
-```
-this route returns a single story based on a valid authors email
-```
+
+
+---
+
+## client
+
+    ├── ...
+    ├── pages # contains all page components
+    ├── components  ├── molecule # contains all super components
+                    ├── atom # contains all sub components
+    ├── utils  ├── hooks   # All custom hooks
+               ├── functions # All helper functions
+               ├── redux # redux store, slices and api connection
+    ├── assets # Images
+                ├── icons # contains all icons
+    ├── testing utils # helpers for tests
+    ├──sass # reset and value partials
+    └── ... └──package.json # Contains all dependencies
