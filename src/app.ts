@@ -1,31 +1,34 @@
-import 'dotenv/config'
-import 'tsconfig-paths/register'
-import createError from 'http-errors'
-import express, { Request, Response } from 'express'
-import { cors } from './middleware/utils'
-import path from 'path'
-import cookieParser from 'cookie-parser'
-import logger from 'morgan'
+import 'dotenv/config';
+import 'tsconfig-paths/register';
+import createError from 'http-errors';
+import express, { Request, Response } from 'express';
+import { cors } from './middleware/utils';
+import path from 'path';
+import cookieParser from 'cookie-parser';
+import logger from 'morgan';
 import helmet from 'helmet';
 
-
-import indexRouter from './routes/index.route'
-import invalidRouter from './routes/404.route'
+import indexRouter from './routes/index.route';
+import invalidRouter from './routes/404.route';
+import storyRouter from './routes/story.routes';
+import './db/mongodb'
 
 const app = express();
 
-app.use(cors)
+app.use(cors);
 app.use(helmet());
-app.use(logger('dev'))
-app.use(express.json())
-app.use(express.urlencoded({ extended: false }))
-app.use(cookieParser())
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter)
-app.use('/', invalidRouter)
+app.use('/', indexRouter);
+app.use('/story', storyRouter);
+app.use('**', invalidRouter);
 
-app.use((req, res, next) => {
+
+app.use((req: Request, res: Response, next) => {
   next(createError(404));
 });
 
