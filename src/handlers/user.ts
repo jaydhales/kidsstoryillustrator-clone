@@ -7,7 +7,6 @@ import isEmail from 'validator/lib/isEmail';
 import UserModel from '../model/user.model';
 
 const secret = process.env.SECRET as string
-
 export class User extends BaseHandler {
 
     static async signup(req: Request, res: Response) {
