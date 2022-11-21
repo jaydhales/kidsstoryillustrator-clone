@@ -2,3 +2,4 @@
 .env
 /build
 /src/seeders
+yarn.lock
