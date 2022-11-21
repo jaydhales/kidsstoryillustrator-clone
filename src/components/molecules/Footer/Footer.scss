@@ -11,13 +11,14 @@
 
     @media screen and (max-width: 1200px) {
         padding: 30px;
-        flex-direction: column-reverse;
+        flex-direction: row;
         align-items: center;
         gap: 50px;
     }
 
     @media screen and (max-width: 900px) {
         padding: 15px;
+        flex-direction: column-reverse;
     }
 
     justify-content: space-between;
@@ -54,19 +55,30 @@
         justify-content: space-between;
         width: 50%;
         flex-basis: 60%;
+        
 
         @media screen and (max-width: 1200px) {
             width: 100%;
-            flex-direction: column;
+            flex-direction: row;
             gap: 20px;
+            padding: 0 10%;
         }
+
+        
+        @media screen and (max-width: 539px) {
+            flex-direction: column;
+            align-items: center;
+        }
+
 
         h3 {
             font-size: 1.5rem;
             font-weight: 500;
             margin-bottom: 5px;
+            display: flex;
         }
 
+       
         &__links {
             display: flex;
             flex-direction: column;
@@ -74,6 +86,12 @@
             gap: 10px;
             flex-basis: 50%;
             margin-right: 50px;
+
+            
+        @media screen and (max-width: 539px) {
+            align-items: center;
+            margin-right: 0;
+        }
 
             &__link {
                 font-size: 1.15rem;
@@ -84,3 +102,8 @@
         }
     }
 }
+
+@media screen and (max-width: 539px){ 
+    .Footer__right h3{
+    padding-left: 12%;
+}}

@@ -33,7 +33,7 @@ const links = [
     ],
   },
   {
-    heading: 'Help',
+    heading : 'Help' ,
     links: [
       {
         text: 'FAQs',
