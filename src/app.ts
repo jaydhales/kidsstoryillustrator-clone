@@ -11,6 +11,7 @@ import helmet from 'helmet';
 import indexRouter from './routes/index.route';
 import invalidRouter from './routes/404.route';
 import storyRouter from './routes/story.routes';
+import userRouter from './routes/user.route';
 import './db/mongodb'
 
 const app = express();
@@ -25,6 +26,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/story', storyRouter);
+app.use('/auth', userRouter);
 app.use('**', invalidRouter);
 
 
