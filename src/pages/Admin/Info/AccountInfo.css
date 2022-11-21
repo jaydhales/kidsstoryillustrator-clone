@@ -6,10 +6,18 @@
 }
 .side-bar1 {
   width: 15%;
+  border: 1px solid black;
 }
 
 span {
     color: #f83f23;
+}
+
+img {
+    width: 70px;
+    border: 1px solid black;
+    border-radius: 50%;
+    height: 60px;
 }
 
 .wrapper-div {
@@ -99,3 +107,60 @@ h2 {
   color: white;
   border-radius: 52px;
 } 
+@media only screen and (max-width: 480px) {
+    .App1 {
+        display: block;
+        font-family: "Nunito", sans-serif; 
+        width: 85%;
+        padding: ;
+    }
+    .cover-section {
+        margin: 0 15px;
+      }
+
+    .wrapper-div {
+        width: 100%;
+        margin: 0 auto;
+      }
+      form {
+        width: 100%;
+    }
+    
+     .grid-section  {
+      display: block;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .inputs {
+        width: 100%;
+      }
+
+      .pass-section {
+        width: 100%;
+        display: block;
+        justify-content: space-between;
+      }
+      
+      .address-section {
+        width: 100%;
+        display: block;
+      }
+
+      .btns {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 110px;
+      }
+
+      .btn1 {
+        width: 150px;
+        padding: 10px 50px;   
+      }
+      .btn2 {
+        width: 150px;
+        padding: 10px 50px;
+      } 
+}

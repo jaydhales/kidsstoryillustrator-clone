@@ -61,7 +61,7 @@ export const Info = () => {
                 name="fullName"
                 onChange={handleChange}
                 />
-                 {submitted &&  !formData.fullName? <span>enter your full name.</span> : null}
+                 {submitted &&  !formData.fullName? <span>enter your full name.</span> : null}<br/>
               </label>
               <label>
                 Email address <br />
@@ -73,7 +73,7 @@ export const Info = () => {
                 name="email"
                 onChange={handleChange}
                 />
-                 {submitted &&  !formData.email? <span>enter an email.</span> : null}
+                 {submitted &&  !formData.email? <span>enter an email.</span> : null}<br/>
               </label>
               <label>
                 Phone number <br />
@@ -85,7 +85,7 @@ export const Info = () => {
                 name="phoneNumber"
                 onChange={handleChange}
                 />
-                {submitted &&  !formData.phoneNumber? <span>enter a vaild number</span> : null}
+                {submitted &&  !formData.phoneNumber? <span>enter a vaild number</span> : null}<br/>
                 
               </label>
               <label>
@@ -97,7 +97,7 @@ export const Info = () => {
                 name="birthday"
                 onChange={handleChange} 
                 />
-                {submitted &&  !formData.birthday? <span>Please enter an age.</span> : null}
+                {submitted &&  !formData.birthday? <span>Please enter an age.</span> : null}<br/>
                
               </label>
             </div>
@@ -114,7 +114,7 @@ export const Info = () => {
                 name="createPassword"
                 onChange={handleChange} 
                 />
-                {submitted &&  !formData.currentPassword? <span>Enter your current password.</span> : null}
+                {submitted &&  !formData.currentPassword? <span>Enter your current password.</span> : null}<br/>
               </label>
               <label>
                 New password <br />
@@ -126,7 +126,7 @@ export const Info = () => {
                 name="newPassword" 
                 onChange={handleChange}
                 />
-                {submitted &&  !formData.newPassword? <span>Please enter your new password.</span> : null}    
+                {submitted &&  !formData.newPassword? <span>Please enter your new password.</span> : null} <br/>   
               </label>
             </div>
 
@@ -142,7 +142,7 @@ export const Info = () => {
                 name="address"
                 onChange={handleChange}
                 />
-                 {submitted &&  !formData.address? <span>Enter a valid address.</span> : null}
+                 {submitted &&  !formData.address? <span>Enter a valid address.</span> : null} <br/>
               </label>
               <label>
                 House no <br />
@@ -154,7 +154,7 @@ export const Info = () => {
                 name="houseNo"
                 onChange={handleChange}
                 />
-                 {submitted &&  !formData.houseNo? <span>Enter your house number.</span> : null}
+                 {submitted &&  !formData.houseNo? <span>Enter your house number.</span> : null}<br/>
               </label>
             </div>
           </form>
