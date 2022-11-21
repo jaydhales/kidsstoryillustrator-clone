@@ -8,7 +8,7 @@
   width: 15%;
 }
 
-span {
+.acct_info_span__ {
     color: #f83f23;
 }
 
@@ -41,7 +41,7 @@ span {
 } 
 
 /* form section */
-form {
+.acct_info_form_01 {
     width: 78%;
 }
 
@@ -51,7 +51,7 @@ form {
   grid-gap: 10px;
 }
 
-h2 {
+.acct_info_h2__ {
   margin: 10px 0;
 }
 
