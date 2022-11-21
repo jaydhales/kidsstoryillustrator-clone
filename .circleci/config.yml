@@ -4,39 +4,48 @@ orbs:
   docker: circleci/docker@0.5.13
 
 jobs:
-  run_tests:
-    working_directory: ~/react-app
+  build-client:
     docker:
       - image: circleci/node:10.16.3
     steps:
-      - checkout
+      - checkout # pulls code from github repo
       - run:
-          name: update-npm
-          command: 'sudo npm install -g'
+          name: cd & update
+          command: |
+            cd client
+            sudo npm install -g
       - restore_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
+          key: dependency-cache-{{ checksum "./client/package.json" }}
       - run:
-          name: npm-install
-          command: sudo npm install
+          name: Build front-end
+          command: |
+            cd client
+            sudo npm install
+            npm run build
       - save_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
+          key: dependency-cache-{{ checksum "./client/package.json" }}
           paths:
-            - ./node_modules
-      # - run:
-      # name: test
-      # command: npm test
+            - ./client/node_modules
+
+  build-backend:
+    docker:
+      - image: cimg/node:10.16.3
+    steps:
+      - checkout
+      - restore_cache:
+          keys: [server-build]
+      - run:
+          name: Back-end build
+          command: |
+            cd server
+            cd src
+            node server.ts
+      - save_cache:
+          paths: [server/dependencies]
+          key: server-build
 
 workflows:
-  version: 2
-  build_deploy:
+  default:
     jobs:
-      - run_tests
-      - docker/publish:
-          image: codak77/cicd
-          dockerfile: dockerfile
-          requires:
-            - run_tests
-          filters:
-            branches:
-              only:
-                - main
+      - build-client
+      - build-server
