@@ -16,14 +16,14 @@ jobs:
             cd client
             sudo npm install -g
       - restore_cache:
-          key: dependency-cache-{{ checksum "./client/package.json" }}
+          key: dependency-cache-{{ checksum "./packages/client/package.json" }}
       - run:
           name: Build front-end
           command: |
             cd packages
             cd client
             sudo npm install
-            npm run build
+           # npm run build
       - save_cache:
           key: dependency-cache-{{ checksum "./client/package.json" }}
           paths:
@@ -42,7 +42,7 @@ jobs:
             cd packages
             cd server
             cd src
-            node server.ts
+            node server
       - save_cache:
           paths: [server/dependencies]
           key: server-build
