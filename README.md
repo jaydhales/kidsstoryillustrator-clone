@@ -1,8 +1,6 @@
-# Backend Stage 1 Task
 
 
-> [Preview deployed API 🚀](https://basic-get-req.herokuapp.com/) 
-
+> [Preview deployed API 🚀]()
 
 
 ## Environments
@@ -21,20 +19,21 @@
 **Clone the repo**
 
 ```
-$ git clone https://github.com/zeph-x/simple_user_response/
+$ git clone 
 ```
 
 **Install dependencies**
 
 ```
-$ yarn
+$ npm
 ```
 
 **Start application**
 
 ```
-$ yarn start
+$ npm dev
 ```
+
 
 
 
