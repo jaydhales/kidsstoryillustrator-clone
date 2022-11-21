@@ -67,7 +67,7 @@
         
         @media screen and (max-width: 539px) {
             flex-direction: column;
-            align-items: center;
+            align-items: left;
         }
 
 
@@ -89,7 +89,7 @@
 
             
         @media screen and (max-width: 539px) {
-            align-items: center;
+            align-items: left;
             margin-right: 0;
         }
 
@@ -103,7 +103,7 @@
     }
 }
 
-@media screen and (max-width: 539px){ 
-    .Footer__right h3{
-    padding-left: 12%;
-}}
+// @media screen and (max-width: 539px){ 
+//     .Footer__right h3{
+//     padding-left: 12%;
+// }}
