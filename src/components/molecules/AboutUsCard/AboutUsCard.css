@@ -1,3 +1,8 @@
+.goal-container * {
+  margin: revert !important;
+  box-sizing: revert !important;
+  padding: revert !important;
+}
 .goal-container {
   display: flex !important;
   align-items: stretch !important;
@@ -110,7 +115,6 @@
   .goalimgLeft {
     width: 208.57px !important;
     padding: 1px !important;
-    
   }
   .goalimgRight {
     width: 223.93px !important;

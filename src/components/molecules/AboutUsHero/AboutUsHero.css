@@ -1,3 +1,8 @@
+.AboutUsHero * {
+  margin: revert !important;
+    box-sizing: revert !important;
+    padding: revert !important;
+}
 .AboutUsHero {
     padding: 0px 124px 80px 124px !important;
     margin: 0 !important;
