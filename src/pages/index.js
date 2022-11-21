@@ -19,3 +19,7 @@ export { default as Profile } from "./Profile";
 export { default as ProfileEdit } from "./Profile/ProfileEdit";
 export { default as SignUp } from "./SignUp";
 export { default as SummaryActivities } from "./SummaryActivities";
+export { default as Info } from "./Admin/Info";
+export { default as Settings } from "./Admin/Settings";
+export { default as Users } from "./Admin/Users";
+
