@@ -12,6 +12,7 @@ jobs:
       - run:
           name: cd & update
           command: |
+            cd packages
             cd client
             sudo npm install -g
       - restore_cache:
@@ -19,6 +20,7 @@ jobs:
       - run:
           name: Build front-end
           command: |
+            cd packages
             cd client
             sudo npm install
             npm run build
@@ -37,6 +39,7 @@ jobs:
       - run:
           name: Back-end build
           command: |
+            cd packages
             cd server
             cd src
             node server.ts
