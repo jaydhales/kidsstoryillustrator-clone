@@ -12,8 +12,8 @@ export const AboutUsCard = () => {
       <div className="goal-container">
         <div className="goalheader">
           <div className="goalheadertext">
-            <p>Ou<span>r G</span>oals</p>
-            {/* <hr className="hr" /> */}
+            <p>Our Goals</p>
+            <hr className="hr" />
           </div>
         </div>
       </div>
