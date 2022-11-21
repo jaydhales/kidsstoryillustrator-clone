@@ -27,7 +27,7 @@ jobs:
           paths:
             - ./client/node_modules
 
-  build-backend:
+  build-server:
     docker:
       - image: cimg/node:10.16.3
     steps:
