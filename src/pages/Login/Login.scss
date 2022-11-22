@@ -1,3 +1,5 @@
+@import "../../theme/sass/mixins";
+
 .Login {
   .center-align {
     text-align: center;
@@ -15,13 +17,13 @@
 
   
   #reset-password {
-    color: var(--primary-color);
+    color: $color-primary-main;
     text-align: center;
   }
   
   .or {
     margin-top: 16px;
-    color: var(--primary-text-color);
+    color: $color-text;
     align-items: center;
     justify-content: center;
   }
