@@ -69,7 +69,7 @@ export const Settings = () => {
                 onChange={handleChange}
               />
               {submitted && !formData.firstName ? (
-                <span>Enter your first name.</span>
+                <span className="rig">Enter your first name.</span>
               ) : null}
             </label>
             <label>
@@ -82,7 +82,7 @@ export const Settings = () => {
                 name="lastName"
                 onChange={handleChange}
               />
-              {submitted && !formData.lastName ? <span>Enter your last name.</span> : null}
+              {submitted && !formData.lastName ? <span className="rig">Enter your last name.</span> : null}
             </label>
           </div>
 
@@ -96,7 +96,7 @@ export const Settings = () => {
               name="city"
               onChange={handleChange}
             />
-            {submitted && !formData.city ? <span>Enter your City.</span> : null}
+            {submitted && !formData.city ? <span className="rig">Enter your City.</span> : null}
           </label>
 
           <div className="region-section">
@@ -111,7 +111,7 @@ export const Settings = () => {
                 onChange={handleChange}
               />
               {submitted && !formData.state ? (
-                <span>Enter your state.</span>
+                <span className="rig">Enter your state.</span>
               ) : null}
             </label>
             <label>
@@ -123,7 +123,7 @@ export const Settings = () => {
                 value={formData.country}
                 name="country"
               />
-               {submitted &&  !formData.country? <span>Enter your Country.</span> : null}
+               {submitted &&  !formData.country? <span className="rig">Enter your Country.</span> : null}
             </label>
           </div>
         </form>
@@ -149,7 +149,7 @@ export const Settings = () => {
                 onChange={handleChange}
               />
               {submitted && !formData.newEmail ? (
-                <span>Enter your new email.</span>
+                <span className="rig">Enter your new email.</span>
               ) : null}
             </label>
             <label>
@@ -163,7 +163,7 @@ export const Settings = () => {
                 onChange={handleChange}
               />
               {submitted && !formData.currentEmail ? (
-                <span>Enter your current email.</span>
+                <span >Enter your current email.</span>
               ) : null}
             </label>
           </div>
