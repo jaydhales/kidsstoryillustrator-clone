@@ -10,17 +10,23 @@ import arrowRight from "../../assets/Story/icons/arrow-right.png";
 import img2 from "../../assets/Story/images/img-1.png";
 import img1 from "../../assets/Story/images/img-2.png";
 import ViewStoryCard from "../../components/atoms/ViewStoryCard";
-import view from "../../assets/MyStories/view-1.png";
+import view1 from "../../assets/MyStories/view-1.png";
+import view2 from "../../assets/MyStories/view-2.png";
+import view3 from "../../assets/MyStories/view-3.png";
+import view4 from "../../assets/MyStories/view-4.png";
+import view5 from "../../assets/MyStories/view-5.png";
+import view6 from "../../assets/MyStories/view-6.png";
 
 export const Story = () => {
   const dummyData = [
-    { id: 0, title: "Holla", src: view },
-    { id: 1, title: "Hollala", src: view },
-    { id: 2, title: "Hollalalala", src: view },
-    { id: 3, title: "Holla", src: view },
-    { id: 4, title: "Hollala", src: view },
-    { id: 5, title: "Hollalalala", src: view },
+    { id: 0, title: "Alicia the shy kid", src: view1 },
+    { id: 1, title: "Mrs ben and family", src: view2 },
+    { id: 2, title: "Crazy mrs fox", src: view3 },
+    { id: 3, title: "The lonely grandma 1", src: view4 },
+    { id: 4, title: "The wooden house", src: view5 },
+    { id: 5, title: "The family under a tree", src: view6 },
   ];
+
   const dummyStory = {
     title: "The friendly fox and crazy rat",
     pages: [
@@ -84,7 +90,7 @@ export const Story = () => {
     <div className="Story">
       <Layout>
         <section className="">
-          <button onClick={() => navigate(-1)}>
+          <button onClick={() => navigate(-1)} className="back-btn">
             <img src={arrowLeft} alt="" />
           </button>
 
