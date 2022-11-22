@@ -88,7 +88,7 @@ export class User extends BaseHandler {
         } catch (error) {
             throw new Error((error as Error).message);
         }
-    };
+    }
 
 
 
