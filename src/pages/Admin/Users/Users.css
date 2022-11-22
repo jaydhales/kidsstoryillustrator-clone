@@ -30,7 +30,7 @@
 
 .head {
   color: #aa0136;
-  margin: 40px 0;
+  margin: 20px 0;
 }
 
 .user-access {
@@ -161,8 +161,8 @@
       }
       
       .user-names > div {
-        margin: 20px 0;
-        padding: 15px 0;
+        margin: 15px 0;
+        padding: 10px 0;
       }
 
       .user-btns {
@@ -170,7 +170,7 @@
         justify-content: right;
         align-items: center;
         gap: 100px;
-        margin: 45px 0 0 0;
+        margin: 25px 0 0 0;
       }
       
       .user-btn1 {
