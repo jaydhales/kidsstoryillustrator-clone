@@ -16,5 +16,9 @@ router
   .route('/get_by_email/:email')
   .get(StoryLookUp.getStoryByEmail)
 
+router
+  .route('/post_story')
+  .post(StoryLookUp.postStory)
+
 
 export default router
