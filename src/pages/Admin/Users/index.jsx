@@ -11,7 +11,7 @@ export const User = () => {
     <div className="user-container">
       <div className="user-sidebar"></div>
       <div className="user-wrapper">
-        <h2>Account Information </h2>
+        <h2 className="head">Account Information </h2>
         <div className="fit">
           <div className="user-access">
             <h3>Manage who can access your account</h3>

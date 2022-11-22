@@ -43,14 +43,14 @@ export const Info = () => {
         <div className="cover-section">
           <b>Edit profile</b>
           <div className="profile">
-            <img className="img" alt="profile-pic" src="./im" />
+            <img className="img" alt="" src="./im" />
             <div>
               <p>Ella James</p>
               <p>EllaJames@gmail.com</p>
             </div>
           </div>
           
-          <form>
+          <form className="form-sec">
             <div className="grid-section">
               <label>
                 Full name <br />
@@ -102,7 +102,7 @@ export const Info = () => {
               </label>
             </div>
 
-            <h2>Chnage Password</h2>
+            <h2 className="pass-head">Chnage Password</h2>
             <div className="pass-section">
               <label>
                 Current password <br />

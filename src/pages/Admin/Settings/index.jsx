@@ -133,7 +133,7 @@ export const Settings = () => {
             <p>Email Address</p>
             <p>Your email address is marke@storyai.com</p>
           </div>
-          <a href="#">Hide</a>
+          <a href="#" className="a">Hide</a>
         </div>
 
         <div className="email-details">
