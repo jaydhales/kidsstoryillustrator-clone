@@ -25,6 +25,9 @@ import {
   ProfileEdit,
   SignUp,
   SummaryActivities,
+  Info,
+  Users,
+  Settings
 } from "./pages";
 
 const MoveToTop = () => {
@@ -63,6 +66,9 @@ const App = () => (
       <Route path="/profile/edit" element={<ProfileEdit />} />
       <Route path="/signup" element={<SignUp />} />
       <Route path="/summaryActivities" element={<SummaryActivities />} />
+      <Route path="/users" element={<Users />} />
+      <Route path="/account-info" element={<Info />} />
+      <Route path="/account-settings" element={<Settings />} />
     </Routes>
   </>
 );

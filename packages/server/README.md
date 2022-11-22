@@ -1,7 +1,39 @@
-Backend Workspace
 
-```routes
-localhost:9000/story/get-story
-localhost:9000/story/get-story/id
-localhost:9000/story/get-by-email/email
+
+> [Preview deployed API 🚀]()
+
+
+## Environments
+- Node version - v16.13.0
+
+
+## Technologies used 
+- NodeJS
+- ExpressJS
+- Typescript
+- ESLint
+
+
+## Getting Started
+
+**Clone the repo**
+
 ```
+$ git clone 
+```
+
+**Install dependencies**
+
+```
+$ npm
+```
+
+**Start application**
+
+```
+$ npm dev
+```
+
+
+
+

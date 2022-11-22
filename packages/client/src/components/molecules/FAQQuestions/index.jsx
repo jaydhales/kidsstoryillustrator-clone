@@ -9,7 +9,7 @@ import "./FAQQuestions.scss";
 
 export const FAQQuestions = () => {
   return <div className="FAQQuestions">
-    <h3>Frequently asked questions</h3>
+    <h3>Freqently asked questions</h3>
     <br/>
     <br/>
     <div className="questions-container">

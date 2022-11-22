@@ -1,5 +1,5 @@
 import { Schema, model } from 'mongoose';
-import { IStorybook } from '../interface/index';
+import { IStorybook } from '../interfaces/index';
 
 const storybookSchema = new Schema<IStorybook>({
     author: {

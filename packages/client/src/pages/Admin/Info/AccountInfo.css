@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+.side-bar1 {
+  width: 15%;
+  border: 1px solid black;
+}
+
+.span {
+    color: #f83f23;
+}
+
+.img {
+    width: 70px;
+    border: 1px solid black;
+    border-radius: 50%;
+    height: 60px;
+}
+
+.wrapper-div {
+  width: 757px;
+  margin: 0 auto;
+}
+
+ .cover-section {
+  margin: 0 30px;
+}
+
+.App1 {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  height: 100vh;
+  font-family: "Nunito", sans-serif;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 5px 0;
+}
+
+.header {
+  color: #aa0136;
+} 
+
+/* form section */
+form {
+    width: 78%;
+}
+
+ .grid-section  {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+
+h2 {
+  margin: 10px 0;
+}
+
+.inputs {
+  padding: 10px 32px;
+  border: 1px solid #e4e4e4;
+  border-radius: 56px;
+  margin: 10px 0;
+}
+
+.pass-section {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.address-section {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.btns {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.btn1 {
+  border: 1px solid #e4e4e4;
+  width: 120px;
+  background-color: #e4e4e4;
+  padding: 10px;
+  border-radius: 52px;
+}
+
+.btn2 {
+  border: 1px solid #aa0136;
+  width: 120px;
+  background-color: #aa0136;
+  padding: 10px;
+  color: white;
+  border-radius: 52px;
+} 
+@media only screen and (max-width: 480px) {
+    .App1 {
+        display: block;
+        font-family: "Nunito", sans-serif; 
+        width: 85%;
+        padding: ;
+    }
+    .cover-section {
+        margin: 0 15px;
+      }
+
+    .wrapper-div {
+        width: 100%;
+        margin: 0 auto;
+      }
+      form {
+        width: 100%;
+    }
+    
+     .grid-section  {
+      display: block;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .inputs {
+        width: 100%;
+      }
+
+      .pass-section {
+        width: 100%;
+        display: block;
+        justify-content: space-between;
+      }
+      
+      .address-section {
+        width: 100%;
+        display: block;
+      }
+
+      .btns {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 110px;
+      }
+
+      .btn1 {
+        width: 150px;
+        padding: 10px 50px;   
+      }
+      .btn2 {
+        width: 150px;
+        padding: 10px 50px;
+      } 
+}

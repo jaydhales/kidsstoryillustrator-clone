@@ -33,7 +33,7 @@ const links = [
     ],
   },
   {
-    heading: 'Help',
+    heading : 'Help' ,
     links: [
       {
         text: 'FAQs',
@@ -58,15 +58,17 @@ const links = [
 ];
 const Footer = () => {
   return (
+    <div>
     <section className="Footer">
       <div className="Footer__left">
         <img src={Logo} className="Navbar__Logo" />
+        <p>follow us on</p>
         <div className="Footer__left__socials">
           <img src={Twitter} />
           <img src={Facebook} />
           <img src={Instagram} />
         </div>
-        <p>&copy; 2022 storyai</p>
+        
       </div>
       <div className="Footer__right">
         {links.map(({ heading, links: link }) => (
@@ -83,6 +85,13 @@ const Footer = () => {
         ))}
       </div>
     </section>
+    <div className="copyright">
+      <hr/>
+      <div className="copy-p">
+      <p>© 2022 Copyright. All rights reserved</p>
+      </div>
+     </div>
+    </div>
   );
 };
 

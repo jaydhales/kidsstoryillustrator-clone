@@ -162,6 +162,12 @@ Main Story Container
 	width: 80%;
 	gap: 17px;
 }
+.text-tabs-container > p {
+	text-align: center;
+	color: #176b17;
+	font-size: 15px;
+	font-weight: 500;
+}
 
 @media (max-width: 768px) {
 	.text-tabs-container {
@@ -370,7 +376,7 @@ Main Story Container
 	
 	.p-i-c-02 {
 		display: flex;
-		gap: 35px;
+		gap: 30px;
 		padding: 22px 0;
 		align-items:flex-end;
 		justify-content: center;
@@ -381,6 +387,7 @@ Main Story Container
 	.pages-index-container {
 		margin: 0 auto;
 		max-width: 360px;
+		/* border: 1px solid black; */
 	}
 	
 	.p-i-c-01-pages {
@@ -411,4 +418,12 @@ Main Story Container
 	grid-template-rows: auto auto auto;
 	overflow: hidden;
 	/* justify-content: center; */
+}
+
+.preview_container_xxd {
+	margin: 0 0 25px;
+}
+.preview_container_xxd > p {
+	font-size: 30px;
+	font-weight: 500;
 }
