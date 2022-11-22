@@ -1,108 +1,110 @@
-.AboutUsVision * {
-  margin: revert !important;
-  box-sizing: revert !important;
-}
-.AboutUsVision {
-  display: flex !important;
-  align-items: stretch !important;
-  background-color: white !important;
-  font-family: "Nunito" !important;
-  padding: 0px 72px 80px 72px !important;
-}
-
-.AboutUsVision > div {
-  background: rgba(238, 204, 215, 0.13) !important;
-  align-items: center !important;
-}
-.missionLeft {
-  border-radius: 16px 0px 0px 16px !important;
-  flex: 70% !important;
-  padding: 72px 182px 50px 72px !important;
-}
-.missionRight {
-  border-radius: 0px 16px 16px 0px !important;
-  flex: 30% !important;
-}
-.missionLeftTop {
-  font-family: "Nunito" !important;
-  font-style: normal !important;
-  font-weight: 400 !important;
-  font-size: 45px !important;
-  line-height: 0px !important;
-  color: #131313 !important;
-}
-.missionLeftBottom {
-  font-style: normal !important;
-  font-weight: 400 !important;
-  font-size: 16px !important;
-  line-height: 24px !important;
-  letter-spacing: 0.5px !important;
-  color: #131313 !important;
-}
-.missionLine {
-  width: 120px !important;
-  height: 0px !important;
-  padding-bottom: 40px !important;
-}
-
-hr {
-  border: 2.5px solid #aa0136 !important;
-  border-radius: 5px !important;
-  background-color: #aa0136 !important;
-}
-
-.mission {
-  width: 80% !important;
-  padding: 45px 88px 0px 0px !important;
-}
-
-@media screen and (max-width: 1224px) {
-  .mission {
-    width: 80% !important;
+.AboutVision {
+  .AboutUsVision * {
+    margin: revert;
+    box-sizing: revert;
   }
-}
-
-@media screen and (max-width: 1024px) {
   .AboutUsVision {
-    padding: 0px 32px 64px 32px !important;
+    display: flex;
+    align-items: stretch;
+    background-color: white;
+    font-family: "Nunito";
+    padding: 0px 72px 80px 72px;
   }
-  .missionLeftTop {
-    font-size: 36px !important;
-  }
-  .missionLeftBottom {
-    font-size: 16px !important;
-    line-height: 18px !important;
-    letter-spacing: 0.37px !important;
+
+  .AboutUsVision > div {
+    background: rgba(238, 204, 215, 0.13);
+    align-items: center;
   }
   .missionLeft {
-    border-radius: 16px 0px 0px 16px !important;
-    flex: 70% !important;
-    padding: 44.57px 44px 44.18px 44px !important;
-  }
-  .mission {
-    width: 80% !important;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .AboutUsVision {
-    padding: 0px 16px 62px 16px !important;
-    flex-direction: column !important;
-  }
-  .missionLeftTop {
-    font-size: 24px !important;
-  }
-  .missionLeftBottom {
-    font-size: 16px !important;
-    line-height: 24px !important;
-    letter-spacing: 0.5px !important;
-  }
-  .missionLeft {
-    border-radius: 16px 16px 0px 0px !important;
-    padding: 16px 16px 16px 16px !important;
+    border-radius: 16px 0px 0px 16px;
+    flex: 70%;
+    padding: 72px 182px 50px 72px;
   }
   .missionRight {
-    border-radius: 16px 0px 0px 16px !important;
-    padding: 16px 102px 16px 102px !important;
+    border-radius: 0px 16px 16px 0px;
+    flex: 30%;
+  }
+  .missionLeftTop {
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 45px;
+    line-height: 0px;
+    color: #131313;
+  }
+  .missionLeftBottom {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    color: #131313;
+  }
+  .missionLine {
+    width: 120px;
+    height: 0px;
+    padding-bottom: 40px;
+  }
+
+  hr {
+    border: 2.5px solid #aa0136;
+    border-radius: 5px;
+    background-color: #aa0136;
+  }
+
+  .mission {
+    width: 80%;
+    padding: 45px 88px 0px 0px;
+  }
+
+  @media screen and (max-width: 1224px) {
+    .mission {
+      width: 80%;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .AboutUsVision {
+      padding: 0px 32px 64px 32px;
+    }
+    .missionLeftTop {
+      font-size: 36px;
+    }
+    .missionLeftBottom {
+      font-size: 16px;
+      line-height: 18px;
+      letter-spacing: 0.37px;
+    }
+    .missionLeft {
+      border-radius: 16px 0px 0px 16px;
+      flex: 70%;
+      padding: 44.57px 44px 44.18px 44px;
+    }
+    .mission {
+      width: 80%;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .AboutUsVision {
+      padding: 0px 16px 62px 16px;
+      flex-direction: column;
+    }
+    .missionLeftTop {
+      font-size: 24px;
+    }
+    .missionLeftBottom {
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.5px;
+    }
+    .missionLeft {
+      border-radius: 16px 16px 0px 0px;
+      padding: 16px 16px 16px 16px;
+    }
+    .missionRight {
+      border-radius: 16px 0px 0px 16px;
+      padding: 16px 102px 16px 102px;
+    }
   }
 }
