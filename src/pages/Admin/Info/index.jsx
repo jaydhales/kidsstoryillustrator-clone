@@ -39,18 +39,18 @@ export const Info = () => {
     <div className="App1">
       <div className="side-bar1"></div>
       <div className="wrapper-div">
-        <h2 className="acct_info_h2__ header">Account Information</h2>
+        <h2 className="header">Account Information</h2>
         <div className="cover-section">
           <b>Edit profile</b>
           <div className="profile">
-            <img alt="profile-pic" src="./im" />
+            <img className="img" alt="profile-pic" src="./im" />
             <div>
               <p>Ella James</p>
               <p>EllaJames@gmail.com</p>
             </div>
           </div>
           
-          <form className="acct_info_form_01">
+          <form>
             <div className="grid-section">
               <label>
                 Full name <br />
@@ -60,8 +60,8 @@ export const Info = () => {
                 value={formData.fullName}
                 name="fullName"
                 onChange={handleChange}
-                />
-                 {submitted &&  !formData.fullName? <span className="acct_info_span__">enter your full name.</span> : null}
+                /> <br/>
+                 {submitted &&  !formData.fullName? <span className="span">enter your full name.</span> : null}<br/>
               </label>
               <label>
                 Email address <br />
@@ -73,7 +73,7 @@ export const Info = () => {
                 name="email"
                 onChange={handleChange}
                 />
-                 {submitted &&  !formData.email? <span className="acct_info_span__">enter an email.</span> : null}
+                 {submitted &&  !formData.email? <span className="span">enter an email.</span> : null}<br/>
               </label>
               <label>
                 Phone number <br />
@@ -85,7 +85,7 @@ export const Info = () => {
                 name="phoneNumber"
                 onChange={handleChange}
                 />
-                {submitted &&  !formData.phoneNumber? <span className="acct_info_span__">enter a vaild number</span> : null}
+                {submitted &&  !formData.phoneNumber? <span className="span">enter a vaild number</span> : null}<br/>
                 
               </label>
               <label>
@@ -97,12 +97,12 @@ export const Info = () => {
                 name="birthday"
                 onChange={handleChange} 
                 />
-                {submitted &&  !formData.birthday? <span className="acct_info_span__">Please enter an age.</span> : null}
+                {submitted &&  !formData.birthday? <span className="span">Please enter an age.</span> : null}<br/>
                
               </label>
             </div>
 
-            <h2 className="acct_info_h2__">Chnage Password</h2>
+            <h2>Chnage Password</h2>
             <div className="pass-section">
               <label>
                 Current password <br />
@@ -114,7 +114,7 @@ export const Info = () => {
                 name="createPassword"
                 onChange={handleChange} 
                 />
-                {submitted &&  !formData.currentPassword? <span className="acct_info_span__">Enter your current password.</span> : null}
+                {submitted &&  !formData.currentPassword? <span className="span">Enter your current password.</span> : null}<br/>
               </label>
               <label>
                 New password <br />
@@ -126,11 +126,11 @@ export const Info = () => {
                 name="newPassword" 
                 onChange={handleChange}
                 />
-                {submitted &&  !formData.newPassword? <span className="acct_info_span__">Please enter your new password.</span> : null}    
+                {submitted &&  !formData.newPassword? <span className="span">Please enter your new password.</span> : null} <br/>   
               </label>
             </div>
 
-            <h2 className="acct_info_h2__">Address</h2>
+            <h2>Address</h2>
             <div className="address-section">
               <label>
                 Address <br />
@@ -142,7 +142,7 @@ export const Info = () => {
                 name="address"
                 onChange={handleChange}
                 />
-                 {submitted &&  !formData.address? <span className="acct_info_span__">Enter a valid address.</span> : null}
+                 {submitted &&  !formData.address? <span className="span">Enter a valid address.</span> : null} <br/>
               </label>
               <label>
                 House no <br />
@@ -154,7 +154,7 @@ export const Info = () => {
                 name="houseNo"
                 onChange={handleChange}
                 />
-                 {submitted &&  !formData.houseNo? <span className="acct_info_span__">Enter your house number.</span> : null}
+                 {submitted &&  !formData.houseNo? <span className="span">Enter your house number.</span> : null}<br/>
               </label>
             </div>
           </form>
