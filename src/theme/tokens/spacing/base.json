@@ -1,0 +1,20 @@
+{
+  "spacing": {
+    "S": {
+      "value": "8",
+      "type": "spacing"
+    },
+    "M": {
+      "value": "{spacing.S}*2",
+      "type": "spacing"
+    },
+    "L": {
+      "value": "{spacing.M} * 2",
+      "type": "spacing"
+    },
+    "XL": {
+      "value": "{spacing.L}*2",
+      "type": "spacing"
+    }
+  }
+}

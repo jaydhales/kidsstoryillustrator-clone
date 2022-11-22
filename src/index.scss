@@ -1,3 +1,4 @@
+@import "theme/sass/variables";
 
 :root {
   --primary-color: #AA0136;
@@ -80,7 +81,7 @@
 }
 
 .btn-primary {
-  background-color: var(--primary-color);
+  background-color: $color-primary-main;
 }
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)

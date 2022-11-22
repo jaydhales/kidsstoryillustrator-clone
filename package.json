@@ -42,6 +42,7 @@
   "devDependencies": {
     "eslint": "^8.28.0",
     "eslint-plugin-react": "^7.31.11",
+    "node-sass": "^7.0.3",
     "prettier": "2.7.1",
     "sass": "^1.56.1"
   }

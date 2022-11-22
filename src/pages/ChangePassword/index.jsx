@@ -1,5 +1,5 @@
 import React from "react";
-import "./ChangePassword.css";
+import "./ChangePassword.scss";
 import logoWhite from "../../assets/img/logo_white.png";
 import arrowLeft from "../../assets/img/arrow-left.png"
 
