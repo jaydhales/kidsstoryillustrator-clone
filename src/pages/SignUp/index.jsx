@@ -43,7 +43,7 @@ export const SignUp = () => {
     .then((res) => {
       setIsLoading(false);
       signUp(res.data.message);
-      navigate("/dashboard");
+      navigate("/myStories");
     })
     .catch(err => {
       setIsLoading(false);

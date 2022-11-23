@@ -40,7 +40,7 @@ export const Login = () => {
     .then((res) => {
       setIsLoading(false);
       logIn(res.data.message);
-      navigate("/dashboard");
+      navigate("/mystories");
     })
     .catch(err => {
       setIsLoading(false);

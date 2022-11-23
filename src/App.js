@@ -3,8 +3,6 @@ import { useLocation, useNavigate } from "react-router-dom";
 import "./App.scss";
 import Routes from "./Auth";
 
-
-
 const MoveToTop = () => {
   const navigate = useNavigate();
   const { hash, pathname } = useLocation();

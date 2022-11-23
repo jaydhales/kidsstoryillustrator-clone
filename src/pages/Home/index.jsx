@@ -27,7 +27,7 @@ export const Home = () => {
               details
             </p>
             <div className="button--grid">
-              <button className="create" onClick={() => navigate('/createStory')} >Create Stories</button>
+              <button className="create" onClick={() => navigate('/login')} >Create Stories</button>
               <button className="read">Read Stories</button>
             </div>
           </section>
