@@ -13,7 +13,7 @@ import view4 from "../../assets/MyStories/view-4.png";
 import view5 from "../../assets/MyStories/view-5.png";
 import view6 from "../../assets/MyStories/view-6.png";
 
-import "./MyStories.css";
+import "./MyStories.scss";
 import ViewStoryCard from "../../components/atoms/ViewStoryCard";
 import { Link } from "react-router-dom";
 
@@ -28,8 +28,8 @@ export const MyStories = () => {
   ];
 
   return (
-    <div className="MyStories">
-      <Layout>
+    <Layout>
+      <div className="MyStories">
         <section className="story-collection" id="recently-created">
           <h3>Recently Created</h3>
 
@@ -50,8 +50,8 @@ export const MyStories = () => {
           id="completed-stories"
           data={dummyData}
         />
-      </Layout>
-    </div>
+      </div>
+    </Layout>
   );
 };
 

@@ -87,8 +87,8 @@ export const Story = () => {
   };
 
   return (
-    <div className="Story">
-      <Layout>
+    <Layout>
+      <div className="Story">
         <section className="">
           <button onClick={() => navigate(-1)} className="back-btn">
             <img src={arrowLeft} alt="" />
@@ -129,8 +129,8 @@ export const Story = () => {
           id="more"
           data={dummyData}
         />
-      </Layout>
-    </div>
+      </div>
+    </Layout>
   );
 };
 
