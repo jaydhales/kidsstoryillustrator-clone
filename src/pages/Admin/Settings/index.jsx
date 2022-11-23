@@ -37,12 +37,14 @@ export const Settings = () => {
 
   return (
     <div className="container">
-      <div className="side-bar"></div>
+      <div className="side-bar">
+        
+      </div>
       <div className="wrapper">
         <h1>Settings</h1>
         <div className="nav-section">
-          <div>
-            <h2>Account Settings</h2>
+            <div className="nav-admin2">
+              <h2>Account Settings</h2>      
 
             <div className="nav-btns">
               <button>Edit Account</button>
@@ -69,7 +71,7 @@ export const Settings = () => {
                 onChange={handleChange}
               />
               {submitted && !formData.firstName ? (
-                <span className="rig">Enter your first name.</span>
+                <span>Enter your first name.</span>
               ) : null}
             </label>
             <label>
