@@ -69,10 +69,11 @@ export const CreateStory = () => {
 
   const getImagesFromServer = async () => {
     // 
-    setImageGenerationState(true);
     if (generateImagePrompt.length < 2) {
       alert('Please enter a valid text');
     } else {
+      setImageGenerationState(true);
+      
       axios({
         method: 'post',
         url: 'http://localhost:4000/api/get_images',
