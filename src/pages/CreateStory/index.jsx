@@ -69,13 +69,14 @@ export const CreateStory = () => {
 
   const getImagesFromServer = async () => {
     // 
-    setImageGenerationState(true);
     if (generateImagePrompt.length < 2) {
       alert('Please enter a valid text');
     } else {
+      setImageGenerationState(true);
+
       axios({
         method: 'post',
-        url: 'http://localhost:4000/api/get_images',
+        url: 'https://story--ai.herokuapp.com/api/get_images',
         data: {
           userPrompt: generateImagePrompt
         }
