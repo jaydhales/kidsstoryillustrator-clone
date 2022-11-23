@@ -28,7 +28,7 @@ export const SignUp = () => {
       <div className="two-column">
       <div className="branding">
         <div className="content">
-          <img src={logoWhite} alt="logo" id="logo2" />
+          <img src={logoWhite} alt="logo" id="logo" />
           <div className="text">
             <h2>The easiest way to write kids story books </h2>
             <p>Write your stories and generate amazing pictures with the help of our ai technologies.</p>
@@ -39,7 +39,7 @@ export const SignUp = () => {
       <div>
         <div id="auth">
           <header className="center-align">
-            <img src={logo} alt="logo" id="logo" />
+            <img src={logo} alt="logo" id="logo2" />
             <nav className="auth-nav">
               <a href="/login" className="link tab-link">Login</a>
               <a href="/signup" className="link tab-link active">Create Account</a>
