@@ -9,8 +9,8 @@ class Homepage extends BaseHandler {
 
         res.status(200).send(
             {
-                "success": true,
-                "message": 'Welcome to StoryAi'
+                'success': true,
+                'message': 'Welcome to StoryAi'
             }
         )
 

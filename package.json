@@ -1,9 +1,9 @@
 {
-  "name": "basic-get-req",
+  "name": "story-ai",
   "version": "0.0.0",
   "private": true,
-  "repository": "https://github.com/zeph-x/simple_user_response",
-  "author": "Giwa Jossy <giwajossy@gmail.com>",
+  "repository": "https://github.com/workshopapps/kidsstoryillustrator.web/tree/BE-main",
+  "author": "PowerDrill",
   "license": "MIT",
   "engines": {
     "node": "16.x"
@@ -28,10 +28,12 @@
     "express": "~4.16.1",
     "helmet": "^5.1.0",
     "http-errors": "~1.6.3",
+    "joi": "^17.7.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.3.4",
     "morgan": "^1.10.0",
     "rimraf": "^3.0.2",
+    "swagger-ui-express": "^4.6.0",
     "tsconfig-paths": "^4.0.0",
     "uuid": "^8.3.2",
     "validator": "^13.7.0"
@@ -48,6 +50,7 @@
     "@types/mocha": "^9.0.0",
     "@types/morgan": "^1.9.3",
     "@types/supertest": "^2.0.11",
+    "@types/swagger-ui-express": "^4.1.3",
     "@types/uuid": "^8.3.4",
     "@types/validator": "^13.7.10",
     "@typescript-eslint/eslint-plugin": "^5.3.1",
