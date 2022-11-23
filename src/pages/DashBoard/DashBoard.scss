@@ -2,7 +2,7 @@
   display: flex;
   width: 100%;
   height: 100vh;
-}
+
 
 /* Sidebar */
 
@@ -14,7 +14,7 @@
   position: fixed;
 }
 
-.sidebar-logo img {
+.sidebar-logo > img {
   width: 40%;
 }
 
@@ -67,7 +67,7 @@
   justify-content: center;
 }
 
-.avatar img {
+.avatar > img {
   width: 20%;
   margin-bottom: 10px;
 }
@@ -416,3 +416,6 @@
     font-size: 25px;
   }
 }
+
+}
+
