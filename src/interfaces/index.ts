@@ -1,5 +1,4 @@
-import { Request } from "express";
-import { Types } from "mongoose";
+import { Types } from 'mongoose';
 
 export class BaseHandler {
   public stringify(obj: any): string {

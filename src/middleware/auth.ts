@@ -1,8 +1,6 @@
-import User from '../model/user.model';
 import jwt from 'jsonwebtoken';
 import { Request, Response, NextFunction} from 'express';
-// import dotenv from 'dotenv';
-// dotenv.config();
+
 const jwtSecretKey = process.env.SECRET as string
 
 const protect = async (req: Request, res: Response, next: NextFunction) => {
