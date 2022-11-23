@@ -147,4 +147,38 @@ export class StoryLookUp extends BaseHandler {
       });
     }
   }
+
+  static async deleteAStory(req: Request, res: Response) {
+
+    const storyId = req.params.id
+
+    try {
+      if (Types.ObjectId.isValid(storyId)) {
+        const story = await StorybookModel.findByIdAndDelete(storyId)
+
+        if (!story) {
+          return res.status(404).send({
+            success: false,
+            message: 'Story not found'
+          })
+        } else {
+
+          return res.status(200).send({
+            success: true,
+            message: 'Story Successfully Deleted'
+          })
+        }
+      } else {
+        return res.status(404).send({
+          success: false,
+          message: 'Invalid ID'
+        })
+      }
+
+    } catch (error) {
+      throw new Error((error as Error).message);
+    }
+
+  }
+
 }
