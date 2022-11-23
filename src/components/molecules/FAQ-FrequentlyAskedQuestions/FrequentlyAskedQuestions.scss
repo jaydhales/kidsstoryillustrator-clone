@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900;1000&display=swap');
+
+.FrequentlyAskedQuestions{
+    width: 100%;
+    font-family: 'Nunito';
+    padding: 2rem;
+
+    .sub-question{
+        border-bottom: 1px solid #E3AABC;
+         
+    }
+
+    .sub-question p{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .questions-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+       
+        padding: .3rem;
+    }
+
+    .main-questions-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: .8rem
+    }
+    
+    .main-questions-container img{
+        padding-left: 1rem;
+    }
+    
+    .main-questions-container p{
+        font-size: 18px;
+    }
+
+    .bullet-icon {
+        width: 24px;
+    }
+
+    .arrow-icon {
+        width: 32px;
+    }
+
+    // media queries
+    @media screen and (max-width: 900px ){
+        padding: 1rem;
+
+        .main-questions-container p{
+            font-size: 15px;
+        }
+
+    }
+}
