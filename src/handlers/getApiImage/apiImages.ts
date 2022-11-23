@@ -26,11 +26,11 @@ class getApiImage extends BaseHandler {
 						samples: samplesNo
 					});
 
-					api.on('image', (args) => {
+					api.on('image', (args: { filePath: string; }) => {
 						imagePathArr.push(args.filePath);
 					});
 					
-					api.on('end', (data) => {
+					api.on('end', (data: any) => {
 						console.log('Generating Complete', data);
 						const imageLinkArr: Array<string> = [];
 						for (let i = 0; i < imagePathArr.length; i++) {
