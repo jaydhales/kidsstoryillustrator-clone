@@ -4,11 +4,11 @@ import { IoIosArrowDown } from "react-icons/io";
 
 import PropTypes from "prop-types";
 
-import "./Users.css";
+import "./Users.scss";
 
 export const User = () => {
   return (
-    <div className="user-container">
+    <div className="Users">
       <div className="user-sidebar"></div>
       <div className="user-wrapper">
         <h2>Account Information </h2>
@@ -64,7 +64,7 @@ export const User = () => {
 
 // These are the types of the props that are passed to the component
 
-User.PropTypes = {};
+User.propTypes = {};
 
 // These are their default values
 

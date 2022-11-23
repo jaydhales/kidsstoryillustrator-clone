@@ -1,10 +1,10 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 
-import "./AccountInfo.css";
+import "./AccountInfo.scss";
 
 export const Info = () => {
-  const [formData, setFormData] = useState ({
+  const [formData, setFormData] = useState({
     fullName: "",
     email: "",
     phoneNumber: "",
@@ -13,10 +13,10 @@ export const Info = () => {
     newPassword: "",
     address: "",
     houseNo: "",
-  })
+  });
 
   const [submitted, setSubmitted] = useState(false);
-  const [valid, setValid] = useState(false)
+  const [valid, setValid] = useState(false);
 
   function handleChange(event) {
     setFormData((prevFormData) => {
@@ -30,13 +30,13 @@ export const Info = () => {
   function submitForm(e) {
     e.preventDefault();
     if (formData.firstName && formData.lastName && formData.email) {
-      setValid(true)
+      setValid(true);
     }
     setSubmitted((prevState) => !prevState);
   }
 
   return (
-    <div className="App1">
+    <div className="AccountInfo">
       <div className="side-bar1"></div>
       <div className="wrapper-div">
         <h2 className="header">Account Information</h2>
@@ -49,19 +49,24 @@ export const Info = () => {
               <p>EllaJames@gmail.com</p>
             </div>
           </div>
-          
+
           <form>
             <div className="grid-section">
               <label>
                 Full name <br />
-                <input type="text" 
-                placeholder="" 
-                className="inputs" 
-                value={formData.fullName}
-                name="fullName"
-                onChange={handleChange}
-                /> <br/>
-                 {submitted &&  !formData.fullName? <span className="span">enter your full name.</span> : null}<br/>
+                <input
+                  type="text"
+                  placeholder=""
+                  className="inputs"
+                  value={formData.fullName}
+                  name="fullName"
+                  onChange={handleChange}
+                />{" "}
+                <br />
+                {submitted && !formData.fullName ? (
+                  <span className="span">enter your full name.</span>
+                ) : null}
+                <br />
               </label>
               <label>
                 Email address <br />
@@ -70,10 +75,13 @@ export const Info = () => {
                   placeholder="enter email address"
                   className="inputs"
                   value={formData.email}
-                name="email"
-                onChange={handleChange}
+                  name="email"
+                  onChange={handleChange}
                 />
-                 {submitted &&  !formData.email? <span className="span">enter an email.</span> : null}<br/>
+                {submitted && !formData.email ? (
+                  <span className="span">enter an email.</span>
+                ) : null}
+                <br />
               </label>
               <label>
                 Phone number <br />
@@ -82,23 +90,28 @@ export const Info = () => {
                   placeholder="enter phone number"
                   className="inputs"
                   value={formData.phoneNumber}
-                name="phoneNumber"
-                onChange={handleChange}
+                  name="phoneNumber"
+                  onChange={handleChange}
                 />
-                {submitted &&  !formData.phoneNumber? <span className="span">enter a vaild number</span> : null}<br/>
-                
+                {submitted && !formData.phoneNumber ? (
+                  <span className="span">enter a vaild number</span>
+                ) : null}
+                <br />
               </label>
               <label>
                 Birthday <br />
-                <input type="text" 
-                placeholder="dd/mm/yy" 
-                className="inputs" 
-                value={formData.birthday}
-                name="birthday"
-                onChange={handleChange} 
+                <input
+                  type="text"
+                  placeholder="dd/mm/yy"
+                  className="inputs"
+                  value={formData.birthday}
+                  name="birthday"
+                  onChange={handleChange}
                 />
-                {submitted &&  !formData.birthday? <span className="span">Please enter an age.</span> : null}<br/>
-               
+                {submitted && !formData.birthday ? (
+                  <span className="span">Please enter an age.</span>
+                ) : null}
+                <br />
               </label>
             </div>
 
@@ -111,10 +124,13 @@ export const Info = () => {
                   placeholder="enter current password"
                   className="inputs"
                   value={formData.currentPassword}
-                name="createPassword"
-                onChange={handleChange} 
+                  name="createPassword"
+                  onChange={handleChange}
                 />
-                {submitted &&  !formData.currentPassword? <span className="span">Enter your current password.</span> : null}<br/>
+                {submitted && !formData.currentPassword ? (
+                  <span className="span">Enter your current password.</span>
+                ) : null}
+                <br />
               </label>
               <label>
                 New password <br />
@@ -123,10 +139,13 @@ export const Info = () => {
                   placeholder="enter new password"
                   className="inputs"
                   value={formData.newPassword}
-                name="newPassword" 
-                onChange={handleChange}
+                  name="newPassword"
+                  onChange={handleChange}
                 />
-                {submitted &&  !formData.newPassword? <span className="span">Please enter your new password.</span> : null} <br/>   
+                {submitted && !formData.newPassword ? (
+                  <span className="span">Please enter your new password.</span>
+                ) : null}{" "}
+                <br />
               </label>
             </div>
 
@@ -139,10 +158,13 @@ export const Info = () => {
                   placeholder="enter home address"
                   className="inputs"
                   value={formData.address}
-                name="address"
-                onChange={handleChange}
+                  name="address"
+                  onChange={handleChange}
                 />
-                 {submitted &&  !formData.address? <span className="span">Enter a valid address.</span> : null} <br/>
+                {submitted && !formData.address ? (
+                  <span className="span">Enter a valid address.</span>
+                ) : null}{" "}
+                <br />
               </label>
               <label>
                 House no <br />
@@ -151,17 +173,22 @@ export const Info = () => {
                   placeholder="enter house number"
                   className="inputs"
                   value={formData.houseNo}
-                name="houseNo"
-                onChange={handleChange}
+                  name="houseNo"
+                  onChange={handleChange}
                 />
-                 {submitted &&  !formData.houseNo? <span className="span">Enter your house number.</span> : null}<br/>
+                {submitted && !formData.houseNo ? (
+                  <span className="span">Enter your house number.</span>
+                ) : null}
+                <br />
               </label>
             </div>
           </form>
 
           <div className="btns">
             <button className="btn1">Cancel</button>
-            <button className="btn2" onClick={submitForm}>Save</button>
+            <button className="btn2" onClick={submitForm}>
+              Save
+            </button>
           </div>
         </div>
       </div>

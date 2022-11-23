@@ -1,3 +1,4 @@
+@import "./theme/sass/variables";
 
 :root {
   --primary-color: #AA0136;
@@ -64,6 +65,13 @@
   font-weight: 500;
   font-size: 14px;
   width: 100%;
+  transition: all ease 0.3s;
+}
+
+.input:focus {
+  outline: none;
+  border: 1px solid $color-primary-main;
+  box-shadow: 0 0 1px 1px $color-primary-main;
 }
 
 .btn {
@@ -77,6 +85,7 @@
   font-family: 'Nunito', sans-serif;
   font-size: 14px;
   cursor: pointer;
+  margin-bottom: 24px;
 }
 
 .btn-primary {
@@ -519,6 +528,10 @@ body {
 @media screen and (min-width: 1040px){
   .two-column {
     display: flex;
+  }
+
+  #logo2 {
+    display: none;
   }
   
   .two-column div {

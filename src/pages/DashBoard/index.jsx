@@ -2,8 +2,7 @@ import React from "react";
 
 import PropTypes from "prop-types";
 
-// Stylesheet
-import "./DashBoard.css";
+import "./DashBoard.scss";
 
 // React Circular Progressbar
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";

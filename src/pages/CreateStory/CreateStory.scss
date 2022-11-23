@@ -216,7 +216,22 @@ Main Story Container
 	padding: 5px 0 0;
 }
 
-.gen-button-container button {
+.gen-button-container .gen_button_01 {
+	width: 100%;
+	background: #AA0136;
+	border: none;
+	padding: 12px 0;
+	border-radius: 56px;
+	font-family: 'Nunito';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 19px;
+	color: #FFFFFF;
+	cursor: pointer;
+}
+
+.gen-button-container .gen_button_02 {
 	width: 100%;
 	background: #AA0136;
 	border: none;
@@ -426,4 +441,8 @@ Main Story Container
 .preview_container_xxd > p {
 	font-size: 30px;
 	font-weight: 500;
+}
+
+.image_loading_btn_x0s3 {
+
 }
