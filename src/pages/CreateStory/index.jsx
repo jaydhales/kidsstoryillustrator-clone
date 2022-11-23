@@ -76,7 +76,7 @@ export const CreateStory = () => {
 
       axios({
         method: 'post',
-        url: 'https://story--ai.herokuapp.com/api/get_images',
+        url: 'https://web-production-c992.up.railway.app/api/get_images',
         data: {
           userPrompt: generateImagePrompt
         }
