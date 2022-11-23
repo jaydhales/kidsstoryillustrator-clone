@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from "react";
-import "./CreateStory.css";
+import "./CreateStory.scss";
 
 import PropTypes from "prop-types";
 
@@ -12,7 +12,7 @@ import add_img from "../../assets/images/create-story/add.svg";
 import previous_arr_icon from "../../assets/images/create-story/previous-next-arrow.svg";
 import ImageCard from "./ImageCard/ImageCard";
 import PreviewStory from "./PreviewStory";
-// import PreviewStory from "./PreviewStory";
+import axios from "axios";
 
 const ImageCardList = ({ list_of_image_urls, returnImageLink }) => {
   const [generatedImages, setGeneratedImages] = useState(list_of_image_urls);
@@ -62,6 +62,29 @@ export const CreateStory = () => {
   const [showPageSaveState, setShowPageSaveState] = useState(false);
 
   const [previewState, setPreviewState] = useState(false);
+
+  const [generateImagePrompt, setGenerateImagePrompt] = useState('');
+
+  const [imageGenerationState, setImageGenerationState] = useState(false);
+
+  const getImagesFromServer = async () => {
+    // 
+    setImageGenerationState(true);
+    if (generateImagePrompt.length < 2) {
+      alert('Please enter a valid text');
+    } else {
+      axios({
+        method: 'post',
+        url: 'http://localhost:4000/api/get_images',
+        data: {
+          userPrompt: generateImagePrompt
+        }
+      }).then((response) => {
+        console.log(response.data.links_array);
+        setGeneratedImages(response.data.links_array);
+      })
+    }
+  }
 
   const getPageImageLink = (image_url) => {
     console.log("This is the image link: " + image_url);
@@ -186,17 +209,21 @@ export const CreateStory = () => {
                     <div>
                       <textarea
                         type="text"
+                        value={generateImagePrompt}
+                        onChange={(e) => setGenerateImagePrompt(e.target.value)}
                         placeholder="Boy In A Room Doing Assignment"
                       />
                     </div>
                   </div>
                   <div className="text-context-tabs gen-button-container">
-                    <button onClick={() => setGeneratedImages(array_of_images)}>
-                      Generate
-                    </button>
+                    {imageGenerationState ? (
+                      <button className="gen_button_02" disabled onClick={getImagesFromServer}>Loading</button>
+                    ) : (
+                      <button className="gen_button_01" onClick={getImagesFromServer}>Generate</button>
+                    )}
                   </div>
                   <div className="text-context-tabs gen-button-container">
-                    <button onClick={AddedToPageList}>Save Page</button>
+                    <button className='gen_button_01' onClick={AddedToPageList}>Save Page</button>
                   </div>
                   {showPageSaveState ? <p>Saved</p> : null}
                 </div>
@@ -215,9 +242,6 @@ export const CreateStory = () => {
                   />
                 </div>
               )}
-              {/* <div>
-              <img src={placeholder_image} alt="" />
-            </div> */}
             </div>
             <div className="pages-index-container">
               <div className="p-i-c-01">
