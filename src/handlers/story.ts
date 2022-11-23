@@ -5,6 +5,7 @@ import StorybookModel from '../model/storybook.model';
 
 export class StoryLookUp extends BaseHandler {
 
+
   static async getAllStories(req: Request, res: Response) {
     try {
       const allStories = await StorybookModel.find({}).populate({
@@ -37,8 +38,8 @@ export class StoryLookUp extends BaseHandler {
       const { id } = req.params;
 
       if (Types.ObjectId.isValid(id)) {
-        const story = await StorybookModel.findById(id).populate('author');
-        
+        const story = await StorybookModel.findById(id).populate("author");
+
         if (!story) {
           return res.status(404).send({
             success: false,
@@ -68,10 +69,7 @@ export class StoryLookUp extends BaseHandler {
     try {
       const { email } = req.params
 
-      const story = await StorybookModel.find({ email: email }).populate({
-        path: 'author',
-        select: 'username _id'
-      });
+      const story = await StorybookModel.findOne({ email: email }).populate('author');
 
       if (!story) {
         return res.status(404).json({
