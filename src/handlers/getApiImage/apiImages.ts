@@ -53,7 +53,7 @@ class getApiImage extends BaseHandler {
 									links_array: imageLinkArr
 								})
 							}
-						}, 90000);
+						}, 61000);
 					});
 				} else {
         console.log('API KEY MISSING');
