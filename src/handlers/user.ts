@@ -1,5 +1,4 @@
-import { Request, Response, ErrorRequestHandler } from 'express';
-import { Types } from 'mongoose';
+import { Request, Response } from 'express';
 import { BaseHandler } from '../interfaces';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';

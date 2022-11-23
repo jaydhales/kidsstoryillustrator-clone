@@ -1,5 +1,6 @@
 import express from 'express';
 import { StoryLookUp } from '../handlers/story';
+import protect  from '../middleware/auth';
 
 const router = express.Router();
 
@@ -18,7 +19,7 @@ router
 
 router
   .route('/post_story')
-  .post(StoryLookUp.postStory)
+  .post(protect, StoryLookUp.postStory)
 
 
 export default router
