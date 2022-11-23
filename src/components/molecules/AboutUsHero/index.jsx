@@ -2,19 +2,21 @@ import React from "react";
 
 import PropTypes from "prop-types";
 
-import "./AboutUsHero.css";
+import "./AboutUsHero.scss";
 
 export const AboutUsHero = () => {
   return (
-    <div className="AboutUsHero">
-      <div className="hero-header">
-        <p>About Us</p>
-      </div>
-      <div className="hero-text">
-        <p>
-          We are a team with a passion for creativity and excellence reforming
-          strorytelling
-        </p>
+    <div className="AboutHero">
+      <div className="AboutUsHero">
+        <div className="hero-header">
+          <p>About Us</p>
+        </div>
+        <div className="hero-text">
+          <p>
+            We are a team with a passion for creativity and excellence reforming
+            storytelling
+          </p>
+        </div>
       </div>
     </div>
   );
