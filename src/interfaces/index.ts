@@ -1,11 +1,10 @@
-import { Types } from 'mongoose'
+import { Types } from 'mongoose';
 
 export class BaseHandler {
   public stringify(obj: any): string {
     return JSON.stringify(obj);
   }
 }
-
 
 export interface IUser {
   [x: string]: any;
@@ -22,12 +21,11 @@ export interface IStorybook {
   title: string;
   numberOfPages: number;
   scenes: {
-    caption: string,
-    imageURL: string
+    caption: string;
+    imageURL: string;
   }[];
   createdAt: Date;
 }
-
 
 export interface IContact {
   fullname: string;
@@ -35,7 +33,4 @@ export interface IContact {
   message: string;
   createdAt: Date;
 }
-
-
-
 
