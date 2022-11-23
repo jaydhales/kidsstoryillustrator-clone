@@ -26,7 +26,7 @@ import {
   SignUp,
   SummaryActivities,
   Info,
-  Users,
+  User,
   Settings
 } from "./pages";
 
@@ -66,7 +66,7 @@ const App = () => (
       <Route path="/profile/edit" element={<ProfileEdit />} />
       <Route path="/signup" element={<SignUp />} />
       <Route path="/summaryActivities" element={<SummaryActivities />} />
-      <Route path="/users" element={<Users />} />
+      <Route path="/users" element={<User />} />
       <Route path="/account-info" element={<Info />} />
       <Route path="/account-settings" element={<Settings />} />
     </Routes>

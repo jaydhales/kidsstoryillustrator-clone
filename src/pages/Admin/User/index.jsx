@@ -64,7 +64,7 @@ export const User = () => {
 
 // These are the types of the props that are passed to the component
 
-User.PropTypes = {};
+User.propTypes = {};
 
 // These are their default values
 

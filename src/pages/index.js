@@ -21,5 +21,5 @@ export { default as SignUp } from "./SignUp";
 export { default as SummaryActivities } from "./SummaryActivities";
 export { default as Info } from "./Admin/Info";
 export { default as Settings } from "./Admin/Settings";
-export { default as Users } from "./Admin/Users";
+export { default as User } from "./Admin/User";
 

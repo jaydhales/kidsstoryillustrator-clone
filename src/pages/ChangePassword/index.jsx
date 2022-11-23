@@ -3,6 +3,8 @@ import "./ChangePassword.css";
 import logoWhite from "../../assets/img/logo_white.png";
 import arrowLeft from "../../assets/img/arrow-left.png"
 
+import PropTypes from "prop-types";
+
 export const ChangePassword = () => {
   const [ password1, setPassword1 ] = React.useState("");
   const [ password2, setPassword2 ] = React.useState("");
@@ -60,5 +62,14 @@ export const ChangePassword = () => {
   </div>
   )
 };
+
+
+// These are the types of the props that are passed to the component
+
+ChangePassword.propTypes = {};
+
+// These are their default values
+
+ChangePassword.defaultProps = {};
 
 export default ChangePassword;
