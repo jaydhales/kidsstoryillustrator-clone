@@ -101,8 +101,8 @@ export const CreateStory = () => {
       {
         pageParagraphText: pageParagraph,
         pageImglinkUri: pageImgLink,
-      }
-  ];
+      },
+    ];
 
     if (generatedPageContent != undefined) {
       setPageContent(bject);
