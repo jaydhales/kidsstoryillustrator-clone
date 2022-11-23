@@ -4,22 +4,24 @@ import PropTypes from "prop-types";
 
 import "./Pricing.scss";
 import { Layout } from "../../components/molecules";
+import { Button } from "../../components/atoms";
 
 export const Pricing = () => {
   return (
     <Layout>
       <div className="Pricing">
-        <div className="heading">
-          <h1 className="title">Transparent, Simple pricing.</h1>
-          <p className="sub-title">
+        <section className="heading">
+          <h1>Transparent, Simple pricing.</h1>
+          <p>
             Try for free for 14 days, no commitment, no credit card required
           </p>
-        </div>
-        <div className="plan">
-          <p>Monthly billing</p>
-          <div className="card">
-            <div className="cardone">
-              <div className="card-head">
+        </section>
+
+        <section className="plan">
+          <h2>Monthly billing</h2>
+          <div className="main">
+            <div className="card">
+              <div className="head">
                 <p className="title">Basic</p>
                 <p className="amount">Free</p>
               </div>
@@ -29,34 +31,29 @@ export const Pricing = () => {
                   <li>Limited story creation</li>
                   <li>No story downloads</li>
                 </ul>
+                <a href="#">Sign Up</a>
               </div>
-              <a href="#">
-                <button className="btn-light">Sign Up</button>
-              </a>
             </div>
-            <div className="cardtwo">
-              <div className="card-head2">
+            <div className="card paid">
+              <div className="head">
                 <p className="title">Growth</p>
                 <p className="amount">
-                  {" "}
-                  <sup className="figure">us$ </sup>2
-                  <sup className="figure"> .00</sup>
+                  <sub className="figure">us$ </sub>2
+                  <sub className="figure"> .00</sub>
                 </p>
               </div>
-              <div className="featurestwo">
+              <div className="features">
                 <p className="sub-tt">What included</p>
-                <ul className="cardtwo-ul">
-                  <li>Limited story creation</li>
-                  <li>No story downloads</li>
-                  <li>No story downloads</li>
+                <ul>
+                  <li>Unlimited story creation</li>
+                  <li>Unlimited story downloads</li>
+                  <li>Publishers access</li>
                 </ul>
+                <a href="#">Sign Up</a>
               </div>
-              <a href="#">
-                <button className="btn-lighttwo">Sign Up</button>
-              </a>
             </div>
           </div>
-        </div>
+        </section>
       </div>
     </Layout>
   );

@@ -1,191 +1,228 @@
-.Pricing{
-    .heading {
-        text-align: center;
+.Pricing {
+  padding: 60px 2rem;
+
+  section {
+    margin: 40px 0;
+  }
+
+  .heading {
+    text-align: center;
+
+    h1 {
+      font-weight: 600;
+      font-size: 67px;
+      margin: 0;
+      margin-bottom: 8px;
     }
-    
-    .title {
-        font-weight: 600;
-        font-size: 36px;
-        margin: 0;
-        margin-bottom: 8px;
+
+    p {
+      font-weight: 500;
+      font-style: italic;
+      font-size: 24px;
+      color: #aaaaaa;
+      margin: 0;
     }
-    
-    .sub-title {
-        font-weight: 500;
-        font-style: italic;
-        font-size: 14px;
-        color: #aaaaaa;
-        margin: 0;
+  }
+
+  .plan {
+    h2 {
+      text-align: center;
+      font-size: 28px;
+      font-weight: 700;
     }
-    
-    .plan p{
-        font-weight: 700;
-        text-align: center;
-    }
-    
-    .card {
-        display: flex;
+
+    .main {
+      display: flex;
+      justify-content: center;
+      gap: 87px;
+      padding: 5rem 0;
+
+      .card {
+        border-radius: 5px;
+        border: 1px solid #cdcdcd;
+        padding: 90px 0;
+        position: relative;
+        width: 470px;
+        display: grid;
         justify-content: center;
-        padding: 0 100px;
-        flex-wrap: wrap;
-        margin-top: 66px;
-    }
-    
-    .card .cardone {
-        margin-right: 84px;
-    }
-    
-    .cardone {
-        border: 1px solid #cdcdcd;
-        padding: 70px 80px;
-        text-align: center;
-    }
-    
-    .cardone .title {
-        text-transform: uppercase;
-        font-weight: 600;
-        font-size: 30px;
-    }
-    
-    .cardone .amount {
-        text-transform: uppercase;
-        font-weight: 600;
-        font-size: 23px;
-        color: #AA0136;
-    }
-    
-    .cardtwo {
-        border: 1px solid #cdcdcd;
-        padding: 70px 80px;
-        text-align: center;
-        background-color: #AA0136;
-    }
-    
-    .cardtwo .title {
-        text-transform: uppercase;
-        font-weight: 600;
-        font-size: 30px;
-        color: #FFFFFF;
-    }
-    
-    .cardtwo .amount .figure {
-        text-transform: uppercase;
-        color: #FFFFFF;
-        font-size: 10px;
-    }
-    
-    .cardtwo .amount {
-        text-transform: uppercase;
-        font-weight: 600;
-        font-size: 23px;
-        color: #FFFFFF;
-    }
-    
-    .features, .featurestwo {
-        text-align: center;
-        padding-top: 20px;
-    }
-    
-    .features .sub-tt, .featurestwo .sub-tt  {
-        font-size: 12px;
-        font-weight: 400;
-        color: #646363;
-        text-align: left;
-    }
-    
-    .features ul {
-        margin-bottom: 50px;
-    }
-    
-    .features ul, .featurestwo ul {
-        list-style: none;
-        padding: 0;
-        text-align: left;
-    }
-    
-    .features ul li, .featurestwo ul li {
-        font-size: 16px;
-        font-weight: 600;
-        padding: 8px 0;
-        color: #1E1E11;
-    }
-    
-    .features ul li:before, .featurestwo ul li:before{
-        font-family: "Font Awesome 5 Free";
-        content: "\f00c";
-        display: inline-block;
-        padding-right: 8px;
-        vertical-align: middle;
-        font-weight: 900;
-        color: #aa0136;
-     }
-    
-     .featurestwo .sub-tt, .featurestwo ul li, .featurestwo ul li:before {
-        color: #FFFFFF;
-     }
-    
-     button.btn-light {
-        background: #aa0136;
+
+        .head p {
+          text-align: center;
+          margin-bottom: 40px;
+        }
+
+        .title {
+          font-size: 45px;
+        }
+
+        .amount {
+          font-size: 36px;
+          text-transform: uppercase;
+          color: var(--primary-color);
+        }
+
+        .sub-tt {
+          font-size: 18px;
+        }
+
+        ul {
+          padding: 24px 0;
+          height: 300px;
+
+          li {
+            font-size: 22px;
+            list-style-image: url("../../assets/Pricing/tick-primary.png");
+            margin-left: 2rem;
+            padding: 24px 0;
+          }
+        }
+
+        a {
+          background: #aa0136;
+          border-radius: 56px;
+          padding: 1rem 4rem;
+          color: #fff;
+          width: max-content;
+          display: block;
+          margin: auto;
+        }
+      }
+
+      .card.paid {
+        border: none;
+        background: var(--primary-color);
         color: #fff;
-        font-family: 'Nunito';
-        border: 1px solid #aa0136;
-        font-weight: 500;
-        padding: 10px 36px;
-        border-radius: 100px;
-    }
-    
-    button.btn-lighttwo {
-        background: #FFFFFF;
-        color: #aa0136;
-        font-family: 'Nunito';
-        border: 1px solid #aa0136;
-        font-weight: 500;
-        padding: 10px 36px;
-        border-radius: 100px;
-    }
-    
-    
-    @media screen and (max-width: 480px){
-        .card {
-            padding: 0 10px;
-        }
-    }
 
-    @media screen and (max-width: 768px){
+        .amount {
+          color: #fff;
+          font-size: 46px;
+          margin-top: -10px;
+        }
+
+        .figure {
+          font-size: 20px;
+          position: relative;
+          bottom: 8px;
+        }
+
+        li {
+          list-style-image: url("../../assets/Pricing/tick.png");
+        }
+
+        a {
+          color: #aa0136;
+          background: #fff;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .plan {
+      .main {
+        gap: 20px;
+      }
+    }
+  }
+
+  @media (max-width: 900px) {
+    .heading {
+      h1 {
+        font-size: 40px;
+      }
+      p {
+        font-size: 18px;
+      }
+    }
+    .plan {
+      .main {
+        flex-direction: column;
+
         .card {
-            margin-bottom: 77px;
-        }
-        .card .cardone {
-            margin-right: 0px;
-            margin-bottom: 77px;
-        }
-        .card > div {
+          width: 100%;
+          justify-content: unset;
+          padding: 0;
+
+          .head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             width: 100%;
-        }
-        .card-head {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #cdcdcd;
-            padding: 10px 60px;
-        }
-        .card-head2 {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #ffffff;
-            padding: 10px 60px;
-        }
-        .features, .featurestwo {
-            text-align: center;
-            padding: 20px 60px 0px;
-        }
-        .cardone, .cardtwo {
-            padding: 0 0 30px;
-        }
-        .cardone .title {
-            margin: 0;
-        }
-    }
-}
+            padding: 2rem 4rem;
+            border-bottom: 1px solid #bbbbbb;
 
+            p {
+              margin: 0;
+            }
+          }
+
+          .features {
+            padding: 2rem 4rem;
+
+            a {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    padding: 40px 1rem;
+    .heading {
+      h1 {
+        font-size: 32px;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+
+    .plan {
+      h2 {
+        font-size: 22px;
+      }
+
+      .main {
+        .card {
+          .head {
+            padding: 1.5rem;
+            p {
+              font-size: 22px;
+            }
+          }
+
+          .features {
+            padding: 1.5rem;
+          }
+
+          ul {
+            min-height: 200px;
+            height: max-content;
+            li {
+              font-size: 18px;
+              padding: 13px;
+
+              @media (max-width: 400px) {
+                font-size: 14px;
+              }
+            }
+          }
+        }
+
+        .card.paid {
+          .amount {
+            font-size: 26px;
+            margin: 0;
+
+            .figure {
+              font-size: 12px;
+              bottom: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
