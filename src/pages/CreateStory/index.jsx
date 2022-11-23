@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from "react";
-import "./CreateStory.css";
+import "./CreateStory.scss";
 
 import PropTypes from "prop-types";
 

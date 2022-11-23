@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import "./ImageCard.css";
+import "./ImageCard.scss";
 
 import check_img from "../../../assets/images/create-story/check-good-yes.svg";
 
