@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import PropTypes from "prop-types";
 
-import "./AcctSetup.css";
+import "./AcctSetup.scss";
 
 export const Settings = () => {
   const [formData, setFormData] = useState({
@@ -36,7 +36,7 @@ export const Settings = () => {
   }
 
   return (
-    <div className="container">
+    <div className="Settings">
       <div className="side-bar"></div>
       <div className="wrapper">
         <h1>Settings</h1>
