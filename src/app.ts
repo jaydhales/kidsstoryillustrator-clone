@@ -12,6 +12,7 @@ import indexRouter from './routes/index.route';
 import invalidRouter from './routes/404.route';
 import storyRouter from './routes/story.routes';
 import userRouter from './routes/user.route';
+import apiImageRouter from './routes/apiImage.route';
 import swaggerDocs from './utils/swagger'
 import './db/mongodb'
 
@@ -30,6 +31,8 @@ app.use('/', indexRouter);
 app.use('/story', storyRouter);
 app.use('/auth', userRouter);
 app.use('*', invalidRouter);
+app.use('/api', apiImageRouter);
+app.use('**', invalidRouter);
 
 
 app.use((req: Request, res: Response, next) => {
