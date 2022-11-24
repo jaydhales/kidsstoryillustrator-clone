@@ -22,7 +22,7 @@
         }
     ],
     "paths": {
-        "/story/get_story": {
+        "/story": {
             "get": {
                 "tags": ["Story"],
                 "summary": "Find All Stories in database",
@@ -48,7 +48,7 @@
                 }
             }
         },
-        "/story/get_by_email/{email}": {
+        "/story/{email}": {
             "get": {
                 "tags": ["Story"],
                 "summary": "Find Story by Email",
@@ -84,7 +84,7 @@
                 }
             }
         },
-        "/story/get_story/{id}": {
+        "/story/{id}": {
             "get": {
                 "tags": ["Story"],
                 "summary": "Find Story by Id",
