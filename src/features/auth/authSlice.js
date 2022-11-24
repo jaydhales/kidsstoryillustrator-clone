@@ -10,16 +10,16 @@ export const authSlice = createSlice({
   reducers: {
       signUp: (state, action) => {
           localStorage.setItem("token", action.hash )
-          const { email, lastname, firstname, username, hash } = action.payload
-          state.user = { email, lastname, firstname, username };
-          state.token = hash;
+          const { email, token } = action.payload
+          state.user = { email };
+          state.token = token;
           state.isAuthenticated = true;
       },
       logIn: (state, action) => {
           localStorage.setItem("token", action.hash )
-          const { email, lastname, firstname, username, hash } = action.payload
-          state.user = { email, lastname, firstname, username };
-          state.token = hash;
+          const { email, token } = action.payload
+          state.user = { email };
+          state.token = token;
           state.isAuthenticated = true;
       },
       logOut: (state) => {
