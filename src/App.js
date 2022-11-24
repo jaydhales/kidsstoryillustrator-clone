@@ -27,7 +27,8 @@ import {
   SummaryActivities,
   Info,
   Users,
-  Settings
+  UserList,
+  Settings,
 } from "./pages";
 
 const MoveToTop = () => {
@@ -69,6 +70,7 @@ const App = () => (
       <Route path="/users" element={<Users />} />
       <Route path="/account-info" element={<Info />} />
       <Route path="/account-settings" element={<Settings />} />
+      <Route path ="/userlist" element={<UserList/>}/>
     </Routes>
   </>
 );

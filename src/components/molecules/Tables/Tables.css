@@ -1,0 +1,42 @@
+.table-wrapper{
+    width: 98vw;
+    padding: 0;
+    margin: 0;
+}
+
+table, td, th{
+    border: 1px solid rgb(221, 217, 217);
+  border-collapse: collapse;
+}
+.table-wrapper table{
+    width: 80%;
+        border-spacing: 30px;
+        margin: 10%;
+}
+
+td, th{
+    text-align: left;
+  }
+  tr{
+    text-align: center;
+  }
+
+tr:hover {
+    background-color: #D6EEEE;}
+
+    td {
+        height: 30px;
+        vertical-align: bottom;
+        padding-left: 15px;
+        max-width: 200px;
+
+      }
+
+      .min-w-full_divide-y-divide-gray-200 input{
+        margin-right: 15px;
+        width: 15px;
+        height: 15px;
+
+      }
+
+      
