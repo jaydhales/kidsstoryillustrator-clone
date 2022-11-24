@@ -120,6 +120,51 @@
                 }
             }
         },
+        "/story/post_story": {
+            "post": {
+                "tags": ["Story"],
+                "summary": "Create story",
+                "description": "Create a new Story.",
+                "operationId": "createStory",
+                "requestBody": {
+                    "description": "Created story object",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/storyRequest"
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "$ref": "#/components/schemas/storyRequest"
+                            }
+                        },
+                        "application/x-www-form-urlencoded": {
+                            "schema": {
+                                "$ref": "#/components/schemas/storyRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Story"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Story"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
         "/auth/signup": {
             "post": {
                 "tags": ["User"],
@@ -264,20 +309,6 @@
                     "name": "User"
                 }
             },
-            "storyRequest": {
-                "type": "object",
-                "properties": {
-                    "title": {
-                        "type": "string"
-                    },
-                    "text": {
-                        "type": "string"
-                    }
-                },
-                "json": {
-                    "name": "storyRequest"
-                }
-            },
             "userSignup": {
                 "type": "object",
                 "properties": {
@@ -307,6 +338,26 @@
                 },
                 "json": {
                     "name": "userLogin"
+                }
+            },
+            "storyRequest": {
+                "type": "object",
+                "properties": {
+                    "decoded": {
+                        "type": "string"
+                    },
+                    "title": {
+                        "type": "string"
+                    },
+                    "numberOfPages": {
+                        "type": "integer"
+                    },
+                    "scenes": {
+                        "type": "string"
+                    }
+                },
+                "json": {
+                    "name": "storyRequest"
                 }
             },
             "ApiResponse": {
