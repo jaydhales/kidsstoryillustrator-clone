@@ -118,6 +118,28 @@
                         }
                     }
                 }
+            },
+            "delete": {
+                "tags": ["Story"],
+                "summary": "Delete story",
+                "description": "Delete story Details.",
+                "operationId": "seleteStory",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Story",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
             }
         },
         "/story/post_story": {
