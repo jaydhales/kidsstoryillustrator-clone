@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900;1000&display=swap');
+
+.Archieve{
+    flex: 4;
+    font-family: 'Nunito';
+    padding: 2rem;
+
+     .archieveText{
+            font-weight: 600;
+            font-size: 22px;
+            padding-bottom: 2rem;
+        }
+
+        .archieveUser{
+            display: flex;
+            justify-content: space-between;
+            padding: 2rem;
+            border: 1px solid #F7F8F8;
+                    
+         }
+
+    @media screen and (max-width: 768px ){
+        .Archieve{
+            width: 100%;
+            margin-left: 0px;
+                    
+            }
+                    
+            .archieveWrapper{
+                  overflow-x: scroll;
+                    }
+                
+            .archieveUser{
+                    width: 1200px;
+                    }
+                
+            .archieveText{
+                    margin-top: 1rem;
+                    }
+                    
+                }
+}
+
+
+
