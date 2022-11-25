@@ -9,6 +9,7 @@ import logoWhite from "../../assets/img/logo_white.png";
 import { signUp } from "../../features/auth/authSlice";
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
+import { useDispatch } from "react-redux";
 
 const endpoint = "https://story--ai.herokuapp.com/auth/signup";
 
@@ -19,6 +20,7 @@ export const SignUp = () => {
   const [ username, setUsername ] = React.useState("");
   const [ isLoading, setIsLoading ] = React.useState(false);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
@@ -42,7 +44,7 @@ export const SignUp = () => {
     .post(endpoint, body, config)
     .then((res) => {
       setIsLoading(false);
-      signUp(res.data.message);
+      dispatch(signUp(res.data.data));
       navigate("/myStories");
     })
     .catch(err => {
