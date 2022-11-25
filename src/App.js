@@ -6,7 +6,6 @@ import "./App.scss";
 import {
   About,
   Blog,
-  BlogDetails,
   ChangePassword,
   Contact,
   CreateStory,
@@ -49,7 +48,6 @@ const App = () => (
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/blog" element={<Blog />} />
-      <Route path="/blog/:id" element={<BlogDetails />} />
       <Route path="/blogPage" element={<BlogPage />} />
       <Route path="/changePassword" element={<ChangePassword />} />
       <Route path ="/contact" element ={<Contact/>}/>

@@ -1,7 +1,6 @@
 import React, { useId } from "react";
 import { Link } from "react-router-dom";
-// import BlogPage from "../../../pages/BlogPage/BlogPage";
-import { BlogDetails } from "../../../pages";
+import BlogPage from "../../../pages/BlogPage/BlogPage";
 import "./BlogPostCard.scss";
 import pic8 from "./pic8.png";
 import PropTypes from "prop-types";

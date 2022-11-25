@@ -1,6 +1,6 @@
 export { default as About } from "./About";
 export { default as Blog } from "./Blog";
-export { default as BlogDetails } from "./BlogDetails";
+// export { default as BlogPage} from "./BlogPage";
 export { default as ChangePassword } from "./ChangePassword";
 export {default as Contact} from "./ContactUs"
 export { default as CreateStory } from "./CreateStory";
