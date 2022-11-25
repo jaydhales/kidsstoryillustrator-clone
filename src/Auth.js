@@ -32,7 +32,9 @@ import {
   Info,
   Users,
   Settings,
+  UserList,
 } from "./pages";
+import AdminDashBoard from "./pages/Admin/Admin-Dashboard";
 
 const DefaultRoutes = (
   <>
@@ -70,6 +72,15 @@ const ProtectedRoutes = (
     <Route path="/users" element={<Users />} />
   </Routes>
 );
+
+
+const AdminRoutes =(
+  <Routes>
+    {DefaultRoutes}
+    <Route path="/admin-dashboard" element ={<AdminDashBoard/>}/>
+    <Route path="/userlist" element ={<UserList/>}/>
+  </Routes>
+)
 
 const AppRoutes = () => {
   const { isAuthenticated } = useSelector((state) => state.auth);
