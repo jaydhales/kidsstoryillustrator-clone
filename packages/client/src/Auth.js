@@ -28,7 +28,8 @@ import {
   SummaryActivities,
   Info,
   Users,
-  Settings
+  Settings,
+  UserDetails
 } from "./pages";
 
 const AppRoutes = (
@@ -57,6 +58,7 @@ const AppRoutes = (
   <Route path="/users" element={<Users />} />
   <Route path="/account-info" element={<Info />} />
   <Route path="/account-settings" element={<Settings />} />
+  <Route path="/userDetails" element={<UserDetails />} />
 </Routes>
 );
 
