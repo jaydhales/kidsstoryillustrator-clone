@@ -45,4 +45,34 @@
     text-align: center;
     font-size: 12px;
   }
+
+  .content {
+    padding-left: 5%;
+    padding-top: 5%;
+  }
+  
+  .content .text {
+    margin-top: 10%;
+    color: #fff;
+  }
+
+  .content .text h2 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 57px;
+    font-weight: 400;
+    margin-bottom: 32px;
+    line-height: 64px;
+  }
+
+    .content .text p {
+    font-family: "Roboto", sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    width: 90%;
+  }
+
+  #logo2 {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
