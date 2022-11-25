@@ -1,0 +1,238 @@
+{
+  "color": {
+    "text": {
+      "value": "#131313",
+      "type": "color",
+      "description": "use for primary text"
+    },
+    "grey": {
+      "100": {
+        "value": "#d9d9d9",
+        "type": "color",
+        "description": "body text"
+      },
+      "200": {
+        "value": "#f7f8f8",
+        "type": "color",
+        "description": "light\n"
+      }
+    },
+    "neutral": {
+      "100": {
+        "value": "#e4e4e4",
+        "type": "color"
+      },
+      "200": {
+        "value": "#d2d2d2",
+        "type": "color"
+      },
+      "300": {
+        "value": "#bbbbbb",
+        "type": "color"
+      },
+      "400": {
+        "value": "#a5a4a4",
+        "type": "color"
+      },
+      "500": {
+        "value": "#8e8e8e",
+        "type": "color"
+      },
+      "700": {
+        "value": "#646363",
+        "type": "color"
+      },
+      "800": {
+        "value": "#504f4f",
+        "type": "color"
+      },
+      "900": {
+        "value": "#3c3c3c",
+        "type": "color"
+      },
+      "1000": {
+        "value": "#282828",
+        "type": "color"
+      },
+      "1100": {
+        "value": "#181818",
+        "type": "color"
+      },
+      "main": {
+        "value": "#787777",
+        "type": "color"
+      }
+    },
+    "Primary": {
+      "100": {
+        "value": "#eeccd7",
+        "type": "color"
+      },
+      "200": {
+        "value": "#e3aabc",
+        "type": "color"
+      },
+      "300": {
+        "value": "#d4809a",
+        "type": "color"
+      },
+      "400": {
+        "value": "#c65679",
+        "type": "color"
+      },
+      "500": {
+        "value": "#b82b58",
+        "type": "color"
+      },
+      "700": {
+        "value": "#8e012d",
+        "type": "color"
+      },
+      "800": {
+        "value": "#710124",
+        "type": "color"
+      },
+      "900": {
+        "value": "#55011b",
+        "type": "color"
+      },
+      "1000": {
+        "value": "#390012",
+        "type": "color"
+      },
+      "1100": {
+        "value": "#22000b",
+        "type": "color"
+      }
+    },
+    "primary": {
+      "main": {
+        "value": "#aa0136",
+        "type": "color",
+        "description": "primary color"
+      }
+    },
+    "Secondary": {
+      "100": {
+        "value": "#cedae3",
+        "type": "color"
+      },
+      "200": {
+        "value": "#adc1d0",
+        "type": "color"
+      },
+      "300": {
+        "value": "#83a2b9",
+        "type": "color"
+      },
+      "400": {
+        "value": "#5a84a2",
+        "type": "color"
+      },
+      "500": {
+        "value": "#31658a",
+        "type": "color"
+      },
+      "700": {
+        "value": "#073a60",
+        "type": "color"
+      },
+      "800": {
+        "value": "#052f4d",
+        "type": "color"
+      },
+      "900": {
+        "value": "#04233a",
+        "type": "color"
+      },
+      "1000": {
+        "value": "#031726",
+        "type": "color"
+      },
+      "1100": {
+        "value": "#020e17",
+        "type": "color"
+      }
+    },
+    "secondary": {
+      "main": {
+        "value": "#084673",
+        "type": "color"
+      }
+    },
+    "Success": {
+      "100": {
+        "value": "#e9fff8",
+        "type": "color"
+      },
+      "200": {
+        "value": "#08875d",
+        "type": "color"
+      },
+      "300": {
+        "value": "#168c65",
+        "type": "color"
+      },
+      "400": {
+        "value": "#066042",
+        "type": "color",
+        "description": "use for Default state"
+      }
+    },
+    "Warning": {
+      "100": {
+        "value": "#fff4dd",
+        "type": "color",
+        "description": "use for background"
+      },
+      "200": {
+        "value": "#ec9410",
+        "type": "color",
+        "description": "use for Default state"
+      },
+      "300": {
+        "value": "#a95d11",
+        "type": "color",
+        "description": "use for hover state"
+      },
+      "400": {
+        "value": "#80460d",
+        "type": "color",
+        "description": "use for pressed state"
+      }
+    },
+    "Error": {
+      "100": {
+        "value": "#ffe2e5",
+        "type": "color",
+        "description": "use for background"
+      },
+      "200": {
+        "value": "#a50a17",
+        "type": "color",
+        "description": "use as default state"
+      },
+      "300": {
+        "value": "#ba2532",
+        "type": "color",
+        "description": "use for hover state"
+      },
+      "400": {
+        "value": "#8c2d27",
+        "type": "color",
+        "description": "use for pressed state"
+      }
+    },
+    "drop-shadow": {
+      "value": {
+        "color": "#a58d8d12",
+        "type": "dropShadow",
+        "x": 2,
+        "y": 2,
+        "blur": 10,
+        "spread": 0
+      },
+      "type": "boxShadow"
+    }
+  }
+}

@@ -3,7 +3,11 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import "./AboutUsVision.scss";
+<<<<<<< HEAD
 import visionImg from "../../../assets/About-asset/visionImg.svg";
+=======
+import visionImg from "./visionImg.svg";
+>>>>>>> FE-main
 
 export const AboutUsVision = () => {
   return (

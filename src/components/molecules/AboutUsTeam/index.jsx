@@ -3,7 +3,11 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import "./AboutUsTeam.scss";
+<<<<<<< HEAD
 import abtTeam from "../../../assets/About-asset/abtTeam.svg";
+=======
+import abtTeam from "./abtTeam.svg";
+>>>>>>> FE-main
 
 export const AboutUsTeam = () => {
   return (

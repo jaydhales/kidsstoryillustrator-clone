@@ -91,6 +91,14 @@
     color: #AA0136;
 }
 
+h3 {
+    text-align: center;
+    color: #AA0136;
+    font-weight: 500;
+    font-size: 45px;
+    text-transform: capitalize;
+}
+
 /* media queries */
 @media screen and (max-width: 900px ){
     width: 100%;
@@ -140,6 +148,10 @@
 
     .sub-helpCategories-container{
         gap:1.5rem
+    }
+
+    h3{
+        font-size: 25px;
     }
 
 }

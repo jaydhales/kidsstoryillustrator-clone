@@ -7,6 +7,7 @@
         box-sizing: border-box;
         border-radius: 56px;
         gap: 20px;
+        border: 1px solid #b9babb;
     }
 
     .input-container {
@@ -219,7 +220,7 @@
             display: grid;
             grid-template-rows: auto;
             grid-template-columns: none;
-            margin: 5%;
+            margin: 0%;
             box-sizing: border-box;
             border: none;
             border-radius: 56px;
@@ -228,6 +229,18 @@
 
         .chatbot_wrapper {
             border-radius: 0;
+        }
+
+
+        .input-container {
+            border-radius: 56px;
+            // border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+            row-gap: 30px;
+            align-items: left;
+            // margin: 10% 5% 0% 5%;
+            // padding: 3% 5% 10% 5%;
         }
 
     }

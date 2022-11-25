@@ -5,20 +5,50 @@ import logoWhite from "../../assets/img/logo_white.png";
 import googleLogo from "../../assets/img/google_logo.png";
 import facebookLogo from "../../assets/img/facebook_logo.png";
 import appleLogo from "../../assets/img/apple_logo.png";
+import axios from 'axios';
+import { logIn } from "../../features/auth/authSlice";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
 
+const endpoint = "https://story--ai.herokuapp.com/auth/signin";
 
 export const Login = () => {
   const [ email, setEmail ] = React.useState("");
   const [ password, setPassword ] = React.useState("");
   const [ errors, setErrors ] = React.useState([]);
   const [ isLoading, setIsLoading ] = React.useState(false);
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
 
+    setIsLoading(true);
+    setErrors([]);
+
     if(!email || !password ){
-      setErrors([...errors, "Fields cannot be empty"])
+      setIsLoading(false);
+      setErrors([...errors, "Fields cannot be empty"]);
     }
+
+    const body = JSON.stringify({ email, password });
+    const config = {
+      headers: {
+        "Content-Type": "application/json"
+      }
+    };
+
+    axios.post(endpoint, body, config)
+    .then((res) => {
+      setIsLoading(false);
+      console.log(res.data.data);
+      dispatch(logIn(res.data.data));
+      navigate("/mystories");
+    })
+    .catch(err => {
+      setIsLoading(false);
+      setErrors([...errors, err.response.data.message ]);
+    });
   }
 
   return (

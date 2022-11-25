@@ -1,18 +1,18 @@
-import React from 'react';
+import React from "react";
 
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-import './Button.css';
+import "./Button.scss";
 
-export const Button = () => {
-  return <div>
-    <button className='FAQ-button'>Send an email</button>
-  </div>;
+export const Button = ({ children }) => {
+  return <button className="Button">{children}</button>;
 };
 
 // These are the types of the props that are passed to the component
 
-Button.propTypes = {};
+Button.propTypes = {
+  children: PropTypes.any,
+};
 
 // These are their default values
 
