@@ -15,6 +15,7 @@ import favBook from "../../../assets/images/book-square.svg";
 import savedBook from "../../../assets/images/book-saved.svg";
 import login from "../../../assets/images/login.svg";
 
+
 export const User = () => {
   return (
     <div className="user-container">
@@ -126,7 +127,7 @@ export const User = () => {
 
 // These are the types of the props that are passed to the component
 
-User.propTypes = {};
+User.PropTypes = {};
 
 // These are their default values
 
