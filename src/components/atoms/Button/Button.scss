@@ -1,0 +1,11 @@
+.Button {
+  padding: 1rem 2rem;
+  background: #aa0136;
+  border-radius: 56px;
+  color: #fff;
+  border: 1px solid #aa0136;
+
+  @media screen and (max-width: 900px) {
+    padding: 1rem 1.5rem;
+  }
+}

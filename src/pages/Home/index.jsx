@@ -27,7 +27,7 @@ export const Home = () => {
               details
             </p>
             <div className="button--grid">
-              <button className="create" onClick={() => navigate('/createStory')} >Create Stories</button>
+              <button className="create" onClick={() => navigate('/login')} >Create Stories</button>
               <button className="read">Read Stories</button>
             </div>
           </section>
@@ -35,8 +35,8 @@ export const Home = () => {
             <img src={illustration} alt="bulb" />
           </section>
         </header>
-        <h3 style={{ textAlign: "center" }}>
-          Why You Love Using <span>story.ai</span>
+        <h3 style={{ textAlign: "center" }} className='h3-header'>
+          Why You Love Using <span className="span">story.ai</span>
         </h3>
         <section className="reasons--grid">
           <div className="grid--one">
@@ -46,7 +46,7 @@ export const Home = () => {
                   <img src={redlogo} alt="bulb" />
                 </div>
 
-                <h4>Fast & Scalable</h4>
+                <h4 className="h4-header">Fast & Scalable</h4>
               </div>
               <p>
                 We have provided the fastest means to generate illustrtions for
@@ -60,12 +60,12 @@ export const Home = () => {
                   <img src={greenlogo} alt="bulb" />
                 </div>
 
-                <h4>Easy to Use</h4>
+                <h4 className="h4-header">Easy to Use</h4>
               </div>
               <p>
                 In just 4 steps, you have everything you need to make a great
                 children story books with detailed and quality illustrations.
-                See <span>demo here</span>
+                See <span className="span">demo here</span>
               </p>
             </div>
           </div>
@@ -79,7 +79,7 @@ export const Home = () => {
                   <img src={orangelogo} alt="bulb" />
                 </div>
 
-                <h4>Automation</h4>
+                <h4 className="h4-header">Automation</h4>
               </div>
               <p>
                 Eploying the best use of AI, illustrations for your stories are
@@ -93,7 +93,7 @@ export const Home = () => {
                   <img src={bluelogo} alt="bulb" />
                 </div>
 
-                <h4>Have Fun Creatign Stories</h4>
+                <h4 className="h4-header">Have Fun Creating Stories</h4>
               </div>
               <p>
                 You do not have to bother about writer’s block. Your keywords
@@ -103,14 +103,14 @@ export const Home = () => {
             </div>
           </div>
         </section>
-        <h3 style={{ textAlign: "center" }}>
+        <h3 className='h3-header'>
           Get Illustrations in 4 Simple Steps
         </h3>
         <section className="steps">
           <div>
             <div className="flex">
               <p className="number red">01</p>
-              <h4>Write Your Story</h4>
+              <h4 className="h4-header">Write Your Story</h4>
             </div>
             <p>
               You do not have to bother about writer’s block. Your keywords will
@@ -121,7 +121,7 @@ export const Home = () => {
           <div>
             <div className="flex">
               <p className="number blue">02</p>
-              <h4>Enter at Least 2 Keywords</h4>
+              <h4 className="h4-header">Enter at Least 2 Keywords</h4>
             </div>
             <p>
               You do not have to bother about writer’s block. Your keywords will
@@ -132,7 +132,7 @@ export const Home = () => {
           <div>
             <div className="flex">
               <p className="number green">03</p>
-              <h4>Click on &quot;Generate Illustrations&quot;</h4>
+              <h4 className="h4-header">Click on &quot;Generate Illustrations&quot;</h4>
             </div>
             <p>
               You do not have to bother about writer’s block. Your keywords will
@@ -143,7 +143,7 @@ export const Home = () => {
           <div>
             <div className="flex">
               <p className="number orange">04</p>
-              <h4>Select Your Preferred Illustration</h4>
+              <h4 className="h4-header">Select Your Preferred Illustration</h4>
             </div>
             <p>
               Select your preferd illustration. You can preview your story to
@@ -155,7 +155,7 @@ export const Home = () => {
         <div className="button--flex">
           <button>Create Story</button>
         </div>
-        <h3 style={{ textAlign: "center", marginTop: "2em" }}>Testimonials</h3>
+        <h3 style={{ margin: "1em" }} className='h3-header'>Testimonials</h3>
         <section className="testimonials">
           <div className="testimonial-message">
             <p>
@@ -164,7 +164,7 @@ export const Home = () => {
               detail within 40 minutes. I totally recommend story.ai for every
               children story writers
             </p>
-            <div>
+            <div className="avatar--profile">
               <div className="avatar">
                 <img src={avatar} alt="avatar" />
               </div>
@@ -179,11 +179,10 @@ export const Home = () => {
               detail within 40 minutes. I totally recommend story.ai for every
               children story writers
             </p>
-            <div>
+            <div className="avatar--profile">
               <div className="avatar">
                 <img src={avatar} alt="avatar" />
               </div>
-
               <p>Temitope Balogun</p>
             </div>
           </div>

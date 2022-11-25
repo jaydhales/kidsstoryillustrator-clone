@@ -1,0 +1,86 @@
+.ProfileEdit {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem;
+
+  .heading {
+    font-size: 22px;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(19, 19, 19, 0.16);
+  }
+
+  .profile-avatar {
+    margin-top: 35px;
+    display: flex;
+    align-items: center;
+
+    div {
+      width: 100px;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    button {
+      background: white;
+      color: #aa0136;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      span {
+      }
+    }
+  }
+
+  .form-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px;
+    margin: 24px 0;
+
+    label {
+      display: grid;
+      gap: 8px;
+    }
+
+    input {
+      padding: 1rem 2rem;
+      border: 1px solid #bbbbbb;
+      border-radius: 53px;
+    }
+
+    input:focus-within {
+      outline: none;
+      border: 1px solid #787777;
+    }
+  }
+
+  .form-action,
+  .profile-avatar {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .form-action {
+    padding: 2rem 0;
+    a {
+      color: #aa0136;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .form-group {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    .form-action,
+    .profile-avatar {
+      justify-content: space-between;
+      gap: 30px;
+    }
+  }
+}
