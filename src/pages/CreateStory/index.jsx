@@ -1,5 +1,5 @@
-import React, { useCallback, useEffect, useState } from "react";
-import "./CreateStory.css";
+import React, { useState } from "react";
+import "./CreateStory.scss";
 
 import PropTypes from "prop-types";
 
@@ -12,7 +12,10 @@ import add_img from "../../assets/images/create-story/add.svg";
 import previous_arr_icon from "../../assets/images/create-story/previous-next-arrow.svg";
 import ImageCard from "./ImageCard/ImageCard";
 import PreviewStory from "./PreviewStory";
-// import PreviewStory from "./PreviewStory";
+import axios from "axios";
+
+import loaader_img from "../../assets/images/create-story/Spinner-wait.gif";
+import { Fade } from "react-awesome-reveal";
 
 const ImageCardList = ({ list_of_image_urls, returnImageLink }) => {
   const [generatedImages, setGeneratedImages] = useState(list_of_image_urls);
@@ -21,8 +24,8 @@ const ImageCardList = ({ list_of_image_urls, returnImageLink }) => {
     <div className="imagecard_list_container">
       {generatedImages.map((image, index) => (
         <ImageCard
-          image_url={image}
           key={index.toString()}
+          image_url={image}
           indexNo={index}
           src={returnImageLink}
         />
@@ -37,19 +40,8 @@ ImageCardList.propTypes = {
 };
 
 export const CreateStory = () => {
-  const [imageLoadingState, setImageLoadingState] = useState([]);
-
-  const array_of_images = [
-    "https://i.pinimg.com/564x/7a/bc/1c/7abc1c5f9c8e10862dc8c0e906f50378.jpg",
-    "https://i.pinimg.com/564x/30/79/b9/3079b92407584ec0ea92bb6ec39a5879.jpg",
-    "https://i.pinimg.com/236x/ea/14/91/ea1491e09397ae136a18c646a08717f1.jpg",
-    "https://i.pinimg.com/564x/06/51/bc/0651bc3e6b04a24c50b2dce52c5732fe.jpg",
-    "https://i.pinimg.com/564x/03/23/f1/0323f1c65032f8807d6e0adc26f35dae.jpg",
-    "https://i.pinimg.com/236x/72/e7/4d/72e74d029193196deb05a14a7ea37d3e.jpg",
-    "https://i.pinimg.com/564x/9e/5d/65/9e5d65afb7a2c44d35746b6bfb11bf27.jpg",
-    "https://i.pinimg.com/564x/3d/84/65/3d84657b1f290102bfc17a017e306624.jpg",
-    "https://i.pinimg.com/236x/12/c8/5b/12c85b70fb9553e7cba731529399f1a9.jpg",
-  ];
+  const [imageLoadingState, setImageLoadingState] = useState(false);
+  const [imageLoadingCounter,setImageLoadingCounter ] = useState('60');
 
   const [generatedImages, setGeneratedImages] = useState([]);
 
@@ -62,6 +54,72 @@ export const CreateStory = () => {
   const [showPageSaveState, setShowPageSaveState] = useState(false);
 
   const [previewState, setPreviewState] = useState(false);
+
+  const [generateImagePrompt, setGenerateImagePrompt] = useState('');
+
+  const [imageGenerationState, setImageGenerationState] = useState(false);
+
+  const getImagesFromServer = async () => {
+    //
+    setImageGenerationState(true);
+
+    axios({
+      method: "post",
+      url: "https://web-production-c992.up.railway.app/api/get_images",
+      data: {
+        userPrompt: generateImagePrompt,
+      },
+    }).then((response) => {
+      console.log(response.data.links_array);
+      setImageLoadingState(false);
+      let new_Arry = [];
+      for (let i = 0; i < 9; i++) {
+        new_Arry.push(response.data.links_array[i]);
+      }
+      setGeneratedImages(new_Arry);
+    });
+    setImageGenerationState(false);
+  };
+
+  const setImageLoadingFunc = () => {
+    console.log(generatedImages.length);
+    if (generatedImages.length != 0) {
+      let prompt_response = prompt(
+        "Are you sure you want to create a new search? Yes or No"
+      ).toLowerCase();
+      if (prompt_response.length >= 2) {
+        if (prompt_response == "yes") {
+          //
+          setGeneratedImages([]);
+
+          setPageParagraph("");
+          setPageImgLink("");
+        } else if (prompt_response == "no") {
+          alert("Re-search cancelled");
+        } else {
+          alert("Please enter a valid response");
+        }
+      }
+    }
+
+    if (generateImagePrompt.length < 2) {
+      alert("Please enter a valid text");
+    } else {
+      setImageLoadingState(true);
+      getImagesFromServer();
+
+      let time_count = 60;
+
+      let this_time_counter = setInterval(() => {
+        time_count -= 1;
+        setImageLoadingCounter(time_count.toString());
+
+        if (time_count == 0) {
+          clearInterval(this_time_counter);
+        }
+      }, 1000);
+    }
+  };
 
   const getPageImageLink = (image_url) => {
     console.log("This is the image link: " + image_url);
@@ -186,38 +244,64 @@ export const CreateStory = () => {
                     <div>
                       <textarea
                         type="text"
+                        value={generateImagePrompt}
+                        onChange={(e) => setGenerateImagePrompt(e.target.value)}
                         placeholder="Boy In A Room Doing Assignment"
                       />
                     </div>
                   </div>
                   <div className="text-context-tabs gen-button-container">
-                    <button onClick={() => setGeneratedImages(array_of_images)}>
-                      Generate
-                    </button>
+                    {imageGenerationState ? (
+                      <button
+                        className="gen_button_02"
+                        disabled
+                        onClick={getImagesFromServer}
+                      >
+                        Loading
+                      </button>
+                    ) : (
+                      <button
+                        className="gen_button_01"
+                        onClick={setImageLoadingFunc}
+                      >
+                        Generate
+                      </button>
+                    )}
                   </div>
                   <div className="text-context-tabs gen-button-container">
-                    <button onClick={AddedToPageList}>Save Page</button>
+                    <button className="gen_button_01" onClick={AddedToPageList}>
+                      Save Page
+                    </button>
                   </div>
                   {showPageSaveState ? <p>Saved</p> : null}
                 </div>
               </div>
               {generatedImages.length < 2 ? (
                 <div className="s-c-02-sub-container-02 image-context">
-                  <div>
-                    <img src={placeholder_image} alt="" />
-                  </div>
+                  {imageLoadingState ? (
+                    <div className="image_thumb_43f_content_cont">
+                      <div className="loader_container_xde34">
+                        <h3>{imageLoadingCounter}</h3>
+                        <img src={loaader_img} alt="" />
+                        <p>Please wait while the image loads...</p>
+                      </div>
+                    </div>
+                  ) : (
+                    <div>
+                      <img src={placeholder_image} alt="" />
+                    </div>
+                  )}
                 </div>
               ) : (
                 <div className="s-c-02-sub-container-02 image-context-alt">
-                  <ImageCardList
-                    list_of_image_urls={generatedImages}
-                    returnImageLink={getPageImageLink}
-                  />
+                  <Fade cascade damping={0.1}>
+                    <ImageCardList
+                      list_of_image_urls={generatedImages}
+                      returnImageLink={getPageImageLink}
+                    />
+                  </Fade>
                 </div>
               )}
-              {/* <div>
-              <img src={placeholder_image} alt="" />
-            </div> */}
             </div>
             <div className="pages-index-container">
               <div className="p-i-c-01">

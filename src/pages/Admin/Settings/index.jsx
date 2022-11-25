@@ -1,8 +1,19 @@
 import React, { useState } from "react";
-
+import { GiHamburgerMenu } from "react-icons/gi";
+import { Link } from "react-router-dom"
 import PropTypes from "prop-types";
 
-import "./AcctSetup.css";
+import "./AcctSetup.scss";
+// Images
+import logo from "../../../assets/images/logo.svg";
+import user from "../../../assets/images/profile.svg";
+import group from "../../../assets/images/group.svg";
+import edit from "../../../assets/images/edit.svg";
+import profile from "../../../assets/images/profile-circle.svg";
+import blog from "../../../assets/images/blogger.svg";
+import setting from "../../../assets/images/setting-2.svg";
+import avatar from "../../../assets/images/avatar.svg";
+import logout from "../../../assets/images/logout.svg";
 
 export const Settings = () => {
   const [formData, setFormData] = useState({
@@ -37,18 +48,71 @@ export const Settings = () => {
 
   return (
     <div className="container">
-      <div className="side-bar"></div>
+      <div className="dashboard">
+        <div className="sidebar">
+          <div className="sidebar-menu">
+            <div className="user side">
+              <img src={user} alt="user" />
+              <p>Dashboard</p>
+            </div>
+            <div className="group side">
+              <img src={group} alt="group" />
+              <Link to="/users">All Users</Link>
+            </div>
+            <div className="edit side">
+              <img src={edit} alt="edit" />
+              <Link to="/myStories">All stories</Link>
+            </div>
+            <div className="profile side">
+              <img src={profile} alt="profile" />
+              <Link to="/profile">Profile</Link>
+            </div>
+            <div className="blog side">
+              <img src={blog} alt="blog" />
+              <Link to="/blog">Blog</Link>
+            </div>
+            <div className="setting side">
+              <img src={setting} alt="setting" />
+              <Link to="/account-setting">Settings</Link>
+            </div>
+          </div>
+          <div className="avatar-zone">
+            <div className="avatar">
+              <img src={avatar} alt="avatar" />
+            </div>
+            <h4>Mark Essien</h4>
+            <p>Admin</p>
+          </div>
+          <div className="log-out">
+            <img src={logout} alt="logout" />
+            <p>Sign Out</p>
+          </div>
+        </div>
+      </div>
       <div className="wrapper">
-        <h1>Settings</h1>
-        <div className="nav-section">
+        <div className="nav-tab">
           <div>
-            <h2>Account Settings</h2>
+            <img src={logo} alt="logo" sizes={30} />
+          </div>
+          <div>
+            <GiHamburgerMenu size={30} />
+          </div>
+        </div>
+        <b className="header-text">Settings</b>
+        <div className="nav-section">
+          <div className="nav-admin">
+            <div className="nav-head">
+              <h2>Account Settings</h2>
+              <div className="admin-2btn">
+                <button>Add Admin</button>
+              </div>
+            </div>
 
             <div className="nav-btns">
-              <button>Edit Account</button>
-              <button>Users(21)</button>
-              <button>All Stories</button>
-              <button>Subscriptions</button>
+              <Link to="/account-info">Edit Account</Link>
+              <Link to="users">Users(21)</Link>
+              <Link to="/myStories">All Stories</Link> 
+              <Link to="/pricing">Subscriptions</Link>
             </div>
           </div>
           <div className="admin-btn">
@@ -69,7 +133,7 @@ export const Settings = () => {
                 onChange={handleChange}
               />
               {submitted && !formData.firstName ? (
-                <span className="rig">Enter your first name.</span>
+                <span>Enter your first name.</span>
               ) : null}
             </label>
             <label>
@@ -82,7 +146,9 @@ export const Settings = () => {
                 name="lastName"
                 onChange={handleChange}
               />
-              {submitted && !formData.lastName ? <span className="rig">Enter your last name.</span> : null}
+              {submitted && !formData.lastName ? (
+                <span className="rig">Enter your last name.</span>
+              ) : null}
             </label>
           </div>
 
@@ -96,7 +162,9 @@ export const Settings = () => {
               name="city"
               onChange={handleChange}
             />
-            {submitted && !formData.city ? <span className="rig">Enter your City.</span> : null}
+            {submitted && !formData.city ? (
+              <span className="rig">Enter your City.</span>
+            ) : null}
           </label>
 
           <div className="region-section">
@@ -123,7 +191,9 @@ export const Settings = () => {
                 value={formData.country}
                 name="country"
               />
-               {submitted &&  !formData.country? <span className="rig">Enter your Country.</span> : null}
+              {submitted && !formData.country ? (
+                <span className="rig">Enter your Country.</span>
+              ) : null}
             </label>
           </div>
         </form>
@@ -133,7 +203,9 @@ export const Settings = () => {
             <p>Email Address</p>
             <p>Your email address is marke@storyai.com</p>
           </div>
-          <a href="#">Hide</a>
+          <a href="#" className="a">
+            Hide
+          </a>
         </div>
 
         <div className="email-details">
@@ -163,7 +235,7 @@ export const Settings = () => {
                 onChange={handleChange}
               />
               {submitted && !formData.currentEmail ? (
-                <span >Enter your current email.</span>
+                <span>Enter your current email.</span>
               ) : null}
             </label>
           </div>

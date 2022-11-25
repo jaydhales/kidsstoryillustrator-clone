@@ -9,38 +9,7 @@ import "./FAQQuestions.scss";
 
 export const FAQQuestions = () => {
   return <div className="FAQQuestions">
-    <h3>Freqently asked questions</h3>
-    <br/>
-    <br/>
-    <div className="questions-container">
-    <div className="main-questions-container">
-      <img src={bullet} alt='Bullet' className="bullet-icon"/>
-      <p>What is storyai ?</p>
-    </div>
-    
-      <img src={arrow} alt='Arrow' className="arrow-icon"/>
-      </div>
-
-      <div className="questions-container">
-    <div className="main-questions-container">
-      <img src={bullet} alt='Bullet Icon' className="bullet-icon"/>
-      <p>What is the cancellation policy ?</p>
-    </div>
-    
-      <img src={arrow} alt='Arrow' className="arrow-icon" />
-      </div>
-
-      <div className="questions-container">
-    <div className="main-questions-container">
-      <img src={bullet} alt='Bullet ICon' className="bullet-icon"/>
-      <p>Are there any free trials available ?</p>
-    </div>
-    
-      <img src={arrow} alt='Arrow' className="arrow-icon" />
-      </div>
-
-      <br/>
-      <br/>
+      
       {/* for further questions container */}
       <div className="further-questions-container">
         <div className="further-questions-subcontainer">

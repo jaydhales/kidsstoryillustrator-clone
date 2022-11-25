@@ -8,14 +8,13 @@
     font-family: "Nunito", sans-serif;
     padding: 2rem 0;
   }
-  h2 {
-    font-size: 36px;
-    text-transform: capitalize;
-    font-weight: 400;
-  }
-  h3 {
+  .h3-header {
     font-size: 32px;
     font-weight: 400;
+    text-align: center;
+  }
+  .h3-header .span{
+    font-size: 32px;
   }
   img {
     max-width: 100%;
@@ -52,7 +51,7 @@
     font-size: 14px;
     font-weight: 500;
   }
-  span {
+  .span {
     color: #aa0136;
   }
   .reasons--grid {
@@ -73,7 +72,7 @@
     display: flex;
     align-items: center;
   }
-  h4 {
+  .h4-header {
     font-size: 24px;
     font-weight: 500;
     margin-left: 10px;
@@ -130,7 +129,14 @@
     border-radius: 8px;
   }
 
-  .avatar {
+  .avatar--profile{
+    text-align: center;
+  }
+  .avatar{
+    display: flex;
+    justify-content: center;
+  }
+  .avatar img{
     width: 64px;
   }
 
@@ -151,13 +157,18 @@
   @media screen and (max-width: 800px) {
     header,
     .reasons--grid,
-    .testimonials,
-    .steps {
+    .testimonials{
       grid-template-columns: 1fr;
       padding: 1em;
     }
-    .steps {
-      padding: 0 2em;
+    .read{
+      margin-top: 1rem;
+    }
+    .steps{
+      grid-template-columns: 1fr;
+    }
+    .header-text{
+      font-size: 2rem;
     }
     .button--grid {
       text-align: center;
