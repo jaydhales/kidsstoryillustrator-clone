@@ -30,98 +30,99 @@
       font-size: 28px;
       font-weight: 700;
     }
+  }
+  .main {
+    display: flex;
+    justify-content: center;
+    gap: 87px;
+    padding: 5rem 0;
 
-    .main {
-      display: flex;
+    .card {
+      border-radius: 5px;
+      border: 1px solid #cdcdcd;
+      padding: 90px 0;
+      position: relative;
+      width: 470px;
+      display: grid;
       justify-content: center;
-      gap: 87px;
-      padding: 5rem 0;
 
-      .card {
-        border-radius: 5px;
-        border: 1px solid #cdcdcd;
-        padding: 90px 0;
-        position: relative;
-        width: 470px;
-        display: grid;
-        justify-content: center;
+      .head p {
+        text-align: center;
+        margin-bottom: 40px;
+      }
 
-        .head p {
-          text-align: center;
-          margin-bottom: 40px;
-        }
+      .title {
+        font-size: 45px;
+      }
 
-        .title {
-          font-size: 45px;
-        }
+      .amount {
+        font-size: 36px;
+        text-transform: uppercase;
+        color: var(--primary-color);
+      }
 
-        .amount {
-          font-size: 36px;
-          text-transform: uppercase;
-          color: var(--primary-color);
-        }
+      .sub-tt {
+        font-size: 18px;
+      }
 
-        .sub-tt {
-          font-size: 18px;
-        }
+      ul {
+        padding: 24px 0;
+        height: 300px;
 
-        ul {
+        li {
+          font-size: 22px;
+          list-style-image: url("../../assets/Pricing/tick-primary.png");
+          margin-left: 2rem;
           padding: 24px 0;
-          height: 300px;
-
-          li {
-            font-size: 22px;
-            list-style-image: url("../../assets/Pricing/tick-primary.png");
-            margin-left: 2rem;
-            padding: 24px 0;
-          }
-        }
-
-        a {
-          background: #aa0136;
-          border-radius: 56px;
-          padding: 1rem 4rem;
-          color: #fff;
-          width: max-content;
-          display: block;
-          margin: auto;
         }
       }
 
-      .card.paid {
-        border: none;
-        background: var(--primary-color);
+      a {
+        background: #aa0136;
+        border-radius: 56px;
+        padding: 1rem 4rem;
         color: #fff;
+        width: max-content;
+        display: block;
+        margin: auto;
+      }
+    }
 
-        .amount {
-          color: #fff;
-          font-size: 46px;
-          margin-top: -10px;
-        }
+    .card.paid {
+      border: none;
+      background: var(--primary-color);
+      color: #fff;
 
-        .figure {
-          font-size: 20px;
-          position: relative;
-          bottom: 8px;
-        }
+      .head p {
+        color: #fff;
+      }
 
-        li {
-          list-style-image: url("../../assets/Pricing/tick.png");
-        }
+      .amount {
+        color: #fff;
+        font-size: 46px;
+        margin-top: -10px;
+      }
 
-        a {
-          color: #aa0136;
-          background: #fff;
-        }
+      .figure {
+        font-size: 20px;
+        position: relative;
+        bottom: 8px;
+      }
+
+      li {
+        list-style-image: url("../../assets/Pricing/tick.png");
+      }
+
+      a {
+        color: #aa0136;
+        background: #fff;
       }
     }
   }
 
   @media (max-width: 1200px) {
-    .plan {
-      .main {
-        gap: 20px;
-      }
+    .main {
+      gap: 20px;
     }
   }
 
@@ -134,34 +135,34 @@
         font-size: 18px;
       }
     }
-    .plan {
-      .main {
-        flex-direction: column;
 
-        .card {
+    .main {
+      flex-direction: column;
+      gap: 80px;
+
+      .card {
+        width: 100%;
+        justify-content: unset;
+        padding: 0;
+
+        .head {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
           width: 100%;
-          justify-content: unset;
-          padding: 0;
+          padding: 2rem 4rem;
+          border-bottom: 1px solid #bbbbbb;
 
-          .head {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            width: 100%;
-            padding: 2rem 4rem;
-            border-bottom: 1px solid #bbbbbb;
-
-            p {
-              margin: 0;
-            }
+          p {
+            margin: 0;
           }
+        }
 
-          .features {
-            padding: 2rem 4rem;
+        .features {
+          padding: 2rem 4rem;
 
-            a {
-              font-size: 14px;
-            }
+          a {
+            font-size: 14px;
           }
         }
       }
@@ -183,43 +184,42 @@
       h2 {
         font-size: 22px;
       }
-
-      .main {
-        .card {
-          .head {
-            padding: 1.5rem;
-            p {
-              font-size: 22px;
-            }
-          }
-
-          .features {
-            padding: 1.5rem;
-          }
-
-          ul {
-            min-height: 200px;
-            height: max-content;
-            li {
-              font-size: 18px;
-              padding: 13px;
-
-              @media (max-width: 400px) {
-                font-size: 14px;
-              }
-            }
+    }
+    .main {
+      .card {
+        .head {
+          padding: 1.5rem;
+          p {
+            font-size: 22px;
           }
         }
 
-        .card.paid {
-          .amount {
-            font-size: 26px;
-            margin: 0;
+        .features {
+          padding: 1.5rem;
+        }
 
-            .figure {
-              font-size: 12px;
-              bottom: 5px;
+        ul {
+          min-height: 200px;
+          height: max-content;
+          li {
+            font-size: 18px;
+            padding: 13px;
+
+            @media (max-width: 400px) {
+              font-size: 14px;
             }
+          }
+        }
+      }
+
+      .card.paid {
+        .amount {
+          font-size: 26px;
+          margin: 0;
+
+          .figure {
+            font-size: 12px;
+            bottom: 5px;
           }
         }
       }

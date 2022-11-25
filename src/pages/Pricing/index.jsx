@@ -19,6 +19,7 @@ export const Pricing = () => {
 
         <section className="plan">
           <h2>Monthly billing</h2>
+
           <div className="main">
             <div className="card">
               <div className="head">
@@ -31,7 +32,7 @@ export const Pricing = () => {
                   <li>Limited story creation</li>
                   <li>No story downloads</li>
                 </ul>
-                <a href="#">Sign Up</a>
+                <a href="/billing?plan=free">Proceed</a>
               </div>
             </div>
             <div className="card paid">
@@ -49,7 +50,7 @@ export const Pricing = () => {
                   <li>Unlimited story downloads</li>
                   <li>Publishers access</li>
                 </ul>
-                <a href="#">Sign Up</a>
+                <a href="/billing?plan=paid">Proceed</a>
               </div>
             </div>
           </div>
