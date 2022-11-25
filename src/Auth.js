@@ -28,7 +28,8 @@ import {
   SummaryActivities,
   Info,
   Users,
-  Settings
+  Settings,
+  UserDashboard
 } from "./pages";
 
 const AppRoutes = (
@@ -41,6 +42,7 @@ const AppRoutes = (
   <Route path ="/contact" element ={<Contact/>}/>
   <Route path="/createStory" element={<CreateStory />} />
   <Route path="/dashboard" element={<Dashboard />} />
+  <Route path="/userdashboard" element={<UserDashboard />} />
   <Route path="/error" element={<Error />} />
   <Route path="/faq" element={<FAQ />} />
   <Route path="/forgotPassword" element={<ForgotPassword />} />
