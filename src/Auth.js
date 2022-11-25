@@ -34,8 +34,8 @@ import {
   Settings,
 } from "./pages";
 
-const PublicRoutes = (
-  <Routes>
+const DefaultRoutes = (
+  <>
     <Route path="/" element={<Home />} />
     <Route path="/about" element={<About />} />
     <Route path="/blog" element={<Blog />} />
@@ -50,11 +50,14 @@ const PublicRoutes = (
     <Route path="/signup" element={<SignUp />} />
     <Route path="/changePassword" element={<ChangePassword />} />
     <Route path="/forgotPassword" element={<ForgotPassword />} />
-  </Routes>
+  </>
 );
+
+const PublicRoutes = <Routes>{DefaultRoutes}</Routes>;
 
 const ProtectedRoutes = (
   <Routes>
+    {DefaultRoutes}
     <Route path="/myStories" element={<MyStories />} />
     <Route path="/dashboard" element={<Dashboard />} />
     <Route path="/story/:id" element={<Story />} />
