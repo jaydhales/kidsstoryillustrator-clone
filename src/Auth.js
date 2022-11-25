@@ -33,6 +33,7 @@ import {
   Users,
   Settings,
   UserList,
+  UserDashboard,
 } from "./pages";
 import AdminDashBoard from "./pages/Admin/Admin-Dashboard";
 
@@ -62,6 +63,7 @@ const ProtectedRoutes = (
     {DefaultRoutes}
     <Route path="/myStories" element={<MyStories />} />
     <Route path="/dashboard" element={<Dashboard />} />
+    <Route path="/userdashboard" element={<UserDashboard />} />
     <Route path="/story/:id" element={<Story />} />
     <Route path="/profile" element={<Profile />} />
     <Route path="/profile/edit" element={<ProfileEdit />} />

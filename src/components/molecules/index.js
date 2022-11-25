@@ -19,3 +19,6 @@ export { default as Navbar } from "./Navbar";
 export { default as ProtectedRoute } from "./ProtectedRoute";
 export { default as PublishedBooks } from "./PublishedBooks";
 export { default as Testimonial } from "./Testimonial";
+export { default as UserDashboardSide } from "./UserDashboardSide";
+export { default as UserDashboardHeader } from "./UserDashboardHeader";
+export { default as UserDashboardMain } from "./UserDashboardMain";
