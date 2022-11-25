@@ -57,6 +57,8 @@ const AppRoutes = (
   <Route path="/users" element={<Users />} />
   <Route path="/account-info" element={<Info />} />
   <Route path="/account-settings" element={<Settings />} />
+  {/* <Route path="/admin" element={<Admin} />
+  <Route path="/admin/dashboard" element={} /> */}
 </Routes>
 );
 
