@@ -30,7 +30,7 @@ export const UserDashboardMain = () => {
 
               <p>
                 <br />
-                <button>Contact</button>
+                <button>View</button>
               </p>
             </div>
             <br />
@@ -53,7 +53,7 @@ export const UserDashboardMain = () => {
 
               <p>
                 <br />
-                <button>Contact</button>
+                <button>View</button>
               </p>
             </div>
             <br />
@@ -76,7 +76,7 @@ export const UserDashboardMain = () => {
 
               <p>
                 <br />
-                <button>Contact</button>
+                <button>View</button>
               </p>
             </div>
           </div>
@@ -100,7 +100,7 @@ export const UserDashboardMain = () => {
 
               <p>
                 <br />
-                <button>Contact</button>
+                <button>View</button>
               </p>
             </div>
             <br />
@@ -123,7 +123,7 @@ export const UserDashboardMain = () => {
 
               <p>
                 <br />
-                <button>Contact</button>
+                <button>View</button>
               </p>
             </div>
             <br />
@@ -146,7 +146,7 @@ export const UserDashboardMain = () => {
 
               <p>
                 <br />
-                <button>Contact</button>
+                <button>View</button>
               </p>
             </div>
           </div>
@@ -170,7 +170,7 @@ export const UserDashboardMain = () => {
 
               <p>
                 <br />
-                <button>Contact</button>
+                <button>View</button>
               </p>
             </div>
             <br />
@@ -193,7 +193,7 @@ export const UserDashboardMain = () => {
 
               <p>
                 <br />
-                <button>Contact</button>
+                <button>View</button>
               </p>
             </div>
             <br />
@@ -216,7 +216,7 @@ export const UserDashboardMain = () => {
 
               <p>
                 <br />
-                <button>Contact</button>
+                <button>View</button>
               </p>
             </div>
           </div>
