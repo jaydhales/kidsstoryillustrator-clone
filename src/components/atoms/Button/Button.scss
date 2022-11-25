@@ -1,13 +1,11 @@
 .Button {
-  padding: 16px;
+  padding: 1rem 2rem;
   background: #aa0136;
   border-radius: 56px;
   color: #fff;
-  width: 230px;
   border: 1px solid #aa0136;
 
   @media screen and (max-width: 900px) {
-    width: 150px;
-    padding: 10px;
+    padding: 1rem 1.5rem;
   }
 }
