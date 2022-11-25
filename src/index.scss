@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+@import "./theme/sass/variables";
+
+>>>>>>> FE-main
 :root {
   --primary-color: #aa0136;
   --primary-text-color: #131313;
@@ -63,6 +68,13 @@
   font-weight: 500;
   font-size: 14px;
   width: 100%;
+  transition: all ease 0.3s;
+}
+
+.input:focus {
+  outline: none;
+  border: 1px solid $color-primary-main;
+  box-shadow: 0 0 1px 1px $color-primary-main;
 }
 
 .btn {
@@ -76,6 +88,7 @@
   font-family: "Nunito", sans-serif;
   font-size: 14px;
   cursor: pointer;
+  margin-bottom: 24px;
 }
 
 .btn-primary {
@@ -516,6 +529,9 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   display: none;
+  min-height: 800px;
+  height: 100%;
+  padding: 48px 0;
 }
 
 .error {
@@ -528,6 +544,13 @@ body {
     display: flex;
   }
 
+<<<<<<< HEAD
+=======
+  #logo2 {
+    display: none;
+  }
+  
+>>>>>>> FE-main
   .two-column div {
     flex: 1;
   }

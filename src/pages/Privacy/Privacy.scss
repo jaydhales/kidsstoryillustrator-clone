@@ -1,0 +1,33 @@
+.Privacy {
+  display: flex;
+  margin: auto;
+  width: 80%;
+  font-family: "Nunito", sans-serif;
+  padding: 2rem 0;
+
+  h1 {
+    font-size: 57px;
+    font-weight: 400;
+  }
+  h2 {
+    font-size: 36px;
+    text-transform: capitalize;
+    font-weight: 400;
+  }
+  h3 {
+    font-size: 32px;
+    font-weight: 400;
+  }
+  a {
+    color: #aa0136;
+  }
+  li {
+    list-style: none;
+  }
+  li::before {
+    content: "\2022";
+    color: #aa0136;
+    width: 1em;
+    margin-right: 0.5em;
+  }
+}

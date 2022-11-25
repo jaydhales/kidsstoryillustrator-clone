@@ -5,14 +5,149 @@
   padding: 0;
   font-size: 14px;
 }
-.side-bar {
-  width: 15%;
-  border: 1px solid black;
+
+.dashboard {
+  display: flex;
+  width: 20%;
+ ;
 }
+
+/* Sidebar */
+
+.sidebar {
+  width: 100%;
+  background: #f7f8f8;
+  padding: 30px;
+  position: static;
+}
+
+.sidebar-logo img {
+  width: 40%;
+}
+
+/* sidebar menu */
+ .sidebar-menu {
+  margin-top: 30px;
+}
+
+.side {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  padding: 10px;
+}
+
+.side img {
+  width: 12%;
+}
+
+.side p {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #787777;
+}
+
+.side:hover, 
+.side:focus {
+  background: #aa0136;
+  border-radius: 56px;
+  
+  cursor: pointer;
+} 
+
+.side > p:hover {
+  color: #f7f8f8;
+}
+
+
+/* Avatar zone */
+
+.avatar-zone {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  top: 300px;
+}
+
+.avatar {
+  display: flex;
+  justify-content: center;
+}
+
+.avatar img {
+  width: 20%;
+  margin-bottom: 10px;
+}
+
+.avatar-zone h4 {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 27px;
+  color: #131313;
+}
+
+.avatar-zone p {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  color: #717171;
+} 
+
+/*Log out */
+.log-out {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 10px;
+  background: #ffffff;
+  border-radius: 56px;
+  cursor: pointer;
+  position: relative;
+  top: 300px;
+}
+
+.log-out img {
+  width: 12%;
+}
+
+.log-out p {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #787777;
+} 
+
+/* Main board */
+ .main-board {
+  width: 80%;
+} 
 
 .wrapper {
   width: 80%;
 }
+
+.nav-tab {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 15px 30px 0;
+  
+}
+
 
 .rig {
   color: #f83f23;
@@ -20,13 +155,14 @@
 
 .container {
   display: flex;
+  gap: 23px;
   flex-direction: row;
-  gap: 20px;
   font-family: "Nunito", sans-serif;
 }
 
 /* Header section */
 .nav-section {
+  width: 97%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -34,6 +170,10 @@
   padding: 15px 0;
   border-top: 1px solid #e4e4e4;
   border-bottom: 1px solid #e4e4e4;
+}
+
+.admin-2btn {
+  display: none;
 }
 
 .nav-btns {
@@ -67,6 +207,11 @@
   width: 148px;
 }
 
+.admin-btn {
+  position: relative;
+  top: 30px;
+}
+
 /* form designs */
  .form-section {
   display: flex;
@@ -76,7 +221,7 @@
 } 
 
  .inputs2 { 
-  width: 70%;
+  width: 100%;
   padding: 10px 32px;
   border: 1px solid #e4e4e4;
   border-radius: 56px;
@@ -84,7 +229,7 @@
 }
 
 .city {
-  width: 87%;
+  width: 100%;
   padding: 10px 32px;
   border: 1px solid #e4e4e4;
   border-radius: 56px;
@@ -109,7 +254,7 @@
   margin: 25px 0;
 }
 
-a {
+.a {
   color: #AA0136;
   text-decoration: none;
 }
@@ -175,12 +320,43 @@ a {
         font-family: "Nunito", sans-serif; 
         margin: 0 auto;
       }
+
+      .dashboard {
+        display: none;
+      }
+
+      .nav-tab {
+        margin: 5px 10px 15px 10px;
+      }
+
+      .nav-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .admin-btn {
+        display: none;
+      }
+
+      .admin-2btn {
+        display: block;
+      }
+
+      .admin-2btn > button {
+        border: 1px solid #aa0136;
+        border-radius: 56px;
+        padding: 8px 15px;
+        background-color: white;
+        width: 110px;
+      }
       
       .wrapper {
         width: 98%;
       }
+
       .nav-btns {
-        width: 80%;
+        width: 100%;
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
@@ -219,11 +395,11 @@ a {
         border: 1px solid #e4e4e4;
         border-radius: 56px;
         margin: 10px 0;
-        width: 80%;
+        width: 100%;
       }
     
       .city {
-        width: 80%;
+        width: 100%;
         padding: 10px 32px;
         border: 1px solid #e4e4e4;
         border-radius: 56px;
@@ -247,7 +423,7 @@ a {
       }
 
       .email-details {
-        width: 90%;
+        width: 100%;
         display: flex;
         flex-direction: column;
         margin: 10px 0;
