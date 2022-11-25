@@ -9,12 +9,14 @@ import FAQCategories from "../../components/molecules/FAQCategories";
 import FAQQuestions from "../../components/molecules/FAQQuestions";
 import FAQCta from "../../components/molecules/FAQCta";
 
+
 export const FAQ = () => {
   return <div>
     <FAQHero />
     <br/>
     <br/>
     <FAQCategories />
+    
     <br/>
     <br/>
     <FAQQuestions />
