@@ -14,7 +14,6 @@ import favBook from "../../../assets/images/book-square.svg";
 import savedBook from "../../../assets/images/book-saved.svg";
 import login from "../../../assets/images/login.svg";
 
-
 export const User = () => {
   return (
     <div className="user-container">
@@ -30,7 +29,7 @@ export const User = () => {
               <img src={messages} alt="group" />
               <p>messages</p> <IoIosArrowForward />
             </div>
-             <div className="edit side1">
+            <div className="edit side1">
               <img src={settings} alt="edit" />
               <p>settings</p> <IoIosArrowForward />
             </div>
