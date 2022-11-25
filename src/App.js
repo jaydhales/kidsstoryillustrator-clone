@@ -29,6 +29,7 @@ import {
   Users,
   Settings
 } from "./pages";
+import BlogPage from "./pages/BlogPage/BlogPage";
 
 const MoveToTop = () => {
   const navigate = useNavigate();
@@ -49,6 +50,7 @@ const App = () => (
       <Route path="/about" element={<About />} />
       <Route path="/blog" element={<Blog />} />
       <Route path="/blog/:id" element={<BlogDetails />} />
+      <Route path="/blogPage" element={<BlogPage />} />
       <Route path="/changePassword" element={<ChangePassword />} />
       <Route path ="/contact" element ={<Contact/>}/>
       <Route path="/createStory" element={<CreateStory />} />
