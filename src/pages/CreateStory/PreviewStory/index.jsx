@@ -1,5 +1,5 @@
 import React from 'react'
-import "./PreviewStory.css";
+import "./PreviewStory.scss";
 
 import PropTypes from "prop-types";
 

@@ -100,7 +100,7 @@ export const Info = () => {
         <div className="cover-section">
           <b>Edit profile</b>
           <div className="profile">
-            <img className="img" alt="" src="./assets/images/brazil.svg" />
+            <img className="img" alt="" src="../../../assets/images/brazil.svg" />
             <div>
               <p>Ella James</p>
               <p>EllaJames@gmail.com</p>

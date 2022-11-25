@@ -1,12 +1,17 @@
 
-import React, { useState } from "react";
+import React from "react";
 import "./SignUp.scss";
 import logo from "../../assets/img/logo.png";
 import googleLogo from "../../assets/img/google_logo.png";
 import facebookLogo from "../../assets/img/facebook_logo.png";
 import appleLogo from "../../assets/img/apple_logo.png";
 import logoWhite from "../../assets/img/logo_white.png";
+import { signUp } from "../../features/auth/authSlice";
+import { useNavigate } from "react-router-dom";
+import axios from 'axios';
+import { useDispatch } from "react-redux";
 
+const endpoint = "https://story--ai.herokuapp.com/auth/signup";
 
 export const SignUp = () => {
   const [ email, setEmail ] = React.useState("");
@@ -14,13 +19,38 @@ export const SignUp = () => {
   const [ errors, setErrors ] = React.useState([]);
   const [ username, setUsername ] = React.useState("");
   const [ isLoading, setIsLoading ] = React.useState(false);
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
+    setIsLoading(true);
 
     if(!email || !password || !username ){
+      setIsLoading(false);
       setErrors([...errors, "Fields cannot be empty"])
+      return;
     }
+
+    const body = JSON.stringify({ email, username, password });
+
+    const config = {
+      headers: {
+        "Content-Type": "application/json"
+      }
+    };
+
+    axios
+    .post(endpoint, body, config)
+    .then((res) => {
+      setIsLoading(false);
+      dispatch(signUp(res.data.data));
+      navigate("/myStories");
+    })
+    .catch(err => {
+      setIsLoading(false);
+      setErrors([...errors, err.response.data.message ]);
+    })
   }
 
   return (
@@ -28,7 +58,7 @@ export const SignUp = () => {
       <div className="two-column">
       <div className="branding">
         <div className="content">
-          <img src={logoWhite} alt="logo" id="logo2" />
+          <img src={logoWhite} alt="logo" id="logo" />
           <div className="text">
             <h2>The easiest way to write kids story books </h2>
             <p>Write your stories and generate amazing pictures with the help of our ai technologies.</p>
@@ -39,7 +69,7 @@ export const SignUp = () => {
       <div>
         <div id="auth">
           <header className="center-align">
-            <img src={logo} alt="logo" id="logo" />
+            <img src={logo} alt="logo" id="logo2" />
             <nav className="auth-nav">
               <a href="/login" className="link tab-link">Login</a>
               <a href="/signup" className="link tab-link active">Create Account</a>
@@ -48,7 +78,7 @@ export const SignUp = () => {
 
           <form onSubmit={handleFormSubmit} className="form">
             <label htmlFor="email" className="label">Email</label><br />
-            <input type="text" placeholder="Enter Email Address" className="input" name="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+            <input type="email" placeholder="Enter Email Address" className="input" name="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
 
             <label htmlFor="username" className="label">Username</label><br />
             <input type="text" placeholder="Enter Username" className="input" name="email" id="username" value={username} onChange={(e) => setUsername(e.target.value)} />
