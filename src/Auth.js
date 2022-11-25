@@ -1,6 +1,6 @@
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import { useSelector } from "react-redux";
 import store from "./store";
 
 const state = store.getState();
@@ -34,8 +34,8 @@ import {
   Settings,
 } from "./pages";
 
-const PublicRoutes = (
-  <Routes>
+const DefaultRoutes = (
+  <>
     <Route path="/" element={<Home />} />
     <Route path="/about" element={<About />} />
     <Route path="/blog" element={<Blog />} />
@@ -50,11 +50,14 @@ const PublicRoutes = (
     <Route path="/signup" element={<SignUp />} />
     <Route path="/changePassword" element={<ChangePassword />} />
     <Route path="/forgotPassword" element={<ForgotPassword />} />
-  </Routes>
+  </>
 );
+
+const PublicRoutes = <Routes>{DefaultRoutes}</Routes>;
 
 const ProtectedRoutes = (
   <Routes>
+    {DefaultRoutes}
     <Route path="/myStories" element={<MyStories />} />
     <Route path="/dashboard" element={<Dashboard />} />
     <Route path="/story/:id" element={<Story />} />
@@ -69,10 +72,10 @@ const ProtectedRoutes = (
 );
 
 const AppRoutes = () => {
-  const { isAuthenticated } = useSelector(state => state.auth);
+  const { isAuthenticated } = useSelector((state) => state.auth);
 
-  if(isAuthenticated) return ProtectedRoutes;
+  if (isAuthenticated) return ProtectedRoutes;
   else return PublicRoutes;
-}
+};
 
 export default AppRoutes;
