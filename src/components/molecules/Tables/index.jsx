@@ -1,31 +1,19 @@
 import React from "react";
+import {useEffect, useState} from "react";
 import "./Tables.css"
-// import { useTable } from "react-table";
+import TableRow from "../TableRow";
+import {CiSearch} from "react-icons/ci";
 
 const Table = () => {
-// const arr = []
+  const TableData= [
 
-// document.querySelectorAll('tr').forEach(({children})  => {
-//   const obj = {
-//     email: children[0].innerText,
-//     firstName: children[1].innerText,
-//     lastName: children[2].innerText,
-//     userType: children[3].innerText,
-//     location: children[4].innerText,
-//   } 
-
-//  arr.push(obj)
-// })
-
-// RESULT
-[
-  //   {
-  //     email: "Email",
-  //     firstName: "First Name",
-  //     lastName: "Last Name",
-  //     userType: "User Type",
-  //     location: "Location",
-  //   },
+  {
+      email: "markessien@hng.zuri.ng",
+      firstName: "Mark",
+      lastName: "Essien",
+      userType: "Premium",
+      location: "Imo State",
+  },
   {
     email: "cyntianduka@unimaid.edu.ng",
     firstName: "Cynthia",
@@ -391,9 +379,9 @@ const Table = () => {
     location: "Canada",
   },
   {
-    email: "marygilberet@gmail.com",
-    firstName: "Mary",
-    lastName: "Gilbet",
+    email: "afolayanoluwatomi@gmail.com",
+    firstName: "Oluwatomi",
+    lastName: "Afolayan",
     userType: "freemium",
     location: "Canada",
   },
@@ -405,16 +393,16 @@ const Table = () => {
     location: "Canada",
   },
   {
-    email: "marygilberet@gmail.com",
-    firstName: "Mary",
-    lastName: "Gilbet",
+    email: "christopherokoro@gmail.com",
+    firstName: "Christopher",
+    lastName: "Okoro",
     userType: "freemium",
     location: "Canada",
   },
   {
-    email: "marygilberet@gmail.com",
-    firstName: "Mary",
-    lastName: "Gilbet",
+    email: "jamesosunkiyesi@gmail.com",
+    firstName: "James",
+    lastName: "Osunkiyesi",
     userType: "freemium",
     location: "Kebbi State",
   },
@@ -468,464 +456,97 @@ const Table = () => {
     location: "London",
   },
 ];
-//   return (
-//     <div className="table-wrapper">
-//         <div className="Table-menu">
-//         <label> <input type='checkbox' id='check-all' value='selectall'/> </label>
-//         </div>
-//    <table className="min-w-full_divide-y-divide-gray-200"
-//   >
-//   <tr>
-//     <th>Email</th>
-//     <th>First Name</th>
-//     <th>Last Name</th>
-//     <th>User Type</th>
-//     <th>Location</th>
-//   </tr>
-//   <tr>
-//     <td><input type="checkbox"/>cyntianduka@unimaid.edu.ng</td>
-//     <td>Cynthia</td>
-//     <td>Nduka</td>
-//     <td>Premium</td>
-//     <td>Imo State</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/>joyokoh@unimaid.edu.ng</td>
-//     <td>Joy</td>
-//     <td>Okoh</td>
-//     <td>freemium</td>
-//     <td>Lagos State</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/>Olayinkaayo@gmail.com</td>
-//     <td>Ayo</td>
-//     <td>Olayinka</td>
-//     <td>premium</td>
-//     <td>Osun State</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/>prosper@hng.com</td>
-//     <td>Prosper</td>
-//     <td>Nduka</td>
-//     <td>Premium</td>
-//     <td>Enugu State</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/>markessien@gmail.com</td>
-//     <td>Mark</td>
-//     <td>Essien</td>
-//     <td>Premium</td>
-//     <td>Lagos State</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/>kikyrolad@gmail.com</td>
-//     <td>Kiki</td>
-//     <td>Roland</td>
-//     <td>Premium</td>
-//     <td>Kwara State</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/>Ukanahdean@gmail.com</td>
-//     <td>Ukanah</td>
-//     <td>Dean</td>
-//     <td>Premium</td>
-//     <td>Abia State</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/>tolulopemalomo@gmail.com</td>
-//     <td>Tolulope</td>
-//     <td>Malomo</td>
-//     <td>freemium</td>
-//     <td>Kogi State</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/>dfsdxcwsfc@gmail.com</td>
-//     <td>Shaw</td>
-//     <td>Ghost</td>
-//     <td>Premium</td>
-//     <td>Kaduna State</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/>pearlsj@gmail.com</td>
-//     <td>Pearls</td>
-//     <td>Nduka</td>
-//     <td>Premium</td>
-//     <td>Lagos State</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/>kikifaro@gmail.com</td>
-//     <td>Kiki</td>
-//     <td>Faro</td>
-//     <td>freemium</td>
-//     <td>Oyo State</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/>MusaAhmed@nuc.edu.ng</td>
-//     <td>Ahmed</td>
-//     <td>Musa</td>
-//     <td>Premium</td>
-//     <td>Kano State</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/>das4l@gmail.com</td>
-//     <td>Joy</td>
-//     <td>Chuks</td>
-//     <td>Premium</td>
-//     <td>Lagos State</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/>obaniyimariam@gmail.com</td>
-//     <td>Obaniyi</td>
-//     <td>Mariam</td>
-//     <td>Premium</td>
-//     <td>Rivers State</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/>Hassanatbo@gmail.com</td>
-//     <td>Hassanat</td>
-//     <td>Zanny</td>
-//     <td>Premium</td>
-//     <td>Adamawa State</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/>AdeyemoSamuel@yahoo.co.uk</td>
-//     <td>Samuel</td>
-//     <td>Adeyemo</td>
-//     <td>Premium</td>
-//     <td>United Kingdom</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/>aguhenry@gmail.com</td>
-//     <td>Henry</td>
-//     <td>Agu</td>
-//     <td>freemium</td>
-//     <td> Abuja</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/>ayenipeter@gmail.com</td>
-//     <td>Peter</td>
-//     <td>Ayeni</td>
-//     <td>Premium</td>
-//     <td>Ondo State</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/>johnbosco@gmail.com</td>
-//     <td>John</td>
-//     <td>Okeke</td>
-//     <td>freemium</td>
-//     <td>Kenya</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/> glowriaagbor@yahoo.com</td>
-//     <td>Glory</td>
-//     <td>Agbor</td>
-//     <td>freemium</td>
-//     <td>Anambra State</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/>shalomoseni@outlook.com</td>
-//     <td>Shalom</td>
-//     <td>Oseni</td>
-//     <td>Premium</td>
-//     <td>USA</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/>opeyemiarrin@unimaid.edu.ng</td>
-//     <td>Arinola</td>
-//     <td>Opeyemi</td>
-//     <td>Premium</td>
-//     <td>Ekiti</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/>Charlessmith@gmail.com</td>
-//     <td>Charles</td>
-//     <td>Smith</td>
-//     <td>Premium</td>
-//     <td>Kwara State</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/>AyobamiFelix@yahoo.com</td>
-//     <td>Ayobami</td>
-//     <td>Felix</td>
-//     <td>freemium</td>
-//     <td>Portugal</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/>amalsingh@hotmail.com</td>
-//     <td>Amal</td>
-//     <td>Sighn</td>
-//     <td>Premium</td>
-//     <td>Mumbai</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/>Ifeanyistephen@gmail.com</td>
-//     <td>Ifeanyi</td>
-//     <td>Stephen</td>
-//     <td>Premium</td>
-//     <td>UAE</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/>marygilberet@gmail.com</td>
-//     <td>Mary</td>
-//     <td>Gilbet</td>
-//     <td>freemium</td>
-//     <td>Canada</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/>margaretplies@gmail.com</td>
-//     <td>Magaret</td>
-//     <td>Ayo</td>
-//     <td>freemium</td>
-//     <td>SouthAfrica</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/>graceajoke@gmail.com</td>
-//     <td>Grace</td>
-//     <td>Asamu</td>
-//     <td>premium</td>
-//     <td>Germany</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/>Justintimberlake@gmail.com</td>
-//     <td>Justin</td>
-//     <td>Timberlake</td>
-//     <td>freemium</td>
-//     <td>China</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/>faithjoseph@gmail.com</td>
-//     <td>Joseph</td>
-//     <td>Russel</td>
-//     <td>freemium</td>
-//     <td>Adamawa State</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/>Awolowoayorinde@gmail.com</td>
-//     <td>Ayo</td>
-//     <td>Awolowo</td>
-//     <td>premium</td>
-//     <td>Enugu</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/>edwinokeys@gmail.com</td>
-//     <td>Okechuwku</td>
-//     <td>Edwin</td>
-//     <td>freemium</td>
-//     <td>Enugu State</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/>tresurematthews26@gmail.com</td>
-//     <td>Treasure</td>
-//     <td>Matthews</td>
-//     <td>freemium</td>
-//     <td>Lagos State</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/>capveeny14@gmail.com</td>
-//     <td>Oyinlola</td>
-//     <td>Double</td>
-//     <td>premium</td>
-//     <td>Japan</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/>fikay756@gmail.com</td>
-//     <td>Fikayo</td>
-//     <td>Ansaru</td>
-//     <td>premium</td>
-//     <td>Ogun State</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/>romosswealth78@gmail.com</td>
-//     <td>Remi</td>
-//     <td>Ahmed</td>
-//     <td>freemium</td>
-//     <td>Gombe State</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/>marygilberet@gmail.com</td>
-//     <td>Mary</td>
-//     <td>Gilbet</td>
-//     <td>freemium</td>
-//     <td>Canada</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/>marygilberet@gmail.com</td>
-//     <td>Mary</td>
-//     <td>Gilbet</td>
-//     <td>premium</td>
-//     <td>Ogun state</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/>marygilberet@gmail.com</td>
-//     <td>John</td>
-//     <td>Gilbet</td>
-//     <td>premium</td>
-//     <td>Oyo state</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/>marygilberet@gmail.com</td>
-//     <td>Mary</td>
-//     <td>Gilbet</td>
-//     <td>freemium</td>
-//     <td>Canada</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/>marygilberet@gmail.com</td>
-//     <td>Mary</td>
-//     <td>Gilbet</td>
-//     <td>freemium</td>
-//     <td>Enugu State</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/>marygilberet@gmail.com</td>
-//     <td>Shawn</td>
-//     <td>Gilbet</td>
-//     <td>freemium</td>
-//     <td>Kaduna State</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/>mgdfgilberet@gmail.com</td>
-//     <td>Mrte</td>
-//     <td>Gilbet</td>
-//     <td>freemium</td>
-//     <td>Ogun State</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/>hunfgberet@gmail.com</td>
-//     <td>Mary</td>
-//     <td>Gilbet</td>
-//     <td>premium</td>
-//     <td>Ondo State</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/>marygilberet@gmail.com</td>
-//     <td>Mary</td>
-//     <td>Gilbet</td>
-//     <td>freemium</td>
-//     <td>Canada</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/>marygilberet@gmail.com</td>
-//     <td>Mary</td>
-//     <td>Gilbet</td>
-//     <td>freemium</td>
-//     <td>Canada</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/>marygilberet@gmail.com</td>
-//     <td>Mary</td>
-//     <td>Gilbet</td>
-//     <td>freemium</td>
-//     <td>Canada</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/>marygilberet@gmail.com</td>
-//     <td>Mary</td>
-//     <td>Gilbet</td>
-//     <td>freemium</td>
-//     <td>Canada</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/>marygilberet@gmail.com</td>
-//     <td>Mary</td>
-//     <td>Gilbet</td>
-//     <td>freemium</td>
-//     <td>Canada</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/>marygilberet@gmail.com</td>
-//     <td>Mary</td>
-//     <td>Gilbet</td>
-//     <td>freemium</td>
-//     <td>Canada</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/>marygilberet@gmail.com</td>
-//     <td>Mary</td>
-//     <td>Gilbet</td>
-//     <td>freemium</td>
-//     <td>Canada</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/>marygilberet@gmail.com</td>
-//     <td>Mary</td>
-//     <td>Gilbet</td>
-//     <td>freemium</td>
-//     <td>Canada</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/>marygilberet@gmail.com</td>
-//     <td>Mary</td>
-//     <td>Gilbet</td>
-//     <td>freemium</td>
-//     <td>Canada</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/>marygilberet@gmail.com</td>
-//     <td>Mary</td>
-//     <td>Gilbet</td>
-//     <td>freemium</td>
-//     <td>Canada</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/>marygilberet@gmail.com</td>
-//     <td>Mary</td>
-//     <td>Gilbet</td>
-//     <td>freemium</td>
-//     <td>Kebbi State</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/>maryanlberet@gmail.com</td>
-//     <td>Maryan</td>
-//     <td>Gipet</td>
-//     <td>premium</td>
-//     <td>Katsina State</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/>maygilbet@gmail.com</td>
-//     <td>Mariam</td>
-//     <td>Gibet</td>
-//     <td>freemium</td>
-//     <td>Jigawa State</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/>ilberet@gmail.com</td>
-//     <td>Miyy</td>
-//     <td>Gilbet</td>
-//     <td>premium</td>
-//     <td>Imo State</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/>marret@gmail.com</td>
-//     <td>Mry</td>
-//     <td>Gibet</td>
-//     <td>freemium</td>
-//     <td>Taraba State</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/>marberet@gmail.com</td>
-//     <td>Mant</td>
-//     <td>Gilbet</td>
-//     <td>freemium</td>
-//     <td>Plateau State</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/>lincon@gmail.com</td>
-//     <td>Mary</td>
-//     <td>Gilbet</td>
-//     <td>premium</td>
-//     <td>Osun  State</td>
-//   </tr>
-//   <tr>
-//   <td><input type="checkbox"/>papitee@gmail.com</td>
-//     <td>Rose</td>
-//     <td>Lawrence</td>
-//     <td>freemium</td>
-//     <td>London</td>
-//   </tr>
 
-// </table>
-// </div>
-//   );
+
+const[tableItems, setTableItems] = useState(TableData);
+const [pageData, setpageData] = useState([]);
+const [pageCounter, setpageCounter] =useState(10);
+const [queryInputValue, setqueryInputValue]=useState ("")
+
+useEffect(()=>{
+  const arr=[];
+  if (tableItems.length >0){
+  for (let index = pageCounter; index < (pageCounter+10); index++) {
+    if (tableItems[index]){
+    arr.push(tableItems[index])
+    }
+  } 
+  }
+
+  
+  setpageData(arr);
+
+},[pageCounter,tableItems])
+
+const handleSearchQuery =(e)=>{
+  const query = e.target.value;
+
+  const result = TableData.filter((item)=>item.email.includes(query));
+  setqueryInputValue(e.target.value)
+    setTableItems(result);
+
+}
+function paginate(a, pageIndex, pageSize) {
+  var endIndex = Math.min((pageIndex + 1) * pageSize, a.length);
+  return a.slice(Math.max(endIndex - pageSize, 0), endIndex);
+}
+
+
+const paginatedData = TableData.filter((users) => {
+  if (queryInputValue === "") {
+    return users;
+  } else if (
+    users.email
+      .toString()
+      .toLocaleLowerCase()
+      .includes(queryInputValue.toLocaleLowerCase())
+  ) {
+    return users;
+  }
+});
+
+  return (     
+  <div className="table-wrapper">
+    <div className="header-wrapper_container">
+      <p>USERS LIST</p>
+    <div className="search-wrapper">
+    <input type="text" onChange={(e)=>handleSearchQuery(e)} placeholder="Search..."/><CiSearch className="search_icon"/>
+    </div>
+    </div>
+    <div className="sort-page-container">
+      <div className="sort">
+      <img src="/assets/images/sort.svg" id="sort_icon" alt="sort-img" />
+        <p>Sort by</p>
+      </div>
+      <div className="pagnation-action">
+      <p>Showing page 1-14 of 2000</p>
+        <img src="/assets/images/Vector.svg" alt="previous" 
+        />
+        <img src="/assets/images/Vector-table2.svg" alt="next" />
+      </div>
+    </div>
+    
+    <div className="table_f-wrap">
+
+   <table className="min-w-full_divide-y-divide-gray-200">
+    <tr>
+      <td>Email</td>
+      <td>First Name</td>
+      <td>Last Name</td>
+      <td>User Type</td>
+      <td>Location</td>
+    </tr>
+
+
+    {paginate(paginatedData, 0, 10).map((row, index) => (
+    <TableRow key={index} data={row}/>
+
+    )
+  
+)}
+
+  </table> 
+  </div>
+  </div> );
 };
 export default Table;
