@@ -10,13 +10,18 @@
   padding: 1rem 0;
 }
 .BlogHero__content--heading {
-  font-size: 2.5rem;
+  font-size: 56px;
+  font-weight: 700;
 }
 .BlogHero__content--sub-heading {
-  font-size: 1.5rem;
+  font-size: 32px;
+  font-weight: 400;
 }
 .BlogHero__content--text {
   color: #717171;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 43px;
 }
 
 .BlogHero__image2-div,
@@ -42,7 +47,8 @@
   border-radius: 20rem;
   border: 1px solid rgba(67, 67, 67, 0.5);
   padding: 0.5rem 1rem;
-  width: 80%;
+  width: 439px;
+  height: 52px;
   display: block;
   outline: none;
 }
@@ -51,7 +57,9 @@
   border: 1px solid #aa0136;
   background-color: #aa0136;
   color: #fff;
-  padding: 0.5rem 1rem;
+  padding: 16px;
+  width: 160px;
+  height: 52px;
 }
 @media only screen and (max-width: 37.5em) {
   .BlogHero {
