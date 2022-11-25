@@ -2,10 +2,11 @@
   * {
     margin: 0;
   }
+  @import url('https://kit.fontawesome.com/0f3801f26c.js');
 
   .sidebar {
     margin: 0;
-    padding: 10px;
+    padding: 30px;
     width: 272px;
     background-color: #ffffff;
     position: fixed;
@@ -13,8 +14,10 @@
     overflow: auto;
     border: 1px solid #d2d2d2;
   }
-
-  .sidebar a {
+.sidebar #linktext .sidebarIcon{
+    width: 24px;
+}
+  .sidebar #linktext {
     display: block;
     color: black;
     padding: 16px;
@@ -23,18 +26,75 @@
   }
 
   .logo {
-    width: fit-content;
+    width: 110px;
   }
+  
 
-  .sidebar a.active {
+  .sidebar #linktext.active {
     padding: 12px 24px;
     gap: 8px;
     color: white;
     background: #aa0136;
     border-radius: 56px;
+    margin-top: 50px;
   }
 
-  .sidebar a:hover:not(.active) {
+  .sidebar #linktext.logout{
+    color: #aa0136;
+    background: white;
+    border-radius: 8px;
+    width:163px ;
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  .sidebar #linktext.upgrade{
+    color: #aa0136;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #aa0136;
+    width:163px ;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 10px;
+  }
+
+  .sidebar #linktext.mystory{
+    padding: 12px 24px;
+    gap: 8px;
+    color: white;
+    background: #aa0136;
+    border-radius: 56px;
+    margin-top: 40px;
+    width:163px ;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .sidebar #linktext.stories{
+    padding: 12px 24px;
+    gap: 8px;
+    color: #646363;
+    background: #EECCD7;
+    border-radius: 56px;
+    margin-top: 40px;
+    width:163px ;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .sidebar #linktext.account{
+    gap: 8px;
+    margin-top: 160px;
+  }
+
+  .sidebar #linktext.icon {
+    display: none;
+  }
+
+  .sidebar #linktext:hover:not(.active) {
     color: #aa0136;
   }
 
@@ -49,11 +109,11 @@
     width: 100%;
     position: fixed;
     z-index: 1;
-    top: -50;
+    top: -1;
     left: 0;
     background-color: white;
     overflow-y: hidden;
-    transition: 0.5s;
+    
   }
 
   .overlayClose {
@@ -64,93 +124,76 @@
     top: 0;
     left: 0;
     overflow-y: hidden;
-    transition: 0.5s;
+    
   }
 
   .overlay-content {
     position: relative;
-    top: 25%;
+    top: 2%;
     width: 100%;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 9px;
   }
 
-  .overlay a {
+  .overlay #linktext {
     padding: 8px;
     text-decoration: none;
-    font-size: 36px;
+    font-size: 16px;
     color: #aa0136;
     display: block;
-    transition: 0.3s;
+    transition: 0.1s;
   }
 
-  .overlay a:hover,
-  .overlay a:focus {
+  .overlay #linktext:hover,
+  .overlay #linktext:focus {
     color: black;
   }
 
-  .overlay .closebtn {
-    position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 60px;
-  }
-
+img{
+    display: revert;
+}
   @media screen and (max-height: 650px) {
     .overlay {
       overflow-y: auto;
     }
-    .overlay a {
+    .overlay #linktext {
       font-size: 20px;
     }
-    .overlay .closebtn {
-      font-size: 40px;
-      top: 15px;
-      right: 35px;
-    }
+    
   }
 
-  @media screen and (max-width: 1099px) {
+  @media screen and (max-width: 899px) {
     .sidebar {
       width: 100%;
       height: auto;
       position: relative;
       border: 1px solid #ffffff;
+      padding: 14px;
     }
-    .sidebar a {
+    .sidebar #linktext {
       float: left;
+      padding: 14px;
     }
     div.content {
       margin-left: 0;
     }
+    .sidebar #linktext.icon {
+        display: none;
+      }
   }
-  .sidebar .icon {
-    display: none;
-  }
+ 
 
-  @media screen and (max-width: 1100px) {
-    .sidebar a:not(:first-child) {
+  @media screen and (max-width: 900px) {
+    .sidebar #linktext:not(:first-child) {
       display: none;
+      padding: 5px;
     }
-    .sidebar a.icon {
+    .sidebar #linktext.icon {
       float: right;
       display: block;
+      padding: 5px;
     }
   }
 
-  @media screen and (max-width: 500px) {
-    .sidebar.responsive {
-      position: relative;
-    }
-    .responsive .icon {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-    .sidebar.responsive a {
-      float: none;
-      display: block;
-      text-align: left;
-    }
-  }
+  
 }

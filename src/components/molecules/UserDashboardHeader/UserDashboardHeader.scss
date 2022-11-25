@@ -1,9 +1,10 @@
 .UserDashboardHeader {
-  * {
-    padding: 16px 16px 0px 16px;
-  }
+  
   .dashHead {
     overflow: hidden;
+  }
+  .story{
+    padding: 32px 0px 0px 0px
   }
 
   .dashHead a {
@@ -12,22 +13,23 @@
     line-height: 28px;
     color: black;
     text-align: center;
-    padding: 14px 16px;
+    padding: 14px;
     text-decoration: none;
   }
 
   .dropdown {
     float: right;
     overflow: hidden;
+    padding: 32px 32px 0px 0px;
   }
 
   .dropdown .dropbtn {
     background-color: #ffffff;
     color: #a50a17;
-    padding: 14px;
+    padding: 5px;
     gap: 0px;
     display: flex;
-    border: 1;
+    border: 0;
     cursor: pointer;
     border: 1px solid #aa0136;
     border-radius: 8px;
@@ -51,7 +53,7 @@
   .dropdown-content a {
     float: none;
     color: black;
-    padding: 12px 16px;
+    padding: 5px;
     text-decoration: none;
     display: block;
     text-align: left;
@@ -64,10 +66,23 @@
   .dropdown:hover .dropdown-content {
     display: block;
   }
+
+  .hrCol {
+    padding: 25px 25px 2px 25px;
+  }
+  @media screen and (max-height: 1050px) {
+    .dropdown {
+        padding: 6px;
+      }
+      .story {
+        padding: 6px;
+      }
+    .dropdown .dropbtn {
+      padding: 5px 15px;
+      width: revert;
+    }
+    .dashHead a {
+      font-size: 20px;
+    }
+  }
 }
-.hrCol{
-  padding: 25px;
-}
-
-
-
