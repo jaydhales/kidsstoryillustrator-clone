@@ -3,13 +3,8 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import "./AboutUsCard.scss";
-<<<<<<< HEAD
 import goals1 from "../../../assets/About-asset/goals1.svg";
 import goals2 from "../../../assets/About-asset/goals2.svg";
-=======
-import goals1 from "./goals1.svg";
-import goals2 from "./goals2.svg";
->>>>>>> FE-main
 
 export const AboutUsCard = () => {
   return (
