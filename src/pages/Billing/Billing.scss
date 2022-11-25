@@ -1,0 +1,121 @@
+.Billing {
+  padding: 60px 2rem;
+
+  section {
+    margin: 40px 0;
+  }
+
+  .heading {
+    text-align: center;
+
+    h1 {
+      font-weight: 600;
+      font-size: 67px;
+      margin: 0;
+      margin-bottom: 8px;
+    }
+
+    p {
+      font-weight: 500;
+      font-style: italic;
+      font-size: 24px;
+      color: #aaaaaa;
+      margin: 0;
+    }
+  }
+
+  .debit-cards {
+    display: flex;
+    justify-content: center;
+    gap: 87px;
+    align-items: center;
+    padding: 0 2rem;
+  }
+
+  .main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: auto;
+    max-width: 900px;
+    gap: 87px;
+    padding: 5rem 0;
+  }
+
+  .form-sect {
+    .heading {
+      font-size: 22px;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 32px;
+
+      span {
+        width: 40px;
+        border: 1px solid;
+        border-radius: 50%;
+        padding: 7px;
+        font-size: 16px;
+      }
+    }
+
+    .form-group {
+      display: grid;
+      gap: 8px;
+      margin-bottom: 32px;
+      width: 100%;
+
+      input {
+        padding: 1rem;
+        border: 1px solid #bbbbbb;
+        border-radius: 56px;
+        width: 100%;
+      }
+    }
+
+    .card-info {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      width: 100%;
+      gap: 50px;
+    }
+  }
+  .form-control {
+    width: max-content;
+    margin: auto;
+  }
+
+  @media (max-width: 1200px) {
+    .main,
+    .debit-cards {
+      gap: 20px;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .heading {
+      h1 {
+        font-size: 40px;
+      }
+      p {
+        font-size: 18px;
+      }
+    }
+
+    .main {
+      grid-template-columns: 1fr;
+      gap: 80px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    padding: 40px 1rem;
+    .heading {
+      h1 {
+        font-size: 32px;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+}

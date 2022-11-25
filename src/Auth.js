@@ -1,6 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import store from './store';
+import { useSelector } from 'react-redux';
+import store from "./store";
 
 const state = store.getState();
 
@@ -21,6 +22,8 @@ import {
   MyStories,
   Story,
   Pricing,
+  Billing,
+  CancelSubscription,
   Privacy,
   Profile,
   ProfileEdit,
@@ -28,11 +31,12 @@ import {
   SummaryActivities,
   Info,
   Users,
-  Settings
+  Settings,
 } from "./pages";
 
-const AppRoutes = (
+const PublicRoutes = (
   <Routes>
+<<<<<<< HEAD
   <Route path="/" element={<Home />} />
   <Route path="/about" element={<About />} />
   <Route path="/blog" element={<Blog />} />
@@ -60,38 +64,45 @@ const AppRoutes = (
   {/* <Route path="/admin" element={<Admin} />
   <Route path="/admin/dashboard" element={} /> */}
 </Routes>
+=======
+    <Route path="/" element={<Home />} />
+    <Route path="/about" element={<About />} />
+    <Route path="/blog" element={<Blog />} />
+    <Route path="/blog/:id" element={<BlogDetails />} />
+    <Route path="/contact" element={<Contact />} />
+    <Route path="/error" element={<Error />} />
+    <Route path="/faq" element={<FAQ />} />
+    <Route path="/howToUse" element={<HowToUse />} />
+    <Route path="/login" element={<Login />} />
+    <Route path="/pricing" element={<Pricing />} />
+    <Route path="/privacy" element={<Privacy />} />
+    <Route path="/signup" element={<SignUp />} />
+    <Route path="/changePassword" element={<ChangePassword />} />
+    <Route path="/forgotPassword" element={<ForgotPassword />} />
+  </Routes>
+>>>>>>> FE-main
 );
 
-// const PublicRoutes = (
-//   <Routes>
-//     <Route path="/" element={<Home />} />
-//     <Route path="/about" element={<About />} />
-//     <Route path="/blog" element={<Blog />} />
-//     <Route path="/blog/:id" element={<BlogDetails />} />
-//     <Route path="/contact" element={<Contact />} />
-//     <Route path="/error" element={<Error />} />
-//     <Route path="/faq" element={<FAQ />} />
-//     <Route path="/howToUse" element={<HowToUse />} />
-//     <Route path="/login" element={<Login />} />
-//     <Route path="/pricing" element={<Pricing />} />
-//     <Route path="/privacy" element={<Privacy />} />
-//     <Route path="/signup" element={<SignUp />} />
-//   </Routes>
-// );
+const ProtectedRoutes = (
+  <Routes>
+    <Route path="/myStories" element={<MyStories />} />
+    <Route path="/dashboard" element={<Dashboard />} />
+    <Route path="/story/:id" element={<Story />} />
+    <Route path="/profile" element={<Profile />} />
+    <Route path="/profile/edit" element={<ProfileEdit />} />
+    <Route path="/account-info" element={<Info />} />
+    <Route path="/account-settings" element={<Settings />} />
+    <Route path="/createStory" element={<CreateStory />} />
+    <Route path="/summaryActivities" element={<SummaryActivities />} />
+    <Route path="/users" element={<Users />} />
+  </Routes>
+);
 
-// const ProtectedRoutes = (
-//   <Routes>
-//     <Route path="/myStories" element={<MyStories />} />
-//     <Route path="/dashboard" element={<Dashboard />} />
-//     <Route path="/story/:id" element={<Story />} />
-//     <Route path="/profile" element={<Profile />} />
-//     <Route path="/profile/edit" element={<ProfileEdit />} />
-//     <Route path="/account-info" element={<Info />} />
-//     <Route path="/account-settings" element={<Settings />} />
-//   </Routes>
-// );
+const AppRoutes = () => {
+  const { isAuthenticated } = useSelector(state => state.auth);
 
-// const AppRoutes = isAuthenticated ? ProtectedRoutes : PublicRoutes;
+  if(isAuthenticated) return ProtectedRoutes;
+  else return PublicRoutes;
+}
 
 export default AppRoutes;
-
