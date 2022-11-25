@@ -2,7 +2,7 @@ import React from "react";
 
 import PropTypes from "prop-types";
 
-import "./AdminDashBoard.css";
+import "./AdminDashboard.css";
 
 export const AdminDashBoard = () => {
   return <div className="AdminDashboard">
