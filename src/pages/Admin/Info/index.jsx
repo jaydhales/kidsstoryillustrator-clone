@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { IoIosArrowForward } from "react-icons/io";
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
-import "./AccountInfo.css";
+import "./AccountInfo.scss";
 import dashboard from "../../../assets/images/Group 1.svg";
 import messages from "../../../assets/images/Group 2.svg";
 import settings from "../../../assets/images/setting-side.svg";
@@ -10,6 +11,7 @@ import profile from "../../../assets/images/profile-circle.svg";
 import favBook from "../../../assets/images/book-square.svg";
 import savedBook from "../../../assets/images/book-saved.svg";
 import login from "../../../assets/images/login.svg";
+import image from "../../../assets/images/brazil.svg";
 
 export const Info = () => {
   const [formData, setFormData] = useState({
@@ -51,7 +53,7 @@ export const Info = () => {
             <h4>Menu</h4>
             <div className="user side1">
               <img src={dashboard} alt="user" />
-              <p>Dashboard</p> <IoIosArrowForward />
+              <Link to="/dashboard">Dashboard</Link> <IoIosArrowForward />
             </div>
             <div className="group side1">
               <img src={messages} alt="group" />
@@ -59,29 +61,35 @@ export const Info = () => {
             </div>
             <div className="edit side1">
               <img src={settings} alt="edit" />
-              <p>settings</p> <IoIosArrowForward />
+              <Link to="/account-settings">settings</Link> <IoIosArrowForward />
             </div>
-            <div className="profile side1">
+
+            <div className="dropdown side1">
               <img src={profile} alt="profile" />
-              <p>Profile</p> <IoIosArrowForward />
+              <button className="dropbtn">Profile</button> <IoIosArrowForward />
+              <div className="dropdown-content">
+                <Link to="/account-info">Edit</Link>
+                <Link to="/users">Account access</Link>
+              
+              </div>
             </div>
             <div className="push">
               <h4>Story books</h4>
               <div className="blog side1">
                 <img src={favBook} alt="blog" />
-                <p>favorite books</p> <IoIosArrowForward />
+                <Link to="/myStories">favorite books</Link> <IoIosArrowForward />
               </div>
               <div className="book2 side1">
                 <img src={favBook} alt="current-book" />
-                <p>current read</p> <IoIosArrowForward />
+                <Link to="/myStories">current read</Link> <IoIosArrowForward />
               </div>
               <div className="book3 side1">
                 <img src={savedBook} alt="setting" />
-                <p>saved books</p> <IoIosArrowForward />
+                <Link to="/myStories">saved books</Link> <IoIosArrowForward />
               </div>
               <div className="book4 side1">
                 <img src={favBook} alt="setting" />
-                <p>other books</p> <IoIosArrowForward />
+                <Link to="/myStories">other books</Link> <IoIosArrowForward />
               </div>
             </div>
 
@@ -94,13 +102,13 @@ export const Info = () => {
           </div>
         </div>
       </div>
-      
+
       <div className="wrapper-div">
         <h2 className="header">Account Information</h2>
         <div className="cover-section">
           <b>Edit profile</b>
           <div className="profile">
-            <img className="img" alt="" src="../../../assets/images/brazil.svg" />
+            <img className="img" src={image} alt="" />
             <div>
               <p>Ella James</p>
               <p>EllaJames@gmail.com</p>
@@ -128,7 +136,7 @@ export const Info = () => {
               <label>
                 Email address <br />
                 <input
-                  type="text"
+                  type="email"
                   placeholder="enter email address"
                   className="inputs"
                   value={formData.email}
@@ -143,7 +151,7 @@ export const Info = () => {
               <label>
                 Phone number <br />
                 <input
-                  type="text"
+                  type="number"
                   placeholder="enter phone number"
                   className="inputs"
                   value={formData.phoneNumber}
@@ -158,7 +166,7 @@ export const Info = () => {
               <label>
                 Birthday <br />
                 <input
-                  type="text"
+                  type="number"
                   placeholder="dd/mm/yy"
                   className="inputs"
                   value={formData.birthday}
@@ -172,16 +180,16 @@ export const Info = () => {
               </label>
             </div>
 
-            <h2 className="pass-head">Change Password</h2>
+            <h2 className="header-text">Change Password</h2>
             <div className="pass-section">
               <label>
                 Current password <br />
                 <input
-                  type="text"
+                  type="password"
                   placeholder="enter current password"
                   className="inputs"
                   value={formData.currentPassword}
-                  name="createPassword"
+                  name="currentPassword"
                   onChange={handleChange}
                 />
                 {submitted && !formData.currentPassword ? (
@@ -192,7 +200,7 @@ export const Info = () => {
               <label>
                 New password <br />
                 <input
-                  type="text"
+                  type="password"
                   placeholder="enter new password"
                   className="inputs"
                   value={formData.newPassword}
@@ -206,7 +214,7 @@ export const Info = () => {
               </label>
             </div>
 
-            <h2>Address</h2>
+            <b className="header-text">Address</b>
             <div className="address-section">
               <label>
                 Address <br />
@@ -226,7 +234,7 @@ export const Info = () => {
               <label>
                 House no <br />
                 <input
-                  type="text"
+                  type="number"
                   placeholder="enter house number"
                   className="inputs"
                   value={formData.houseNo}
