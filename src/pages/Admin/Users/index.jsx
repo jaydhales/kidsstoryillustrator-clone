@@ -2,9 +2,10 @@ import React from "react";
 import { CiSearch } from "react-icons/ci";
 import { IoIosArrowDown } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
+import { Link } from "react-router-dom"
 
 import PropTypes from "prop-types";
-import "./Users.css";
+import "./Users.scss";
 
 import dashboard from "../../../assets/images/Group 1.svg";
 import messages from "../../../assets/images/Group 2.svg"
@@ -23,38 +24,43 @@ export const User = () => {
           <div className="sidebar-menu1">
             <h4>Menu</h4>
             <div className="user side1">
-              <img src={dashboard} alt="user" />
-              <p>Dashboard</p> <IoIosArrowForward />
+            <img src={dashboard} alt="user" />
+              <Link to="/dashboard">Dashboard</Link> <IoIosArrowForward />
             </div>
             <div className="group side1">
               <img src={messages} alt="group" />
               <p>messages</p> <IoIosArrowForward />
             </div>
              <div className="edit side1">
-              <img src={settings} alt="edit" />
-              <p>settings</p> <IoIosArrowForward />
+             <img src={settings} alt="edit" />
+              <Link to="/account-settings">settings</Link> <IoIosArrowForward />
             </div>
-            <div className="profile side1">
+            <div className="dropdown side1">
               <img src={profile} alt="profile" />
-              <p>Profile</p> <IoIosArrowForward />
+              <button className="dropbtn">Profile</button> <IoIosArrowForward />
+              <div className="dropdown-content">
+                <Link to="/account-info">Edit</Link>
+                <Link to="/users">Account access</Link>
+              
+              </div>
             </div>
             <div className="push">
               <h4>Story books</h4>
               <div className="blog side1">
                 <img src={favBook} alt="blog" />
-                <p>favorite books</p> <IoIosArrowForward />
+                <Link to="/myStories">favorite books</Link> <IoIosArrowForward />
               </div>
               <div className="book2 side1">
                 <img src={favBook} alt="current-book" />
-                <p>current read</p> <IoIosArrowForward />
+                <Link to="/myStories">current read</Link> <IoIosArrowForward />
               </div>
               <div className="book3 side1">
                 <img src={savedBook} alt="setting" />
-                <p>saved books</p> <IoIosArrowForward />
+                <Link to="/myStories">saved books</Link> <IoIosArrowForward />
               </div>
               <div className="book4 side1">
                 <img src={favBook} alt="setting" />
-                <p>other books</p> <IoIosArrowForward />
+                <Link to="/myStories">other books</Link> <IoIosArrowForward />
               </div>
             </div> 
 
