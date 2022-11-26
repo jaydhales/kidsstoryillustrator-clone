@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { CiSearch } from "react-icons/ci";
 import { IoIosArrowDown } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
@@ -17,6 +17,29 @@ import login from "../../../assets/images/login.svg";
 
 
 export const User = () => {
+    const [formData, setFormData] = useState({
+     users: ""
+    });
+  
+    const [submitted, setSubmitted] = useState(false);
+    const [valid, setValid] = useState(false);
+  
+    function handleChange(event) {
+      setFormData((prevFormData) => {
+        return {
+          ...prevFormData,
+          [event.target.name]: event.target.value,
+        };
+      });
+    }
+  
+    function submitForm(e) {
+      e.preventDefault();
+      if (formData.firstName && formData.lastName && formData.email) {
+        setValid(true);
+      }
+      setSubmitted((prevState) => !prevState);
+    }
   return (
     <div className="user-container">
           <div className="dashboard1">
@@ -77,15 +100,21 @@ export const User = () => {
         <h2 className="head">Account Information </h2>
         <div className="fit">
           <div className="user-access">
-            <h3>Manage who can access your account</h3>
+            <h3 className="text-1">Manage who can access your account</h3>
             <p>X</p>
           </div>
           <p className="text">Choose users who can access your kids A.I</p>
           <div className="user-input">
             <CiSearch size={20} className="icon" />
-            <input type="text" placeholder="Search for users" />
-            <button>Save</button>
+            <input type="text" 
+            placeholder="Search for users" 
+            value={formData.users}
+            name="users"
+            onChange={handleChange}
+            /> <br/>
+            <button onClick={submitForm}>Save</button>
           </div>
+          {submitted && !formData.users? <span className="span">Please insert a name</span> : null}
           <div className="user-checkname">
             <div>
               <p> Name</p>
@@ -98,19 +127,19 @@ export const User = () => {
 
           <div className="user-names">
             <div>
-              <p>Manuel Ademola</p>
+              <p className="text-2">Manuel Ademola</p>
               <input type="checkbox" />
             </div>
             <div>
-              <p>Manuel Ademola</p>
+              <p className="text-2">Manuel Ademola</p>
               <input type="checkbox" />
             </div>
             <div>
-              <p>Manuel Ademola</p>
+              <p className="text-2">Manuel Ademola</p>
               <input type="checkbox" />
             </div>
             <div>
-              <p>Manuel Ademola</p>
+              <p className="text-2">Manuel Ademola</p>
               <input type="checkbox" />
             </div>
           </div>
