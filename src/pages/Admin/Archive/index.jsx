@@ -3,8 +3,8 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import "./Archive.scss";
-import Archieve from "../../components/molecules/Archieve";
-import SideBar from "../../components/molecules/SideBar";
+import Archieve from "../../../components/molecules/Archieve";
+import SideBar from "../../../components/molecules/SideBar";
 
 export const Archive = () => {
   

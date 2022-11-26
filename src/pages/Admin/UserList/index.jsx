@@ -1,6 +1,6 @@
 import "./UserList.css";
 import React from "react";
-import  Table  from "../../components/molecules/Tables";
+import  Table  from "../../../components/molecules/Tables";
 import {CiSearch} from "react-icons/ci";
 
 

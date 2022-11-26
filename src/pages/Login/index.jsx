@@ -43,7 +43,7 @@ export const Login = () => {
       setIsLoading(false);
       console.log(res.data.data);
       dispatch(logIn(res.data.data));
-      navigate("/dashboard");
+      navigate("/summaryActivities");
     })
     .catch(err => {
       setIsLoading(false);

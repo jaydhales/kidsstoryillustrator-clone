@@ -20,11 +20,11 @@ export { default as Privacy } from "./Privacy";
 export { default as Profile } from "./Profile";
 export { default as ProfileEdit } from "./Profile/ProfileEdit";
 export { default as SignUp } from "./SignUp";
-export { default as SummaryActivities } from "./SummaryActivities";
-export { default as Info } from "./Admin/Info";
+export { default as SummaryActivities } from "./Users/SummaryActivities";
+export { default as Info } from "./Users/Info";
 export { default as Settings } from "./Admin/Settings";
-export { default as Users } from "./Admin/Users";
-export {default as UserList} from "./UserList";
+export { default as Users } from "./Users/Users";
+export {default as UserList} from "./Admin/UserList";
 // export {default as UserDetails} from "./UserDetails";
-export { default as Archive } from "./Archive";
+export { default as Archive } from "./Admin/Archive";
 
