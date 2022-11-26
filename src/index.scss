@@ -1,8 +1,5 @@
-// <<<<<<< HEAD
-// =======
-// @import "./theme/sass/variables";
 
-// >>>>>>> FE-main
+@import "./theme/sass/variables";
 :root {
   --primary-color: #aa0136;
   --primary-text-color: #131313;
@@ -544,13 +541,11 @@ body {
     display: flex;
   }
 
-// <<<<<<< HEAD
-// =======
-//   #logo2 {
-//     display: none;
-//   }
+
+  #logo2 {
+    display: none;
+  }
   
-// >>>>>>> FE-main
   .two-column div {
     flex: 1;
   }

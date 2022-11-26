@@ -1,0 +1,103 @@
+.UserDashboardMain {
+  * {
+    box-sizing: border-box;
+  }
+
+  .cardRow {
+    display: -ms-flexbox; 
+    display: flex;
+    -ms-flex-wrap: wrap; 
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+
+  /* Create four equal columns that sits next to each other */
+  .cardColumn {
+    -ms-flex: 33.33%; 
+    flex: 33.33%;
+    max-width: 33.33%;
+    padding: 16px 16px;
+  }
+
+  .cardColumn img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
+
+
+  @media screen and (max-width: 700px) {
+    .cardColumn {
+      -ms-flex: 100%;
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+
+  .card {
+    
+    margin: auto;
+    text-align: left;
+    font-family: arial;
+    padding: 16px;
+    border: 0.5px solid #d2d2d2;
+    border-radius: 12px;
+  }
+
+  .title {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    text-transform: capitalize;
+    color: #131313;
+  }
+
+  button {
+    border: none;
+    padding: 8px;
+    color: white;
+    background-color: #aa0136;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 14px;
+    border-radius: 56px;
+  }
+
+  a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+  }
+
+  button:hover,
+  a:hover {
+    opacity: 0.7;
+  }
+
+  .chip {
+    display: inline-block;
+    padding: 0 25px;
+    height: 50px;
+    font-size: 16px;
+    line-height: 30px;
+    border-radius: 25px;
+  }
+
+  .chip img {
+    float: left;
+    margin: 0 10px 0 -25px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+  }
+
+  .chipText {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+    text-transform: capitalize;
+
+    color: #787777;
+  }
+}

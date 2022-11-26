@@ -45,7 +45,7 @@ export const SignUp = () => {
     .then((res) => {
       setIsLoading(false);
       dispatch(signUp(res.data.data));
-      navigate("/myStories");
+      navigate("/dashboard");
     })
     .catch(err => {
       setIsLoading(false);
