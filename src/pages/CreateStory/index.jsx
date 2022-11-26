@@ -42,25 +42,16 @@ ImageCardList.propTypes = {
 export const CreateStory = () => {
   const [imageLoadingState, setImageLoadingState] = useState(false);
   const [imageLoadingCounter,setImageLoadingCounter ] = useState('60');
-
   const [generatedImages, setGeneratedImages] = useState([]);
-
   const [pageContent, setPageContent] = useState([]);
-
   const [pageParagraph, setPageParagraph] = useState("");
-
   const [pageImgLink, setPageImgLink] = useState("");
-
   const [showPageSaveState, setShowPageSaveState] = useState(false);
-
   const [previewState, setPreviewState] = useState(false);
-
   const [generateImagePrompt, setGenerateImagePrompt] = useState('');
-
   const [imageGenerationState, setImageGenerationState] = useState(false);
 
   const getImagesFromServer = async () => {
-    //
     setImageGenerationState(true);
 
     axios({
@@ -70,6 +61,7 @@ export const CreateStory = () => {
         userPrompt: generateImagePrompt,
       },
     }).then((response) => {
+      console.log(response);
       console.log(response.data.links_array);
       setImageLoadingState(false);
       let new_Arry = [];

@@ -14,7 +14,7 @@ import mystory from "./mystories.svg";
 import lgout from "./logout.svg";
 import { render } from "@testing-library/react";
 import { Link } from "react-router-dom";
-import 'https://kit.fontawesome.com/0f3801f26c.js'
+// import 'https://kit.fontawesome.com/0f3801f26c.js'
 
 class UserDashboardSide extends Component {
   state = { clicked: false };
