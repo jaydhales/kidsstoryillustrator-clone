@@ -24,12 +24,14 @@
   padding: 30px;
   position: static;
   border-left: #e4e4e4;
+  border-top: white;
+  border-bottom: white;
   border-width: 2px;
 }
 
 /* sidebar menu */
 .sidebar-menu1 {
-  margin-top: 30px;
+  // margin-top: 5px;
 }
 
 .side1 {
@@ -183,7 +185,7 @@
 
 .head {
   color: #aa0136;
-  margin: 140px 0 5px 0;
+  margin: 155px 0 5px 0;
   font-weight: 500;
   font-size: 24px;
   line-height: 36px;
@@ -191,13 +193,12 @@
 
 .text-1 {
   font-weight: 500px;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 36px;
 }
 
 .text-2 {
   font-weight: 400px;
-  font-size: 24px;
   line-height: 36px;
 }
 
@@ -271,7 +272,7 @@
 .text {
   color: #8E8E8E;
   font-weight: 500px;
-  font-size: 16px;
+  font-size: 13px;
   line-height: 36px;
 }
 
