@@ -140,6 +140,14 @@
   border: none;
 }
 
+
+input::-webkit-input-placeholder {	
+  font-weight: 500px;
+  font-size: 11.5px;
+  line-height: 20px;
+  color: #8D8E91;
+}
+
 .dropdown {
   position: relative;
   display: inline-block;
