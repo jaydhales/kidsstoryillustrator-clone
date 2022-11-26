@@ -25,6 +25,7 @@ export { default as Info } from "./Admin/Info";
 export { default as Settings } from "./Admin/Settings";
 export { default as Users } from "./Admin/Users";
 export {default as UserList} from "./UserList";
+export { default as UserDashboard } from "./UserDashboard"
 // export {default as UserDetails} from "./UserDetails";
 export { default as Archive } from "./Archive";
 
