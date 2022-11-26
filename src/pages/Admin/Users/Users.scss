@@ -202,12 +202,6 @@
   line-height: 36px;
 }
 
-::placeholder {
-  font-weight: 500px;
-  font-size: 14px;
-  line-height: 20px;
-}
-
 .user-access {
   display: flex;
   justify-content: space-between;
@@ -337,6 +331,10 @@
     flex-direction: column;
     justify-content: center;
     margin: 0 auto;
+  }
+
+  .head {
+    margin: 50px 0 0 0;
   }
 
   .user-input {
