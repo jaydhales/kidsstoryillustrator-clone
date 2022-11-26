@@ -22,7 +22,6 @@ export const Settings = () => {
     city: "",
     state: "",
     country: "",
-    newEmail: "",
     currentEmail: "",
   });
 
@@ -53,7 +52,7 @@ export const Settings = () => {
           <div className="sidebar-menu">
             <div className="user side">
               <img src={user} alt="user" />
-              <p>Dashboard</p>
+              <Link to="/dashboard">Dashboard</Link>
             </div>
             <div className="group side">
               <img src={group} alt="group" />
@@ -73,7 +72,7 @@ export const Settings = () => {
             </div>
             <div className="setting side">
               <img src={setting} alt="setting" />
-              <Link to="/account-setting">Settings</Link>
+              <Link to="/account-settings">Settings</Link>
             </div>
           </div>
           <div className="avatar-zone">
