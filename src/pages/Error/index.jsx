@@ -54,7 +54,7 @@ export const Error = (props) => {
          
                     { props.error === 401
                         ? <>
-                         <button onClick={()=>navigate ('/signin')}
+                         <button onClick={()=>navigate ('/login')}
               className='btn2'>
               Sign in
           </button>

@@ -28,7 +28,8 @@ import {
   SummaryActivities,
   Info,
   Users,
-  Settings
+  Settings,
+  UserDetails
 } from "./pages";
 
 const AppRoutes = (
@@ -42,6 +43,8 @@ const AppRoutes = (
   <Route path="/createStory" element={<CreateStory />} />
   <Route path="/dashboard" element={<Dashboard />} />
   <Route path="/error" element={<Error />} />
+  <Route path="/error404" element={<Error error={404} />} />
+  <Route path="/error403" element={<Error error={403} />} />
   <Route path="/faq" element={<FAQ />} />
   <Route path="/forgotPassword" element={<ForgotPassword />} />
   <Route path="/howToUse" element={<HowToUse />} />
@@ -57,6 +60,7 @@ const AppRoutes = (
   <Route path="/users" element={<Users />} />
   <Route path="/account-info" element={<Info />} />
   <Route path="/account-settings" element={<Settings />} />
+  <Route path="/user-details" element={<UserDetails />} />
 </Routes>
 );
 
