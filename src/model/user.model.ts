@@ -1,4 +1,4 @@
-import { Schema, model, Types } from 'mongoose'
+import { Schema, model } from 'mongoose'
 import { IUser } from '../interfaces/index'
 
 const userSchema = new Schema<IUser>({
@@ -10,6 +10,10 @@ const userSchema = new Schema<IUser>({
         required: [true, 'Email is required'],
         unique: true,
         lowercase: true
+    },
+    isAdmin: {
+        type: Boolean,
+        default: false
     },
     hash: {
         type: String,

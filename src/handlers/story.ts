@@ -38,7 +38,10 @@ export class StoryLookUp extends BaseHandler {
       const { id } = req.params;
 
       if (Types.ObjectId.isValid(id)) {
-        const story = await StorybookModel.findById(id).populate('author');
+        const story = await StorybookModel.findById(id).populate({
+          path: 'author',
+          select: 'username _id'
+        });
 
         if (!story) {
           return res.status(404).send({
@@ -67,10 +70,10 @@ export class StoryLookUp extends BaseHandler {
 
   static async getStoryByEmail(req: Request, res: Response) {
     try {
-      const { email } = req.params
+      // const { email } = req.params
 
-      const story = await StorybookModel.findOne({ email: email }).populate('author');
-
+      const story = await StorybookModel.find({}).populate('author');
+      
       if (!story) {
         return res.status(404).json({
           success: false,
