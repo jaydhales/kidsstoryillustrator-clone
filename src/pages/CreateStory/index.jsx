@@ -156,7 +156,6 @@ export const CreateStory = () => {
       console.log("No Text available");
       console.log("Story Not Saved");
       setModalDisplay('Error', 'No Message Available. Story not saved', 'error')
-
       return;
     } else {
       //
@@ -232,7 +231,10 @@ export const CreateStory = () => {
     }).then((response) => {
       console.log(response);
       setModalDisplay('Success', 'Story Saved Successfully', 'succes');
-    }).catch(err => console.error(err));
+    }).catch((err) => {
+      console.error(err);
+      setModalDisplay('Error', 'Story not saved', 'error');
+    });
   }
 
   const PostStoryVal = () => {
@@ -279,7 +281,7 @@ export const CreateStory = () => {
                 Preview Story
               </button>
             )}
-            <button className="btn-02" onClick={PostStory}>Save story</button>
+            <button className="btn-02" onClick={PostStoryVal}>Save story</button>
           </div>
         </div>
         {!previewState ? (
