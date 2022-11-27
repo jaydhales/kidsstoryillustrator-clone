@@ -2,76 +2,37 @@ import React from "react";
 
 import PropTypes from "prop-types";
 
-import "./DashBoard.scss";
-
+import "./UserDetails.scss";
+import { useNavigate } from "react-router-dom";
 // React Circular Progressbar
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 
 // Images
-import logo from "../../assets/images/dashboard/logo.svg";
-import user from "../../assets/images/dashboard/profile.svg";
-import group from "../../assets/images/dashboard/group.svg";
-import edit from "../../assets/images/dashboard/edit.svg";
-import profile from "../../assets/images/dashboard/profile-circle.svg";
-import blog from "../../assets/images/dashboard/blogger.svg";
-import setting from "../../assets/images/dashboard/setting-2.svg";
-import avatar from "../../assets/images/dashboard/avatar.svg";
-import asia from "../../assets/images/dashboard/asia.svg";
-import logout from "../../assets/images/dashboard/logout.svg";
-import contact from "../../assets/images/dashboard/contact.svg";
-import nav from "../../assets/images/dashboard/nav.svg";
-import more from "../../assets/images/dashboard/more.svg";
-import image1 from "../../assets/images/dashboard/image1.svg";
-import image2 from "../../assets/images/dashboard/image2.svg";
-import image3 from "../../assets/images/dashboard/image3.svg";
+import logo from "../../../assets/images/dashboard/logo.svg";
+import user from "../../../assets/images/dashboard/profile.svg";
+import group from "../../../assets/images/dashboard/group.svg";
+import edit from "../../../assets/images/dashboard/edit.svg";
+import profile from "../../../assets/images/dashboard/profile-circle.svg";
+import blog from "../../../assets/images/dashboard/blogger.svg";
+import setting from "../../../assets/images/dashboard/setting-2.svg";
+import avatar from "../../../assets/images/dashboard/avatar.svg";
+import asia from "../../../assets/images/dashboard/asia.svg";
+import logout from "../../../assets/images/dashboard/logout.svg";
+import contact from "../../../assets/images/dashboard/contact.svg";
+import nav from "../../../assets/images/dashboard/nav.svg";
+import more from "../../../assets/images/dashboard/more.svg";
+import image1 from "../../../assets/images/dashboard/image1.svg";
+import image2 from "../../../assets/images/dashboard/image2.svg";
+import image3 from "../../../assets/images/dashboard/image3.svg";
+import { AdminSideNav } from "../../../components/molecules";
 
-export const DashBoard = () => {
+export const UserDetails = () => {
+  const navigate = useNavigate();
   const noOfStories = 48;
   const timeSpent = 20;
   return (
     <div className="dashboard">
-      <div className="sidebar">
-        <div className="sidebar-logo">
-          <img src={logo} alt="logo" />
-        </div>
-        <div className="sidebar-menu">
-          <div className="user side">
-            <img src={user} alt="user" />
-            <p>Dashboard</p>
-          </div>
-          <div className="group side">
-            <img src={group} alt="group" />
-            <p>All Users</p>
-          </div>
-          <div className="edit side">
-            <img src={edit} alt="edit" />
-            <p>All stories</p>
-          </div>
-          <div className="profile side">
-            <img src={profile} alt="profile" />
-            <p>Profile</p>
-          </div>
-          <div className="blog side">
-            <img src={blog} alt="blog" />
-            <p>Blog</p>
-          </div>
-          <div className="setting side">
-            <img src={setting} alt="setting" />
-            <p>Dashboard</p>
-          </div>
-        </div>
-        <div className="avatar-zone">
-          <div className="avatar">
-            <img src={avatar} alt="avatar" />
-          </div>
-          <h4>Mark Essien</h4>
-          <p>Admin</p>
-        </div>
-        <div className="log-out">
-          <img src={logout} alt="logout" />
-          <p>Sign Out</p>
-        </div>
-      </div>
+      <AdminSideNav/>
       <div className="main-board">
         <div className="user-header">
           <h1>User Details</h1>
@@ -288,10 +249,10 @@ export const DashBoard = () => {
 
 // These are the types of the props that are passed to the component
 
-DashBoard.propTypes = {};
+UserDetails.propTypes = {};
 
 // These are their default values
 
-DashBoard.defaultProps = {};
+UserDetails.defaultProps = {};
 
-export default DashBoard;
+export default UserDetails;

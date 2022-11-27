@@ -1,129 +1,12 @@
+div{
 .dashboard {
   display: flex;
   width: 100%;
   height: 100vh;
-
-
-/* Sidebar */
-
-.sidebar {
-  width: 20%;
-  height: 100vh;
-  background: #f7f8f8;
-  padding: 30px;
-  position: fixed;
 }
-
-.sidebar-logo > img {
-  width: 40%;
-}
-
-/* sidebar menu */
-.sidebar-menu {
-  margin-top: 30px;
-}
-
-.side {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 15px;
-  padding: 10px;
-}
-
-.side img {
-  width: 12%;
-}
-
-.side p {
-  font-family: "Nunito";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 22px;
-  color: #787777;
-}
-
-.side:hover,
-.side:focus {
-  background: #aa0136;
-  border-radius: 56px;
-  color: #f7f8f8;
-  cursor: pointer;
-}
-
-/* Avatar zone */
-
-.avatar-zone {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  margin-top: 50px;
-}
-
-.avatar {
-  display: flex;
-  justify-content: center;
-}
-
-.avatar > img {
-  width: 20%;
-  margin-bottom: 10px;
-}
-
-.avatar-zone h4 {
-  font-family: "Nunito";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 27px;
-  color: #131313;
-}
-
-.avatar-zone p {
-  font-family: "Nunito";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 19px;
-  color: #717171;
-}
-
-/*Log out */
-.log-out {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 20px;
-  padding: 10px;
-  background: #ffffff;
-  border-radius: 56px;
-  cursor: pointer;
-}
-
-.log-out:hover {
-  background-color: #aa0136;
-  color: white;
-}
-
-.log-out img {
-  width: 12%;
-}
-
-.log-out p {
-  font-family: "Nunito";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 22px;
-  color: #787777;
-}
-
 /* Main board */
 .main-board {
-  width: 100%;
+  width: 80%;
   padding: 30px;
   margin-left: 280px;
 }
@@ -375,14 +258,30 @@
   }
 }
 
+@media screen and (max-width: 700px) {
+  .dashboard .main-board {
+    margin-left: 33px;
+    width: 90%;
+    padding: 0px;
+    padding-top: 50px;
+}
+}
+
+@media screen and (max-width: 400px) {
+  .side p {
+    text-align: center;
+    float: none;
+  }
+}
+
 @media (max-width: 991px) {
   .sidebar {
     width: 30%;
   }
-  .main-board {
-    margin-left: 280px;
-    width: 70%;
-  }
+  // .main-board {
+  //   margin-left: 280px;
+  //   width: 70%;
+  // }
   .personal-card {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

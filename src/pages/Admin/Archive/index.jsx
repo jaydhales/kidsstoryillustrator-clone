@@ -4,13 +4,13 @@ import PropTypes from "prop-types";
 
 import "./Archive.scss";
 import Archieve from "../../../components/molecules/Archieve";
-import SideBar from "../../../components/molecules/SideBar";
+import { AdminSideNav } from "../../../components/molecules";
 
 export const Archive = () => {
   
   return <div className="Archive">
     
-    <SideBar />
+    <AdminSideNav />
     <Archieve />
   </div>;
 };

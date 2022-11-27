@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap");
 
-* {
+.main-container {
   margin: 0;
   padding: 0;
-}
+
 .dashboard1 {
   display: flex;
   width: 20%;
@@ -366,4 +366,5 @@ input::-webkit-input-placeholder {
         width: 150px;
         margin: 0 0 20px 0;
       } 
+}
 }

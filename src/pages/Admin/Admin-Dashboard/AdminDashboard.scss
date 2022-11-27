@@ -1,6 +1,10 @@
+div{
+
 .AdminDashboard {
-    padding: 2rem 4rem;
-    background: #F5F5F5;
+    padding: 3rem 4rem;
+    // background: #F5F5F5;
+    width: 80%;
+margin-left: 17%;
 }
 .welcome-text{
     font-weight: 500;
@@ -81,9 +85,7 @@
 }
 
 @media screen and (max-width: 480px) {
-    .AdminDashboard{
-        padding: 2rem;
-    }
+    
     .users-grid{
         grid-template-columns: 1fr;
     }
@@ -93,4 +95,14 @@
     .table-scroll{
         overflow-x: scroll;
     }
+}
+
+@media screen and (max-width: 700px) {
+    .AdminDashboard {
+        padding: 5rem 2rem;
+        width: 80%;
+        margin-left: 10%;
+    }
+}
+
 }
