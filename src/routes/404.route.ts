@@ -3,6 +3,6 @@ import BadRoute from '../handlers/404'
 
 const router = express.Router()
 
-router.get('*', BadRoute.handleBadRoute);
+router.use('*', BadRoute.handleBadRoute);
 
 export default router;

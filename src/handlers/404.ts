@@ -5,11 +5,10 @@ class BadRoute extends BaseHandler {
   /* Handle Bad route */
   static handleBadRoute(req: Request, res: Response) {
     console.log(req.body);
-    res.status(404).send({
+    return res.status(404).send({
       success: false,
       message: 'Invalid Route. Please confirm your endpoint.'
     });
   }
 }
-
 export default BadRoute;
