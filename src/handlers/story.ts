@@ -38,7 +38,7 @@ export class StoryLookUp extends BaseHandler {
       const { id } = req.params;
 
       if (Types.ObjectId.isValid(id)) {
-        const story = await StorybookModel.findById(id).populate("author");
+        const story = await StorybookModel.findById(id).populate('author');
 
         if (!story) {
           return res.status(404).send({

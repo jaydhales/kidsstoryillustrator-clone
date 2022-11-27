@@ -32,16 +32,17 @@ class getApiImage extends BaseHandler {
 					
 					api.on('end', (data: any) => {
 						console.log('Generating Complete', data);
-						const imageLinkArr: Array<string> = [];
-						for (let i = 0; i < imagePathArr.length; i++) {
-							uploadImage(imagePathArr[i]).then((response) => {
-								imageLinkArr.push(response);
-								unlink(imagePathArr[i], () => {
-									console.log('');
+						if (data.isOk == true) {
+							const imageLinkArr: Array<string> = [];
+							for (let i = 0; i < imagePathArr.length; i++) {
+								uploadImage(imagePathArr[i]).then((response) => {
+									imageLinkArr.push(response);
+									unlink(imagePathArr[i], () => {
+										console.log('');
+									})
+									console.log('Image Uploaded Successfully')
 								})
-								console.log('Image Uploaded Successfully')
-							})
-						}
+							}
 						setTimeout(() => {
 							console.log(imageLinkArr);
 							if (imageLinkArr.length < samplesNo) {
@@ -54,6 +55,9 @@ class getApiImage extends BaseHandler {
 								})
 							}
 						}, 61000);
+					} else {
+						res.send('Error Fetching Images: Points Exhausted');
+					}
 					});
 				} else {
         console.log('API KEY MISSING');
