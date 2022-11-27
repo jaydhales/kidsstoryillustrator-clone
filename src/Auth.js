@@ -71,21 +71,21 @@ const ProtectedRoutes = (
     <Route path="/profile/edit" element={<ProfileEdit />} />
     <Route path="/account-info" element={<Info />} />
     <Route path="/account-settings" element={<Settings />} />
+    <Route path="/billing" element={<Billing />} />
+    <Route path="/cancelSubscription" element={<CancelSubscription />} />
     <Route path="/createStory" element={<CreateStory />} />
     <Route path="/summaryActivities" element={<SummaryActivities />} />
     <Route path="/users" element={<Users />} />
-    </>
+  </>
 );
 
-
-const AdminRoutes =(
+const AdminRoutes = (
   <>
     {ProtectedRoutes}
-    <Route path="/admin" element ={<AdminDashBoard/>}/>
-    <Route path="/admin/userlist" element ={<UserList/>}/>
+    <Route path="/admin" element={<AdminDashBoard />} />
+    <Route path="/admin/userlist" element={<UserList />} />
     {/* <Route path="/admin/userdetails/:id" element={<UserDetails/>} /> */}
-    <Route path="/admin/archive" element ={<Archive/>}/>
-
+    <Route path="/admin/archive" element={<Archive />} />
   </>
 );
 
