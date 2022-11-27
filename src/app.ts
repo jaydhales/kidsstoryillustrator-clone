@@ -30,8 +30,8 @@ swaggerDocs(app);
 app.use('/', indexRouter);
 app.use('/story', storyRouter);
 app.use('/auth', userRouter);
-app.use('*', invalidRouter);
 app.use('/api', apiImageRouter);
+app.use('*', invalidRouter);
 app.use('**', invalidRouter);
 
 
