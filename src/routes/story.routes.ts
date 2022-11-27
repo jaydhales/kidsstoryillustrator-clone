@@ -19,7 +19,7 @@ router
 
 router
   .route('/post_story')
-  .post(protect, StoryLookUp.postStory)
+  .post(StoryLookUp.postStory)
   
 
 export default router
