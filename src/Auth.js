@@ -31,13 +31,17 @@ import {
   SummaryActivities,
   Info,
   Users,
-  Settings,
   UserList,
+  Settings,
   UserDashboard,
   Archive,
-  // UserDetails,
 } from "./pages";
 import AdminDashBoard from "./pages/Admin/Admin-Dashboard";
+import AdminLogin from "./pages/Admin/AdminLogin";
+import AdminSignup from "./pages/Admin/AdminSignup";
+import UserDetails from "./pages/Admin/UserDetails";
+
+
 
 const DefaultRoutes = (
   <>
@@ -82,10 +86,12 @@ const ProtectedRoutes = (
 const AdminRoutes = (
   <>
     {ProtectedRoutes}
-    <Route path="/admin" element={<AdminDashBoard />} />
-    <Route path="/admin/userlist" element={<UserList />} />
-    {/* <Route path="/admin/userdetails/:id" element={<UserDetails/>} /> */}
-    <Route path="/admin/archive" element={<Archive />} />
+    <Route path="/admin" element ={<AdminDashBoard/>}/>
+    <Route path="/admin/userlist" element ={<UserList/>}/>
+    <Route path="/admin/adminlogin" element ={<AdminLogin/>}/>
+    <Route path="/admin/adminsignup" element ={<AdminSignup/>}/>
+    <Route path="/admin/userdetails/" element={<UserDetails/>} />
+    <Route path="/admin/archive" element ={<Archive/>}/>
   </>
 );
 

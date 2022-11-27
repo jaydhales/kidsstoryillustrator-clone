@@ -531,6 +531,17 @@ body {
   padding: 48px 0;
 }
 
+.AdminLogin-branding {
+  background-position: center 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: none;
+  min-height: 800px;
+  height: 100%;
+  padding: 48px 0;
+}
+
+
 .error {
   color: #a50a17;
   margin-bottom: 8px;

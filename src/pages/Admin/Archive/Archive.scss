@@ -1,3 +1,4 @@
+div{
 .Archive{
     display: flex;
 
@@ -8,6 +9,15 @@
       .Archive {
         flex-direction: column;
       }
-
-      
     }
+      @media screen and (max-width: 700px) {
+
+      .Archieve {
+        width: 75%;
+        font-family: "Nunito";
+        margin-left: 15%;
+        margin-top: 20%;
+    }
+  }
+    }
+  
