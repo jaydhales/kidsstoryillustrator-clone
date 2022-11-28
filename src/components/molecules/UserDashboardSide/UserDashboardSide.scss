@@ -1,0 +1,196 @@
+.UserDashboardSide {
+  * {
+    margin: 0;
+  }
+
+  .sidebar {
+    margin: 0;
+    padding: 30px;
+    width: 272px;
+    background-color: #ffffff;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    border: 1px solid #d2d2d2;
+  }
+.sidebar #linktext .sidebarIcon{
+    width: 24px;
+}
+  .sidebar #linktext {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  .logo {
+    width: 110px;
+  }
+  
+
+  .sidebar #linktext.active {
+    padding: 12px 24px;
+    gap: 8px;
+    color: white;
+    background: #aa0136;
+    border-radius: 56px;
+    margin-top: 50px;
+  }
+
+  .sidebar #linktext.logout{
+    color: #aa0136;
+    background: white;
+    border-radius: 8px;
+    width:163px ;
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  .sidebar #linktext.upgrade{
+    color: #aa0136;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #aa0136;
+    width:163px ;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 10px;
+  }
+
+  .sidebar #linktext.mystory{
+    padding: 12px 24px;
+    gap: 8px;
+    color: white;
+    background: #aa0136;
+    border-radius: 56px;
+    margin-top: 40px;
+    width:163px ;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .sidebar #linktext.stories{
+    padding: 12px 24px;
+    gap: 8px;
+    color: #646363;
+    background: #EECCD7;
+    border-radius: 56px;
+    margin-top: 40px;
+    width:163px ;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .sidebar #linktext.account{
+    gap: 8px;
+    margin-top: 160px;
+  }
+
+  .sidebar #linktext.icon {
+    display: none;
+  }
+
+  .sidebar #linktext:hover:not(.active) {
+    color: #aa0136;
+  }
+
+  div.content {
+    margin-left: 277px;
+    padding: 1px 16px;
+    height: 1000px;
+  }
+
+  .overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: -1;
+    left: 0;
+    background-color: white;
+    overflow-y: hidden;
+    
+  }
+
+  .overlayClose {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-y: hidden;
+    
+  }
+
+  .overlay-content {
+    position: relative;
+    top: 2%;
+    width: 100%;
+    text-align: center;
+    margin-top: 9px;
+  }
+
+  .overlay #linktext {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #aa0136;
+    display: block;
+    transition: 0.1s;
+  }
+
+  .overlay #linktext:hover,
+  .overlay #linktext:focus {
+    color: black;
+  }
+
+img{
+    display: revert;
+}
+  @media screen and (max-height: 650px) {
+    .overlay {
+      overflow-y: auto;
+    }
+    .overlay #linktext {
+      font-size: 20px;
+    }
+    
+  }
+
+  @media screen and (max-width: 899px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+      border: 1px solid #ffffff;
+      padding: 14px;
+    }
+    .sidebar #linktext {
+      float: left;
+      padding: 14px;
+    }
+    div.content {
+      margin-left: 0;
+    }
+    .sidebar #linktext.icon {
+        display: none;
+      }
+  }
+ 
+
+  @media screen and (max-width: 900px) {
+    .sidebar #linktext:not(:first-child) {
+      display: none;
+      padding: 5px;
+    }
+    .sidebar #linktext.icon {
+      float: right;
+      display: block;
+      padding: 5px;
+    }
+  }  
+}

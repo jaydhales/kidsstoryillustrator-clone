@@ -1,0 +1,61 @@
+.Admin-harmburger_wrapper{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+
+
+    #main{
+        background-color: #f7f8f8;
+        width: 10%;
+    }
+
+
+    .sideNav{
+         
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            background-color: #f7f8f8;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+          }
+
+
+          .sideNav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+          }
+          
+          .openbtn {
+            font-size: 20px;
+            cursor: pointer;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+          }
+
+
+          
+          
+          
+
+
+    
+
+
+
+
+
+
+
+
+
+}

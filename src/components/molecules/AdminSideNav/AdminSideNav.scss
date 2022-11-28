@@ -1,0 +1,159 @@
+.sidenav-container{
+  margin: 0;
+  padding: 0;
+bottom: 0;
+.sideNav{
+
+        width: 20%;
+        height: 100vh;
+        background: #f7f8f8;
+        padding: 30px;
+        position: fixed;
+        z-index: 1; 
+  top: 0; 
+  left: 0;
+  overflow-x: hidden; 
+  padding-top: 20px;
+}
+
+  .sidebar-logo > img {
+    width: 40%;
+  }
+.hamburger-container{
+display: none;
+}
+
+  .hamburger-container > img{
+    width: 20px;
+    height: 20px;
+  }
+
+  .sidebar-menu{
+    padding-top: 13%;
+  }
+
+  .side {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    padding: 10px;
+  }
+  
+  .side img {
+    width: 12%;
+  }
+  
+  .side p {
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: #787777;
+  }
+
+  .side:hover,
+.side:focus, .side:active{
+  background: #aa0136;
+  border-radius: 56px;
+  color: #f7f8f8;
+  cursor: pointer;
+}
+
+.avatar-zone {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 130%;
+  }
+  
+  .avatar {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .avatar > img {
+    width: 20%;
+    margin-bottom: 10px;
+  }
+  
+  .avatar-zone h4 {
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 27px;
+    color: #131313;
+  }
+  
+  .avatar-zone p {
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    color: #717171;
+  }
+  
+  /*Log out */
+  .log-out {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20%;
+    padding: 10px;
+    background-color: #b21144;
+    border-radius: 56px;
+    cursor: pointer;
+  }
+  
+  .log-out:hover {
+    background-color: #aa0136;
+    color: white;
+  }
+  
+  .log-out img {
+    width: 12%;
+  }
+  
+  .log-out p {
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: #787777;
+  }
+
+  .side p:hover {
+    color: white;
+  }
+  @media screen and (max-width: 700px) {
+
+  .Desktop-sidenav-view{
+    display: none;
+  }
+
+  .hamburger-container{
+    display: block;
+  }
+
+  .sideNav{
+    background-color: transparent;
+  }
+
+  .sideNav{
+
+    width: 50%;
+    
+}
+
+.sidebar-logo{
+  padding-top: 2%;
+}
+}
+  
+}

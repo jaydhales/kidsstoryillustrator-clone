@@ -31,10 +31,17 @@ import {
   SummaryActivities,
   Info,
   Users,
-  Settings,
   UserList,
+  Settings,
+  UserDashboard,
+  Archive,
 } from "./pages";
 import AdminDashBoard from "./pages/Admin/Admin-Dashboard";
+import AdminLogin from "./pages/Admin/AdminLogin";
+import AdminSignup from "./pages/Admin/AdminSignup";
+import UserDetails from "./pages/Admin/UserDetails";
+
+
 
 const DefaultRoutes = (
   <>
@@ -55,38 +62,44 @@ const DefaultRoutes = (
   </>
 );
 
-const PublicRoutes = <Routes>{DefaultRoutes}</Routes>;
+const PublicRoutes = <>{DefaultRoutes}</>;
 
 const ProtectedRoutes = (
-  <Routes>
+  <>
     {DefaultRoutes}
     <Route path="/myStories" element={<MyStories />} />
     <Route path="/dashboard" element={<Dashboard />} />
+    <Route path="/userdashboard" element={<UserDashboard />} />
     <Route path="/story/:id" element={<Story />} />
     <Route path="/profile" element={<Profile />} />
     <Route path="/profile/edit" element={<ProfileEdit />} />
     <Route path="/account-info" element={<Info />} />
     <Route path="/account-settings" element={<Settings />} />
+    <Route path="/billing" element={<Billing />} />
+    <Route path="/cancelSubscription" element={<CancelSubscription />} />
     <Route path="/createStory" element={<CreateStory />} />
     <Route path="/summaryActivities" element={<SummaryActivities />} />
     <Route path="/users" element={<Users />} />
-  </Routes>
+  </>
 );
 
-
-const AdminRoutes =(
-  <Routes>
-    {DefaultRoutes}
-    <Route path="/admin-dashboard" element ={<AdminDashBoard/>}/>
-    <Route path="/userlist" element ={<UserList/>}/>
-  </Routes>
-)
+const AdminRoutes = (
+  <>
+    {ProtectedRoutes}
+    <Route path="/admin" element ={<AdminDashBoard/>}/>
+    <Route path="/admin/userlist" element ={<UserList/>}/>
+    <Route path="/admin/adminlogin" element ={<AdminLogin/>}/>
+    <Route path="/admin/adminsignup" element ={<AdminSignup/>}/>
+    <Route path="/admin/userdetails/" element={<UserDetails/>} />
+    <Route path="/admin/archive" element ={<Archive/>}/>
+  </>
+);
 
 const AppRoutes = () => {
   const { isAuthenticated } = useSelector((state) => state.auth);
 
-  if (isAuthenticated) return ProtectedRoutes;
-  else return PublicRoutes;
+  if (isAuthenticated) return <Routes>{AdminRoutes} </Routes>;
+  else return <Routes>{PublicRoutes}</Routes>;
 };
 
 export default AppRoutes;
