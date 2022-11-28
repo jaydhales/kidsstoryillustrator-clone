@@ -46,7 +46,7 @@ export const Settings = () => {
   }
 
   return (
-    <div className="container">
+    <div className="container-cover">
       <div className="dashboard">
         <div className="sidebar">
           <div className="sidebar-menu">
@@ -88,7 +88,7 @@ export const Settings = () => {
           </div>
         </div>
       </div>
-      <div className="wrapper">
+      <div className="wrapper-cover">
         <div className="nav-tab">
           <div>
             <img src={logo} alt="logo" sizes={30} />
