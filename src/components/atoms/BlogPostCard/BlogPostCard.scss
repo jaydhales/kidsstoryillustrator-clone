@@ -4,8 +4,7 @@
   gap: 1rem;
   padding: 1rem;
   border: 1px solid rgba(67, 67, 67, 0.1);
-  width: 522px;
-  height: 466px;
+  width: 100%;
   border-radius: 1rem;
 
 &__img{
@@ -42,10 +41,6 @@
   gap: .5rem;
 }
 
-.BlogPost__card-main > .BlogPostCard {
-  width: 413px;
-  height: 466px;
-}
 }
 
 .BlogPostcard__link {

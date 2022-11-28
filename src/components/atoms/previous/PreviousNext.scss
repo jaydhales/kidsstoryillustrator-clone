@@ -1,0 +1,26 @@
+.prevNxtBtn__sect{
+  .prevNxtBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    margin: 32px 0;
+  } 
+
+  .btnHover:hover{
+    color: #BBBBBB;
+  }
+  .prevBtn {
+    margin-right: 78px;
+  }
+
+  .nxtBtn {
+    margin-left: 78px;
+  }
+
+  .btn_one, .btn_two, .btn_three {
+    margin-right: 16px;
+  }
+
+}
+
