@@ -19,6 +19,7 @@ const postCardDetails = [
     image: "pic6",
     title: "More Fun With 3d Illustrations",
     content: "With a well thought inspiration on including 3d illustration generator upcoming. We are trilled about what the future holds...",
+    
   },
 ]
 
