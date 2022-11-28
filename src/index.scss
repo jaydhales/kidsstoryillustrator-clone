@@ -1,5 +1,5 @@
-@import "./theme/sass/variables";
 
+@import "./theme/sass/variables";
 :root {
   --primary-color: #aa0136;
   --primary-text-color: #131313;
@@ -68,11 +68,11 @@
   transition: all ease 0.3s;
 }
 
-.input:focus {
-  outline: none;
-  border: 1px solid $color-primary-main;
-  box-shadow: 0 0 1px 1px $color-primary-main;
-}
+// .input:focus {
+//   outline: none;
+//   border: 1px solid $color-primary-main;
+//   box-shadow: 0 0 1px 1px $color-primary-main;
+// }
 
 .btn {
   display: block;
@@ -531,6 +531,17 @@ body {
   padding: 48px 0;
 }
 
+.AdminLogin-branding {
+  background-position: center 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: none;
+  min-height: 800px;
+  height: 100%;
+  padding: 48px 0;
+}
+
+
 .error {
   color: #a50a17;
   margin-bottom: 8px;
@@ -540,6 +551,7 @@ body {
   .two-column {
     display: flex;
   }
+
 
   #logo2 {
     display: none;
