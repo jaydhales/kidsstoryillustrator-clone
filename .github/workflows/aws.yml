@@ -1,0 +1,36 @@
+name: Storyai CICD workflow
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+jobs:
+  build-push-images:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout GitHub Action
+        uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+     # - name: Build Backend Image
+      #  run: |
+       #   docker build ./docker -t vip-customer-api:v1
+        #  docker tag vip-customer-web:v1 ${{ secrets.DOCKERHUB_USERNAME }}/vip-customer-api:v1
+         # echo "${{ secrets.DOCKERHUB_PASSWORD }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
+          #docker push ${{ secrets.DOCKERHUB_USERNAME }}/vip-customer-api:v1
+
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
+          timeout: 1000s
+          script: |
+            sudo su
+            cd /home/ubuntu
+            touch Adewumni.txt
+            
