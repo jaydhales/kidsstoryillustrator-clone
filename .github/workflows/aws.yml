@@ -31,6 +31,6 @@ jobs:
           timeout: 1000s
           script: |
             sudo su
-            cd /home/ubuntu
-            touch Adewumni.txt
+            cd /var/www/
+            bash update.sh
             
