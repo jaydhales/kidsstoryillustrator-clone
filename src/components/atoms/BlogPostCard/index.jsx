@@ -1,6 +1,7 @@
 import React, { useId } from "react";
 import { Link } from "react-router-dom";
-import BlogPage from "../../../pages/BlogPage/BlogPage";
+// import BlogPage from "../../../pages/BlogPage/BlogPage";
+import { BlogDetails } from "../../../pages";
 import "./BlogPostCard.scss";
 import pic8 from "./pic8.png";
 import PropTypes from "prop-types";
@@ -18,7 +19,7 @@ const BlogPostCard = ({
   const id = useId();
 
   return (
-    <Link to={`/blogPage`} className="BlogPostcard__link"><section className="BlogPostCard" id="BlogPost_Card">
+    <Link to={`/BlogPage`} className="BlogPostcard__link"><section className="BlogPostCard" id="BlogPost_Card">
       <div className="BlogPostCard__heading">
         <div className="BlogPostCard__content">
           <div className="BlogPostCard__content-img">
