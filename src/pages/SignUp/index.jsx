@@ -6,12 +6,12 @@ import googleLogo from "../../assets/img/google_logo.png";
 import facebookLogo from "../../assets/img/facebook_logo.png";
 import appleLogo from "../../assets/img/apple_logo.png";
 import logoWhite from "../../assets/img/logo_white.png";
-import { signUp } from "../../features/auth/authSlice";
+// import { signUp } from "../../features/auth/authSlice";
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 import { useDispatch } from "react-redux";
 
-const endpoint = "https://story--ai.herokuapp.com/auth/signup";
+// const endpoint = "https://story--ai.herokuapp.com/auth/signup";
 
 export const SignUp = () => {
   const [ email, setEmail ] = React.useState("");
@@ -40,17 +40,17 @@ export const SignUp = () => {
       }
     };
 
-    axios
-    .post(endpoint, body, config)
-    .then((res) => {
-      setIsLoading(false);
-      dispatch(signUp(res.data.data));
-      navigate("/dashboard");
-    })
-    .catch(err => {
-      setIsLoading(false);
-      setErrors([...errors, err.response.data.message ]);
-    })
+    // axios
+    // .post(endpoint, body, config)
+    // .then((res) => {
+    //   setIsLoading(false);
+    //   dispatch(signUp(res.data.data));
+    //   navigate("/dashboard");
+    // })
+    // .catch(err => {
+    //   setIsLoading(false);
+    //   setErrors([...errors, err.response.data.message ]);
+    // })
   }
 
   return (

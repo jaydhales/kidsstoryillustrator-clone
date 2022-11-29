@@ -5,7 +5,7 @@ import logo from "../../../assets/img/logo.png";
 import googleLogo from "../../../assets/img/google_logo.png";
 import facebookLogo from "../../../assets/img/facebook_logo.png";
 import appleLogo from "../../../assets/img/apple_logo.png";
-import { signUp } from "../../../features/auth/authSlice";
+// import { signUp } from "../../../features/auth/authSlice";
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 import { useDispatch } from "react-redux";
@@ -43,7 +43,7 @@ export const AdminSignUp = () => {
     .post(endpoint, body, config)
     .then((res) => {
       setIsLoading(false);
-      dispatch(signUp(res.data.data));
+      // dispatch(signUp(res.data.data));
       navigate("/admin");
     })
     .catch(err => {
