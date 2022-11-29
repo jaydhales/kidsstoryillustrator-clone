@@ -19,7 +19,7 @@ const BlogPostCard = ({
   const id = useId();
 
   return (
-    <Link to={`/BlogDetails`} className="BlogPostcard__link">
+    <Link to={`/blogDetails`} className="BlogPostcard__link">
       <section className="BlogPostCard" id="BlogPost_Card">
         <div className="BlogPostCard__heading">
           <div className="BlogPostCard__content">
