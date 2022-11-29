@@ -1,0 +1,60 @@
+ .UserStory {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto;
+    margin-bottom: 10px;
+    .arrow-back {
+        margin-top: 10px;
+        .arrow {
+            width: 48px;
+            height: 48px;
+            cursor: pointer;
+
+
+        }
+    }
+    .stories{
+        max-width: 70vw;
+        margin-top: 10px;
+    
+            .title{
+                font-family: 'Nunito';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 36px;
+                line-height: 44px;
+                color: #131313;
+                margin-top: 10px;
+                margin-bottom: 5px;
+                
+            }
+            .storyimg {
+                margin-bottom: 10px;
+            }
+            .story {
+                font-family: 'Nunito';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 40px;
+                color: #131313;
+                margin-bottom: 20px;
+            }
+    }
+
+ }
+
+
+ @media screen  and (max-width:430px){
+    .UserStory{
+        .stories {
+            .title {
+                font-size: 20px;
+            }
+            .story {
+                font-size: 16px;
+            }
+        }
+    }
+ }
+

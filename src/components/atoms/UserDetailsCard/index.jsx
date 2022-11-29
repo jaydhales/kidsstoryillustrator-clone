@@ -8,60 +8,60 @@ import person from '../../../assets/adminuserdetails/person.svg'
 export const UserDetailsCard = (props) => {
   return <div className='UserDetailsCard'>
         <h2>All Personal Informations</h2>
-        <div>
+        <div className='main_details'>
             <div className='detail'>
                 <img src={person} alt="icon" />
-                <div>
-                    <p>{props.username}</p>
-                    <p> Username</p>
+                <div className='details'>
+                    <p className='userdetail'>{props.username}</p>
+                    <p className='uservalue'> Username</p>
                 </div>
             </div>
-            <div>
+            <div  className='detail'>
                 <img src={person} alt="icon" />
-                <div>
-                    <p> {props.email} </p>
-                    <p>Email Address</p>
+                <div className='details'>
+                    <p className='userdetail'> {props.email} </p>
+                    <p className='uservalue'>Email Address</p>
                 </div>
             </div>
-            <div>
+            <div  className='detail'>
                 <img src={person} alt="icon" />
-                <div>
-                    <p>{props.phone} </p>
-                    <p>Phone Number</p>
+                <div className='details'>
+                    <p className='userdetail'>{props.phone} </p>
+                    <p className='uservalue'>Phone Number</p>
                 </div>
             </div>
             
         </div>
-        <div>
-        <div>
+        <div className='main_details'>
+        <div className='detail'>
                 <img src={person} alt="icon" />
-                <div>
-                    <p>{props.website} </p>
-                    <p>Website</p>
+                <div className='details'>
+                    <p className='userdetail'>{props.website} </p>
+                    <p className='uservalue'>Website</p>
                 </div>
             </div>
-            <div>
+            <div className='detail'>
                 <img src={person} alt="icon" />
-                <div>
-                    <p>{props.gender} </p>
-                    <p>Gender</p>
+                <div className='details'>
+                    <p className='userdetail'>{props.gender} </p>
+                    <p className='uservalue'>Gender</p>
                 </div>
             </div>
-            <div>
+            <div  className='detail'>
                 <img src={person} alt="icon" />
-                <div>
-                    <p>{props.dateJoined} </p>
-                    <p>Date Joined</p>
+                <div className='details'>
+                    <p className='userdetail'>{props.dateJoined} </p>
+                    <p className='uservalue'>Date Joined</p>
                 </div>
             </div>
 
         </div>
-        <div>
-        <div>
+        <div className='main_details'>
+        <div className='detail'>
                 <img src={person} alt="icon" />
-                <div>
-                    <p>{props.address} </p>
-                    <p>Address</p>
+                <div className='details'>
+                    <p className='userdetail'>{props.address} </p>
+                    <p className='uservalue'>Address</p>
                 </div>
             </div>
         </div>

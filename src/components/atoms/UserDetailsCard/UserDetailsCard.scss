@@ -1,6 +1,79 @@
-.UserDetailsCard{
-   img{
-     height: 24px;
-     width: 24px;
-   }
+.UserDetailsCard {
+    border: 1px solid #F1F1F1;
+    box-shadow: 2px 2px #F1F1F1;
+    margin: 20px;
+    border-radius: 3px;
+    max-width: 70vw;
+    padding: 10px;
+    h2{
+        font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 40px;
+        color: #181818;
+        margin-bottom: 10px;
+        
+    }
+
+    .main_details {
+        display: grid;
+        grid-template-columns: 380px 250px 250px;
+        gap: 10px;
+        margin-bottom: 20px;
+        justify-content: center;
+        .detail {
+            display: flex;
+            flex-direction: row;
+            img{
+                height: 48px;
+                width: 48px;
+                margin-right: 10px;
+              }
+              .details{
+                .userdetail {
+                    font-family: 'Nunito';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 24px;
+                    letter-spacing: 0.1px;
+                    color: #181818;
+                }
+                .uservalue{
+                    font-family: 'Nunito';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 12px;
+                    line-height: 16px;
+                    letter-spacing: 0.5px;                    
+                    color: #787777;
+                }
+              }
+        }
+    }
+   
+}
+
+@media screen  and (max-width:1024px){
+    .UserDetailsCard {
+        max-width: 90vw;
+    }
+}
+@media screen  and (max-width: 768px){
+    .UserDetailsCard {
+       .main_details{
+        grid-template-columns: 300px 300px;
+       }
+    }
+}
+@media screen  and (max-width: 430px){
+    .UserDetailsCard {
+        h2 {
+            font-size: 24px;
+        }
+       .main_details{
+        grid-template-columns: 300px ;
+       }
+    }
 }

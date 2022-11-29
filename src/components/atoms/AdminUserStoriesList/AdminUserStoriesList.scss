@@ -1,0 +1,74 @@
+.AdminUserStoriesList {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    max-width: 70vw;
+    gap: 20px;
+    .card_story {
+        max-width: 280px;
+         height: 250px;
+         border-radius: 16px;
+         border: 1px solid #F1F1F1;
+         box-shadow: 2px 2px #f1f1f1;
+         margin-bottom: 10px;
+        .img_story {
+            width: 280px;
+            border-top-left-radius: 16px;
+            border-top-right-radius: 16px;
+           
+        }
+        .card_details {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 20px;
+            padding-left: 10px;
+            .card-detail{
+                cursor: pointer;
+                .card-title{
+                    font-family: 'Nunito';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 24px;
+                    letter-spacing: 0.1px;
+                    text-transform: capitalize;
+                    color: #131313;
+                }
+                .card-date{
+                    font-family: 'Nunito';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 20px;
+                    letter-spacing: 0.1px;
+                    text-transform: capitalize;
+                    color: #787777;
+                }
+            }
+
+             .img_details{
+                width:30px;
+                height: 30px;
+             }
+        }
+    }
+    
+}
+
+@media screen  and (max-width:1024px){
+    .AdminUserStoriesList {
+        max-width: 90vw;
+        
+    }
+}
+@media screen  and (max-width:768px){
+    .AdminUserStoriesList {
+        grid-template-columns: auto auto;
+    }
+}
+@media screen  and (max-width:430px){
+    .AdminUserStoriesList {
+        grid-template-columns: auto;
+        max-width: 90vw;
+    }
+}

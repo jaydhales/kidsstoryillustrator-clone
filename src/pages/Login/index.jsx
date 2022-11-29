@@ -8,6 +8,7 @@ import appleLogo from "../../assets/img/apple_logo.png";
 import axios from 'axios';
 import { logIn } from "../../features/auth/authSlice";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
 
 const endpoint = "https://story--ai.herokuapp.com/auth/signin";
 
@@ -17,6 +18,7 @@ export const Login = () => {
   const [ errors, setErrors ] = React.useState([]);
   const [ isLoading, setIsLoading ] = React.useState(false);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
@@ -39,8 +41,9 @@ export const Login = () => {
     axios.post(endpoint, body, config)
     .then((res) => {
       setIsLoading(false);
-      logIn(res.data.message);
-      navigate("/mystories");
+      console.log(res.data.data);
+      dispatch(logIn(res.data.data));
+      navigate("/userdashboard");
     })
     .catch(err => {
       setIsLoading(false);

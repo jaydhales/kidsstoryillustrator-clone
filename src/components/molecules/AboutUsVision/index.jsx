@@ -3,7 +3,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import "./AboutUsVision.scss";
-import visionImg from "./visionImg.svg";
+import visionImg from "../../../assets/About-asset/visionImg.svg";
 
 export const AboutUsVision = () => {
   return (

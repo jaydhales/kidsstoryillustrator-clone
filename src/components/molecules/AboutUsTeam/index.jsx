@@ -3,7 +3,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import "./AboutUsTeam.scss";
-import abtTeam from "./abtTeam.svg";
+import abtTeam from "../../../assets/About-asset/abtTeam.svg";
 
 export const AboutUsTeam = () => {
   return (

@@ -17,7 +17,7 @@ const MoveToTop = () => {
 const App = () => (
   <>
     <MoveToTop />
-    { Routes }
+    <Routes />
   </>
 );
 export default App;

@@ -1,3 +1,157 @@
 .UserDetails{
+    display: grid;
+    justify-content: center;
+    margin-top: 20px;
+    .user-detail {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 10px;
+            margin-left: 10px; 
+            cursor: pointer;          
+           
+            img{
+                width: 34px;
+                height: 34px;
+            }
+            div  {
+                font-family: 'Nunito';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 32px;
+                line-height: 36px;
+                color: #181818;
+
+                
+            }
+    }
+    .user-avatar {
+        display: flex;
+        flex-direction: row;
+        margin-left: 10px;
+        
+        .avatar {
+            width: 98px;
+            height: 98px;
+           
+        }
+        div {
+             display: flex;
+             flex-direction: row;
+             height: 40px;
+             margin-top: 30px;
+             margin-left: 20px;
+        
+        .user-name {
+            font-family: 'Nunito';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 40px;
+            color: #181818;
+            margin-right: 10px;
+           
+
+        }
+        .premium {
+            font-family: 'Nunito';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 19px;
+            color: #08875D;
+            background: #E9FFF8;
+            border-radius: 50px;
+            padding: 10px 24px;
+            
+
+
+        }
+    }
+       
+    }
+    .user-stories{
+        border: 1px solid #F1F1F1;
+        box-shadow: 2px 2px #F1F1F1;
+        margin: 20px;
+        border-radius: 3px;
+        max-width: 70vw;
+        padding: 10px;
+        .stories{
+            display: flex;
+            flex-direction: row;
+            justify-content:space-between;
+            margin-bottom: 20px;
+            padding: 10px;
+            .user1{
+                font-family: 'Nunito';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 32px;
+                line-height: 40px;
+                color: #181818;
+            }
+            .view {
+                font-family: 'Manrope';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 20px;
+                letter-spacing: 0.1px;
+                color: #787777;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media screen  and (max-width:1024px){
+  .UserDetails {
+    .user-stories{
+        max-width: 90vw;
+    }
+  }
+}
+
     
+@media screen  and (max-width:430px){
+    .UserDetails {
+
+        .user-detail {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 10px;
+            margin-left: 10px;           
+           
+           
+            div  {
+                font-size: 22px;
+                
+            }
+    }
+    .user-avatar {
+       
+        
+        .avatar {
+            width: 48px;
+            height: 48px;
+           
+        }
+        div {
+            
+             height: 40px;
+             margin-top: 0px;
+       
+        
+        .user-name {
+           
+            font-size: 16px;
+            
+        }
+        
+    }
+       
+    }
+
+    }
+
 }

@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { Link } from "react-router-dom"
 import PropTypes from "prop-types";
 
-import "./AcctSetup.css";
+import "./AcctSetup.scss";
 // Images
 import logo from "../../../assets/images/logo.svg";
 import user from "../../../assets/images/profile.svg";
@@ -21,7 +22,6 @@ export const Settings = () => {
     city: "",
     state: "",
     country: "",
-    newEmail: "",
     currentEmail: "",
   });
 
@@ -52,27 +52,27 @@ export const Settings = () => {
           <div className="sidebar-menu">
             <div className="user side">
               <img src={user} alt="user" />
-              <p>Dashboard</p>
+              <Link to="/dashboard">Dashboard</Link>
             </div>
             <div className="group side">
               <img src={group} alt="group" />
-              <p>All Users</p>
+              <Link to="/users">All Users</Link>
             </div>
             <div className="edit side">
               <img src={edit} alt="edit" />
-              <p>All stories</p>
+              <Link to="/myStories">All stories</Link>
             </div>
             <div className="profile side">
               <img src={profile} alt="profile" />
-              <p>Profile</p>
+              <Link to="/profile">Profile</Link>
             </div>
             <div className="blog side">
               <img src={blog} alt="blog" />
-              <p>Blog</p>
+              <Link to="/blog">Blog</Link>
             </div>
             <div className="setting side">
               <img src={setting} alt="setting" />
-              <p>Dashboard</p>
+              <Link to="/account-settings">Settings</Link>
             </div>
           </div>
           <div className="avatar-zone">
@@ -97,7 +97,7 @@ export const Settings = () => {
             <GiHamburgerMenu size={30} />
           </div>
         </div>
-        <h1>Settings</h1>
+        <b className="header-text">Settings</b>
         <div className="nav-section">
           <div className="nav-admin">
             <div className="nav-head">
@@ -108,10 +108,10 @@ export const Settings = () => {
             </div>
 
             <div className="nav-btns">
-              <button>Edit Account</button>
-              <button>Users(21)</button>
-              <button>All Stories</button>
-              <button>Subscriptions</button>
+              <Link to="/account-info">Edit Account</Link>
+              <Link to="users">Users(21)</Link>
+              <Link to="/myStories">All Stories</Link> 
+              <Link to="/pricing">Subscriptions</Link>
             </div>
           </div>
           <div className="admin-btn">
