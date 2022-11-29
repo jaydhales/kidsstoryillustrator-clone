@@ -176,14 +176,18 @@
       grid-template-columns: 1fr;
       padding: 1em;
     }
+    .header-text{
+      font-size: 3rem;
+    }
     .steps{
       grid-template-columns: 1fr;
     }
     .button--grid {
       text-align: center;
-      margin: 1em 0;
+      margin: 1em auto;
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
+      justify-content: center;
       gap: 10px;
     }
   }
