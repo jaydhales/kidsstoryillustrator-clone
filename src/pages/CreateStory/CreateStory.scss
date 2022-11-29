@@ -1,6 +1,5 @@
 .create-story-wrapper {
 	position: relative;
-	display: block;
 }
 
 .cs-sub-container {
@@ -432,11 +431,21 @@ Main Story Container
 }
 
 .preview_container_xxd {
-	margin: 0 0 25px;
-}
-.preview_container_xxd > p {
-	font-size: 30px;
-	font-weight: 500;
+  margin: 0 0 25px;
+
+
+  .previewtitle_s45e {
+    color: #1f1e1eb6;
+    font-size: 30px;
+    font-weight: 500;
+
+    span {
+			font-size: 30px;
+			font-weight: 500;	
+			text-transform: capitalize;
+      color: #000000;
+    }
+  }
 }
 
 .image_thumb_43f_content_cont {

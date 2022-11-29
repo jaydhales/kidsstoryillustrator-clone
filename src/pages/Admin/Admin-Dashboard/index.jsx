@@ -2,11 +2,14 @@ import React from "react";
 
 import PropTypes from "prop-types";
 
-import "./AdminDashBoard.css";
+import "./AdminDashboard.scss";
+import { AdminSideNav } from "../../../components/molecules";
 
 export const AdminDashBoard = () => {
-  return <div className="AdminDashboard">
-    <h1 className="welcome-text">Hi John, Welcome back!</h1>
+  return <>
+  <AdminSideNav/>
+  <div className="AdminDashboard">
+    <h1 className="welcome-text">Hi Mark, Welcome back!</h1>
     <section className="users-grid">
       <div className="grid--box">
         <h3 className='grid-header'>No. of users</h3>
@@ -94,7 +97,8 @@ export const AdminDashBoard = () => {
     </table>
     </section>
     </section>
-  </div>;
+  </div>
+  </>
 };
 
 // These are the types of the props that are passed to the component

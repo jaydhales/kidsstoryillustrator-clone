@@ -5,7 +5,16 @@ import TableRow from "../TableRow";
 import {CiSearch} from "react-icons/ci";
 
 const Table = () => {
+
   const TableData= [
+
+  {
+      email: "cyntianduka@unimaid.edu.ng",
+      firstName: "Cynthia",
+      lastName: "Nduka",
+      userType: "Premium",
+      location: "Imo State",
+  },
 
   {
       email: "markessien@hng.zuri.ng",
@@ -529,7 +538,7 @@ const paginatedData = TableData.filter((users) => {
     <div className="table_f-wrap">
 
    <table className="min-w-full_divide-y-divide-gray-200">
-    <tr>
+    <tr >
       <td>Email</td>
       <td>First Name</td>
       <td>Last Name</td>
@@ -539,7 +548,7 @@ const paginatedData = TableData.filter((users) => {
 
 
     {paginate(paginatedData, 0, 10).map((row, index) => (
-    <TableRow key={index} data={row}/>
+    <TableRow key={index} data={row} />
 
     )
   

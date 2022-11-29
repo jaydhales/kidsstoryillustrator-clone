@@ -1,8 +1,5 @@
-// <<<<<<< HEAD
-// =======
-// @import "./theme/sass/variables";
 
-// >>>>>>> FE-main
+@import "./theme/sass/variables";
 :root {
   --primary-color: #aa0136;
   --primary-text-color: #131313;
@@ -534,6 +531,17 @@ body {
   padding: 48px 0;
 }
 
+.AdminLogin-branding {
+  background-position: center 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: none;
+  min-height: 800px;
+  height: 100%;
+  padding: 48px 0;
+}
+
+
 .error {
   color: #a50a17;
   margin-bottom: 8px;
@@ -544,13 +552,11 @@ body {
     display: flex;
   }
 
-// <<<<<<< HEAD
-// =======
-//   #logo2 {
-//     display: none;
-//   }
+
+  #logo2 {
+    display: none;
+  }
   
-// >>>>>>> FE-main
   .two-column div {
     flex: 1;
   }

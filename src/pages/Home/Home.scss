@@ -1,6 +1,20 @@
 .Home {
   padding: 2rem;
 
+  .home-container-01 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
+
+  @media (min-width: 1000px) {
+    .home-container-01 {
+      padding-left: 45px;
+    }
+  }
+
+
   .Landing {
     display: flex;
     margin: auto;
@@ -28,28 +42,34 @@
   .header-text {
     color: #131313;
     font-weight: 900;
+    line-height: normal;
     font-size: 4rem;
   }
   p {
     font-weight: 500;
     color: #717171;
   }
-  button {
-    padding: 1rem;
-    border-radius: 56px;
+  .respons_btn_size_435 {
+    padding: 13px 14px;
     width: 230px;
+    border-radius: 56px;
     font-weight: 500;
     border: 1px solid #aa0136;
-  }
-  .create {
-    background-color: #aa0136;
-    color: #ffffff;
-  }
-  .read {
-    background: transparent;
-    color: #aa0136;
     font-size: 14px;
     font-weight: 500;
+  }
+  .button--grid {
+    display: flex;
+    gap: 13px;
+
+    .create {
+      background-color: #aa0136;
+      color: #ffffff;
+    }
+    .read {
+      background: transparent;
+      color: #aa0136;
+    }
   }
   .span {
     color: #aa0136;
@@ -144,11 +164,6 @@
     margin-bottom: 24px;
   }
 
-  @media screen and (min-width: 1190px) {
-    .read {
-      margin-left: 1rem;
-    }
-  }
   @media screen and (min-width: 801px) and (max-width: 1189px) {
     .steps {
       padding: 0 5em;
@@ -161,18 +176,15 @@
       grid-template-columns: 1fr;
       padding: 1em;
     }
-    .read{
-      margin-top: 1rem;
-    }
     .steps{
       grid-template-columns: 1fr;
-    }
-    .header-text{
-      font-size: 2rem;
     }
     .button--grid {
       text-align: center;
       margin: 1em 0;
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
     }
   }
 }

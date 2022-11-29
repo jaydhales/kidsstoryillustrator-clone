@@ -20,15 +20,15 @@ export const Home = () => {
     <Layout>
       <div className="Home">
         <header>
-          <section className="text">
+          <section className="text home-container-01">
             <h1 className="header-text">Generate Story Illustrations</h1>
             <p className="lead">
               Describe your scene. Our AI will generate the illustrations in
               details
             </p>
             <div className="button--grid">
-              <button className="create" onClick={() => navigate('/login')} >Create Stories</button>
-              <button className="read">Read Stories</button>
+              <button className="create respons_btn_size_435" onClick={() => navigate('/login')} >Create Stories</button>
+              <button className="read respons_btn_size_435">Read Stories</button>
             </div>
           </section>
           <section className="image">
@@ -153,7 +153,7 @@ export const Home = () => {
           </div>
         </section>
         <div className="button--flex">
-          <button>Create Story</button>
+          <button className="respons_btn_size_435" onClick={() => navigate('/createStory')}>Create Story</button>
         </div>
         <h3 style={{ margin: "1em" }} className='h3-header'>Testimonials</h3>
         <section className="testimonials">
