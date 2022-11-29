@@ -1,6 +1,7 @@
 import React from "react";
 import BlogPostCard from "../../atoms/BlogPostCard";
 import "./BlogPost.scss";
+import { PreviousNextBTN } from "../../atoms/previous";
 
 
 const postCardDetails = [
@@ -69,6 +70,7 @@ const BlogPost = () => {
           <BlogPostCard key={card.id} {...card} />
         ))}
       </div>
+      <PreviousNextBTN />
 
       </div>
     </div>
