@@ -63,9 +63,9 @@ export class User extends BaseHandler {
                 if (user) {
                     const payload = {
                         _id: user._id,
-                        firstName: user.firstName,
-                        lastName: user.lastName,
-                        email: user.email
+                        username: user.username,
+                        email: user.email,
+                        isAdmin: user.isAdmin,
                     };
 
                     if (!bcrypt.compareSync(password, user.hash)) {

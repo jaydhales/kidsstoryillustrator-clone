@@ -1,6 +1,6 @@
 import express from 'express';
 import { StoryLookUp } from '../handlers/story';
-import protect from '../middleware/auth';
+import { protect } from '../middleware/auth';
 
 const router = express.Router();
 
