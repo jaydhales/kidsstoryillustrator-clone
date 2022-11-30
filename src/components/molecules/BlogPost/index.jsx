@@ -1,6 +1,7 @@
 import React from "react";
 import BlogPostCard from "../../atoms/BlogPostCard";
 import "./BlogPost.scss";
+import { PreviousNextBTN } from "../../atoms/previous";
 
 
 const postCardDetails = [
@@ -19,6 +20,7 @@ const postCardDetails = [
     image: "pic6",
     title: "More Fun With 3d Illustrations",
     content: "With a well thought inspiration on including 3d illustration generator upcoming. We are trilled about what the future holds...",
+    
   },
 ]
 
@@ -68,6 +70,7 @@ const BlogPost = () => {
           <BlogPostCard key={card.id} {...card} />
         ))}
       </div>
+      <PreviousNextBTN />
 
       </div>
     </div>
