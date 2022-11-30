@@ -46,7 +46,7 @@ export const Settings = () => {
   }
 
   return (
-    <div className="container-cover">
+    <div className="account-settings">
       <div className="dashboard">
         <div className="sidebar">
           <div className="sidebar-menu">
