@@ -14,5 +14,8 @@ router
     .route('/signin')
     .post(validateSignin, User.signin)
 
+router
+    .route('/getAllUsers')
+    .get(authorizeAdmin, User.getAllUsers)
 
 export default router
