@@ -23,6 +23,13 @@ export const User = () => {
 
   const [submitted, setSubmitted] = useState(false);
   const [valid, setValid] = useState(false);
+  const [access, setAccess] = useState("Manage who can access your account")
+  const [cancel, setCancel] = useState("X")
+
+  function removeContent() {
+    setAccess("")
+    setCancel("")
+  }
 
   function handleChange(event) {
     setFormData((prevFormData) => {
@@ -105,8 +112,8 @@ export const User = () => {
           <h2 className="head">Account Information </h2>
           <div className="fit">
             <div className="user-access">
-              <h3 className="text-1">Manage who can access your account</h3>
-              <p>X</p>
+              <h3 className="text-1">{access}</h3>
+              <p onClick={removeContent}>{cancel}</p>
             </div>
             <p className="text">Choose users who can access your kids A.I</p>
             <div className="user-input">
@@ -131,7 +138,7 @@ export const User = () => {
                   <IoIosArrowDown />
                 </span>
               </div>
-              <button>Grant access</button>
+              <button onClick={() => window.location.reload(false)}>Grant access</button>
             </div>
 
             <div className="user-names">
@@ -155,7 +162,7 @@ export const User = () => {
 
             <div className="user-btns">
               <button className="user-btn1">Cancel</button>
-              <button className="user-btn2">Save Changes</button>
+              <button className="user-btn2" onClick={() => window.location.reload(false)}>Save Changes</button>
             </div>
           </div>
         </div>
