@@ -18,4 +18,8 @@ router
     .route('/getAllUsers')
     .get(authorizeAdmin, User.getAllUsers)
 
+router
+    .route('/deleteUser')
+    .delete(authorizeAdmin, User.deleteUser)
+
 export default router

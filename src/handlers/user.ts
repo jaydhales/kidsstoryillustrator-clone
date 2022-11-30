@@ -4,6 +4,7 @@ import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import isEmail from 'validator/lib/isEmail';
 import UserModel from '../model/user.model';
+import { Types } from 'mongoose';
 
 const secret = process.env.SECRET as string;
 export class User extends BaseHandler {
@@ -111,6 +112,35 @@ export class User extends BaseHandler {
         message: 'It is not you, it is us, in a while the server will be up',
         error_message: error.message
       });
+    }
+  }
+
+  static async deleteUser(req: Request, res: Response) {
+    const userId = req.params.id;
+
+    try {
+      if (Types.ObjectId.isValid(userId)) {
+        const user = await UserModel.findByIdAndDelete(userId);
+
+        if (!user) {
+          return res.status(404).send({
+            success: false,
+            message: 'User not found'
+          });
+        } else {
+          return res.status(200).send({
+            success: true,
+            message: 'User Successfully Deleted'
+          });
+        }
+      } else {
+        return res.status(404).send({
+          success: false,
+          message: 'Invalid UserID'
+        });
+      }
+    } catch (error) {
+      throw new Error((error as Error).message);
     }
   }
 }
