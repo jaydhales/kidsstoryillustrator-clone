@@ -19,7 +19,7 @@ router
     .get(authorizeAdmin, User.getAllUsers)
 
 router
-    .route('/deleteUser')
+    .route('/deleteUser/:id')
     .delete(authorizeAdmin, User.deleteUser)
 
 export default router
