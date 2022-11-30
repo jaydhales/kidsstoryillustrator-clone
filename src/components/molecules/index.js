@@ -22,3 +22,4 @@ export { default as Testimonial } from "./Testimonial";
 export { default as UserDashboardSide } from "./UserDashboardSide";
 export { default as UserDashboardHeader } from "./UserDashboardHeader";
 export { default as UserDashboardMain } from "./UserDashboardMain";
+export { default as AdminSideNav } from "./AdminSideNav";

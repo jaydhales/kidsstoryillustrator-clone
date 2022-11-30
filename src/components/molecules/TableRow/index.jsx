@@ -1,11 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
-
+import { useNavigate } from "react-router-dom";
 
 const TableRow=(data)=>{
+  const navigate = useNavigate();
   const { email, firstName, lastName, userType, location}= data.data;
   return(
-        <tr>
+        <tr onClick={() => navigate('/admin/userdetails')}>
       <td>{email}</td>
       <td>{firstName}</td>
       <td>{lastName}</td>

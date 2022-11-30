@@ -31,16 +31,19 @@ import {
   SummaryActivities,
   Info,
   Users,
-  Settings,
   UserList,
+  Settings,
   UserDashboard,
   Archive,
-  UserDetails,
   UserStoriesList,
-  AdminDashBoard,
   UserStory
   
 } from "./pages";
+import AdminDashBoard from "./pages/Admin/Admin-Dashboard";
+import AdminLogin from "./pages/Admin/AdminLogin";
+import AdminSignup from "./pages/Admin/AdminSignup";
+import UserDetails from "./pages/Admin/UserDetails";
+
 
 const DefaultRoutes = (
   <>
@@ -76,22 +79,26 @@ const ProtectedRoutes = (
     <Route path="/profile/edit" element={<ProfileEdit />} />
     <Route path="/account-info" element={<Info />} />
     <Route path="/account-settings" element={<Settings />} />
+    <Route path="/billing" element={<Billing />} />
+    <Route path="/cancelSubscription" element={<CancelSubscription />} />
     <Route path="/createStory" element={<CreateStory />} />
     <Route path="/summaryActivities" element={<SummaryActivities />} />
     <Route path="/users" element={<Users />} />
-    </>
+  </>
 );
 
-
-const AdminRoutes =(
+const AdminRoutes = (
   <>
     {ProtectedRoutes}
     <Route path="/admin" element ={<AdminDashBoard/>}/>
     <Route path="/admin/userlist" element ={<UserList/>}/>
     <Route path="/admin/userdetails/:id" element={<UserDetails/>} />
-    <Route path="/admin/archive" element ={<Archive/>}/>
     <Route path="/admin/user-stories" element ={<UserStoriesList/>}/>
     <Route path="/admin/userstory/:id" element ={<UserStory/>}/>
+    <Route path="/admin/adminlogin" element ={<AdminLogin/>}/>
+    <Route path="/admin/adminsignup" element ={<AdminSignup/>}/>
+    <Route path="/admin/userdetails/" element={<UserDetails/>} />
+    <Route path="/admin/archive" element ={<Archive/>}/>
 
   </>
 );

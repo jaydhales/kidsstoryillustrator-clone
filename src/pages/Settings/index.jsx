@@ -5,15 +5,15 @@ import PropTypes from "prop-types";
 
 import "./AcctSetup.scss";
 // Images
-import logo from "../../../assets/images/logo.svg";
-import user from "../../../assets/images/profile.svg";
-import group from "../../../assets/images/group.svg";
-import edit from "../../../assets/images/edit.svg";
-import profile from "../../../assets/images/profile-circle.svg";
-import blog from "../../../assets/images/blogger.svg";
-import setting from "../../../assets/images/setting-2.svg";
-import avatar from "../../../assets/images/avatar.svg";
-import logout from "../../../assets/images/logout.svg";
+import logo from "../../assets/images/logo.svg";
+import user from "../../assets/images/profile.svg";
+import group from "../../assets/images/group.svg";
+import edit from "../../assets/images/edit.svg";
+import profile from "../../assets/images/profile-circle.svg";
+import blog from "../../assets/images/blogger.svg";
+import setting from "../../assets/images/setting-2.svg";
+import avatar from "../../assets/images/avatar.svg";
+import logout from "../../assets/images/logout.svg";
 
 export const Settings = () => {
   const [formData, setFormData] = useState({

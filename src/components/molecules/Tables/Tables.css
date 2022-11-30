@@ -1,5 +1,5 @@
 .table-wrapper{
-    width: 98vw;
+    width: 80vw;
     padding: 0;
     margin: 0;
 }
@@ -10,9 +10,9 @@ table, td, th{
   overflow-x:auto;
 }
 .table-wrapper table{
-    width: 80%;
+    width: 85%;
         border-spacing: 30px;
-        margin: 0% 10%;
+        margin: 0% 5%;
 }
 
 td, th{
@@ -20,6 +20,7 @@ td, th{
   }
   tr{
     text-align: center;
+    cursor: pointer;
   }
 
 tr:hover {
@@ -43,8 +44,8 @@ tr:hover {
       .header-wrapper_container{
         display: flex;
         justify-content: space-between;
-        padding: 0% 10%;
-        margin-top: 10%;
+        padding: 0% 10% 0% 5%;
+        margin-top: 5%;
         align-items: center;
       }
 
@@ -95,7 +96,8 @@ tr:hover {
       .sort-page-container{
         display: flex;
         justify-content: space-between;
-        padding: 2% 12%;
+        padding: 2% 10% 2% 5%;
+        
         align-items: center;
       }
 

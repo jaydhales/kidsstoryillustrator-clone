@@ -1,7 +1,7 @@
-* {
+.main-container {
   margin: 0;
   padding: 0;
-}
+
 
 .user-container {
   display: flex;
@@ -369,4 +369,5 @@
   .user-btn2 {
     padding: 15px;
   }
+}
 }
