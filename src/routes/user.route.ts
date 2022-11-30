@@ -1,6 +1,7 @@
 import express from 'express';
 import { User } from '../handlers/user';
 import { validateSignin, validateSignup } from '../middleware/validate';
+import { authorizeAdmin } from '../middleware/auth';
 
 const router = express.Router();
 
