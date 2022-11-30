@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { BaseHandler } from '../interfaces';
+import { BaseHandler, IUser } from '../interfaces';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import isEmail from 'validator/lib/isEmail';
@@ -142,5 +142,52 @@ export class User extends BaseHandler {
     } catch (error) {
       throw new Error((error as Error).message);
     }
+  }
+
+  static async updateAUser(req: Request, res: Response) {
+
+    try {
+        const userId = req.params.id
+        const { username, email, isAdmin } = req.body
+
+        if (Types.ObjectId.isValid(userId)) {
+
+            UserModel.findById({ _id: userId }, (error: Error, document: IUser) => {
+                if (error) return res.send({ success: false, message: 'Update failed: ' + error })
+
+                if (document) {
+                    document.username = username || document.username
+                    document.email = email || document.email
+                    document.isAdmin = isAdmin || document.isAdmin
+
+                    document.save().then(async (user: IUser) => {
+
+                        return res.status(200).send({
+                            success: true,
+                            message: 'User Updated Successfully',
+                            data: user
+                        })
+                    }).catch((error: Error) => {
+                        throw new Error(error.message);
+                    })
+                } else {
+                    return res.status(404).send(
+                        {
+                            success: false,
+                            message: 'User not found'
+                        })
+                }
+            })
+        } else {
+            return res.status(404).send(
+                {
+                    success: false,
+                    message: 'Invalid ID'
+                })
+        }
+    } catch (error) {
+        throw new Error((error as Error).message);
+    }
+
   }
 }

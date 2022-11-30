@@ -1,25 +1,17 @@
 import express from 'express';
 import { User } from '../handlers/user';
-import { validateSignin, validateSignup } from '../middleware/validate';
 import { authorizeAdmin } from '../middleware/auth';
 
 const router = express.Router();
 
 router
-    .route('/signup')
-    .post(validateSignup, User.signup)
-
-
-router
-    .route('/signin')
-    .post(validateSignin, User.signin)
-
-router
-    .route('/getAllUsers')
+    .route('/')
     .get(authorizeAdmin, User.getAllUsers)
 
 router
-    .route('/deleteUser/:id')
+    .route('/:id')
+    .put(authorizeAdmin, User.updateAUser)
     .delete(authorizeAdmin, User.deleteUser)
+
 
 export default router
