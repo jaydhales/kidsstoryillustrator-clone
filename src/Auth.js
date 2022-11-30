@@ -48,7 +48,7 @@ const DefaultRoutes = (
     <Route path="/" element={<Home />} />
     <Route path="/about" element={<About />} />
     <Route path="/blog" element={<Blog />} />
-    <Route path="/blog/:id" element={<BlogDetails />} />
+    <Route path="/blogDetails" element={<BlogDetails />} />
     <Route path="/contact" element={<Contact />} />
     <Route path="/error" element={<Error />} />
     <Route path="/faq" element={<FAQ />} />

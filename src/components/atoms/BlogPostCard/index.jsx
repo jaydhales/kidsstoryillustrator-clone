@@ -6,7 +6,7 @@ import "./BlogPostCard.scss";
 import pic8 from "./pic8.png";
 import PropTypes from "prop-types";
 import { SmallImg } from "../../../icons";
-import './BlogPostCard.scss';
+import "./BlogPostCard.scss";
 
 const BlogPostCard = ({
   image,
@@ -19,37 +19,35 @@ const BlogPostCard = ({
   const id = useId();
 
   return (
-    <Link to={`/BlogPage`} className="BlogPostcard__link"><section className="BlogPostCard" id="BlogPost_Card">
-      <div className="BlogPostCard__heading">
-        <div className="BlogPostCard__content">
-          <div className="BlogPostCard__content-img">
-            <img src={pic8} alt="" className="BlogPostCard__content-image" />
+    <Link to={`/blogDetails`} className="BlogPostcard__link">
+      <section className="BlogPostCard" id="BlogPost_Card">
+        <div className="BlogPostCard__heading">
+          <div className="BlogPostCard__content">
+            <div className="BlogPostCard__content-img">
+              <img src={pic8} alt="" className="BlogPostCard__content-image" />
+            </div>
+            <div className="BlogPostCard__title">
+              <small>
+                <b>{heading}</b>
+              </small>
+              <small className="small_date">{date}</small>
+            </div>
           </div>
-          <div className="BlogPostCard__title">
-            <small>
-              <b>{heading}</b>
-            </small>
-            <small className="small_date">{date}</small>
-          </div>
+          <SmallImg />
         </div>
-        <SmallImg />
-      </div>
 
-      
-      <img
-        src={`/${relativeUrl ?? "image"}/${image}.png`}
-        alt="blog card"
-        className="BlogPostCard__img"
-      />
-      
+        <img
+          src={`/${relativeUrl ?? "image"}/${image}.png`}
+          alt="blog card"
+          className="BlogPostCard__img"
+        />
 
-      <div>
-        <h3>{title}</h3>
-        <p>{content}</p>
-      </div>
-    </section>
+        <div>
+          <h3>{title}</h3>
+          <p>{content}</p>
+        </div>
+      </section>
     </Link>
-    
   );
 };
 

@@ -31,21 +31,22 @@
     &__ul li{
         padding-bottom: 1rem;
     }
+
+    .BlogDetails__headerone {
+        font-size: 45px;
+        font-weight: 700;
+        margin: 40px 0;
+     }
+    
+     .BlogDetails_para {
+        font-size: 14px;
+        font-weight: 400;
+     }
+    
+     .Blogcontent_para, .Blogcontent_list {
+        font-size: 16px;
+        font-weight: 400;
+        margin: 20px 0;
+     }
 }
- .header_one {
-    font-size: 45px;
-    font-weight: 700;
-    margin: 40px 0;
- }
-
- .BlogDetails_para {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 40px;
- }
-
- .Blogcontent_para, .Blogcontent_list {
-    font-size: 16px;
-    font-weight: 400;
-    margin-bottom: 20px;
- }
+ 
