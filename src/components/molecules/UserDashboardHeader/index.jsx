@@ -11,7 +11,7 @@ export const UserDashboardHeader = () => {
       <div className="UserDashboardHeader">
         <div className="dashHead">
           <div className="story">
-            <a href="#home">My Story</a>
+            <a href="">My Story</a>
           </div>
           <div className="dropdown">
             <button className="dropbtn">This Week</button>

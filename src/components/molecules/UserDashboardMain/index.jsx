@@ -216,7 +216,7 @@ export const UserDashboardMain = () => {
 
               <p>
                 <br />
-                <button>View</button>
+                <button>Views</button>
               </p>
             </div>
           </div>

@@ -4,16 +4,11 @@ import PropTypes from "prop-types";
 
 import "./UserDashboard.scss";
 import UserDashboardSide from "../../components/molecules/UserDashboardSide";
-import UserDashboardHeader from "../../components/molecules/UserDashboardHeader";
-import UserDashboardMain from "../../components/molecules/UserDashboardMain";
 
 export const UserDashboard = () => {
   return (
     <div className="UserDashboard">
       <UserDashboardSide />
-      <UserDashboardHeader/>
-      <UserDashboardMain/>
-
     </div>
   );
 };

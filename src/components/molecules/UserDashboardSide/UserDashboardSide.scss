@@ -5,7 +5,7 @@
 
   .sidebar {
     margin: 0;
-    padding: 30px;
+    padding: 5px 30px;
     width: 272px;
     background-color: #ffffff;
     position: fixed;
@@ -13,9 +13,9 @@
     overflow: auto;
     border: 1px solid #d2d2d2;
   }
-.sidebar #linktext .sidebarIcon{
+  .sidebar #linktext .sidebarIcon {
     width: 24px;
-}
+  }
   .sidebar #linktext {
     display: block;
     color: black;
@@ -27,74 +27,77 @@
   .logo {
     width: 110px;
   }
-  
 
   .sidebar #linktext.active {
-    padding: 12px 24px;
+    padding: 12px 12px;
     gap: 8px;
     color: white;
     background: #aa0136;
     border-radius: 56px;
-    margin-top: 50px;
+    margin-top: 40px;
+    width: 163px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  .sidebar #linktext.logout{
+  .sidebar #linktext.logout {
     color: #aa0136;
     background: white;
     border-radius: 8px;
-    width:163px ;
+    width: 163px;
     margin-top: 80px;
     margin-left: auto;
     margin-right: auto;
   }
 
-
-  .sidebar #linktext.upgrade{
+  .sidebar #linktext.upgrade {
     color: #aa0136;
     background: white;
     border-radius: 8px;
     border: 1px solid #aa0136;
-    width:163px ;
+    width: 163px;
     margin-left: auto;
     margin-right: auto;
     font-size: 10px;
   }
 
-  .sidebar #linktext.mystory{
-    padding: 12px 24px;
+  .sidebar #linktext.newstory {
+    padding: 12px 12px;
     gap: 8px;
-    color: white;
-    background: #aa0136;
+    color: #646363;
+    background: #eeccd7;
     border-radius: 56px;
-    margin-top: 40px;
-    width:163px ;
-    margin-left: auto;
-    margin-right: auto;
+    margin-top: 30px;
   }
 
-  .sidebar #linktext.stories{
+  .sidebar #linktext.stories {
     padding: 12px 24px;
     gap: 8px;
     color: #646363;
-    background: #EECCD7;
+    background: #eeccd7;
     border-radius: 56px;
     margin-top: 40px;
-    width:163px ;
+    width: 163px;
     margin-left: auto;
     margin-right: auto;
   }
 
-  .sidebar #linktext.account{
+  .sidebar #linktext.account {
     gap: 8px;
-    margin-top: 160px;
+    margin-top: 140px;
+    border-radius: 8px;
+    width: 163px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .sidebar #linktext.icon {
     display: none;
   }
 
-  .sidebar #linktext:hover:not(.active) {
-    color: #aa0136;
+  .sidebar #linktext:hover:not(.active, .logo) {
+    background-color: #aa0136;
+    color: #ffffff;
   }
 
   div.content {
@@ -112,7 +115,6 @@
     left: 0;
     background-color: white;
     overflow-y: hidden;
-    
   }
 
   .overlayClose {
@@ -123,7 +125,6 @@
     top: 0;
     left: 0;
     overflow-y: hidden;
-    
   }
 
   .overlay-content {
@@ -148,9 +149,9 @@
     color: black;
   }
 
-img{
+  img {
     display: revert;
-}
+  }
   @media screen and (max-height: 650px) {
     .overlay {
       overflow-y: auto;
@@ -158,7 +159,6 @@ img{
     .overlay #linktext {
       font-size: 20px;
     }
-    
   }
 
   @media screen and (max-width: 899px) {
@@ -177,10 +177,9 @@ img{
       margin-left: 0;
     }
     .sidebar #linktext.icon {
-        display: none;
-      }
+      display: none;
+    }
   }
- 
 
   @media screen and (max-width: 900px) {
     .sidebar #linktext:not(:first-child) {
@@ -192,5 +191,5 @@ img{
       display: block;
       padding: 5px;
     }
-  }  
+  }
 }
