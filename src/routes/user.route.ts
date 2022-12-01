@@ -13,5 +13,9 @@ router
     .route('/signin')
     .post(validateSignin, User.signin)
 
+router
+    .route('/forgot-password')
+    .post(User.forgotPassword)
+
 
 export default router
