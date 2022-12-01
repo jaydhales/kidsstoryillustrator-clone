@@ -4,9 +4,9 @@ import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 
 
-import logo from "../../../assets/images/dashboard/logo.svg";
-import group from "../../../assets/images/dashboard/group.svg";
-import profile from "../../../assets/images/dashboard/profile-circle.svg";
+import logo from "../../../assets/images/dashboard/logo*.svg";
+import group from "../../../assets/images/dashboard/user-octagon.svg";
+import profile from "../../../assets/images/dashboard/category-2.svg";
 import setting from "../../../assets/images/dashboard/setting-2.svg";
 import avatar from "../../../assets/images/dashboard/avatar.svg";
 import logout from "../../../assets/images/dashboard/logout.svg";
@@ -30,10 +30,11 @@ const AdminSideNav =()=>{
         <div className="sidebar-logo">
           <img src={logo} alt="logo" />
         </div>
+        <hr className='hr'/>
         <div className="Desktop-sidenav-view">
         <div className="sidebar-menu">
         <div className="setting side">
-            <img src={setting} alt="setting" />
+            <img src={profile} alt="profile" />
             <p onClick={() => navigate('/admin')}>Dashboard</p>
           </div>
           <div className="group side">
@@ -41,7 +42,7 @@ const AdminSideNav =()=>{
             <p onClick={() => navigate('/admin/userlist')}>All Users </p>
           </div>
           <div className="profile side">
-            <img src={profile} alt="profile" />
+            <img src={setting} alt="setting" />
             <p onClick={() => navigate('/admin/archive')}>Archived Users</p>
           </div>
           
