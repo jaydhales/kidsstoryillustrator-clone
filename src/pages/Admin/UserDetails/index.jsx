@@ -31,7 +31,7 @@ export const UserDetails = () => {
   const noOfStories = 48;
   const timeSpent = 20;
   return (
-    <div className="dashboard">
+    <div className="USER-dashboard">
       <AdminSideNav/>
       <div className="main-board">
         <div className="user-header">
