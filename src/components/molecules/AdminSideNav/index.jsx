@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 
 
-import logo from "../../../assets/images/dashboard/logo*.svg";
+import logo from "../../../assets/images/dashboard/logo.svg";
 import group from "../../../assets/images/dashboard/user-octagon.svg";
 import profile from "../../../assets/images/dashboard/category-2.svg";
 import setting from "../../../assets/images/dashboard/setting-2.svg";
@@ -12,9 +12,6 @@ import avatar from "../../../assets/images/dashboard/avatar.svg";
 import logout from "../../../assets/images/dashboard/logout.svg";
 import sidenavHamburger from "../../../assets/images/dashboard/sidenavHamburger.png";
 import AdminHamburger from "../AdminSideNavMobile";
-
-
-
 
 
 const AdminSideNav =()=>{
@@ -45,18 +42,22 @@ const AdminSideNav =()=>{
             <img src={setting} alt="setting" />
             <p onClick={() => navigate('/admin/archive')}>Archived Users</p>
           </div>
-          
         </div>
+        <div className="footer--profile">
+        <hr className="footer-hr"/>
         <div className="avatar-zone">
           <div className="avatar">
             <img src={avatar} alt="avatar" />
           </div>
-          <h4>Mark Essien</h4>
-          <p>Admin</p>
+          <div>
+            <h4>Mark Essien</h4>
+            <p>Admin</p>
+          </div>
         </div>
         <div className="log-out">
           <img src={logout} alt="logout" />
           <p onClick={() => navigate('/admin/adminlogin')}>Sign Out</p>
+        </div>
         </div>
         </div>
       </div>

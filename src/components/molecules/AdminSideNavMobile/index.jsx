@@ -39,8 +39,10 @@ const AdminHamburger=(props)=>{
           <div className="avatar">
             <img src={avatar} alt="avatar" />
           </div>
-          <h4>Mark Essien</h4>
-          <p>Admin</p>
+          <div>
+            <h4>Mark Essien</h4>
+            <p>Admin</p>
+          </div>
         </div>
         <div className="log-out">
           <img src={logout} alt="logout" />

@@ -15,6 +15,9 @@ bottom: 0;
   overflow-x: hidden; 
   padding-top: 20px;
 }
+img{
+  max-width: 100%;
+}
 
   .sidebar-logo > img {
     width: 70%;
@@ -66,18 +69,17 @@ display: none;
 
 .avatar-zone {
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
+    margin-top: 0%;
   }
   
   .avatar {
     display: flex;
-    justify-content: center;
   }
   
   .avatar > img {
-    width: 20%;
+    margin-right: 10px;
+    height: 50px;
+    width: 50px;
     margin-bottom: 10px;
   }
   
@@ -103,11 +105,10 @@ display: none;
   .log-out {
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 10px;
-    margin-top: 20%;
     padding: 10px;
     color: #aa0136;
+    margin-top: 2rem;
     border-radius: 56px;
     cursor: pointer;
   }
@@ -126,6 +127,14 @@ display: none;
     color: #aa0136;
   }
 
+  .footer--profile{
+    position: absolute;
+    padding-bottom: 2rem;
+    bottom: 0;
+  }
+  .footer-hr{
+    margin: 1rem 0;
+  }
   .side p:hover {
     color: #aa0136;
   }
