@@ -4,10 +4,9 @@ import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import isEmail from 'validator/lib/isEmail';
 import UserModel from '../model/user.model';
-import sendEmail from '../utils/sendEmail';
+// import sendEmail from '../utils/sendEmail';
 
-const secret = 'abc123'
-// const secret = process.env.SECRET as string
+const secret = process.env.SECRET as string
 export class User extends BaseHandler {
 
     static async signup(req: Request, res: Response) {
@@ -92,7 +91,7 @@ export class User extends BaseHandler {
     }
 
     static async forgotPassword(req: Request, res: Response) {
-        const { email } = req.body;
+        const { email, old_password, new_password } = req.body;
         try {
             if (!isEmail(email)) {
                 return res.status(400).send({ message: 'Invalid Email' });
@@ -101,16 +100,22 @@ export class User extends BaseHandler {
                 if(!user){
                     return res.status(400).send({ message: 'Email or password incorrect' });
                 }
-                const payload = {
-                    _id: user._id,
-                    firstName: user.firstName,
-                    lastName: user.lastName,
-                    email: user.email
-                };
-                const token = jwt.sign({ ...payload }, secret, { expiresIn: '24h' });
-                const link = `${process.env.BASE_URL}/password_reset/${user._id}/${token}`;
-                await sendEmail('jigah4thjuly@gmail.com', 'Password Reset Link', link);
-                res.send('Password reset link sent to your email account!')
+                // const payload = {
+                //     _id: user._id,
+                //     firstName: user.firstName,
+                //     lastName: user.lastName,
+                //     email: user.email
+                // };
+                // const token = jwt.sign({ ...payload }, secret, { expiresIn: '24h' });
+                // const link = `${process.env.BASE_URL}/password_reset/${user._id}/${token}`;
+                // await sendEmail('jigah4thjuly@gmail.com', 'Password Reset Link', link);
+                // res.send('Password reset link sent to your email account!')
+                if(old_password === new_password){
+                  user.password = bcrypt.hashSync(new_password, 10);
+                  user.save()
+                } else {
+                  return res.status(400).send({ message: 'Incorrect Passwords' });
+                }
             }
         } catch (error) {
             res.send('An error occured')

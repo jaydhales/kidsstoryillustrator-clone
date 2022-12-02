@@ -3,49 +3,34 @@ import { google } from 'googleapis';
 const OAuth2 = google.auth.OAuth2;
 
 
+const client_id = process.env.CLIENT_ID as string;
+const client_secret = process.env.CLIENT_SECRET as string;
+const refresh_token = process.env.REFRESH_TOKEN as string;
+const authUser = process.env.USER as string;
+
+const OAuth2_client = new OAuth2(client_id, client_secret);
+OAuth2_client.setCredentials({ refresh_token});
+
 const sendEmail = async(email: any, subject: any, text: any) => {
     try {
-        // const transporter = nodemailer.createTransport({
-        //     host: process.env.PORT,
-        //     service: process.env.SERVICE,
-        //     port: 587,
-        //     secure: true,
-        //     auth: {
-        //         user: 'jigah4july@gmail.com',
-        //         pass: 'parliament24'
-        //     }
-        // });
+        const accessToken = OAuth2_client.getAccessToken()
 
 
-        const transporter = nodemailer.createTransport({
-            host: process.env.PORT,
-            port: 587,
-            service: process.env.SERVICE,
-            secure: true,
-            auth: {
-              type: 'OAuth2',
-              user: 'jigah4july@gmail.com',
-              clientId: '436047847806-1g500jutav81d00hs9388dijsoluftsk.apps.googleusercontent.com',
-              clientSecret: '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',
-              refreshToken: process.env.REFRESH_TOKEN,
-              accessToken: process.env.ACCESS_TOKEN,
-              expires: 1484314697598
-            }
-          });
+const transporter = nodemailer.createTransport({
+  host: 'smtp.gmail.com',
+  port: 465,
+  secure: true,
+  auth: {
+    type: 'OAuth2',
+    user: authUser,
+        clientId: client_id,
+        clientSecret: client_secret,
+        refreshToken: refresh_token,
+        accessToken: accessToken,
+    expires: 1484314697598
+  }
+});
 
-        // const transporter = nodemailer.createTransport({
-        //     host: process.env.PORT,
-        //     service: process.env.SERVICE,
-        //     port: 465,
-        //     secure: true,
-        //     auth: {
-        //       type: 'OAuth2',
-        //       user: 'jigah4july@gmail.com',
-        //       clientId: '436047847806-1g500jutav81d00hs9388dijsoluftsk.apps.googleusercontent.com',
-        //       clientSecret: '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',
-        //       expires: 1484314697598
-        //     }
-        //   });
 
         await transporter.sendMail({
             from: process.env.USER,
