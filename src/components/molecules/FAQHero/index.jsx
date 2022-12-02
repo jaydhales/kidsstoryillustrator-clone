@@ -2,12 +2,18 @@ import React from "react";
 
 import PropTypes from "prop-types";
 
-import searchIcon from '../../../assets/Image/FAQ-asset/search-icon.png'
+import searchIcon from '../../../assets/Image/FAQ-asset/search-icon.png';
+// import mask from "../../../assets/images/mask.png";
+// import chatbot1 from "../../../assets/images/chatbot1.jpg";
 
 import "./FAQHero.scss";
 
 export const FAQHero = () => {
-  return <div className="FAQHero">
+  return <div className="faqheader">
+    {/* <div>
+      <img src={mask} alt="" />
+    </div> */}
+    <div className="FAQHero">
     <h1>Hello, Need help?</h1>
     <p>We are glad you are looking for an answer, our team has come up with
       the best answers for you
@@ -18,6 +24,10 @@ export const FAQHero = () => {
       </div>
       <input type='text' placeholder="Search for a question" />
     </div>
+  </div>
+  {/* <div>
+    <img src={chatbot1} alt="" />
+  </div> */}
   </div>;
 };
 

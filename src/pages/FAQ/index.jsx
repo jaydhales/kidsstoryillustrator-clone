@@ -8,20 +8,20 @@ import "./FAQ.scss";
 import FAQCategories from "../../components/molecules/FAQCategories";
 import FAQQuestions from "../../components/molecules/FAQQuestions";
 import FAQCta from "../../components/molecules/FAQCta";
+import GettingStartedQuestions from "../../components/molecules/FAQ-FrequentlyAskedQuestions/GettingStartedQuestions"
+import { Footer, Navbar } from "../../components/molecules";
 
 
 export const FAQ = () => {
   return <div>
+    <Navbar />
     <FAQHero />
-    <br/>
-    <br/>
     <FAQCategories />
-    
-    <br/>
-    <br/>
+    <GettingStartedQuestions />    
     <FAQQuestions />
     <br/>
     <FAQCta />
+    <Footer />
   </div>;
 };
 

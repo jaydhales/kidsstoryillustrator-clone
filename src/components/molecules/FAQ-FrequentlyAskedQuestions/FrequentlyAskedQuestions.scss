@@ -1,58 +1,68 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900;1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900;1000&display=swap");
+.FrequentlyAskedQuestions {
+  width: 100%;
+  font-family: "Nunito";
+  padding: 0 100px;
+  margin-top: 124px;
+  margin-bottom: 84px;
 
-.FrequentlyAskedQuestions{
-    width: 100%;
-    font-family: 'Nunito';
-    padding: 2rem;
+  .frqli_h3 h3 {
+    margin-bottom: 76px;
+    font-size: 45px;
+    font-weight: 500;
+    text-align: center;
+    color: #aa0136;
+    text-transform: capitalize;
+    margin-bottom: 60px;
+  }
 
-    .sub-question{
-        border-bottom: 1px solid #E3AABC;
-         
+  .sub-question {
+    border-bottom: 1px solid #e3aabc;
+    margin-bottom: 60px;
+  }
+
+  .sub-question p {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .questions-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0.3rem;
+  }
+
+  .main-questions-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .main-questions-container img {
+    padding-left: 1rem;
+  }
+
+  .main-questions-container p {
+    font-size: 18px;
+  }
+
+  .bullet-icon {
+    width: 24px;
+  }
+
+  .arrow-icon {
+    width: 32px;
+  }
+
+  // media queries
+  @media screen and (max-width: 900px) {
+    padding: 1rem;
+
+    .main-questions-container p {
+      font-size: 15px;
     }
-
-    .sub-question p{
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
-
-    .questions-container{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-       
-        padding: .3rem;
-    }
-
-    .main-questions-container{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: .8rem
-    }
-    
-    .main-questions-container img{
-        padding-left: 1rem;
-    }
-    
-    .main-questions-container p{
-        font-size: 18px;
-    }
-
-    .bullet-icon {
-        width: 24px;
-    }
-
-    .arrow-icon {
-        width: 32px;
-    }
-
-    // media queries
-    @media screen and (max-width: 900px ){
-        padding: 1rem;
-
-        .main-questions-container p{
-            font-size: 15px;
-        }
-
-    }
+  }
 }

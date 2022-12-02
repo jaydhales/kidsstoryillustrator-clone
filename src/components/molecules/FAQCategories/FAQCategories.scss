@@ -10,6 +10,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 80px;
+    margin-bottom: 59px;
 }
 
 .helpContainer-text h2{
@@ -31,12 +33,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
-    gap:3rem
+    gap:3rem;
+    cursor: pointer;
 }
 
 .gettingStarted-container{
-    border: 1px solid #AA0136;
+    border: 1px solid #E3AABC;
     border-radius: 8px;
     width: 280px;
     height: 220px;
@@ -97,6 +99,10 @@ h3 {
     font-weight: 500;
     font-size: 45px;
     text-transform: capitalize;
+}
+
+.categoriess_con:hover {
+    border: 1px solid #AA0136 ;
 }
 
 /* media queries */
