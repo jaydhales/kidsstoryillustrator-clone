@@ -101,6 +101,8 @@
     display: grid;
     gap: 2rem;
     grid-template-columns: 1fr 1fr;
+    padding: 1rem 4rem;
+    gap: 30px;
     margin: 2rem 0;
   }
   .number {
@@ -178,12 +180,16 @@
     }
     .steps{
       grid-template-columns: 1fr;
+      padding: 0rem;
+    }
+    .header-text{
+      font-size: 3rem;
     }
     .button--grid {
       text-align: center;
-      margin: 1em 0;
+      margin: 1em auto;
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       gap: 10px;
     }
   }
