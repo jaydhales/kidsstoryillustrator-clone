@@ -281,6 +281,51 @@
           }
         }
       }
+    },
+    "/auth/forgot-password": {
+      "post": {
+        "tags": ["User"],
+        "summary": "Forgot Password",
+        "description": "Forgot Password.",
+        "operationId": "forgotPassword",
+        "requestBody": {
+          "description": "Email of user.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/forgotPassword"
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/forgotPassword"
+              }
+            },
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "#/components/schemas/forgotPassword"
+              }
+            }
+          }
+        },
+        "responses": {
+          "default": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/User"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/User"
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -365,6 +410,14 @@
         },
         "json": {
           "name": "userLogin"
+        }
+      },
+      "forgotPassword": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string"
+          }
         }
       },
       "storyRequest": {
