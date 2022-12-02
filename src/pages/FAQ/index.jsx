@@ -16,8 +16,7 @@ export const FAQ = () => {
   return <div>
     <Navbar />
     <FAQHero />
-    <FAQCategories />
-    <GettingStartedQuestions />    
+    <FAQCategories />  
     <FAQQuestions />
     <br/>
     <FAQCta />
