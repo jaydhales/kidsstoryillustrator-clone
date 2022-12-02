@@ -5,6 +5,12 @@ const userSchema = new Schema<IUser>({
     username: {
         type: String
     },
+    firstName: {
+        type: String
+    },
+    lastName: {
+        type: String
+    },
     email: {
         type: String,
         required: [true, 'Email is required'],
