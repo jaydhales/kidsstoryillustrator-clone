@@ -16,7 +16,7 @@ export const FAQQuestions = () => {
           <img src={chatImage} alt='Chat Image' className="chat-image"/>
           <h4>Still have questions ?</h4>
           <p>Send us an email & we&#39;ll respond within 48 hours</p>
-          <Button />
+          <Button>Send an Email</Button>
         </div>
       </div>
   </div>;

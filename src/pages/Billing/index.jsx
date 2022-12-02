@@ -112,7 +112,7 @@ export const Billing = () => {
                       type="number"
                       name="cvv"
                       id="cvv"
-                      maxLength={}
+                      maxLength={5}
                       onChange={handleChange}
                       placeholder="cvv"
                     />
