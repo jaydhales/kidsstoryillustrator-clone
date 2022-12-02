@@ -147,6 +147,14 @@
 
     }
 
+    .social_last_sect {
+        margin-top: 108px;
+    }
+
+    .social-media-link_chatbot2 {
+        display: flex;
+    }
+
     .social-media-link a .social-media-link img {
         cursor: pointer;
         text-decoration: none;
@@ -191,8 +199,8 @@
 
     #chatbot2_icon {
         float: right;
-        width: 230px;
-        height: 150px;
+        width: 191px;
+        height: 226px;
         background-blend-mode: color, normal;
         mix-blend-mode: multiply;
 
@@ -250,6 +258,15 @@
             align-items: left;
             // margin: 10% 5% 0% 5%;
             // padding: 3% 5% 10% 5%;
+        }
+
+        .social-media-link_chatbot2 {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        .social_last_sect {
+            margin-top: 0;
         }
 
     }
