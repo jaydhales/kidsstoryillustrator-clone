@@ -17,10 +17,11 @@ const Contact = () => {
           <div>
 <Navbar/>
           <div className="ContactUs">
+          <p className="contactus">Contact Us</p>
                <section className="Contact-frame_container">
                     <div className='input-container'>
                          <div className="contact_heading">
-                              <p className="Contact-us">Contact Us</p>
+                              <p className="Contact-us">Drop a Message</p>
                               <p className="contact-paragraph">Get in touch by just dropping a message</p>
                          </div>
 
@@ -33,14 +34,14 @@ const Contact = () => {
                                         <input type="email" placeholder="Enter Email" value={email} onChange={(e) => { SetEmail(e.target.value) }} name="email" required />
                                    </label>
                                    <label>Drop a message
-                                        <textarea type="text" placeholder="Enter your message" value={message} onChange={(e) => { SetMessage(e.target.value) }} name="message" required />
+                                        <textarea type="text" placeholder="" value={message} onChange={(e) => { SetMessage(e.target.value) }} name="message" required />
                                    </label>
                                    <button type='submit'>Submit</button>
                               </form>
                          </div>
                     </div>
                     <div className="chatbot_wrapper">
-                         <img src="/assets/images/chatbot-2.png" id="chatbot1" alt="Metabnb_icon" />
+                         {/* <img src="/assets/images/chatbot-2.png" id="chatbot1" alt="Metabnb_icon" /> */}
                          <div className="flex-card">
                               <p>Contact Information</p>
                               <ul>
@@ -58,7 +59,7 @@ const Contact = () => {
                               </div>
                          </div>
 
-                         <img src="/assets/images/chatbot-1.png" id="chatbot2_icon" alt="chatbot_icon" />
+                         <img src="/assets/images/Group(3).png" id="chatbot2_icon" alt="chatbot_icon" />
 
 
                     </div>
