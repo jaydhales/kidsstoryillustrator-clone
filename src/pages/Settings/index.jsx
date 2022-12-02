@@ -270,23 +270,44 @@
 // export default Settings;
 
 
-import React from "react";
+import React, {useState} from "react";
 // import SettingsNavBar from "../../components/molecules/SettingsNavBar"
-import Account from "../Account";
+// import {Route, Routes} from 'react-router-dom'
+import Account from "../Users/Account";
+import Security from "../Users/Security";
+import SideBar from "../../components/molecules/SideBar"
 
 
 import PropTypes from "prop-types";
 import "./AcctSetup.scss";
 export const Settings = () => {
+  const [account, setAccount]=useState(false)
+  const [security, setSecurity]=useState(false)
+
+  const viewAcct = ()=> {
+    setAccount(prevState => !prevState)
+    setSecurity(false)
+  }
+
+  const vewSecurity = ()=> {
+    setSecurity(prevState => !prevState)
+    setAccount(false)
+  }
   return (
     <div className="Settings">
-      <div className="side-bar2">
-
-      </div>
-      <div>
-        <h2>Settings</h2>
-         {/* <SettingsNavBar/> */}
-         <Account/>
+      <div className="side-bar2"><SideBar /></div>
+     
+      <div className="wrap-content">
+        <h2 className="head-text">Settings</h2>
+        <div className="nav-section">
+        <button onClick={viewAcct}>Account</button>
+        <button onClick={vewSecurity}>Security</button>
+        <button>Billing</button>
+        </div>
+        <div>
+          {!account? <Account/>: null}
+          {security? <Security/>: null}
+        </div>
       </div>
     </div>
   )

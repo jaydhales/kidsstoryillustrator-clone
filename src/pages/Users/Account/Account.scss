@@ -38,11 +38,13 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 30px;
+    gap: 40px;
   }
 
   .input2 {
     width: 100%;
     border: 2px solid #e4e4e4;
+    height: 40px;
     border-radius: 56px;
   }
 
@@ -98,9 +100,6 @@
         flex-direction: column;
         margin: 20px 0;
     }
-
-    
-  
     
     .footer-section {
         display: block;

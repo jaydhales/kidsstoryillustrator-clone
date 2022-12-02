@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import Ellipse from "../../assets/images/Ellipse.svg";
+import Ellipse from "../../../assets/images/Ellipse.svg";
 import "./Account.scss";
 import PropTypes from "prop-types";
 export const Account = () => {
