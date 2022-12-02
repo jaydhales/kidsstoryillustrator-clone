@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 import "./FrequentlyAskedQuestions.scss";
 import arrow from "../../../assets/Image/FAQ-asset/down-arrow.png";
 import bullet from "../../../assets/Image/FAQ-asset/bullet.png";
-
+import smallchatbot from "../../../assets/images/smallchatbot.png"
 export const PricingQuestions = (props) => {
   const [pricingOne, setPricingOne] = useState(true);
   const [pricingTwo, setPricingTwo] = useState(true);
@@ -25,6 +25,9 @@ export const PricingQuestions = (props) => {
 
   return (
     <div className="FrequentlyAskedQuestions">
+      <div className="smallchatbot">
+        <img src={smallchatbot} alt="" />
+      </div>
       <div className="frqli_h3">
         <h3>Freqently asked questions</h3>
       </div>

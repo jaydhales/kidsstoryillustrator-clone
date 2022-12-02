@@ -57,6 +57,12 @@
     width: 32px;
   }
 
+  .smallchatbot {
+    width: 20%;
+    position: relative;
+    right: 113px;
+    top: 135px;
+  }
   // media queries
   @media screen and (max-width: 900px) {
     padding: 1rem;
