@@ -13,7 +13,7 @@ export class User extends BaseHandler {
       if (!isEmail(req.body.email)) {
         return res.status(400).send({ message: 'Email Invalid' });
       } else {
-        const { email, username, password } = req.body;
+        const { email, username, firstName, lastName, password } = req.body;
 
         if (password.length < 7) {
           return res
@@ -29,6 +29,8 @@ export class User extends BaseHandler {
           } else {
             return UserModel.create({
               username: username,
+              firstName: firstName,
+              lastName: lastName,
               email: email,
               hash: bcrypt.hashSync(password, 10)
             }).then((user) => {
@@ -64,6 +66,8 @@ export class User extends BaseHandler {
           const payload = {
             _id: user._id,
             username: user.username,
+            firstName: user.firstName,
+            lastName: user.lastName,
             email: user.email,
             isAdmin: user.isAdmin
           };
@@ -169,7 +173,7 @@ export class User extends BaseHandler {
 
     try {
         const userId = req.params.id
-        const { username, email, isAdmin } = req.body
+        const { username, firstName, lastName, email, isAdmin } = req.body
 
         if (Types.ObjectId.isValid(userId)) {
 
@@ -179,6 +183,8 @@ export class User extends BaseHandler {
                 if (document) {
                     document.username = username || document.username
                     document.email = email || document.email
+                    document.firstName = firstName || document.firstName
+                    document.lastName = lastName || document.lastName
                     document.isAdmin = isAdmin || document.isAdmin
 
                     document.save().then(async (user: IUser) => {
