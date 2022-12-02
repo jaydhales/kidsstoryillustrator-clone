@@ -10,8 +10,10 @@ router
 
 router
     .route('/:id')
+    .get(User.getAUser)
     .put(authorizeAdmin, User.updateAUser)
     .delete(authorizeAdmin, User.deleteUser)
+
 
 
 export default router

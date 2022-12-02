@@ -91,6 +91,27 @@ export class User extends BaseHandler {
     }
   }
 
+  static getAUser(req: Request, res: Response) {
+
+        try {
+
+            const id = req.params.id
+
+            if (Types.ObjectId.isValid(id)) {
+                UserModel.findOne({ _id: id })
+                    .then((user) => {
+                        !user
+                            ? res.status(404).send({ success: false, message: 'User not found' })
+                            : res.status(200).send({ success: true, message: 'User retrieved successfully', data: user })
+                    })
+            } else {
+                return res.status(404).send({ success: false, message: 'Invalid Id' })
+            }
+        } catch (error) {
+            throw new Error((error as Error).message)
+        }
+    }
+
   static async getAllUsers(req: Request, res: Response) {
     try {
       const allUsers = await UserModel.find();
