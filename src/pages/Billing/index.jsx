@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 
 import PropTypes from "prop-types";
 
@@ -11,6 +12,15 @@ import mastercard from "../../assets/debit-card/mastercard.png";
 import { Button } from "../../components/atoms";
 
 export const Billing = () => {
+  const [message, setMessage] = useState('');
+
+  const handleChange = event => {
+    setMessage(event.target.value);
+
+    console.log('value is:', event.target.value);
+  };
+
+
   return (
     <Layout>
       <div className="Billing">
@@ -44,7 +54,7 @@ export const Billing = () => {
                     type="text"
                     name="name"
                     id="name"
-                    value=""
+                    onChange={handleChange}
                     placeholder="Enter Full name"
                   />
                 </div>
@@ -54,7 +64,7 @@ export const Billing = () => {
                     type="text"
                     name="address1"
                     id="address1"
-                    value=""
+                    onChange={handleChange}
                     placeholder="Enter Address"
                   />
                 </div>
@@ -64,7 +74,7 @@ export const Billing = () => {
                     type="text"
                     name="address2"
                     id="address2"
-                    value=""
+                    onChange={handleChange}
                     placeholder="Enter Address 2"
                   />
                 </div>
@@ -79,7 +89,7 @@ export const Billing = () => {
                     type="text"
                     name="card-name"
                     id="card-name"
-                    value=""
+                    onChange={handleChange}
                     placeholder="Enter Name on card"
                   />
                 </div>
@@ -89,7 +99,8 @@ export const Billing = () => {
                     type="number"
                     name="card-number"
                     id="card-number"
-                    value=""
+                    minLength={3}
+                    onChange={handleChange}
                     placeholder="0000 0000 0000 0000"
                   />
                 </div>
@@ -101,7 +112,8 @@ export const Billing = () => {
                       type="number"
                       name="cvv"
                       id="cvv"
-                      value=""
+                      maxLength={}
+                      onChange={handleChange}
                       placeholder="cvv"
                     />
                   </div>{" "}
@@ -111,7 +123,7 @@ export const Billing = () => {
                       type="number"
                       name="exp-month"
                       id="exp-month"
-                      value=""
+                      onChange={handleChange}
                       placeholder="Month"
                     />
                   </div>
@@ -121,7 +133,7 @@ export const Billing = () => {
                       type="number"
                       name="exp-year"
                       id="exp-year"
-                      value=""
+                      onChange={handleChange}
                       placeholder="year"
                     />
                   </div>
