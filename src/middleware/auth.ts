@@ -3,6 +3,7 @@ import { Request, Response, NextFunction} from 'express';
 import { getToken } from './utils'
 
 const jwtSecretKey = process.env.SECRET as string
+const accessSecret = process.env.TOKEN_SECRET as string;
 
 export const protect = async (req: Request, res: Response, next: NextFunction) => {
   // get the token
@@ -43,4 +44,24 @@ export const authorizeAdmin = async (req: Request, res: Response, next: NextFunc
   } catch (err) {
       return res.send(err)
   }
+}
+
+export const signinAccessToken = (payloadHolder: any) => {
+  const secret = accessSecret;
+  const options = {
+      expiresIn: '24h'
+  }
+  const payload = {...payloadHolder}
+  const accessToken = jwt.sign(payload, secret, options);
+  return accessToken;
+}
+
+export const signinRefreshToken = (payloadHolder: any) => {
+  const secret = accessSecret;
+  const options = {
+    expiresIn: '1y'
+  }
+  const payload = {...payloadHolder}
+  const RefreshToken = jwt.sign(payload, secret, options);
+  return RefreshToken;
 }

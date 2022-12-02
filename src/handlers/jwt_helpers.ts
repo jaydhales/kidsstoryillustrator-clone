@@ -1,20 +1,13 @@
-import JWT from 'jsonwebtoken';
-// const secret = process.env.TOKEN_SECRET as string;
+import { Request, Response } from 'express';
+import UserModel from '../model/user.model';
+import { signinAccessToken } from '../middleware/auth';
 
-export const signinAccessToken = (userId: any, payload: any) => {
-    const secret = 'abc123';
-    const options = {
-        expiresIn: '24h'
-    }
-    const accessToken = JWT.sign(payload, secret, options);
-    return accessToken;
-}
 
-export const signinRefreshToken = (userId: any, payload: any) => {
-    const secret = 'bde456';
-    const options = {
-        expiresIn: '1y'
-    }
-    const RefreshToken = JWT.sign(payload, secret, options);
-    return RefreshToken;
+export const accessToken = async(req: Request, res: Response) => {
+    const user = await UserModel.findOne({email: req.body.email})
+    const accessToken = await signinAccessToken(user);
+    res.send({
+        success: true,
+        data: accessToken
+    });
 }

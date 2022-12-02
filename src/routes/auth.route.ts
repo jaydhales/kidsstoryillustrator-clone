@@ -1,4 +1,5 @@
 import express from 'express';
+import { accessToken } from '../handlers/jwt_helpers';
 import { User } from '../handlers/user';
 import { validateSignin, validateSignup } from '../middleware/validate';
 
@@ -12,6 +13,5 @@ router
 router
     .route('/signin')
     .post(validateSignin, User.signin)
-
 
 export default router
