@@ -35,6 +35,8 @@ import {
   Settings,
   UserDashboard,
   Archive,
+  Account,
+  Security,
 } from "./pages";
 import AdminDashBoard from "./pages/Admin/Admin-Dashboard";
 import AdminLogin from "./pages/Admin/AdminLogin";
@@ -76,6 +78,8 @@ const ProtectedRoutes = (
     <Route path="/account-info" element={<Info />} />
     <Route path="/account-settings" element={<Settings />} />
     <Route path="/billing" element={<Billing />} />
+    <Route path="/account" element={<Account />}/>
+    <Route path="/security" element={<Security />}/>
     <Route path="/cancelSubscription" element={<CancelSubscription />} />
     <Route path="/createStory" element={<CreateStory />} />
     <Route path="/summaryActivities" element={<SummaryActivities />} />

@@ -3,7 +3,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import "./SideBar.scss";
-import logo from '../../../assets/SideBar/story.ai.png'
+import logo from "../../../assets/img/logo.png";
 import dashboard from '../../../assets/SideBar/Profile_Icon_UIA.png'
 import userTag from '../../../assets/SideBar/user-tag.png'
 import archieve from '../../../assets/SideBar/Vector.png'

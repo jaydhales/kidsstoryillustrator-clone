@@ -1,40 +1,36 @@
-// import React from "react";
-// import "./SettingsNavBar.scss";
-// import { Route, Routes, Router, Switch, Link } from "react-router-dom"
-// import Account from "../../../pages/Account";
+import React from "react";
+import "./SettingsNavBar.scss";
+import {Route, Routes, useNavigate} from 'react-router-dom'
+// import { Account, Security } from "../../../pages";
 
-// import PropTypes from "prop-types";
-// export const SettingsNavBar = () => {
-//   return (
-//     // <Router>
-//     <div className="SettingsNavBar">
-//          <nav className="list-section">
-//             <li>
-//                 <Link href="/account">Account</Link>
-//             </li>
-//             <li>
-//                 <Link href="/security">Security</Link>
-//             </li>
-//             <li>
-//                 <Link href="/billing">Billing</Link>
-//             </li>
-//         </nav>
-   
+import PropTypes from "prop-types";
+import { Account } from "../../../pages/Users/Account";
+export const SettingsNavBar = () => {
+   const navigate = useNavigate()
+  return (
+    <div>
+        <nav className="list-section">
+         <li>
+                <button onClick={() => navigate('/account')}>Account</button>
+            </li> 
+             {/* <li>
+                <Link to="/security">Security</Link>
+          </li>
+           <li>
+               <Link to="/billing">Billing</Link>
+           </li>  */}
+       </nav>
+    </div>       
+  )
+}
+ {/* */}
 
-//         {/* <Routes>
-//             <Route path="/account" element={<Account/>}/>
-//         </Routes> */}
-//      </div>
-//     // </Router>
-//   )
-// }
+// These are the types of the props that are passed to the component
 
-// // These are the types of the props that are passed to the component
+SettingsNavBar.propTypes = {};
 
-// SettingsNavBar.propTypes = {};
+// These are their default values
 
-// // These are their default values
+SettingsNavBar.defaultProps = {};
 
-// SettingsNavBar.defaultProps = {};
-
-// export default SettingsNavBar;
+export default SettingsNavBar;
