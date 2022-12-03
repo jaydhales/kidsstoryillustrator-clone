@@ -15,9 +15,12 @@ bottom: 0;
   overflow-x: hidden; 
   padding-top: 20px;
 }
+img{
+  max-width: 100%;
+}
 
   .sidebar-logo > img {
-    width: 40%;
+    width: 70%;
   }
 .hamburger-container{
 display: none;
@@ -32,10 +35,14 @@ display: none;
     padding-top: 13%;
   }
 
+  .hr{
+    margin-top: 1rem;
+  }
   .side {
     display: flex;
     align-items: center;
     gap: 15px;
+    color: #aa0136 !important;
     margin-bottom: 15px;
     padding: 10px;
   }
@@ -54,28 +61,25 @@ display: none;
   }
 
   .side:hover,
-.side:focus, .side:active{
-  background: #aa0136;
+.side:focus, .side:active{  
   border-radius: 56px;
-  color: #f7f8f8;
   cursor: pointer;
+  filter: invert(12%) sepia(97%) saturate(3841%) hue-rotate(331deg) brightness(84%) contrast(108%);
 }
 
 .avatar-zone {
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    margin-top: 130%;
+    margin-top: 0%;
   }
   
   .avatar {
     display: flex;
-    justify-content: center;
   }
   
   .avatar > img {
-    width: 20%;
+    margin-right: 10px;
+    height: 50px;
+    width: 50px;
     margin-bottom: 10px;
   }
   
@@ -101,22 +105,17 @@ display: none;
   .log-out {
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 10px;
-    margin-top: 20%;
     padding: 10px;
-    background-color: #b21144;
+    color: #aa0136;
+    margin-top: 2rem;
     border-radius: 56px;
     cursor: pointer;
   }
   
-  .log-out:hover {
-    background-color: #aa0136;
-    color: white;
-  }
-  
   .log-out img {
     width: 12%;
+    filter: invert(12%) sepia(97%) saturate(3841%) hue-rotate(331deg) brightness(84%) contrast(108%);
   }
   
   .log-out p {
@@ -125,11 +124,19 @@ display: none;
     font-weight: 500;
     font-size: 16px;
     line-height: 22px;
-    color: #787777;
+    color: #aa0136;
   }
 
+  .footer--profile{
+    position: absolute;
+    padding-bottom: 2rem;
+    bottom: 0;
+  }
+  .footer-hr{
+    margin: 1rem 0;
+  }
   .side p:hover {
-    color: white;
+    color: #aa0136;
   }
   @media screen and (max-width: 700px) {
 

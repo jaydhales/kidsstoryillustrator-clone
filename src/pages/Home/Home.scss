@@ -101,9 +101,9 @@
     display: grid;
     gap: 2rem;
     grid-template-columns: 1fr 1fr;
-    padding: 1rem 4rem;
-    gap: 30px;
+    grid-gap: 30px;
     margin: 2rem 0;
+    padding: 1rem 4rem;
   }
   .number {
     height: 56px;
@@ -178,18 +178,19 @@
       grid-template-columns: 1fr;
       padding: 1em;
     }
-    .steps{
-      grid-template-columns: 1fr;
-      padding: 0rem;
-    }
     .header-text{
       font-size: 3rem;
     }
+    .steps{
+      grid-template-columns: 1fr;
+      padding: 0rem;
+
+    }
     .button--grid {
-      text-align: center;
-      margin: 1em auto;
-      display: flex;
       flex-direction: column;
+      justify-content: center;
+      margin: 1em auto;
+
       gap: 10px;
     }
   }
