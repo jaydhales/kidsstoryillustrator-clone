@@ -10,7 +10,7 @@ const AuthProvider = ({ children }) => {
     token: null,
   };
 
-  const apiUrl = "https://web-production-c992.up.railway.app/";
+  const apiUrl = "https://api.magicbookwriter.hng.tech/";
 
   const [myAuth, setAuth] = useState(initialAuth);
 
