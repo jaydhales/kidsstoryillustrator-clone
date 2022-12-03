@@ -24,7 +24,7 @@ pipeline {
 			steps {
 				sh "sudo rm -rf /home/samuraiaj/magicbackend/*"
 				sh "sudo cp -rf * /home/samuraiaj/magicbackend/"
-				sh "sudo cp -rf /home/oche/samuraiaj/magic-env/.env /home/samuraiaj/magicbackend"
+				sh "sudo cp -rf /home/samuraiaj/magic-env/.env /home/samuraiaj/magicbackend"
 				sh "sudo su - samuraiaj && whoami"
 				//sh "sudo systemctl restart magicfront.service"
                 		
