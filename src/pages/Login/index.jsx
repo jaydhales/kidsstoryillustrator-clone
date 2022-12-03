@@ -147,9 +147,8 @@ export const Login = () => {
                   alt="Google logo"
                   className="btn-round-img"
                 />
-                                <p>Continue with Google</p>
-
-              </button>
+                 <p>Continue with Google</p>
+                </button>
 
               <button className="btn-round" aria-label="login with google" id="facebook-login">
                 <img
@@ -157,7 +156,7 @@ export const Login = () => {
                   alt="Facebook logo"
                   className="btn-round-img"
                 />
-                                <p>Continue with Facebook</p>
+               <p>Continue with Facebook</p>
 
               </button>
 
