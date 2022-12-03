@@ -11,6 +11,9 @@ export const UserDashboard = () => {
   return (
     <div className="UserDashboard">
       <UserDashboardSide />
+      <UserDashboardHeader/>
+      <UserDashboardMain/>
+
     </div>
   );
 };

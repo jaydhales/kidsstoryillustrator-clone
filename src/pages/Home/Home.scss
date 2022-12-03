@@ -184,11 +184,13 @@
     .steps{
       grid-template-columns: 1fr;
       padding: 0rem;
+
     }
     .button--grid {
       flex-direction: column;
       justify-content: center;
       margin: 1em auto;
+
       gap: 10px;
     }
   }

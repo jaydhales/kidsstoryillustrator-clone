@@ -35,6 +35,9 @@ import {
   Settings,
   UserDashboard,
   Archive,
+  Account,
+  Security,
+  BillingPage
 } from "./pages";
 import AdminDashBoard from "./pages/Admin/Admin-Dashboard";
 import AdminLogin from "./pages/Admin/AdminLogin";
@@ -48,7 +51,7 @@ const DefaultRoutes = (
     <Route path="/" element={<Home />} />
     <Route path="/about" element={<About />} />
     <Route path="/blog" element={<Blog />} />
-    <Route path="/blog/:id" element={<BlogDetails />} />
+    <Route path="/blogDetails" element={<BlogDetails />} />
     <Route path="/contact" element={<Contact />} />
     <Route path="/error" element={<Error />} />
     <Route path="/faq" element={<FAQ />} />
@@ -76,6 +79,9 @@ const ProtectedRoutes = (
     <Route path="/account-info" element={<Info />} />
     <Route path="/account-settings" element={<Settings />} />
     <Route path="/billing" element={<Billing />} />
+    <Route path="/account" element={<Account />}/>
+    <Route path="/security" element={<Security />}/>
+    <Route path="/billing-page" element={<BillingPage/>}/>
     <Route path="/cancelSubscription" element={<CancelSubscription />} />
     <Route path="/createStory" element={<CreateStory />} />
     <Route path="/summaryActivities" element={<SummaryActivities />} />
