@@ -78,6 +78,15 @@
       width: 100%;
       gap: 50px;
     }
+
+    input {
+      background-color: #E8F0FE;
+    }
+  
+    input:invalid {
+      background-color: #ffffff;
+    }
+  
   }
   .form-control {
     width: max-content;

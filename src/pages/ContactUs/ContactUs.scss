@@ -233,6 +233,14 @@
         line-height: 40px;
     }
 
+    textarea {
+        background-color: #E8F0FE;
+      }
+
+    textarea:invalid {
+        background-color: #ffffff;
+      }
+
     @media only screen and (max-width: 540px) {
 
         .Contact-frame_container {
