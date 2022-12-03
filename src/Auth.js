@@ -57,6 +57,7 @@ const DefaultRoutes = (
     <Route path="/admin/login" element={<AdminLogin />} />
     <Route path="/changePassword" element={<ChangePassword />} />
     <Route path="/forgotPassword" element={<ForgotPassword />} />
+    <Route path="/createStory" element={<CreateStory />} />
   </>
 );
 
@@ -78,7 +79,7 @@ const ProtectedRoutes = (
     <Route path="/security" element={<Security />} />
     <Route path="/billing-page" element={<BillingPage />} />
     <Route path="/cancelSubscription" element={<CancelSubscription />} />
-    <Route path="/createStory" element={<CreateStory />} />
+
     <Route path="/summaryActivities" element={<SummaryActivities />} />
     <Route path="/users" element={<Users />} />
   </>
