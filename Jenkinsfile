@@ -10,7 +10,7 @@ pipeline {
 
 			steps  {
 				sh "sudo npm"
-        sh "sudo npm run build"
+                                sh "sudo npm run build"
         
 			} 
     
