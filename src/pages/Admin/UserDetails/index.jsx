@@ -1,23 +1,15 @@
-import React from "react";
+import React, { useEffect,useState } from "react";
 
 import PropTypes from "prop-types";
-
+import Table from "../../../components/molecules/Tables";
 import "./UserDetails.scss";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 // React Circular Progressbar
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 
 // Images
-import logo from "../../../assets/images/dashboard/logo.svg";
-import user from "../../../assets/images/dashboard/profile.svg";
-import group from "../../../assets/images/dashboard/group.svg";
-import edit from "../../../assets/images/dashboard/edit.svg";
-import profile from "../../../assets/images/dashboard/profile-circle.svg";
-import blog from "../../../assets/images/dashboard/blogger.svg";
-import setting from "../../../assets/images/dashboard/setting-2.svg";
-import avatar from "../../../assets/images/dashboard/avatar.svg";
+
 import asia from "../../../assets/images/dashboard/asia.svg";
-import logout from "../../../assets/images/dashboard/logout.svg";
 import contact from "../../../assets/images/dashboard/contact.svg";
 import nav from "../../../assets/images/dashboard/nav.svg";
 import more from "../../../assets/images/dashboard/more.svg";
@@ -25,11 +17,38 @@ import image1 from "../../../assets/images/dashboard/image1.svg";
 import image2 from "../../../assets/images/dashboard/image2.svg";
 import image3 from "../../../assets/images/dashboard/image3.svg";
 import { AdminSideNav } from "../../../components/molecules";
+import axios from "axios";
+
+
+const endpoint ="https://web-production-c992.up.railway.app/users/";
 
 export const UserDetails = () => {
   const navigate = useNavigate();
+  const [stateId, setStateId]= useState([]);
   const noOfStories = 48;
   const timeSpent = 20;
+
+
+const {id} = useParams()
+// console.log(id)
+
+  const Config ={
+    headers: {
+      "Content-type": "application/json",
+      "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzgxMGZjMzVhMDhmMGEyYjQxYTBiODQiLCJ1c2VybmFtZSI6IkFkbWluIiwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2NzAwNTUzOTAsImV4cCI6MTY3MDE0MTc5MH0.WYKlwPkxqN-xGivW-Ins3IwOVqkfFrUyYb2E6C3hfGs"
+    }
+  }
+ 
+  useEffect(()=>{
+    axios.get (endpoint +id,Config).then((response) =>{
+      // console.log(response)
+      const idArray = response.data.data
+      // console.log(response.data.data)
+      setStateId(idArray)
+    })
+  })
+
+
   return (
     <div className="USER-dashboard">
       <AdminSideNav/>
@@ -37,9 +56,9 @@ export const UserDetails = () => {
         <div className="user-header">
           <h1>User Details</h1>
           <div className="user-track">
-            <p className="admin">Admin Dashboard</p>
+            <p onClick={() => navigate('/admin')} className="admin">Admin Dashboard</p>
             <img src={nav} alt="nav" />
-            <p>User</p>
+            <p onClick={() => navigate('/admin/userlist')}>User</p>
             <img src={nav} alt="nav" />
             <p>User Details</p>
           </div>
@@ -49,39 +68,72 @@ export const UserDetails = () => {
           <div className="user-image">
             <img src={asia} alt="asia" />
           </div>
-          <div className="user-cred">
-            <div className="status">
-              <h3>Cythnia Nduka</h3>
-              <span>Active</span>
+          
+        </div >  
+        <div className="userID-details">
+          <div className="userID-details-frame">
+            <div className="userID-details-frame">
+            <img src={contact} alt="contact" />
+            <div>
+            <h4>{stateId.firstName}</h4>
+            <p>First Name</p>
             </div>
-            <p>Teacher/Illustrator</p>
-          </div>
-        </div>
-        {/* About User */}
-        <div className="about-user">
-          <h1>About User</h1>
-          <p>
-            Cynthia Nduka is an illustrator and passionate teacher. Illustrating
-            stories since she was a child, Ibinola uses her art to bring people
-            together and make them feel connected. She believes that one of the
-            best ways to teach is by telling stories, and she uses her
-            illustrations to help others learn about the world around them. She
-            has been teaching for over a decade, including at universities such
-            as Harvard University, MIT and Stanford. She has also taught at
-            schools from kindergarten through high school levels, including
-            public schools in the United States as well as international schools
-            around the world.
-          </p>
+            </div>
 
-          <p>
-            She believes that it&apos;s important to create art that not only
-            entertains, but also teaches people a new perspective on life. Her
-            work has been featured in publications such as The New York Times
-            and The Huffington Post, as well as several local magazines.
-          </p>
+            <div className="userID-details-frame">
+            <img src={contact} alt="contact" />
+            <div>
+            <h4>{stateId.lastName}</h4>
+            <p>Last Name</p>
+            </div>
+            </div>
+
+            <div className="userID-details-frame">
+            <img src={contact} alt="contact" />
+            <div>
+            <h4>{stateId.email}</h4>
+            <p>Email</p>
+            </div>
+            </div>
+
+            <div className="userID-details-frame">
+            <img src={contact} alt="contact" />
+            <div>
+            <h4>{stateId.username}</h4>
+            <p>Username</p>
+            </div>
+            </div>
+
+            <div className="userID-details-frame">
+            <img src={contact} alt="contact" />
+            <div>
+            <h4>{stateId.createdAt}</h4>
+            <p>Date Joined</p>
+            </div>
+            </div>
+
+            <div className="userID-details-frame">
+            <img src={contact} alt="contact" />
+            <div>
+            <h4>{stateId.updatedAt}</h4>
+            <p>Last Update</p>
+            </div>
+            </div>
+
+            <div className="userID-details-frame">
+            <img src={contact} alt="contact" />
+            <div>
+            <h4>{stateId._id}</h4>
+            <p>ID</p>
+            </div>
+            </div>
+
         </div>
+        </div>
+
+        
         {/* Personal Information */}
-        <div className="personal-info">
+        {/* <div className="personal-info">
           <h1>All Personal Informations</h1>
           <div className="personal-card">
             <div className="inner-card">
@@ -134,7 +186,7 @@ export const UserDetails = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
         {/* User Analytics */}
         <div className="user-analytics">
           <h1>User Analytics</h1>
