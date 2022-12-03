@@ -1,0 +1,90 @@
+.BillingPage {
+  .head-content {
+    border-bottom: 1px solid #d2d2d2;
+    padding: 5px 0;
+  }
+  .head-content > b {
+    font-weight: 700px;
+    font-size: 20px;
+    line-height: 24px;
+    margin: 10px 0;
+  }
+  .head-content > p {
+    font-weight: 500px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #646363;
+  }
+  .grid-section2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+    margin: 25px 0;
+  }
+
+  .input3 {
+    width: 300px;
+    height: 40px;
+    border-radius: 56px;
+    border: 1px solid #646363;
+  }
+
+  .input3::-webkit-input-placeholder {
+    font-weight: 500px;
+    font-size: 14px;
+    line-height: 20px;
+    padding-left: 15px;
+    color: #8d8e91;
+  }
+  .card-btn {
+    color: #AA0136;
+    font-weight: 700px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .span2 {
+    color: red;
+  }
+
+  .bill-add {
+    border-bottom: 1px solid #d2d2d2;
+    padding: 5px 0;
+    margin: 20px 0;
+  }
+  .bill-add > b {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px
+  }
+  .bill-add > p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #646363;
+  } 
+  .btns-6 {
+    width: 223px;
+    height: 48px;
+    background: #AA0136;
+    color: white;
+    border-radius: 56px;
+    margin: 25px 0;
+  }
+
+  @media only screen and (max-width: 480px) {
+    margin: 0 10px;
+    form {
+        margin: 20px 0;
+    }
+
+    .grid-section2 {
+        display: flex;
+        flex-direction: column;
+        margin: 20px 0;
+    }
+    .input3 {
+        width: 100%;
+    }
+  }
+}
