@@ -27,7 +27,7 @@ pipeline {
 				sh "sudo cp -rf * /home/samuraiaj/magicbackend/"
 				sh "sudo cp -rf /home/samuraiaj/magic-env/.env /home/samuraiaj/magicbackend"
 				sh "sudo su - samuraiaj && whoami"
-				//sh "sudo systemctl restart magicfront.service"
+				sh "sudo systemctl restart magicback.service"
                 		
 				
 			}
