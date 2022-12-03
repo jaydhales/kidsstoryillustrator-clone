@@ -15,10 +15,10 @@ export const Security = () => {
 
         <div className="passwords">
             <label>Old password <br />
-                <input type="password" placeholder="********" className="inputs3"/>
+                <input type="password" placeholder="********" className="inputs4"/>
             </label>
             <label>New password <br />
-                <input type="password" placeholder="********" className="inputs3"/>
+                <input type="password" placeholder="********" className="inputs4"/>
             </label>
         </div>
 
