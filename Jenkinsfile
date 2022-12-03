@@ -9,8 +9,8 @@ pipeline {
 		stage("Build") {
 
 			steps  {
-				sh "sudo npm"
-        sh "sudo npm run build"
+				sh "sudo npm install"
+                                sh "sudo npm run build"
         
 			} 
     
@@ -23,7 +23,7 @@ pipeline {
 				sh "sudo rm -rf /home/samuraiaj/magicbook/*"
 				sh "sudo cp -rf * /home/samuraiaj/magicbook/"
 				sh "sudo su - samuraiaj && whoami"
-				sh "sudo systemctl restart magicbook.service"
+				sh "sudo systemctl restart magicfront.service"
                 		
 				
 			}
@@ -32,3 +32,5 @@ pipeline {
 }
 }
     }
+
+//testing
