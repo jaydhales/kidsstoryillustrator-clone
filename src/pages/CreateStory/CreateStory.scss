@@ -34,6 +34,10 @@
     &.create {
       grid-template-columns: 1fr 1fr;
 
+      @media (max-width: 900px) {
+        grid-template-columns: 1fr;
+      }
+
       form {
         padding: 24px;
       }
@@ -109,10 +113,6 @@
       p {
         color: #13131399;
       }
-    }
-
-    @media (max-width: 900px) {
-      grid-template-columns: 1fr;
     }
   }
 }
