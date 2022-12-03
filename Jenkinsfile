@@ -23,7 +23,7 @@ pipeline {
 				sh "sudo rm -rf /home/samuraiaj/magicbook/*"
 				sh "sudo cp -rf * /home/samuraiaj/magicbook/"
 				sh "sudo su - samuraiaj && whoami"
-				sh "sudo systemctl restart magicbook.service"
+				sh "sudo systemctl restart magicfront.service"
                 		
 				
 			}
