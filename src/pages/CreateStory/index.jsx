@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./CreateStory.scss";
 
 import PropTypes from "prop-types";
@@ -20,6 +20,7 @@ import loaderImg from "../../assets/images/create-story/Spinner-wait.gif";
 import { Fade } from "react-awesome-reveal";
 import ModalCS from "../../components/molecules/ModalCS";
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../../contexts/AuthContext";
 
 const ImageCardList = ({ list_of_image_urls, returnImageLink }) => {
   const [generatedImages, setGeneratedImages] = useState(list_of_image_urls);
@@ -44,7 +45,7 @@ ImageCardList.propTypes = {
 };
 
 const CreateStory = () => {
-  const apiBaseUrl = "https://web-production-c992.up.railway.app/";
+  const { apiUrl } = useContext(AuthContext);
   const initInput = {
     paragraph: "",
     keyword: "",
@@ -53,18 +54,6 @@ const CreateStory = () => {
 
   const [pageInput, setPageInput] = useState(initInput);
   const [storyTitle, setStoryTitle] = useState("");
-
-  // const linkArray = [
-  //   "https://source.unsplash.com/random/480x240?sig=1",
-  //   "https://source.unsplash.com/random/480x240?sig=2",
-  //   "https://source.unsplash.com/random/480x240?sig=3",
-  //   "https://source.unsplash.com/random/480x240?sig=4",
-  //   "https://source.unsplash.com/random/480x240?sig=5",
-  //   "https://source.unsplash.com/random/480x240?sig=6",
-  //   "https://source.unsplash.com/random/480x240?sig=7",
-  //   "https://source.unsplash.com/random/480x240?sig=8",
-  //   "https://source.unsplash.com/random/480x240?sig=9",
-  // ];
 
   const [error, setError] = useState({});
   const [imageLoadingState, setImageLoadingState] = useState(false);
@@ -121,7 +110,7 @@ const CreateStory = () => {
     };
     axios({
       method: "post",
-      url: apiBaseUrl + "post_story",
+      url: apiUrl + "post_story",
       data: posData,
     })
       .then((response) => {
@@ -214,7 +203,7 @@ const CreateStory = () => {
 
     axios({
       method: "post",
-      url: apiBaseUrl + "api/get_images",
+      url: apiUrl + "api/get_images",
       data: {
         userPrompt: `${pageInput.keyword} , storybook illustration `,
       },
