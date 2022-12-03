@@ -482,6 +482,7 @@
         }
       }
     },
+
     "/api/get_images": {
       "post": {
         "tags": ["Images"],
