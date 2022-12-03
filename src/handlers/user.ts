@@ -6,8 +6,7 @@ import isEmail from 'validator/lib/isEmail';
 import UserModel from '../model/user.model';
 import { Types } from 'mongoose';
 
-const secret = 'abc123';
-// const secret = process.env.SECRET as string;
+const secret = process.env.SECRET as string;
 export class User extends BaseHandler {
   static async signup(req: Request, res: Response) {
     try {
