@@ -16,6 +16,19 @@
           padding: 2rem;
         }
       }
+
+      .page-control {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        button {
+          color: #13131399;
+          &:disabled {
+            opacity: 0.2;
+          }
+        }
+      }
     }
 
     &.create {

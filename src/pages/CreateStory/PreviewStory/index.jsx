@@ -1,14 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import PropTypes from "prop-types";
 import { useNavigate } from "react-router-dom";
+import Button from "../../../components/atoms/Button";
 
-const PreviewStory = ({ story, title, back }) => {
+const PreviewStory = ({ story, title, back, handleSave }) => {
+  const totalPages = story.length - 1;
+  const [currentPage, setCurrentPage] = useState(0);
+  const [prevDisabled, setPrevDisabled] = useState(true);
+  const [nextDisabled, setNextDisabled] = useState(false);
+
+  useEffect(() => {
+    if (currentPage === 0) {
+      setPrevDisabled(true);
+    } else {
+      setPrevDisabled(false);
+    }
+
+    if (currentPage === totalPages) {
+      setNextDisabled(true);
+    } else {
+      setNextDisabled(false);
+    }
+  }, [currentPage]);
+
   return (
     <div className="wrapper preview">
       <div className="preview-container">
         <div className="heading">
-          <div className="prev">
+          <div className="page-control">
             <button
               onClick={(e) => {
                 back(false);
@@ -21,15 +41,34 @@ const PreviewStory = ({ story, title, back }) => {
 
           <p>{title}</p>
 
-          <p>Page {story[0].page}</p>
+          <div className="page-control">
+            <button
+              onClick={(e) => setCurrentPage(currentPage - 1)}
+              disabled={prevDisabled}
+            >
+              ˂
+            </button>
+            <p>Page {currentPage + 1}</p>
+            <button
+              onClick={(e) => setCurrentPage(currentPage + 1)}
+              disabled={nextDisabled}
+            >
+              ˃
+            </button>
+          </div>
         </div>
 
         <div className="preview-main">
           <div className="image">
-            <img src={story[0].content.image} alt={story[0].content.keyword} />
+            <img
+              src={story[currentPage].content.image}
+              alt={story[currentPage].content.keyword}
+            />
           </div>
 
-          <p>{story[0].content.paragraph}</p>
+          <p>{story[currentPage].content.paragraph}</p>
+
+          <Button clickFn={handleSave}> Save </Button>
         </div>
       </div>
     </div>

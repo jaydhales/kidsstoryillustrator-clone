@@ -54,17 +54,18 @@ const CreateStory = () => {
   const [pageInput, setPageInput] = useState(initInput);
   const [storyTitle, setStoryTitle] = useState("");
 
-  const linkArray = [
-    "https://source.unsplash.com/random/480x240?sig=1",
-    "https://source.unsplash.com/random/480x240?sig=2",
-    "https://source.unsplash.com/random/480x240?sig=3",
-    "https://source.unsplash.com/random/480x240?sig=4",
-    "https://source.unsplash.com/random/480x240?sig=5",
-    "https://source.unsplash.com/random/480x240?sig=6",
-    "https://source.unsplash.com/random/480x240?sig=7",
-    "https://source.unsplash.com/random/480x240?sig=8",
-    "https://source.unsplash.com/random/480x240?sig=9",
-  ];
+  // const linkArray = [
+  //   "https://source.unsplash.com/random/480x240?sig=1",
+  //   "https://source.unsplash.com/random/480x240?sig=2",
+  //   "https://source.unsplash.com/random/480x240?sig=3",
+  //   "https://source.unsplash.com/random/480x240?sig=4",
+  //   "https://source.unsplash.com/random/480x240?sig=5",
+  //   "https://source.unsplash.com/random/480x240?sig=6",
+  //   "https://source.unsplash.com/random/480x240?sig=7",
+  //   "https://source.unsplash.com/random/480x240?sig=8",
+  //   "https://source.unsplash.com/random/480x240?sig=9",
+  // ];
+
   const [error, setError] = useState({});
   const [imageLoadingState, setImageLoadingState] = useState(false);
   const [imageLoadingCounter, setImageLoadingCounter] = useState("60");
@@ -78,6 +79,7 @@ const CreateStory = () => {
   const [modalMessage, setModalMessage] = useState("");
   const [modalStat, setModalStat] = useState("");
   const [pageCount, setPageCount] = useState(1);
+  const [pageContent, setPageContent] = useState([]);
   const [story, setStory] = useState([]);
   const [storyPosting, setStoryPosting] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -97,6 +99,48 @@ const CreateStory = () => {
     } else {
       getImagesFromServer();
     }
+  };
+
+  const handleSave = () => {
+    setStoryPosting(true);
+    setPageContent(
+      story.map(({ content }) => {
+        const { paragraph, image } = content;
+        return {
+          pageParagraphText: paragraph,
+          pageImglinkUri: image,
+        };
+      })
+    );
+
+    const posData = {
+      decoded: { _id: "63836095dcec0b9a8d523767" },
+      title: storyTitle,
+      numberOfPages: story.length,
+      scenes: pageContent,
+    };
+    axios({
+      method: "post",
+      url: apiBaseUrl + "post_story",
+      data: posData,
+    })
+      .then((response) => {
+        console.log(response);
+        setStoryPosting(false);
+        setModalDisplay("Success", "Story Saved Successfully", "success");
+        setPreviewState(false);
+        setStory([]);
+        setStoryTitle("");
+        setPageInput(initInput);
+        setPageCount(1);
+        // setTimeout(() => {
+        //   navigate(0);
+        // }, 2600);
+      })
+      .catch((err) => {
+        console.error(err);
+        setModalDisplay("Error", "Story not saved", "error");
+      });
   };
 
   useEffect(() => {
@@ -166,46 +210,46 @@ const CreateStory = () => {
     setImageGenerationState(true);
     setPageInput((pageInput) => ({ ...pageInput, image: "" }));
 
-    // console.log("loading...");
+    console.log("loading...");
 
-    // axios({
-    //   method: "post",
-    //   url: apiBaseUrl + "api/get_images",
-    //   data: {
-    //     userPrompt: pageInput.keyword,
-    //   },
-    // })
-    //   .then((response) => {
-    //     console.log(response);
-    //     if (
-    //       typeof response.data == "string" &&
-    //       response.data.toLowerCase().includes("error")
-    //     ) {
-    //       setModalDisplay("Error", "You are out of tokens", "error");
-    //       setImageLoadingState(false);
-    //       setImageGenerationState(false);
-    //       setGeneratedImages([]);
-    //       console.log("error...");
-    //       return;
-    //     }
+    axios({
+      method: "post",
+      url: apiBaseUrl + "api/get_images",
+      data: {
+        userPrompt: pageInput.keyword,
+      },
+    })
+      .then((response) => {
+        console.log(response);
+        if (
+          typeof response.data == "string" &&
+          response.data.toLowerCase().includes("error")
+        ) {
+          setModalDisplay("Error", "You are out of tokens", "error");
+          setImageLoadingState(false);
+          setImageGenerationState(false);
+          setGeneratedImages([]);
+          console.log("error...");
+          return;
+        }
 
-    //     console.log(response.data.links_array);
-    //     setImageLoadingState(false);
-    //     let new_Arry = [];
-    //     for (let i = 0; i < 9; i++) {
-    //       new_Arry.push(response.data.links_array[i]);
-    //     }
-    //     setGeneratedImages(new_Arry);
-    //   })
-    //   .catch((err) => {
-    //     console.error(err);
-    //   });
+        console.log(response.data.links_array);
+        setImageLoadingState(false);
+        let new_Arry = [];
+        for (let i = 0; i < 9; i++) {
+          new_Arry.push(response.data.links_array[i]);
+        }
+        setGeneratedImages(new_Arry);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
 
     setTimeout(() => {
-      setGeneratedImages(linkArray);
+      // setGeneratedImages(linkArray);
 
       setImageGenerationState(false);
-    }, 10000);
+    }, 20000);
   };
 
   const getPageImageLink = (image_url) => {
@@ -236,7 +280,12 @@ const CreateStory = () => {
         />
       )}
       {previewState && story.length > 0 ? (
-        <PreviewStory story={story} title={storyTitle} back={setPreviewState} />
+        <PreviewStory
+          story={story}
+          title={storyTitle}
+          back={setPreviewState}
+          handleSave={handleSave}
+        />
       ) : (
         <div className="wrapper create">
           <div className="input-container">
