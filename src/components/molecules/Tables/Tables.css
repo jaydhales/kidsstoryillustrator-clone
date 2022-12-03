@@ -33,6 +33,10 @@ tr:hover {
         max-width: 200px;
 
       }
+      td img{
+        width: 25px;
+        height: 25px;
+      }
 
       .min-w-full_divide-y-divide-gray-200 input{
         margin-right: 15px;

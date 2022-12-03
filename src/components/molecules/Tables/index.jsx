@@ -6,10 +6,13 @@ import {CiSearch} from "react-icons/ci";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import Deletepopup from "../Deletepopup/Deletepopup";
+import img from "../../../assets/images/dashboard/del-act.png";
 
 
 const endpoint ="https://web-production-c992.up.railway.app/users";
 const Table = () => {
+  const [isNavExpanded, setIsNavExpanded] = useState(false);
   const navigate = useNavigate();
   const[activeStep, setActiveStep] = useState(0);
 const handleNext =() => {
@@ -105,20 +108,24 @@ function paginate(a, pageIndex, pageSize) {
    <table className="min-w-full_divide-y-divide-gray-200">
     <thead>
     <tr>
+    <td>Email</td>
       <td>First Name</td>
       <td>Last Name</td>
-      <td>Email</td>
       <td>Username</td>
+      <td></td>
     </tr>
     </thead>
 
 <tbody>
     {paginate(queryItems, activeStep, activeStep + 10).map((row, index) => (
-      <tr key={row._id} onClick={(e) => console.log(row._id)}> 
-      <td>{row.firstname}</td>
-      <td>{row.lastname}</td>
-      <td><Link to={"/admin/userdetails/"+ row._id}> {row.email}</Link></td>
+      <tr key={row._id} onClick={(e) => console.log(row._id)}>
+     <td><Link to={"/admin/userdetails/"+ row._id}> {row.email}</Link></td>
+      <td>{row.firstName}</td>
+      <td>{row.lastName}</td>
       <td>{row.username}</td>
+      <td> <img onClick={() => {
+          setIsNavExpanded(!isNavExpanded);
+        }} src={img} alt="next" /></td>
       </tr>
 
     )
@@ -128,6 +135,8 @@ function paginate(a, pageIndex, pageSize) {
 
   </table> 
   </div>
+  {isNavExpanded && <Deletepopup exit={() => setIsNavExpanded(false)} />
+      }
   </div> );
 };
 export default Table;

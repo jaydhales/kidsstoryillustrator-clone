@@ -56,7 +56,7 @@ const AdminSideNav =()=>{
         </div>
         <div className="log-out">
           <img src={logout} alt="logout" />
-          <p onClick={() => navigate('/admin/adminlogin')}>Sign Out</p>
+          <p onClick={() => navigate('/admin/login')}>Sign Out</p>
         </div>
         </div>
         </div>
