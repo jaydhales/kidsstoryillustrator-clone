@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 
 import PropTypes from "prop-types";
+import Mastercard from "../../../assets/images/Mastercard logo.svg"
 import "./BillingPage.scss"
 export const Settings = () => {
+  const [viewCard, setViewCard] = useState(false)
+  const [viewForm, setViewForm] = useState(true)
   const [formData, setFormData] = useState({
     cardName: "",
     cardNumber: "",
@@ -30,13 +33,18 @@ export const Settings = () => {
     }
     setSubmitted((prevState) => !prevState);
   }
+
+  const saveCard = () => {
+    setViewCard(prevState => !prevState)
+    setViewForm(prevState => !prevState)
+  }
   return (
     <div className="BillingPage">
         <div className="head-content">
             <b>Payment method</b>
             <p>Update your billing details and address</p>
         </div>
-        <form>
+        {viewForm? <form>
           <div className="grid-section2">
             <label>
               Cardholder name <br />
@@ -99,8 +107,25 @@ export const Settings = () => {
               ) : null}
             </label>
           </div>
-          <button className="card-btn">Save Card</button>
-        </form>
+          <button className="card-btn" onClick={saveCard}>Save Card</button>
+        </form> : null}
+        {viewCard? <div className="card-section1">
+            <div className="card-section2">
+            <img src={Mastercard} alt="/" className="card-logo" />
+            <div>
+              <b>Visa ending in 1234</b>
+              <p>Expiry 06/2024</p>
+            
+            <div className="card-section3">
+              <p>Set as default</p>
+              <button className="card-btn">Edit</button>
+            </div>
+            </div>
+          </div>
+          <div>
+            <input type="checkbox" className="card-section4"/>
+          </div>
+        </div> : null}
         <div className="bill-add">
          <b>Billing address</b>
          <p>Where should invoices be sent</p>

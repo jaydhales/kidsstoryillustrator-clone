@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-// import SettingsNavBar from "../../components/molecules/SettingsNavBar"
-// import {Route, Routes} from 'react-router-dom'
 import Account from "../Users/Account";
 import Security from "../Users/Security";
 import BillingPage from "../Users/BillingPage"
@@ -12,7 +10,7 @@ export const Settings = () => {
   const [account, setAccount] = useState(true);
   const [security, setSecurity] = useState(false);
   const [billPage, setBillPage] = useState(false);
-  
+   const [value, setValue] = React.useState();
 
   const viewAcct = () => {
     setAccount((prevState) => !prevState);
@@ -35,9 +33,13 @@ export const Settings = () => {
     
   };
 
-  // const handleClick = () => {
-  //   setBtnState(btnState => !btnState)
-  // }
+ 
+
+ const handleChange = (event) => {
+
+   setValue(event.target.value);
+
+ };
 
 
   return (
@@ -50,21 +52,20 @@ export const Settings = () => {
         <h2 className="head-text">Settings</h2>
         <div className="nav-section">
          <button  onClick={viewAcct}>Account</button>
-          
           <button onClick={viewSecurity}>Security</button>
           <button onClick={viewBill}>Billing</button>
         </div>
 
         {/* mobile nav */}
         <div className="mobile-nav">
-          <select className="mob-nav">
-            <option>
-            <button onClick={viewAcct}>Account</button>
+          <select className="mob-nav" value={value} onChange={handleChange}>
+            <option value="account"> 
+            {/* <button onClick={viewAcct}>Account</button> */}Account
             </option>
-            <option>
-            <button onClick={viewSecurity}>Security</button>
+            <option value="account">
+            {/* <button >Security</button> */}Security
             </option>
-            <option>Billing</option>
+            <option value="billPage">Billing</option>
           </select>
         </div>
 
