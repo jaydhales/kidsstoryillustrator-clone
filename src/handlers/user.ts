@@ -218,3 +218,50 @@ export class User extends BaseHandler {
 
   }
 }
+
+
+export class Admin extends BaseHandler {
+
+  static async adminSignin(req: Request, res: Response) {
+    try {
+      const { email, password } = req.body;
+
+      if (!isEmail(email)) {
+        return res.status(400).send({ message: 'Invalid Email' });
+      } else {
+        const user = await UserModel.findOne({ email: email, isAdmin: true });
+
+        if (user) {
+          const payload = {
+            _id: user._id,
+            username: user.username,
+            firstName: user.firstName,
+            lastName: user.lastName,
+            email: user.email,
+            isAdmin: user.isAdmin
+          };
+
+          if (!bcrypt.compareSync(password, user.hash)) {
+            return res.status(400).send({ message: 'Invalid Password' });
+          } else {
+            return res.status(200).send({
+              success: true,
+              message: 'Sign in Successful',
+              data: {
+                ...payload,
+                token: jwt.sign({ ...payload }, secret, { expiresIn: '24h' })
+              }
+            });
+          }
+        } else {
+          return res
+            .status(400)
+            .send({ message: 'Email or password incorrect' });
+        }
+      }
+    } catch (error) {
+      throw new Error((error as Error).message);
+    }
+  }
+
+}
