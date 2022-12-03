@@ -2,10 +2,12 @@ import { useRef, useState, useEffect, useContext } from "react";
 import React from "react";
 import "./SignUp.scss";
 import logo from "../../assets/img/logo.png";
-import googleLogo from "../../assets/img/google_logo.png";
-import facebookLogo from "../../assets/img/facebook_logo.png";
+import googleLogo from "../../assets/img/google.png";
+import facebookLogo from "../../assets/img/facebook-icon.png";
 import appleLogo from "../../assets/img/apple_logo.png";
 import logoWhite from "../../assets/img/logo_white.svg";
+import leftArrow from "../../assets/img/left-arrow.png";
+
 
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -67,8 +69,16 @@ const SignUp = () => {
   return (
     <div className="Signup">
       <div className="two-column">
+      
         <div className="branding">
+        <img
+     onClick={() => navigate('/')}
+                  src={leftArrow}
+                  alt="Facebook logo"
+                  className="back-arrow"
+                />
           <div className="content">
+         
             <img src={logoWhite} alt="logo" id="logo" />
             <div className="text">
               <h2>The easiest way to write kids story books </h2>
@@ -194,28 +204,34 @@ const SignUp = () => {
             <p className="continue-with">Continue with</p>
 
             <div className="auth-links">
-              <button className="btn-round" aria-label="login with google">
+              <button className="btn-round" aria-label="login with google" id="google-login">
                 <img
                   src={googleLogo}
                   alt="Google logo"
                   className="btn-round-img"
                 />
+                                <p>Continue with Google</p>
+
               </button>
 
-              <button className="btn-round" aria-label="login with google">
+              <button className="btn-round" aria-label="login with google" id="facebook-login">
                 <img
                   src={facebookLogo}
                   alt="Facebook logo"
                   className="btn-round-img"
                 />
+                                <p>Continue with Facebook</p>
+
               </button>
 
-              <button className="btn-round" aria-label="login with google">
+              <button className="btn-round" aria-label="login with google" id="apple-login">
                 <img
                   src={appleLogo}
                   alt="Apple logo"
                   className="btn-round-img"
                 />
+                                <p>Continue with Apple</p>
+
               </button>
             </div>
           </div>
