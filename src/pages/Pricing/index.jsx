@@ -50,7 +50,7 @@ export const Pricing = () => {
                   <li>Unlimited story downloads</li>
                   <li>Publishers access</li>
                 </ul>
-                <a href="/billing?plan=paid">Proceed</a>
+                <a href="billing">Proceed</a>
               </div>
             </div>
           </div>

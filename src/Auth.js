@@ -77,7 +77,7 @@ const ProtectedRoutes = (
     <Route path="/billing" element={<Billing />} />
     <Route path="/account" element={<Account />} />
     <Route path="/security" element={<Security />} />
-    <Route path="/billing-page" element={<BillingPage />} />
+    {/* <Route path="/billing-page" element={<BillingPage />} /> */}
     <Route path="/cancelSubscription" element={<CancelSubscription />} />
 
     <Route path="/summaryActivities" element={<SummaryActivities />} />

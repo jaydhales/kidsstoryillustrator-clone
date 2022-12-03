@@ -27,7 +27,7 @@ const Contact = () => {
             </div>
 
             <div className="form">
-              <form onSubmit={handleSubmit}>
+              <form onSubmit={handleSubmit} className="con_form">
                 <label>
                   Full Name
                   <input
