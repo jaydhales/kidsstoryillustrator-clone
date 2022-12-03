@@ -216,7 +216,7 @@ const CreateStory = () => {
       method: "post",
       url: apiBaseUrl + "api/get_images",
       data: {
-        userPrompt: pageInput.keyword,
+        userPrompt: `${pageInput.keyword} , storybook illustration `,
       },
     })
       .then((response) => {
