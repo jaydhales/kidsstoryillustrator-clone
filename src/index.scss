@@ -526,6 +526,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   display: none;
+  min-height: 100vh;
   padding: 48px 0;
 }
 
@@ -534,8 +535,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   display: none;
-  min-height: 800px;
-  height: 100%;
+  min-height: 100vh;
   padding: 48px 0;
 }
 
