@@ -25,7 +25,7 @@ const SignUp = () => {
   const navigate = useNavigate();
   // const dispatch = useDispatch();
 
-  const endpoint = apiUrl + "/auth/signup";
+  const endpoint = apiUrl + "auth/signup";
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
