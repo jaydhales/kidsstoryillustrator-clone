@@ -1,11 +1,27 @@
 .Button {
-  padding: 1rem 2rem;
-  background: #aa0136;
-  border-radius: 56px;
-  color: #fff;
-  border: 1px solid #aa0136;
+  button {
+    padding: 12px 24px;
 
-  @media screen and (max-width: 900px) {
-    padding: 1rem 1.5rem;
+    border-radius: 56px;
+
+    border: 1px solid #aa0136;
+
+    // @media screen and (max-width: 900px) {
+    //   padding: 1rem 1.5rem;
+    // }
+
+    &:disabled {
+      opacity: 0.7;
+    }
+  }
+
+  .default {
+    background: #aa0136;
+    color: #fff;
+  }
+
+  .noBg {
+    background: none;
+    color: #aa0136;
   }
 }
