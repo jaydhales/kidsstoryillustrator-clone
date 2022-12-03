@@ -19,7 +19,7 @@
 
 /* login and signup page styles  */
 #auth {
-  padding: 48px 16px;
+  padding: 30px 16px 0px;
   text-align: center;
   max-width: 400px;
   margin-left: auto;
@@ -56,8 +56,8 @@
 }
 
 .input {
-  margin-top: 12px;
-  margin-bottom: 24px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   border: 1px solid #bbbbbb;
   padding: 16px 20px;
   border-radius: 30px;
@@ -517,7 +517,7 @@ body {
 }
 
 .two-column {
-  height: 100vh;
+  height: fit-content;
 }
 
 .branding {

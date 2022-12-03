@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 // import { Facebook, Instagram, Twitter } from '../../../assets';
-import Logo from '../../../assets/img/logo.png';
+import logo_red from '../../../assets/img/logo_red.svg';
 import Facebook from '../../../assets/img/ri-facebook-circle-fill.svg';
 import Twitter from '../../../assets/img/ri-twitter-fill.svg';
 import Instagram from '../../../assets/img/ri-instagram-fill.svg';
@@ -61,7 +61,7 @@ const Footer = () => {
     <div>
     <section className="Footer">
       <div className="Footer__left">
-        <img src={Logo} className="Navbar__Logo" />
+        <img src={logo_red} className="Navbar__Logo" />
         <p>follow us on</p>
         <div className="Footer__left__socials">
           <img src={Twitter} />

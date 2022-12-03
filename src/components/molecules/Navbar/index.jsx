@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-import Logo  from '../../../assets/img/logo.png';
+import logo_red  from '../../../assets/img/logo_red.svg';
 import { NavLink } from '../../atoms';
 
 import style from './Navbar.scss';
@@ -37,7 +37,7 @@ const Navbar = () => {
   const navigate=useNavigate();
   return (
     <nav className="Navbar">
-      <img src={Logo} className="Navbar__Logo" />
+      <img src={logo_red} className="Navbar__Logo" />
       <div className={`Navbar__container ${dropDown && `Navbar__container__active`}`}>
         <div className="Navbar__container__links">
         {navLinks.map(({ text, to }) => (

@@ -1,7 +1,7 @@
 import React from "react";
 import "./Login.scss";
 import logo from "../../assets/img/logo.png";
-import logoWhite from "../../assets/img/logo_white.png";
+import logoWhite from "../../assets/img/logo_white.svg";
 import googleLogo from "../../assets/img/google_logo.png";
 import facebookLogo from "../../assets/img/facebook_logo.png";
 import appleLogo from "../../assets/img/apple_logo.png";
@@ -73,10 +73,10 @@ export const Login = () => {
         </nav>
       </header>
 
-        <form onSubmit={handleFormSubmit} className="form">
+        <form onSubmit={handleFormSubmit} className="form" id="login-form">
 
           <label htmlFor="email" className="label">Email</label><br />
-          <input type="text" placeholder="Enter Email Address" className="input" name="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+          <input type="text" placeholder="Enter Email Address" className="input" name="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)}/>
 
           <label htmlFor="pasword" className="label">Password</label><br />
           <input type="password" placeholder="Enter Password" className="input input-password" name="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} />

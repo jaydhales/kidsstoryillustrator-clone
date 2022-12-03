@@ -94,9 +94,9 @@ const AdminRoutes = (
     {ProtectedRoutes}
     <Route path="/admin" element ={<AdminDashBoard/>}/>
     <Route path="/admin/userlist" element ={<UserList/>}/>
-    <Route path="/admin/adminlogin" element ={<AdminLogin/>}/>
+    <Route path="/admin/login" element ={<AdminLogin/>}/>
     <Route path="/admin/adminsignup" element ={<AdminSignup/>}/>
-    <Route path="/admin/userdetails/" element={<UserDetails/>} />
+    <Route path="/admin/userdetails/:id" element={<UserDetails/>} />
     <Route path="/admin/archive" element ={<Archive/>}/>
   </>
 );

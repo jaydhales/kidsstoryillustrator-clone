@@ -1,23 +1,27 @@
-
+import {useRef, useState, useEffect} from "react";
 import React from "react";
 import "./SignUp.scss";
 import logo from "../../assets/img/logo.png";
 import googleLogo from "../../assets/img/google_logo.png";
 import facebookLogo from "../../assets/img/facebook_logo.png";
 import appleLogo from "../../assets/img/apple_logo.png";
-import logoWhite from "../../assets/img/logo_white.png";
+import logoWhite from "../../assets/img/logo_white.svg";
 import { signUp } from "../../features/auth/authSlice";
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 import { useDispatch } from "react-redux";
 
-const endpoint = "https://story--ai.herokuapp.com/auth/signup";
+const endpoint = "https://web-production-c992.up.railway.app/auth/signup";
 
-export const SignUp = () => {
+ const SignUp = () => {
+  const userRef = useRef(); 
+  const errRef = useRef();
   const [ email, setEmail ] = React.useState("");
   const [ password, setPassword ] = React.useState("");
   const [ errors, setErrors ] = React.useState([]);
   const [ username, setUsername ] = React.useState("");
+  const [ firstname, setFirstName ] = React.useState("");
+  const [ lastname, setLastName ] = React.useState("");
   const [ isLoading, setIsLoading ] = React.useState(false);
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -32,7 +36,7 @@ export const SignUp = () => {
       return;
     }
 
-    const body = JSON.stringify({ email, username, password });
+    const body = JSON.stringify({ email, firstname, lastname, password });
 
     const config = {
       headers: {
@@ -77,14 +81,21 @@ export const SignUp = () => {
           </header>
 
           <form onSubmit={handleFormSubmit} className="form">
-            <label htmlFor="email" className="label">Email</label><br />
-            <input type="email" placeholder="Enter Email Address" className="input" name="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+          <label htmlFor="email" className="label">Email</label><br />
+            <input type="email" placeholder="Enter Email Address" className="input" name="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} required/>
+
+            <label htmlFor="firstname" className="label">First Name</label><br />
+            <input type="text" placeholder="Enter first name" className="input" name="firstname" id="firstname" value={firstname} onChange={(e) => setFirstName(e.target.value)} required/>
+
+            <label htmlFor="lastname" className="label">Last Name</label><br />
+            <input type="text" placeholder="Enter last name" className="input" name="lasttname" id="firstname" value={lastname} onChange={(e) => setLastName(e.target.value)} required/>
 
             <label htmlFor="username" className="label">Username</label><br />
-            <input type="text" placeholder="Enter Username" className="input" name="email" id="username" value={username} onChange={(e) => setUsername(e.target.value)} />
+            <input type="text" placeholder="Enter Username" className="input" name="username" id="username" value={username} onChange={(e) => setUsername(e.target.value)} required/>
 
-            <label htmlFor="pasword" className="label">Password</label><br />
-            <input type="password" placeholder="Enter Password" className="input input-password" name="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+            <label htmlFor="password" className="label">Password</label><br />
+            <input type="password" placeholder="Enter Password" className="input input-password" name="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} required/>
+
             { errors.map((error, index) => <p key={index} className="error">{error}</p>)}
             <button className="btn btn-primary">{ isLoading ? 'Signing Up...' :'Sign Up'}</button>
             <p className="disclaimer"> By creating an account, you agree to our Terms of Service and Privacy & Cookie Statement.</p>
