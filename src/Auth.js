@@ -42,14 +42,20 @@ import AdminLogin from "./pages/Admin/AdminLogin";
 import UserDetails from "./pages/Admin/UserDetails";
 
 const AppRoutes = () => {
-  const { myAuth, setAuth } = useContext(AuthContext);
+  const { myAuth, setAuth, initialAuth } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const { isAdmin, isAuthenticated } = myAuth;
 
   useEffect(() => {
-    let localAuth = JSON.parse(localStorage.getItem("authInfo"));
-    setAuth(localAuth);
+    const localAuth =
+      localStorage.getItem("authInfo") &&
+      JSON.parse(localStorage.getItem("authInfo"));
+    if (localAuth) {
+      setAuth(localAuth);
+    } else {
+      localStorage.setItem("authInfo", JSON.stringify(myAuth));
+    }
   }, []);
 
   return (
@@ -128,7 +134,7 @@ const AppRoutes = () => {
 const Protected = ({ children }) => {
   const { isAuthenticated } = useContext(AuthContext).myAuth;
   if (!isAuthenticated) {
-    <Navigate to="/login" />;
+    return <Navigate replace to="/login" />;
   } else {
     return <>{children}</>;
   }
@@ -137,7 +143,7 @@ const Protected = ({ children }) => {
 const Admin = ({ children }) => {
   const { isAdmin, isAuthenticated } = useContext(AuthContext).myAuth;
   if (!isAdmin && !isAuthenticated) {
-    <Navigate to="/" />;
+    return <Navigate replace to="/" />;
   } else {
     return <>{children}</>;
   }
