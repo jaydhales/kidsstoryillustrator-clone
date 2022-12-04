@@ -82,10 +82,14 @@
     line-height: 20px;
   }
 
-  .card-section4 {
-    width: 100%;
-    height: 100%;
+  .card-section1 > input {
+    border-radius: 50%;
   }
+
+//   .card-section4 {
+//     width: 100%;
+//     height: 100%;
+//   }
 
   .card-logo {
     width: 40px;
@@ -117,9 +121,16 @@
   }
 
   @media only screen and (max-width: 480px) {
-    margin: 0 10px;
+    display: flex;
+      flex-direction: column;
+      justify-content: center;
+    margin: 0 5px;
     form {
         margin: 20px 0;
+    }
+
+    .card-section1 {
+        width: 100%;
     }
 
     .grid-section2 {
