@@ -133,7 +133,7 @@ const AppRoutes = () => {
 
 const Protected = ({ children }) => {
   const { isAuthenticated } = useContext(AuthContext).myAuth;
-  if (!isAuthenticated) {
+  if (isAuthenticated === false) {
     return <Navigate replace to="/login" />;
   } else {
     return <>{children}</>;
@@ -142,7 +142,7 @@ const Protected = ({ children }) => {
 
 const Admin = ({ children }) => {
   const { isAdmin, isAuthenticated } = useContext(AuthContext).myAuth;
-  if (!isAdmin && !isAuthenticated) {
+  if (isAdmin === false && isAuthenticated === false) {
     return <Navigate replace to="/" />;
   } else {
     return <>{children}</>;
