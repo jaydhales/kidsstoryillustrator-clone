@@ -33,7 +33,7 @@ const SignUp = () => {
     e.preventDefault();
     setIsLoading(true);
 
-    if (!email || !password || !username) {
+    if (!email || !password || !username || !lastName || !firstName) {
       setIsLoading(false);
       setErrors([...errors, "Fields cannot be empty"]);
       return;
