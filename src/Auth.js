@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate, useNavigate } from "react-router-dom";
 import { AuthContext } from "./contexts/AuthContext";
 
 import {
@@ -42,6 +42,7 @@ import UserDetails from "./pages/Admin/UserDetails";
 
 const AppRoutes = () => {
   const { myAuth } = useContext(AuthContext);
+  const navigate =useNavigate()
 
   const { isAdmin, isAuthenticated } = myAuth;
 
@@ -130,13 +131,20 @@ const AppRoutes = () => {
 
 const Protected = ({ children }) => {
   const { isAuthenticated } = useContext(AuthContext).myAuth;
-  if (!isAuthenticated) return <Navigate to="/login" replace />;
-  return children;
+  if (!isAuthenticated) { 
+    useNavigate(-1) 
+  } else {
+    return children;
+  }  
 };
+
 const Admin = ({ children }) => {
-  const { isAdmin } = useContext(AuthContext).myAuth;
-  if (!isAdmin) return <Navigate to="/" replace />;
-  return children;
+  const { isAdmin, isAuthenticated } = useContext(AuthContext).myAuth;
+  if (!isAdmin && !isAuthenticated) { 
+    useNavigate(-1) 
+  } else {
+    return children;
+  }  
 };
 
 export default AppRoutes;

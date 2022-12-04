@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {useEffect, useState} from "react";
 import "./Tables.css"
 import TableRow from "../TableRow";
@@ -8,10 +8,12 @@ import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Deletepopup from "../Deletepopup/Deletepopup";
 import img from "../../../assets/images/dashboard/del-act.png";
+import { AuthContext } from "../../../contexts/AuthContext";
 
 
-const endpoint ="https://web-production-c992.up.railway.app/users";
 const Table = () => {
+  const{apiUrl, myAuth} =useContext(AuthContext)
+  const endpoint = apiUrl + "users/"
   const [isNavExpanded, setIsNavExpanded] = useState(false);
   const navigate = useNavigate();
   const[activeStep, setActiveStep] = useState(0);
@@ -26,8 +28,8 @@ const handlePrev =() => {
   const ConfigData ={
     headers: {
         "Content-type": "application/json",
-        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzgxMGZjMzVhMDhmMGEyYjQxYTBiODQiLCJ1c2VybmFtZSI6IkFkbWluIiwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2NzAwNTUzOTAsImV4cCI6MTY3MDE0MTc5MH0.WYKlwPkxqN-xGivW-Ins3IwOVqkfFrUyYb2E6C3hfGs"
-}
+        "authorization": "Bearer " + myAuth.token
+    }
 };
 const[tableItems, setTableItems] = useState([]);
 const[queryItems, setQueryItems] = useState([]);

@@ -1,23 +1,26 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import "./App.scss";
 import Routes from "./Auth";
+import { AuthContext } from "./contexts/AuthContext";
 
-const MoveToTop = () => {
-  const navigate = useNavigate();
-  const { hash, pathname } = useLocation();
+
+
+const App = () =>{ 
+  const {setAuth} = useContext(AuthContext)
   useEffect(() => {
-    if (hash) return;
-
-    window.scrollTo(0, 0);
-  }, [pathname, navigate, hash]);
-  return null;
-};
-
-const App = () => (
+    const localInfo = JSON.parse(localStorage.getItem("authInfo"))
+  if (localInfo && Object.entries(localInfo) >0) {
+    setAuth(localInfo) 
+  }
+    
+  }, [] )
+  
+  
+  
+  return ( 
   <>
-    <MoveToTop />
     <Routes />
   </>
-);
+)};
 export default App;

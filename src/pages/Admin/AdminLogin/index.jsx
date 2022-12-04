@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../contexts/AuthContext";
 
 export const AdminLogin = () => {
-  const { apiUrl, handleLogin } = useContext(AuthContext);
+  const { apiUrl, handleLogIn } = useContext(AuthContext);
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
   const [errors, setErrors] = React.useState([]);
@@ -18,7 +18,7 @@ export const AdminLogin = () => {
 
   const navigate = useNavigate();
 
-  const endpoint = apiUrl + "auth/signin";
+  const endpoint = apiUrl + "auth/admin_signin";
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
@@ -43,7 +43,7 @@ export const AdminLogin = () => {
       .then((res) => {
         setIsLoading(false);
         console.log(res);
-        handleLogin(res.data.data);
+        handleLogIn(res.data.data);
 
         if (res.data.data.isAdmin) {
           navigate("/admin");
