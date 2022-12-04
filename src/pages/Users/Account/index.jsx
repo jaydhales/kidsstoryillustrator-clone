@@ -35,8 +35,8 @@ export const Account = () => {
       <div className="cover-2">
         <div className="image-section">
           <img src={Ellipse} alt="/" className="img-1" />
-          <button className="btns-1">Upload</button>
-          <button className="btns-2">Remove</button>
+          <button className="btns-1" onClick={() => window.location.reload()}>Upload</button>
+          <button className="btns-2" onClick={() => window.location.reload()}>Remove</button>
         </div>
         <form>
           <div className="grid-section1">
