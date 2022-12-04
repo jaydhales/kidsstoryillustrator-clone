@@ -21,6 +21,7 @@ import { Fade } from "react-awesome-reveal";
 import ModalCS from "../../components/molecules/ModalCS";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthContext";
+import SideBarLayout from "../../components/molecules/SideBarLayout";
 
 const ImageCardList = ({ list_of_image_urls, returnImageLink }) => {
   const [generatedImages, setGeneratedImages] = useState(list_of_image_urls);
@@ -51,10 +52,8 @@ const CreateStory = () => {
     keyword: "",
     image: "",
   };
-
   const [pageInput, setPageInput] = useState(initInput);
   const [storyTitle, setStoryTitle] = useState("");
-
   const [error, setError] = useState({});
   const [imageLoadingState, setImageLoadingState] = useState(false);
   const [imageLoadingCounter, setImageLoadingCounter] = useState("60");
@@ -72,10 +71,6 @@ const CreateStory = () => {
   const [story, setStory] = useState([]);
   const [storyPosting, setStoryPosting] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-
-  useEffect(() => {
-    console.log(story);
-  }, [story]);
 
   const handleGenerate = (e) => {
     e.preventDefault();
@@ -223,22 +218,18 @@ const CreateStory = () => {
         }
 
         console.log(response.data.links_array);
-        setImageLoadingState(false);
+
         let new_Arry = [];
         for (let i = 0; i < 9; i++) {
           new_Arry.push(response.data.links_array[i]);
         }
         setGeneratedImages(new_Arry);
+        setImageGenerationState(false);
+        setImageLoadingState(false);
       })
       .catch((err) => {
         console.error(err);
       });
-
-    setTimeout(() => {
-      // setGeneratedImages(linkArray);
-
-      setImageGenerationState(false);
-    }, 20000);
   };
 
   const getPageImageLink = (image_url) => {
@@ -259,124 +250,126 @@ const CreateStory = () => {
   };
 
   return (
-    <div className="CreateStory">
-      {modalState && (
-        <ModalCS
-          title={modalTitle}
-          message={modalMessage}
-          handleModDisplay={setModalDisplay}
-          message_stat={modalStat}
-        />
-      )}
-      {previewState && story.length > 0 ? (
-        <PreviewStory
-          story={story}
-          title={storyTitle}
-          back={setPreviewState}
-          handleSave={handleSave}
-        />
-      ) : (
-        <div className="wrapper create">
-          <div className="input-container">
-            <div className="heading">
-              <h2>New Story</h2>
-              <p>Page {pageCount}</p>
-            </div>
-            <form>
-              <label htmlFor="title">
-                What is the title of your story?
-                <input
-                  type="text"
-                  name="title"
-                  id="title"
-                  value={storyTitle}
-                  onChange={handleChange}
-                  placeholder="The Mermaid on Tea Island"
-                />
-                {error.title && <p className="input-error">{error.title}</p>}
-              </label>
-
-              <label htmlFor="paragraph">
-                Write the first paragraph of your story here
-                <textarea
-                  name="paragraph"
-                  id="paragraph"
-                  value={pageInput.paragraph}
-                  onChange={handleChange}
-                  placeholder="In Tea island lives a beautiful mermaid named Adella. Adella’s eyes are blue. Her hair is so long that it reaches to her waist."
-                />
-                {error.paragraph && (
-                  <p className="input-error">{error.paragraph}</p>
-                )}
-              </label>
-
-              <label htmlFor="keyword">
-                Enter keywords to generate Illustratons
-                <input
-                  type="text"
-                  name="keyword"
-                  id="keyword"
-                  value={pageInput.keyword}
-                  onChange={handleChange}
-                  placeholder="Mermaid with long hair and blue eyes on an Island"
-                />
-                {error.keyword && (
-                  <p className="input-error">{error.keyword}</p>
-                )}
-              </label>
-
-              <div className="form-action">
-                <Button
-                  clickFn={handleGenerate}
-                  disabled={imageGenerationState}
-                >
-                  Generate Illustration
-                </Button>
-                <Button styling="noBg" clickFn={handleNext}>
-                  Next Page
-                </Button>
+    <SideBarLayout>
+      <div className="CreateStory">
+        {modalState && (
+          <ModalCS
+            title={modalTitle}
+            message={modalMessage}
+            handleModDisplay={setModalDisplay}
+            message_stat={modalStat}
+          />
+        )}
+        {previewState && story.length > 0 ? (
+          <PreviewStory
+            story={story}
+            title={storyTitle}
+            back={setPreviewState}
+            handleSave={handleSave}
+          />
+        ) : (
+          <div className="wrapper create">
+            <div className="input-container">
+              <div className="heading">
+                <h2>New Story</h2>
+                <p>Page {pageCount}</p>
               </div>
-            </form>
-          </div>
-          <div className="image-container">
-            <div className="heading">
-              <h2>{storyTitle || "Story Title"}</h2>
-              <Button
-                styling="noBg"
-                disabled={story.length === 0}
-                clickFn={() => setPreviewState(!previewState)}
-              >
-                Preview Story
-              </Button>
-            </div>
-
-            {error.image && <p className="input-error">{error.image}</p>}
-
-            {imageGenerationState ? (
-              <div className="loading">
-                <img src={loaderImg} alt="" />
-              </div>
-            ) : (
-              generatedImages.length > 0 && (
-                <Fade cascade damping={0.1}>
-                  <ImageCardList
-                    list_of_image_urls={generatedImages}
-                    returnImageLink={getPageImageLink}
+              <form>
+                <label htmlFor="title">
+                  What is the title of your story?
+                  <input
+                    type="text"
+                    name="title"
+                    id="title"
+                    value={storyTitle}
+                    onChange={handleChange}
+                    placeholder="The Mermaid on Tea Island"
                   />
-                  <a
-                    href=""
-                    onClick={(e) => generateMoreImages(e)}
-                    className="gen-btn"
+                  {error.title && <p className="input-error">{error.title}</p>}
+                </label>
+
+                <label htmlFor="paragraph">
+                  Write the first paragraph of your story here
+                  <textarea
+                    name="paragraph"
+                    id="paragraph"
+                    value={pageInput.paragraph}
+                    onChange={handleChange}
+                    placeholder="In Tea island lives a beautiful mermaid named Adella. Adella’s eyes are blue. Her hair is so long that it reaches to her waist."
+                  />
+                  {error.paragraph && (
+                    <p className="input-error">{error.paragraph}</p>
+                  )}
+                </label>
+
+                <label htmlFor="keyword">
+                  Enter keywords to generate Illustratons
+                  <input
+                    type="text"
+                    name="keyword"
+                    id="keyword"
+                    value={pageInput.keyword}
+                    onChange={handleChange}
+                    placeholder="Mermaid with long hair and blue eyes on an Island"
+                  />
+                  {error.keyword && (
+                    <p className="input-error">{error.keyword}</p>
+                  )}
+                </label>
+
+                <div className="form-action">
+                  <Button
+                    clickFn={handleGenerate}
+                    disabled={imageGenerationState}
                   >
-                    Generate more images
-                  </a>
-                </Fade>
-              )
-            )}
+                    Generate Illustration
+                  </Button>
+                  <Button styling="noBg" clickFn={handleNext}>
+                    Next Page
+                  </Button>
+                </div>
+              </form>
+            </div>
+            <div className="image-container">
+              <div className="heading">
+                <h2>{storyTitle || "Story Title"}</h2>
+                <Button
+                  styling="noBg"
+                  disabled={story.length === 0}
+                  clickFn={() => setPreviewState(!previewState)}
+                >
+                  Preview Story
+                </Button>
+              </div>
+
+              {error.image && <p className="input-error">{error.image}</p>}
+
+              {imageGenerationState ? (
+                <div className="loading">
+                  <img src={loaderImg} alt="" />
+                </div>
+              ) : (
+                generatedImages.length > 0 && (
+                  <Fade cascade damping={0.1}>
+                    <ImageCardList
+                      list_of_image_urls={generatedImages}
+                      returnImageLink={getPageImageLink}
+                    />
+                    <a
+                      href=""
+                      onClick={(e) => generateMoreImages(e)}
+                      className="gen-btn"
+                    >
+                      Generate more images
+                    </a>
+                  </Fade>
+                )
+              )}
+            </div>
           </div>
-        </div>
-      )}
-    </div>
+        )}
+      </div>
+    </SideBarLayout>
   );
 };
 
