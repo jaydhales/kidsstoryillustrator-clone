@@ -88,7 +88,7 @@ export const AdminLogin = () => {
                 name="email"
                 id="email"
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={(e) => setEmail(e.target.value)} required
               />
 
               <label htmlFor="pasword" className="label">
@@ -102,7 +102,7 @@ export const AdminLogin = () => {
                 name="password"
                 id="password"
                 value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                onChange={(e) => setPassword(e.target.value)} required
               />
 
               {errors.map((error, index) => (
