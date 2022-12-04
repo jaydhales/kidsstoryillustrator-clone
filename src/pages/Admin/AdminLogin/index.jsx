@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import "./AdminLogin.scss";
 import logo from "../../../assets/img/logo.png";
-import logoWhite from "../../../assets/img/logo_white.png";
-import googleLogo from "../../../assets/img/google_logo.png";
+import logoWhite from "../../../assets/img/logo_white.svg";
+import reroute from "../../../assets/img/reroute.png";
 import facebookLogo from "../../../assets/img/facebook_logo.png";
 import appleLogo from "../../../assets/img/apple_logo.png";
 import axios from "axios";
@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../contexts/AuthContext";
 
 export const AdminLogin = () => {
-  const { apiUrl, handleLogin } = useContext(AuthContext);
+  const { apiUrl, handleLogIn } = useContext(AuthContext);
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
   const [errors, setErrors] = React.useState([]);
@@ -18,7 +18,7 @@ export const AdminLogin = () => {
 
   const navigate = useNavigate();
 
-  const endpoint = apiUrl + "auth/signin";
+  const endpoint = apiUrl + "auth/admin_signin";
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
@@ -43,7 +43,7 @@ export const AdminLogin = () => {
       .then((res) => {
         setIsLoading(false);
         console.log(res);
-        handleLogin(res.data.data);
+        handleLogIn(res.data.data);
 
         if (res.data.data.isAdmin) {
           navigate("/admin");
@@ -63,13 +63,12 @@ export const AdminLogin = () => {
       <div className="Admin-column">
         <div className="Admin-branding">
           <div className="content">
-            <img src={logo} alt="logo" id="logo" />
+            <img src={logoWhite} alt="logo" id="logo" />
           </div>
         </div>
         <div>
-          <div id="auth">
+          <div id="auth" className="admin_signin">
             <header className="center-align">
-              <img src={logo} alt="logo" id="logo2" />
               <nav className="auth-nav">
                 <a href="/admin/adminlogin" className="link tab-link active">
                   Login To Dashboard
@@ -119,28 +118,6 @@ export const AdminLogin = () => {
             <a href="/forgotPassword" id="reset-password">
               Forgot Password
             </a>
-
-            {/* <div className="flex or">
-          <div className="hLine"></div>
-          <p>Or</p>
-          <div className="hLine"></div>
-        </div>
-
-        <p className="continue-with">Continue with</p>
-
-        <div className="auth-links">
-          <button className="btn-round" aria-label="login with google">
-            <img src={googleLogo} alt="Google logo" className="btn-round-img"/>
-          </button>
-
-          <button className="btn-round" aria-label="login with google">
-            <img src={facebookLogo} alt="Facebook logo" className="btn-round-img"/>
-          </button>
-
-          <button className="btn-round" aria-label="login with google">
-            <img src={appleLogo} alt="Apple logo" className="btn-round-img"/>
-          </button>
-        </div> */}
           </div>
         </div>
       </div>

@@ -1,10 +1,9 @@
-import React, { useEffect,useState } from "react";
+import React, { useEffect,useState, useContext } from "react";
 
 import PropTypes from "prop-types";
 import Table from "../../../components/molecules/Tables";
 import "./UserDetails.scss";
 import { useNavigate, useParams } from "react-router-dom";
-// React Circular Progressbar
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 
 // Images
@@ -18,11 +17,13 @@ import image2 from "../../../assets/images/dashboard/image2.svg";
 import image3 from "../../../assets/images/dashboard/image3.svg";
 import { AdminSideNav } from "../../../components/molecules";
 import axios from "axios";
+import { AuthContext } from "../../../contexts/AuthContext";
 
 
-const endpoint ="https://web-production-c992.up.railway.app/users/";
 
 export const UserDetails = () => {
+  const{apiUrl, myAuth} =useContext(AuthContext)
+  const endpoint = apiUrl + "users/"
   const navigate = useNavigate();
   const [stateId, setStateId]= useState([]);
   const noOfStories = 48;
@@ -35,7 +36,7 @@ const {id} = useParams()
   const Config ={
     headers: {
       "Content-type": "application/json",
-      "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzgxMGZjMzVhMDhmMGEyYjQxYTBiODQiLCJ1c2VybmFtZSI6IkFkbWluIiwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2NzAwNTUzOTAsImV4cCI6MTY3MDE0MTc5MH0.WYKlwPkxqN-xGivW-Ins3IwOVqkfFrUyYb2E6C3hfGs"
+      "authorization": "Bearer " + myAuth.token
     }
   }
  

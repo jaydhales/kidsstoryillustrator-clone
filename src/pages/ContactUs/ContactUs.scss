@@ -7,6 +7,7 @@
         box-sizing: border-box;
         // border-radius: 56px;
         gap: 20px;
+        margin-bottom: 284px;
         // border: 1px solid #b9babb;
     }
 
@@ -20,9 +21,11 @@
     }
 
     .contactus {
+        font-family: 'Nunito';
         font-weight: 700;
         font-size: 48px;
         margin-left: 9%;
+        margin-top: 98px;
     }
 
     .Contact-us {
@@ -32,6 +35,7 @@
         font-size: 36px;
         line-height: 44px;
         margin-bottom: 8px;
+        
     }
 
     .contact-paragraph {
@@ -57,7 +61,7 @@
     .Contact-frame_container input {
         width: 100%;
         height: 56px;
-        border-radius: 10px;
+        border-radius: 48px;
         border: 1px solid #BBBBBB;
 
     }
@@ -122,6 +126,21 @@
         transition: 0.2s;
     }
 
+    input {
+        background-color: #E8F0FE;
+      }
+
+      input:invalid {
+        background-color: #FFFFFF;
+      }
+
+    textarea {
+        background-color: #E8F0FE;
+      }
+
+      textarea:invalid {
+        background-color: #FFFFFF;
+      }
 
 
     .Contact-frame_container a {
@@ -245,6 +264,7 @@
 
         .chatbot_wrapper {
             border-radius: 0;
+            margin-bottom: 168px;
         }
 
 
