@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { useEffect } from "react";
 import { Routes, Route, Navigate, useNavigate } from "react-router-dom";
 import { AuthContext } from "./contexts/AuthContext";
 
@@ -41,20 +42,21 @@ import AdminLogin from "./pages/Admin/AdminLogin";
 import UserDetails from "./pages/Admin/UserDetails";
 
 const AppRoutes = () => {
-  const { myAuth } = useContext(AuthContext);
-  const navigate =useNavigate()
+  const { myAuth, setAuth, initialAuth } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const { isAdmin, isAuthenticated } = myAuth;
 
-  const DefaultRoutes = `
-      
-    `;
-
-  const ProtectedRoutes = ``;
-
-  const AdminRoutes = `
-      
-  `;
+  useEffect(() => {
+    const localAuth =
+      localStorage.getItem("authInfo") &&
+      JSON.parse(localStorage.getItem("authInfo"));
+    if (localAuth) {
+      setAuth(localAuth);
+    } else {
+      localStorage.setItem("authInfo", JSON.stringify(myAuth));
+    }
+  }, []);
 
   return (
     <Routes>
@@ -131,20 +133,20 @@ const AppRoutes = () => {
 
 const Protected = ({ children }) => {
   const { isAuthenticated } = useContext(AuthContext).myAuth;
-  if (!isAuthenticated) { 
-    useNavigate(-1) 
+  if (isAuthenticated === false) {
+    return <Navigate replace to="/login" />;
   } else {
-    return children;
-  }  
+    return <>{children}</>;
+  }
 };
 
 const Admin = ({ children }) => {
   const { isAdmin, isAuthenticated } = useContext(AuthContext).myAuth;
-  if (!isAdmin && !isAuthenticated) { 
-    useNavigate(-1) 
+  if (isAdmin === false && isAuthenticated === false) {
+    return <Navigate replace to="/" />;
   } else {
-    return children;
-  }  
+    return <>{children}</>;
+  }
 };
 
 export default AppRoutes;

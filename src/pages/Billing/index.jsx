@@ -56,6 +56,7 @@ export const Billing = () => {
                     id="name"
                     onChange={handleChange}
                     placeholder="Enter Full name"
+                    required
                   />
                 </div>
                 <div className="form-group">
@@ -66,6 +67,7 @@ export const Billing = () => {
                     id="address1"
                     onChange={handleChange}
                     placeholder="Enter Address"
+                    required
                   />
                 </div>
                 <div className="form-group">
@@ -76,6 +78,7 @@ export const Billing = () => {
                     id="address2"
                     onChange={handleChange}
                     placeholder="Enter Address 2"
+                    required
                   />
                 </div>
               </div>
@@ -91,6 +94,7 @@ export const Billing = () => {
                     id="card-name"
                     onChange={handleChange}
                     placeholder="Enter Name on card"
+                    required
                   />
                 </div>
                 <div className="form-group">
@@ -102,6 +106,7 @@ export const Billing = () => {
                     minLength={3}
                     onChange={handleChange}
                     placeholder="0000 0000 0000 0000"
+                    required
                   />
                 </div>
 
@@ -115,6 +120,7 @@ export const Billing = () => {
                       maxLength={5}
                       onChange={handleChange}
                       placeholder="cvv"
+                      required
                     />
                   </div>{" "}
                   <div className="form-group">
@@ -125,6 +131,7 @@ export const Billing = () => {
                       id="exp-month"
                       onChange={handleChange}
                       placeholder="Month"
+                      required
                     />
                   </div>
                   <div className="form-group">
@@ -135,6 +142,7 @@ export const Billing = () => {
                       id="exp-year"
                       onChange={handleChange}
                       placeholder="year"
+                      required
                     />
                   </div>
                 </div>
