@@ -60,7 +60,10 @@
       }
 
       @media only screen and (max-width: 480px) {
-        margin: 0 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+       margin: 0 5px;
       }
       .input4 {
         width: 100%;
