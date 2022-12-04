@@ -223,22 +223,18 @@ const CreateStory = () => {
         }
 
         console.log(response.data.links_array);
-        setImageLoadingState(false);
+
         let new_Arry = [];
         for (let i = 0; i < 9; i++) {
           new_Arry.push(response.data.links_array[i]);
         }
         setGeneratedImages(new_Arry);
+        setImageLoadingState(false);
+        setImageGenerationState(false);
       })
       .catch((err) => {
         console.error(err);
       });
-
-    setTimeout(() => {
-      // setGeneratedImages(linkArray);
-
-      setImageGenerationState(false);
-    }, 20000);
   };
 
   const getPageImageLink = (image_url) => {
