@@ -92,4 +92,10 @@
       height: 40px;
     }
   }
+
+  @media screen and (max-width: 489px) {
+    .chatbot3 {
+      display: none;
+    }
+  }
 }
