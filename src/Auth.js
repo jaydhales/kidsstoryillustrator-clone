@@ -37,7 +37,8 @@ import {
   Archive,
   Account,
   Security,
-  BillingPage
+  BillingPage,
+  UsersDashboard
 } from "./pages";
 import AdminDashBoard from "./pages/Admin/Admin-Dashboard";
 import AdminLogin from "./pages/Admin/AdminLogin";
@@ -86,6 +87,7 @@ const ProtectedRoutes = (
     <Route path="/createStory" element={<CreateStory />} />
     <Route path="/summaryActivities" element={<SummaryActivities />} />
     <Route path="/users" element={<Users />} />
+    <Route path="/users-dashboard" element={<UsersDashboard />} />
   </>
 );
 

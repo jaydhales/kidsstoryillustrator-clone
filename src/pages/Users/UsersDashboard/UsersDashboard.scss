@@ -1,0 +1,72 @@
+.UsersDashboard {
+  display: flex;
+  width: 100%;
+  font-family: "Nunito";
+  font-style: normal;
+
+     .side-bar3 {
+        width: 240px;
+        height: 100vh;
+    }
+
+    
+  .wrap-content1 {
+    margin: 0 40px;
+  }
+
+  .header-boxes1 {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 15px 0;
+  }
+
+  .header-boxes2 {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 15px 0;
+  }
+  .rig1 {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .vix1 {
+    border: 1px solid black;
+    border-radius: 12px;
+    padding: 32px 24px;
+  }
+  .cover1  {
+    border: 1px solid #FFF6DF;
+    width: 339px;
+    background: #FFF6DF;
+    border-radius: 12px;
+    padding: 32px 24px;
+  }
+
+  .cover2  {
+    border: 1px solid #E0DFFF;
+    width: 339px;
+    background: #E0DFFF;
+    border-radius: 12px;
+    padding: 32px 24px;
+  }
+
+  .cover3  {
+    border: 1px solid #E0FFDF;
+    width: 339px;
+    background: #E0FFDF;
+    border-radius: 12px;
+    padding: 32px 24px;
+  }
+
+  .btn-vix {
+    width: 290px;
+    height: 50px;
+    background: #AA0136;
+    border-radius: 56px;
+    color: white;
+  }
+
+}
