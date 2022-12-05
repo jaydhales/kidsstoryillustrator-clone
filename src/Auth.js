@@ -72,7 +72,8 @@ const AppRoutes = () => {
       <Route path="/pricing" element={<Pricing />} />
       <Route path="/privacy" element={<Privacy />} />
       <Route path="/signup" element={<SignUp />} />
-      <Route path="/admin/login" element={<AdminLogin />} />
+      <Route path="/billing"  element={<Billing/>}/>
+     <Route path="/admin/login" element={<AdminLogin />} />
       <Route path="/changePassword" element={<ChangePassword />} />
       <Route path="/forgotPassword" element={<ForgotPassword />} />
       <Route path="/createStory" element={<CreateStory />} />
