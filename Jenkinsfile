@@ -25,7 +25,7 @@ pipeline {
 			steps {
 				sh "sudo cp -rf . /home/samuraiaj/magicbackend"
 				//sh "sudo pm2 stop kidsstoryillustrator"
-				sh "sudo pm2 start /home/samuraiaj/magicbackend/ecosystem.config.js"
+				sh "sudo pm2 start /home/samuraiaj/ecosystem.config.js"
 				sh "sudo pm2 save"
 				//sh "sudo rm -rf /home/samuraiaj/magicbackend/*"
 				//sh "sudo cp -rf /home/samuraiaj/magic-env/.env /home/samuraiaj/magicbackend"
