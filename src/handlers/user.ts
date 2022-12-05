@@ -255,7 +255,7 @@ static async forgotPassword(req: Request, res: Response) {
       } else {
           const user = await UserModel.findOne({email: email});
           if(!user){
-              return res.status(400).send({ message: 'Email or password incorrect' });
+            return res.status(400).send({ message: 'Email incorrect' });
           }
           const payload = {
               _id: user._id,
@@ -265,7 +265,7 @@ static async forgotPassword(req: Request, res: Response) {
           };
           const token = jwt.sign({ ...payload }, secret, { expiresIn: '15m' });
           const link = `${base_url}users/reset-password/${user._id}/${token}`;
-          await sendEmail('jigah4thjuly@gmail.com', 'Password Reset Link', link);
+          await sendEmail(user.name, 'Password Reset Link', link);
           res.send('Password reset link sent to your email account!')
       }
   } catch (error) {
