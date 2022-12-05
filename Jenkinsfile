@@ -11,7 +11,7 @@ pipeline {
 
 			steps  {
 				sh "sudo npm install"
-      				//sh "sudo npm run build"
+      				sh "sudo npm run build"
         
 			} 
     
