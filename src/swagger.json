@@ -286,6 +286,56 @@
         }
       }
     },
+    "/auth/admin_signin": {
+      "post": {
+        "tags": ["User"],
+        "summary": "Login Admin",
+        "description": "Authenticate an admin user.",
+        "operationId": "loginAdmin",
+        "requestBody": {
+          "description": "Created admin object",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/userLogin"
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/userLogin"
+              }
+            },
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "#/components/schemas/userLogin"
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/User"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/User"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/users/": {
       "get": {
         "tags": ["Admin"],
@@ -317,6 +367,34 @@
       }
     },
     "/users/{id}": {
+      "get": {
+        "tags": ["Admin"],
+        "summary": "Get A User Detail",
+        "description": "Admin Operation: Get a user detail.",
+        "operationId": "getAUser",
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/User"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/User"
+                }
+              }
+            }
+          }
+        }
+      },
       "put": {
         "tags": ["Admin"],
         "summary": "Update Admin Details",
@@ -390,6 +468,50 @@
             "schema": {
               "type": "string"
             }
+          }
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "successful operation"
+          }
+        }
+      }
+    },
+
+    "/api/get_images": {
+      "post": {
+        "tags": ["Images"],
+        "summary": "Get API Image",
+        "description": "Get API Image.",
+        "operationId": "getImage",
+        "requestBody": {
+          "description": "Created image object",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/apiImage"
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/apiImage"
+              }
+            },
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "#/components/schemas/apiImage"
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "api_key": []
           }
         ],
         "responses": {
@@ -512,6 +634,14 @@
           "name": "storyRequest"
         }
       },
+      "apiImage": {
+        "type": "object",
+        "properties": {
+          "prompt": {
+            "type": "string"
+          }
+        }
+      },
       "ApiResponse": {
         "type": "object",
         "properties": {
@@ -535,6 +665,11 @@
         "type": "http",
         "scheme": "bearer",
         "bearerFormat": "JWT"
+      },
+      "api_key": {
+        "type": "apiKey",
+        "name": "api_key",
+        "in": "header"
       }
     }
   }
