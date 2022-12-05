@@ -606,6 +606,14 @@
           "name": "userLogin"
         }
       },
+      "accessSignToken": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string"
+          }
+        }
+      },
       "storyRequest": {
         "type": "object",
         "properties": {
