@@ -10,67 +10,85 @@ import Instagram from '../../../assets/img/ri-instagram-fill.svg';
 
 
 import style from './Footer.scss';
-const links = [
-  {
-    heading: 'Company',
-    links: [
-      {
-        text: 'About Us',
-        to: '/about',
-      },
-      {
-        text: 'Contact Us',
-        to: '/contact',
-      },
-      {
-        text: 'Pricing',
-        to: '/pricing',
-      },
-      {
-        text: 'Create Story',
-        to: '/craeteStory',
-      },
-    ],
-  },
-  {
-    heading : 'Help' ,
-    links: [
-      {
-        text: 'FAQs',
-        to: '/faq',
-      },
-      {
-        text: 'Privacy Policy',
-        to: '/privacy',
-      },
+// const links = [
+//   {
+//     heading: 'Company',
+//     links: [
+//       {
+//         text: 'About Us',
+//         to: '/about',
+//       },
+//       {
+//         text: 'Contact Us',
+//         to: '/contact',
+//       },
+//       {
+//         text: 'Pricing',
+//         to: '/pricing',
+//       },
+//       {
+//         text: 'Create Story',
+//         to: '/craeteStory',
+//       },
+//     ],
+//   },
+//   {
+//     heading : 'Help' ,
+//     links: [
+//       {
+//         text: 'FAQs',
+//         to: '/faq',
+//       },
+//       {
+//         text: 'Privacy Policy',
+//         to: '/privacy',
+//       },
       
-    ],
-  },
-  {
-    heading: 'Resources',
-    links: [
-      {
-        text: 'Blog',
-        to: '/blog',
-      },
-    ],
-  },
-];
+//     ],
+//   },
+//   {
+//     heading: 'Resources',
+//     links: [
+//       {
+//         text: 'Blog',
+//         to: '/blog',
+//       },
+//     ],
+//   },
+// ];
 const Footer = () => {
   return (
     <div>
     <section className="Footer">
       <div className="Footer__left">
-        <img src={logo_red} className="Navbar__Logo" />
+        <img src={logo_red} className="footer__Logo" />
         <p>follow us on</p>
         <div className="Footer__left__socials">
           <img src={Twitter} />
           <img src={Facebook} />
           <img src={Instagram} />
-        </div>
-        
+        </div> 
       </div>
-      <div className="Footer__right">
+
+      <div className="Footer_company">
+        <h3 className='Footer_heading'>Company</h3>
+        <Link to="/about" className='Footer_link'>About Us</Link>
+        <Link to="/contact" className='Footer_link'>Contact Us</Link>
+        <Link to="/pricing" className='Footer_link'>Pricing</Link>
+        <Link to="/createstory" className='Footer_link'>Create Story</Link>
+      </div>
+
+      <div className="Footer_help">
+        <h3 className='Footer_heading'>Help</h3>
+        <Link to="/faq'" className='Footer_link'>FAQs</Link>
+        <Link to="/privacy" className='Footer_link'>Privacy Policy </Link>
+      </div>
+
+      <div className="Footer_resources">
+        <h3 className='Footer_heading'>Resources</h3>
+        <Link to="/blog" className='Footer_link'>Blog</Link>
+      </div>
+      {/* <div className="Footer__right">
         {links.map(({ heading, links: link }) => (
           <div key={heading}>
             <h3>{heading}</h3>
@@ -83,8 +101,9 @@ const Footer = () => {
             </div>
           </div>
         ))}
-      </div>
+      </div> */}
     </section>
+
     <div className="copyright">
       <hr/>
       <div className="copy-p">

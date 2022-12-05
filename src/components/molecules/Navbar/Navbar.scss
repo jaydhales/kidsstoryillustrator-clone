@@ -7,7 +7,7 @@
   left: 0;
   right: 0;
   background-color: #fff;
-  z-index: 7;
+  z-index: 2;
 
   @media screen and (max-width: 1200px) {
     padding: 30px;
@@ -19,11 +19,9 @@
 
   align-items: center;
 
-  &__Logo {
-    z-index: 7;
-    width: 150px;
+  .Navbar__Logo{
+    width: 200px;
   }
-
   &__container {
     display: flex;
 
@@ -61,9 +59,14 @@
     }
 
     &__getStarted {
+      font-size: 18px;
+        padding-inline: 2rem;
+
       @media screen and (max-width: 900px) {
         width: 100%;
         text-align: center;
+
+        
       }
 
       border: 2px solid #aa0136;
