@@ -25,7 +25,6 @@ export { default as Info } from "./Users/Info";
 export { default as Settings } from "./Settings";
 export { default as Account } from "./Users/Account";
 export { default as Security } from "./Users/Security"
-export { default as UsersDashboard } from "./Users/UsersDashboard"
 export { default as BillingPage } from "./Users/BillingPage";
 export { default as Users } from "./Users/Users";
 export { default as UserList } from "./Admin/UserList";
