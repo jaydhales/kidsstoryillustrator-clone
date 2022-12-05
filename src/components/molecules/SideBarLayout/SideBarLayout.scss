@@ -1,5 +1,4 @@
 .SideBarLayout {
-  width: 100vw;
   .sidebar-container {
     margin: 0;
     padding: 0;
@@ -166,9 +165,13 @@
   }
 
   .main-container {
-    width: 80%;
     padding: 0;
     margin-left: 20%;
     box-sizing: border-box;
+
+    @media screen and (max-width: 700px) {
+      margin: 0;
+      margin-top: 100px;
+    }
   }
 }

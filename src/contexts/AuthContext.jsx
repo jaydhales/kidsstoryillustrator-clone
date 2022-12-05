@@ -3,12 +3,12 @@ import React, { createContext, useContext, useEffect, useState } from "react";
 const AuthContext = createContext();
 
 const AuthProvider = ({ children }) => {
-  const initialAuth = useState({
+  const initialAuth = {
     isAuthenticated: false,
     isAdmin: false,
     user: null,
     token: null,
-  });
+  };
 
   const apiUrl = "https://api.magicbookwriter.hng.tech/";
 

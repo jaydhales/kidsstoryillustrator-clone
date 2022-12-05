@@ -81,58 +81,67 @@ const AppRoutes = () => {
 
       <Route
         path="/myStories"
-        element=<Protected>{<MyStories />} </Protected>
+        element={<Protected>{<MyStories />} </Protected>}
       />
       <Route
         path="/dashboard"
-        element=<Protected>{<Dashboard />} </Protected>
+        element={<Protected>{<Dashboard />} </Protected>}
       />
       <Route
         path="/userdashboard"
-        element=<Protected>{<UserDashboard />} </Protected>
+        element={<Protected>{<UserDashboard />} </Protected>}
       />
-      <Route path="/story/:id" element=<Protected>{<Story />} </Protected> />
-      <Route path="/profile" element=<Protected>{<Profile />} </Protected> />
+      <Route path="/story/:id" element={<Protected>{<Story />} </Protected>} />
+      <Route path="/profile" element={<Protected>{<Profile />} </Protected>} />
       <Route
         path="/profile/edit"
-        element=<Protected>{<ProfileEdit />} </Protected>
+        element={<Protected>{<ProfileEdit />} </Protected>}
       />
-      <Route path="/account-info" element=<Protected>{<Info />} </Protected> />
+      <Route
+        path="/account-info"
+        element={<Protected>{<Info />} </Protected>}
+      />
       <Route
         path="/account-settings"
-        element=<Protected>{<Settings />} </Protected>
+        element={<Protected>{<Settings />} </Protected>}
       />
-      <Route path="/billing" element=<Protected>{<Billing />} </Protected> />
-      <Route path="/account" element=<Protected>{<Account />} </Protected> />
-      <Route path="/security" element=<Protected>{<Security />} </Protected> />
+      <Route path="/billing" element={<Protected>{<Billing />} </Protected>} />
+      <Route path="/account" element={<Protected>{<Account />} </Protected>} />
+      <Route
+        path="/security"
+        element={<Protected>{<Security />} </Protected>}
+      />
       <Route
         path="/billing-page"
-        element=<Protected>{<BillingPage />} </Protected>
+        element={<Protected>{<BillingPage />} </Protected>}
       />
       <Route
         path="/cancelSubscription"
-        element=<Protected>{<CancelSubscription />} </Protected>
+        element={<Protected>{<CancelSubscription />} </Protected>}
       />
       <Route
         path="/summaryActivities"
-        element=<Protected>{<SummaryActivities />} </Protected>
+        element={<Protected>{<SummaryActivities />} </Protected>}
       />
-      <Route path="/users" element=<Protected>{<Users />} </Protected> />
+      <Route path="/users" element={<Protected>{<Users />} </Protected>} />
 
       {/* Admin */}
-      <Route path="/admin" element=<Admin>{<AdminDashBoard />}</Admin> />
-      <Route path="/admin/userlist" element=<Admin>{<UserList />}</Admin> />
+      <Route path="/admin" element={<Admin>{<AdminDashBoard />}</Admin>} />
+      <Route path="/admin/userlist" element={<Admin>{<UserList />}</Admin>} />
       <Route
         path="/admin/userdetails/:id"
-        element=<Admin>{<UserDetails />}</Admin>
+        element={<Admin>{<UserDetails />}</Admin>}
       />
-      <Route path="/admin/archive" element=<Admin>{<Archive />}</Admin> />
+      <Route path="/admin/archive" element={<Admin>{<Archive />}</Admin>} />
     </Routes>
   );
 };
 
 const Protected = ({ children }) => {
-  const { isAuthenticated } = useContext(AuthContext).myAuth;
+  const { myAuth } = useContext(AuthContext);
+  const { isAuthenticated } = myAuth;
+
+  console.log(myAuth);
   if (isAuthenticated === false) {
     return <Navigate replace to="/login" />;
   } else {
@@ -141,7 +150,9 @@ const Protected = ({ children }) => {
 };
 
 const Admin = ({ children }) => {
-  const { isAdmin, isAuthenticated } = useContext(AuthContext).myAuth;
+  const { myAuth } = useContext(AuthContext);
+  const { isAdmin, isAuthenticated } = myAuth;
+
   if (isAdmin === false && isAuthenticated === false) {
     return <Navigate replace to="/" />;
   } else {
