@@ -36,6 +36,7 @@ import {
   Account,
   Security,
   BillingPage,
+  UsersDashboard
 } from "./pages";
 import AdminDashBoard from "./pages/Admin/Admin-Dashboard";
 import AdminLogin from "./pages/Admin/AdminLogin";
@@ -78,7 +79,32 @@ const AppRoutes = () => {
       <Route path="/forgotPassword" element={<ForgotPassword />} />
       <Route path="/createStory" element={<CreateStory />} />
 
+
+const ProtectedRoutes = (
+  <>
+    {DefaultRoutes}
+    <Route path="/myStories" element={<MyStories />} />
+    <Route path="/dashboard" element={<Dashboard />} />
+    <Route path="/userdashboard" element={<UserDashboard />} />
+    <Route path="/story/:id" element={<Story />} />
+    <Route path="/profile" element={<Profile />} />
+    <Route path="/profile/edit" element={<ProfileEdit />} />
+    <Route path="/account-info" element={<Info />} />
+    <Route path="/account-settings" element={<Settings />} />
+    <Route path="/billing" element={<Billing />} />
+    <Route path="/account" element={<Account />}/>
+    <Route path="/security" element={<Security />}/>
+    <Route path="/billing-page" element={<BillingPage/>}/>
+    <Route path="/cancelSubscription" element={<CancelSubscription />} />
+    <Route path="/createStory" element={<CreateStory />} />
+    <Route path="/summaryActivities" element={<SummaryActivities />} />
+    <Route path="/users" element={<Users />} />
+    <Route path="/users-dashboard" element={<UsersDashboard />} />
+  </>
+);
+=======
       {/* Protected */}
+
 
       <Route
         path="/myStories"
