@@ -5,7 +5,6 @@ import StorybookModel from '../model/storybook.model';
 
 export class StoryLookUp extends BaseHandler {
 
-
   static async getAllStories(req: Request, res: Response) {
     try {
       const allStories = await StorybookModel.find({}).populate({
