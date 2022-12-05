@@ -1,24 +1,17 @@
+import { IStorybook } from '.';
 
-interface Ibody {
-	email: string,
-	username: string,
-	firstName: string,
-	lastName: string,
-	password: string
+export interface Ibody {
+	email: string;
+	username: string;
+	firstName: string;
+	lastName: string;
+	hash: string;
 }
 
-const body: Ibody = {
-	email: 'ukanah15thdean@gmail.com',
-	username: 'deanuko',
-	firstName: 'dean',
-	lastName: 'ukanah',
-	password: 'sdkfhffhfkwefjwfwjf'
+export interface request_ {
+	body: Ibody;
 }
 
-interface request_ {
-	body: Ibody
-}
-
-export const request: request_ = {
-	body: body
+export interface request__ {
+	storyBody: IStorybook
 }
