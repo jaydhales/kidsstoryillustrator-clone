@@ -14,6 +14,14 @@ router
     .put(authorizeAdmin, User.updateAUser)
     .delete(authorizeAdmin, User.deleteUser)
 
+router
+    .route('/forgot-password')
+    .post(User.forgotPassword)
+
+router
+    .route('/reset-password/:id/:token')
+    .post(User.resetPassword)
+
 
 
 export default router
