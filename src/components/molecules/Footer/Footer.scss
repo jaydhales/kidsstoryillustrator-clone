@@ -1,13 +1,13 @@
 .Footer {
-    width:100%;
-    background-color: #fff;
-    color: #131313;     
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    place-items: center;
-    align-items: start;
-    padding-block: 1rem;
-    margin-block-start: 5rem;
+    width: 100%;
+padding-inline: 5%;
+margin-block-start: 5rem;
+padding-block: 1rem;
+background-color: #ffffff;
+color: #131313;
+display: grid;
+grid-template-columns: 4fr repeat(3, 3fr);
+
 
     .footer__Logo{
         cursor: pointer;
