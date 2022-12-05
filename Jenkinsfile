@@ -11,7 +11,7 @@ pipeline {
 
 			steps  {
 				sh "sudo npm i --force"
-      				//sh "sudo npm run build"
+      				sh "sudo npm run build"
         
 			} 
     
@@ -23,7 +23,7 @@ pipeline {
 		
 			
 			steps {
-				sh "sudo cp -rf * /home/samuraiaj/magicbackend"
+				sh "sudo cp -rf . /home/samuraiaj/magicbackend"
 				//sh "sudo pm2 stop kidsstoryillustrator"
 				sh "sudo pm2 start /home/samuraiaj/magicbackend/ecosystem.config.js"
 				sh "sudo pm2 save"
