@@ -12,7 +12,12 @@ export const Settings = () => {
   const [account, setAccount] = useState(true);
   const [security, setSecurity] = useState(false);
   const [billPage, setBillPage] = useState(false);
-  const [value, setValue] = React.useState();
+  const [isActive, setIsActive] = useState(false);
+
+  const handleClick = () => {
+    setIsActive(current => !current);
+  };
+
 
   const viewAcct = () => {
     setAccount((prevState) => !prevState);
@@ -32,9 +37,6 @@ export const Settings = () => {
     setSecurity(false);
   };
 
-  const handleChange = (event) => {
-    setValue(event.target.value);
-  };
 
   return (
     <div className="Settings">

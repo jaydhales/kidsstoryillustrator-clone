@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 
 import PropTypes from "prop-types";
-import Mastercard from "../../../assets/images/Mastercard logo.svg"
-import "./BillingPage.scss"
+import Mastercard from "../../../assets/images/Mastercard logo.svg";
+import "./BillingPage.scss";
 export const Settings = () => {
-  const [viewCard, setViewCard] = useState(false)
-  const [viewForm, setViewForm] = useState(true)
+  const [viewCard, setViewCard] = useState(false);
+  const [viewForm, setViewForm] = useState(true);
   const [formData, setFormData] = useState({
     cardName: "",
     cardNumber: "",
     date: "",
     cvc: "",
-    billingAddress: ""
+    billingAddress: "",
   });
 
   const [submitted, setSubmitted] = useState(false);
@@ -35,16 +35,17 @@ export const Settings = () => {
   }
 
   const saveCard = () => {
-    setViewCard(prevState => !prevState)
-    setViewForm(prevState => !prevState)
-  }
+    setViewCard((prevState) => !prevState);
+    setViewForm((prevState) => !prevState);
+  };
   return (
     <div className="BillingPage">
-        <div className="head-content">
-            <b>Payment method</b>
-            <p>Update your billing details and address</p>
-        </div>
-        {viewForm? <form>
+      <div className="head-content">
+        <b>Payment method</b>
+        <p>Update your billing details and address</p>
+      </div>
+      {viewForm ? (
+        <form>
           <div className="grid-section2">
             <label>
               Cardholder name <br />
@@ -77,7 +78,7 @@ export const Settings = () => {
               ) : null}
             </label>
             <label>
-            Expiration month and year <br />
+              Expiration month and year <br />
               <input
                 type="number"
                 className="input3"
@@ -92,7 +93,7 @@ export const Settings = () => {
               ) : null}
             </label>
             <label>
-            CVC <br />
+              CVC <br />
               <input
                 type="number"
                 className="input3"
@@ -107,45 +108,53 @@ export const Settings = () => {
               ) : null}
             </label>
           </div>
-          <button className="card-btn" onClick={saveCard}>Save Card</button>
-        </form> : null}
-        {viewCard? <div className="card-section1">
-            <div className="card-section2">
+          <button className="card-btn" onClick={saveCard}>
+            Save Card
+          </button>
+        </form>
+      ) : null}
+      {viewCard ? (
+        <div className="card-section1">
+          <div className="card-section2">
             <img src={Mastercard} alt="/" className="card-logo" />
             <div>
               <b>Visa ending in 1234</b>
               <p>Expiry 06/2024</p>
-            
-            <div className="card-section3">
-              <p>Set as default</p>
-              <button className="card-btn">Edit</button>
-            </div>
-            </div>
-          </div>
-          <div>
-            <input type="checkbox" className="card-section4"/>
-          </div>
-        </div> : null}
-        <div className="bill-add">
-         <b>Billing address</b>
-         <p>Where should invoices be sent</p>
-        </div>
-        <div className="footer-content">
-              <input
-                type="email"
-                className="input3"
-                placeholder="Example@gmail.com"
-                name="billingAdress"
-                value={formData.billingAddress}
-                onChange={handleChange}
-              />
-              <br />
-              {submitted && !formData.billingAddress ? (
-                <span className="span2">enter your card name.</span>
-              ) : null}
 
-            <button className="btns-6" onClick={submitForm}>Save Changes</button>
+              <div className="card-section3">
+                <p>Set as default</p>
+                <button className="card-btn">Edit</button>
+              </div>
+            </div>
+          </div>
+          <label className="container">
+            <input type="checkbox" />
+            <span className="checkmark"></span>
+          </label>
         </div>
+      ) : null}
+      <div className="bill-add">
+        <b>Billing address</b>
+        <p>Where should invoices be sent</p>
+      </div>
+      <div className="footer-content">
+        <input
+          type="email"
+          className="input3"
+          placeholder="Example@gmail.com"
+          name="billingAdress"
+          value={formData.billingAddress}
+          onChange={handleChange}
+        />
+        <br />
+        {submitted && !formData.billingAddress ? (
+          <span className="span2">enter your card name.</span>
+        ) : null}
+
+        <button className="btns-6" onClick={submitForm}>
+          Save Changes
+        </button>
+      </div>
     </div>
   );
 };
