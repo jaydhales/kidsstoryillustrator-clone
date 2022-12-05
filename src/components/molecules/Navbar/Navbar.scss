@@ -21,7 +21,7 @@
 
   &__Logo {
     z-index: 7;
-    width: 75px;
+    width: 150px;
   }
 
   &__container {
@@ -66,9 +66,9 @@
         text-align: center;
       }
 
-      background: #aa0136;
+      border: 2px solid #aa0136;
       padding: 10px 20px;
-      color: #fff;
+      color: #aa0136;
       border-radius: 999px;
       font-weight: 400;
       cursor: pointer;

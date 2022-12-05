@@ -27,8 +27,7 @@ export const Home = () => {
               details
             </p>
             <div className="button--grid">
-              <button className="create respons_btn_size_435" onClick={() => navigate('/login')} >Create Stories</button>
-              <button className="read respons_btn_size_435">Read Stories</button>
+              <button className="create respons_btn_size_435" onClick={() => navigate('/createStory')} >Create Stories</button>
             </div>
           </section>
           <section className="image">
@@ -82,7 +81,7 @@ export const Home = () => {
                 <h4 className="h4-header">Automation</h4>
               </div>
               <p>
-                Eploying the best use of AI, illustrations for your stories are
+                Deploying the best use of AI, illustrations for your stories are
                 automatically generated. You do not have to bother about the
                 details.
               </p>
@@ -153,7 +152,6 @@ export const Home = () => {
           </div>
         </section>
         <div className="button--flex">
-          <button className="respons_btn_size_435" onClick={() => navigate('/createStory')}>Create Story</button>
         </div>
         <h3 style={{ margin: "1em" }} className='h3-header'>Testimonials</h3>
         <section className="testimonials">

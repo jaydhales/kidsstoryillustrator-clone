@@ -1,80 +1,101 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900;1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900;1000&display=swap");
 
+.faqheader {
+  display: flex;
+
+  .chatbot3 {
+    background-blend-mode: color, normal;
+    height: 100%;
+  }
+
+.group_chatbot5{
+    transform: rotate(-40deg);
+}
+}
 
 .FAQHero {
+  display: flex;
+  width: 100%;
+  background-color: #faf0f3;
+
+  .faqhero_mid-div {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #FAF0F3;
-    font-family: 'Nunito';
+    background-color: #faf0f3;
+    font-family: "Nunito";
     top: 0;
-    padding: 8rem;
+  }
+
+  h1 {
+    color: #aa0136;
+    font-weight: 800;
+    font-size: 57px;
+    /* line-height: 64px; */
+  }
+
+  p {
+    font-weight: 500;
+    font-size: 18px;
+    color: #131313;
+    width: 571px;
+    text-align: center;
+    padding: 0.5rem;
+  }
+
+  .search-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 16px 32px;
+  }
+
+  .search-container input {
+    padding-left: 4rem;
+    background: #ffffff;
+    width: 601px;
+    height: 56px;
+    box-sizing: border-box;
+    border: 1px solid #aa0136;
+    border-radius: 56px;
+  }
+
+  #search-icon {
+    width: 20px;
+    position: absolute;
+    left: 10%;
+  }
+
+  /* media queries */
+  @media screen and (max-width: 900px) {
     width: 100%;
+    padding: 2rem;
 
-    h1{
-        color: #AA0136;
-        font-weight: 800;
-        font-size: 57px;
-        /* line-height: 64px; */
-    }
-    
-    p{
-        font-weight: 500;
-        font-size: 18px;
-        color: #131313;
-        width: 571px;
-        text-align: center;
-        padding: .5rem;
-    }
-    
-    .search-container{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: relative;
-        padding: 16px 32px;
-    }
-    
-    .search-container input{
-        padding-left: 4rem;
-        background: #ffffff;
-        width: 601px;
-        height: 56px;
-        box-sizing: border-box;
-        border: 1px solid #AA0136;
-        border-radius: 56px;
+    h1 {
+      font-size: 28px;
     }
 
-    #search-icon {
-        width: 20px;
-        position: absolute;
-        left: 10%;
+    p {
+      width: 271px;
+      text-align: center;
+      font-size: 10px;
     }
-    
-    /* media queries */
-    @media screen and (max-width: 900px ) {
-        width: 100%;
-        padding: 2rem;
-        
-        h1{
-            font-size: 28px;
-        }
-    
-        p {
-            width:271px;
-            text-align: center;
-            font-size: 10px;
-        }
-    
-        .search-container{
-            padding: 3px 12px;
-        }
-    
-        .search-container input{
-            width: 320px;
-            height: 40px;
-        }
+
+    .search-container {
+      padding: 3px 12px;
     }
+
+    .search-container input {
+      width: 320px;
+      height: 40px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .chatbot3 {
+      display: none;
+    }
+  }
 }
-

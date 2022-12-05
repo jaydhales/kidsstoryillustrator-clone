@@ -1,23 +1,19 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import "./App.scss";
 import Routes from "./Auth";
 
-const MoveToTop = () => {
-  const navigate = useNavigate();
-  const { hash, pathname } = useLocation();
+const App = () => {
+  const { pathname } = useLocation();
+
   useEffect(() => {
-    if (hash) return;
-
     window.scrollTo(0, 0);
-  }, [pathname, navigate, hash]);
-  return null;
-};
+  }, [pathname]);
 
-const App = () => (
-  <>
-    <MoveToTop />
-    <Routes />
-  </>
-);
+  return (
+    <>
+      <Routes />
+    </>
+  );
+};
 export default App;

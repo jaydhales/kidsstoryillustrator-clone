@@ -1,0 +1,27 @@
+.delete-user-side-popup{
+    width: 220px;
+    height: 250px;
+    background-color: #ffffff;
+    border: #f0f4f4 2px solid;
+    box-shadow:  1px 3px 15px 5px #f0f4f4 inset;
+     position: absolute;
+    top: 23%;
+    right: 2%;
+}
+
+
+.closebtn{
+    font-size: 30px;
+    right: 5%;
+    position: absolute;
+}
+
+.KEBAB-menu{
+    margin: 15%;
+}
+
+.KEBAB-menu li{
+list-style: none;
+cursor: pointer;
+margin: 15%;
+}

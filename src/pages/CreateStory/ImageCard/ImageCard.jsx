@@ -14,25 +14,25 @@ const ImageCard = ({ image_url, src, indexNo }) => {
     const element_id = e.target.id;
 
     const el2 = document.getElementById(element_id);
-    
+
     const parentPar = el2.parentElement.parentElement;
 
     for (let x = 0; x < parentPar.childElementCount; x++) {
-      parentPar.childNodes[x].firstChild.classList.add("check_img_off");
+      parentPar.childNodes[x].classList.remove("isChecked");
     }
 
-    el2.parentElement.firstChild.classList.remove("check_img_off");
+    el2.parentElement.classList.add("isChecked");
   };
 
   return (
     <div
-      className="imagecard"
+      className="ImageCard"
       onClick={(e) => {
         getElementID(e);
-				src(image_url);
+        src(image_url);
       }}
     >
-      <img src={check_img} className={`check_img check_img_off`} alt="" />
+      <img src={check_img} className="check" alt="" />
       <img
         src={image_url}
         id={`${indexNo}-image`}

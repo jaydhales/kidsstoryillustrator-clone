@@ -51,7 +51,7 @@
   }
   .respons_btn_size_435 {
     padding: 13px 14px;
-    width: 230px;
+    width: 250px;
     border-radius: 56px;
     font-weight: 500;
     border: 1px solid #aa0136;
@@ -101,7 +101,9 @@
     display: grid;
     gap: 2rem;
     grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
     margin: 2rem 0;
+    padding: 1rem 4rem;
   }
   .number {
     height: 56px;
@@ -176,14 +178,19 @@
       grid-template-columns: 1fr;
       padding: 1em;
     }
+    .header-text{
+      font-size: 3rem;
+    }
     .steps{
       grid-template-columns: 1fr;
+      padding: 0rem;
+
     }
     .button--grid {
-      text-align: center;
-      margin: 1em 0;
-      display: flex;
-      flex-direction: row;
+      flex-direction: column;
+      justify-content: center;
+      margin: 1em auto;
+
       gap: 10px;
     }
   }

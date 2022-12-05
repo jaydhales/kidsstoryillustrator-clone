@@ -13,7 +13,7 @@
 
     .sideNav{
          
-            height: 100%;
+            min-height: 100vh;
             width: 100%;
             position: fixed;
             background-color: #f7f8f8;
@@ -40,6 +40,18 @@
             color: white;
             padding: 10px 15px;
             border: none;
+          }
+          li{
+            list-style-type: none;
+            color: #787777;
+            font-size: 16px;
+          }
+          .side:hover,
+.li:focus, .li:active{
+            color: #aa0136;
+          }
+          .log-out{
+            margin-top: 0%;
           }
 
 

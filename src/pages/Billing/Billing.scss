@@ -70,6 +70,14 @@
         border-radius: 56px;
         width: 100%;
       }
+
+      input {
+        background-color: #E8F0FE;
+      }
+
+      input:invalid {
+        background-color: #FFFFFF;
+      }
     }
 
     .card-info {

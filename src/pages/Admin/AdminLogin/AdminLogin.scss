@@ -1,8 +1,21 @@
 @import "../../../theme/sass/variables";
 
 .AdminLogin {
+
+  background-color: #B00B31;
+    width: 100vw;
+    min-height: 100vh;
   .center-align {
     text-align: center;
+    
+  }
+
+  .admin_signin{
+    background-color: #ffffff;
+    box-sizing: border-box;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 5px;
+
   }
   
   #logo, #logo2 {
@@ -13,6 +26,7 @@
   #logo2 {
     margin-left: auto;
     margin-right: auto;
+    z-index: 3;
   }
 
   
