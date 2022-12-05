@@ -68,7 +68,7 @@ export const AccountInfo = () => {
                     <img src={options} alt="" className="opt"/>
                   </div>
                   <div className="vix4">
-                    <b>a wise old owl</b>
+                    <b>A wise old owl</b>
                     <p>Black and white</p>
                   </div>
                   <p>There was an old owl who lived in an oak tree. everyday, he observes incident that occurs around him.</p>

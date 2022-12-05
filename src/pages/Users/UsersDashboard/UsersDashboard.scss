@@ -133,6 +133,33 @@
   }
 
   @media only screen and (max-width: 480px) {
+    .UsersDashboard1 {
+      margin: 0 10px;
+      width: 100%;
+    }
+    .side-bar3 {
+      display: none;
+    }
     
+    .header-boxes1 { 
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 15px;
+    }
+
+    .cover1, .cover2, .cover3 {
+      width: 190px;
+    }
+
+    .footer-boxes {
+      width: 400px;
+      
+    }
+    .header-boxes2 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
   }
 }
