@@ -266,7 +266,7 @@ static async forgotPassword(req: Request, res: Response) {
           };
           const token = jwt.sign({ ...payload }, secret, { expiresIn: '15m' });
           const link = `${base_url}users/reset-password/${user._id}/${token}`;
-          await sendEmail('jigah4thjuly@gmail.com', 'Password Reset Link', link);
+          await sendEmail(user.email, 'Password Reset Link', link);
           res.send('Password reset link sent to your email account!')
       }
   } catch (error) {
