@@ -54,14 +54,20 @@
         padding: 16px 32px 16px 16px;
         background: #AA0136;
         color: #FFFFFF;
+        font-size: 18px;
     }
     
+
+    .action-subcontainer_input::placeholder{
+        color: #ffffff
+    }
     .action-subcontainer button{
         border: 1px solid #FFFFFF;
         border-radius: 56px;
         width: 166px;
         background: #FFFFFF;
         color:#AA0136;
+        font-size: 18px;
     }
     
     .action-container p{
