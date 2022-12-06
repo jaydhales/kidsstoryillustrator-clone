@@ -117,8 +117,15 @@ const AppRoutes = () => {
 };
 
 const Protected = ({ children }) => {
-  const { isAuthenticated } = JSON.parse(localStorage.getItem("authInfo"));
+  const localAuth = JSON.parse(localStorage.getItem("authInfo"));
 
+   console.log(localAuth);
+
+
+  if (!localAuth) return <Navigate replace to="/login" />;
+
+  const { isAuthenticated } = localAuth;
+ 
   console.log(isAuthenticated);
   if (isAuthenticated === false) {
     return <Navigate replace to="/login" />;
@@ -128,9 +135,12 @@ const Protected = ({ children }) => {
 };
 
 const Admin = ({ children }) => {
-  const { isAdmin, isAuthenticated } = JSON.parse(
-    localStorage.getItem("authInfo")
-  );
+  const localAuth = JSON.parse(localStorage.getItem("authInfo"));
+
+  if (!localAuth) return <Navigate replace to="/" />;
+
+  const { isAdmin, isAuthenticated } = localAuth;
+
   if (isAdmin === false && isAuthenticated === false) {
     return <Navigate replace to="/" />;
   } else {
