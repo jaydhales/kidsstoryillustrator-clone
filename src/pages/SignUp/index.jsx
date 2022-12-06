@@ -195,13 +195,13 @@ const SignUp = () => {
               </p>
             </form>
 
-            <div className="flex or">
+            {/* <div className="flex or">
               <div className="hLine"></div>
               <p>Or</p>
               <div className="hLine"></div>
             </div>
 
-            <p className="continue-with">Continue with</p>
+            <p className="continue-with">Continue with</p> */}
 
             {/* <div className="auth-links">
               <button className="btn-round" aria-label="login with google" id="google-login">
