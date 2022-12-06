@@ -29,8 +29,8 @@ export const Pricing = () => {
               <div className="features">
                 <p className="sub-tt">What included</p>
                 <ul>
-                  <li>Limited story creation</li>
-                  <li>No story downloads</li>
+                  <li><span className="li_span">Limited story creation</span></li>
+                  <li><span className="li_span">No story downloads</span></li>
                 </ul>
                 <a href="/billing?plan=free">Proceed</a>
               </div>
@@ -46,9 +46,9 @@ export const Pricing = () => {
               <div className="features">
                 <p className="sub-tt">What included</p>
                 <ul>
-                  <li>Unlimited story creation</li>
-                  <li>Unlimited story downloads</li>
-                  <li>Publishers access</li>
+                  <li><span className="li_span">Unlimited story creation</span></li>
+                  <li><span className="li_span">Unlimited story downloads</span></li>
+                  <li><span className="li_span">Publishers access</span></li>
                 </ul>
                 <a href="/billing?plan=paid">Proceed</a>
               </div>
