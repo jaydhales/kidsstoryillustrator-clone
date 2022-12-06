@@ -1,64 +1,21 @@
 import React from 'react';
 
 import { Link } from 'react-router-dom';
+import { FaFacebook } from 'react-icons/fa';
+import { AiFillInstagram, AiOutlineTwitter } from 'react-icons/ai';
+
+
 
 // import { Facebook, Instagram, Twitter } from '../../../assets';
 import logo_red from '../../../assets/img/logo_red.svg';
 import Facebook from '../../../assets/img/ri-facebook-circle-fill.svg';
 import Twitter from '../../../assets/img/ri-twitter-fill.svg';
 import Instagram from '../../../assets/img/ri-instagram-fill.svg';
+import './Footer.scss';
 
-
-import style from './Footer.scss';
-// const links = [
-//   {
-//     heading: 'Company',
-//     links: [
-//       {
-//         text: 'About Us',
-//         to: '/about',
-//       },
-//       {
-//         text: 'Contact Us',
-//         to: '/contact',
-//       },
-//       {
-//         text: 'Pricing',
-//         to: '/pricing',
-//       },
-//       {
-//         text: 'Create Story',
-//         to: '/craeteStory',
-//       },
-//     ],
-//   },
-//   {
-//     heading : 'Help' ,
-//     links: [
-//       {
-//         text: 'FAQs',
-//         to: '/faq',
-//       },
-//       {
-//         text: 'Privacy Policy',
-//         to: '/privacy',
-//       },
-      
-//     ],
-//   },
-//   {
-//     heading: 'Resources',
-//     links: [
-//       {
-//         text: 'Blog',
-//         to: '/blog',
-//       },
-//     ],
-//   },
-// ];
 const Footer = () => {
   return (
-    <div>
+    <div className='Footer_wrapper'>
     <section className="Footer">
       <div className="Footer__left">
         <img src={logo_red} className="footer__Logo" />
@@ -88,30 +45,31 @@ const Footer = () => {
         <h3 className='Footer_heading'>Resources</h3>
         <Link to="/blog" className='Footer_link'>Blog</Link>
       </div>
-      {/* <div className="Footer__right">
-        {links.map(({ heading, links: link }) => (
-          <div key={heading}>
-            <h3>{heading}</h3>
-            <div className="Footer__right__links">
-              {link.map(({ text, to }) => (
-                <Link to={to} key={text} className="Footer__right__links__link">
-                  <small>{text}</small>
-                </Link>
-              ))}
-            </div>
-          </div>
-        ))}
-      </div> */}
     </section>
 
+
+
     <div className="copyright">
-      <hr/>
+      <div className='social_link_display_mobile'>
+      <p>follow us on</p>
+        <div className="Footer__left__socials">
+          <div className="social_icons_wrapper">
+            <AiOutlineTwitter className='social_icons'/>
+          </div>
+          <div className="social_icons_wrapper">
+            <FaFacebook className='social_icons'/>
+          </div>
+          <div className="social_icons_wrapper">
+            <AiFillInstagram className='social_icons'/>
+          </div>
+        </div> 
+      </div>
       <div className="copy-p">
       <p>© 2022 Copyright. All rights reserved</p>
       </div>
      </div>
     </div>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer
