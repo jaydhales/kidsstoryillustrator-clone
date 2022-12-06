@@ -10,6 +10,10 @@
     height: 100vh;
   }
 
+  .nav3 {
+    display: none;
+  }
+
   .wrap-content1 {
     width: 73%;
   }
@@ -141,6 +145,10 @@
       display: none;
     }
     
+    .nav3 {
+      display: block;
+    }
+
     .header-boxes1 { 
       display: grid;
       grid-template-columns: 1fr 1fr;
