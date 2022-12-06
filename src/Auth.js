@@ -36,6 +36,7 @@ import {
   Account,
   Security,
   BillingPage,
+  UsersDashboard
 } from "./pages";
 import AdminDashBoard from "./pages/Admin/Admin-Dashboard";
 import AdminLogin from "./pages/Admin/AdminLogin";
@@ -77,6 +78,7 @@ const AppRoutes = () => {
       <Route path="/changePassword" element={<ChangePassword />} />
       <Route path="/forgotPassword" element={<ForgotPassword />} />
       <Route path="/createStory" element={<CreateStory />} />
+      <Route path="/users/dashboard" element={<UsersDashboard />} />
 
       {/* Protected */}
 
