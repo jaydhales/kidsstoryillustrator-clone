@@ -43,7 +43,7 @@ export const Login = () => {
       .then((res) => {
         setIsLoading(false);
         handleLogIn(res.data.data);
-        navigate("/users-dashboard");
+        navigate("/users/dashboard");
       })
       .catch((err) => {
         setIsLoading(false);
