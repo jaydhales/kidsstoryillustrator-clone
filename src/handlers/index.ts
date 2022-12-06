@@ -6,7 +6,7 @@ class Homepage extends BaseHandler {
   static getHomeRoute(req: Request, res: Response) {
     return res.status(200).send({
       success: true,
-      message: 'Welcome to StoryAi'
+      message: 'Welcome to Magic-Book-Writer 🎩. A story book illustrator for kids and teens'
     });
   }
 }
