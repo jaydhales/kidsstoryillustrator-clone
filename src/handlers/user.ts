@@ -8,7 +8,7 @@ import { Types } from 'mongoose';
 import sendEmail from '../utils/sendMail';
 
 const secret = process.env.SECRET as string;
-const base_url = process.env.SECRET as string;
+const base_url = process.env.BASE_URL as string;
 
 export class User extends BaseHandler {
   static async signup(req: Request, res: Response) {
