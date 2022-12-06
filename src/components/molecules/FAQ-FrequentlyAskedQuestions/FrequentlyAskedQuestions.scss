@@ -78,5 +78,15 @@
     .main-questions-container p {
       font-size: 15px;
     }
+
+    .smallchatbot {
+      display: none;
+  }
+  }
+
+  @media screen and (max-width: 480px) {
+    .smallchatbot {
+      display: none;
+    }
   }
 }
