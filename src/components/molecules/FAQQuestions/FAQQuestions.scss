@@ -1,123 +1,121 @@
 /* .FAQQuestions {
 } */
 
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900;1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900;1000&display=swap");
 
 .FAQQuestions {
-    width: 100%;
-    font-family: 'Nunito';
-    padding: 2rem;
+  width: 100%;
+  font-family: "Nunito";
+  padding: 2rem;
 
+  .questions-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e3aabc;
+    padding: 0.3rem;
+  }
 
-    .questions-container{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-bottom: 1px solid #E3AABC;
-        padding: .3rem;
+  .main-questions-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .main-questions-container img {
+    padding-left: 1rem;
+  }
+
+  .main-questions-container p {
+    font-size: 18px;
+  }
+
+  .further-questions-container {
+    padding: 5rem;
+  }
+
+  .further-questions-subcontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    border: 1px solid #aa0136;
+    border-radius: 12px;
+    padding: 5rem;
+    margin: auto;
+  }
+
+  .further-questions-subcontainer h4 {
+    font-weight: 600;
+    font-size: 36px;
+    color: #131313;
+    padding: 0.1rem;
+  }
+
+  .further-questions-subcontainer p {
+    font-weight: 400;
+    font-size: 17px;
+    padding-bottom: 1rem;
+  }
+
+  .bullet-icon {
+    width: 24px;
+  }
+
+  .arrow-icon {
+    width: 32px;
+  }
+  .chat-image {
+    width: 80px;
+    height: 104px;
+  }
+
+  /* media queries */
+  @media screen and (max-width: 900px) {
+    padding: 1rem;
+    width: 70%;
+    margin: auto;
+
+    .further-questions-subcontainer img {
+      display: none;
     }
 
-    .main-questions-container{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: .8rem
-    }
-    
-    .main-questions-container img{
-        padding-left: 1rem;
-    }
-    
-    .main-questions-container p{
-        font-size: 18px;
-    }
-    
-    .further-questions-container{
-        padding:  5rem;
-        
-    }
-    
-    .further-questions-subcontainer{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 70%;
-        border: 1px solid #AA0136;
-        border-radius: 12px; 
-        padding:  5rem; 
-        margin: auto;
-        
-    }
-    
-    .further-questions-subcontainer h4{
-        font-weight: 600;
-        font-size: 36px;
-        color: #131313;
-        padding: .1rem;
-    }
-    
-    .further-questions-subcontainer p{
-        font-weight: 400;
-        font-size: 17px;
-        padding-bottom: 1rem;
-    }
-    
-    .bullet-icon {
-        width: 24px;
+    .further-questions-subcontainer p {
+      display: none;
     }
 
-    .arrow-icon {
-        width: 32px;
-    }
-    .chat-image {
-        width: 80px;
-        height: 104px;
+    .further-questions-subcontainer {
+      width: 100%;
     }
 
-    /* media queries */
-    @media screen and (max-width: 900px ){
-        padding: 1rem;
-
-        .further-questions-subcontainer img{
-            display: none
-        }
-
-        .further-questions-subcontainer p{
-            display: none
-        }
-
-        .further-questions-subcontainer{
-            width: 100%;
-            
-        }
-
-        .further-questions-subcontainer h4{
-            font-size: 15px;
-            font-weight: 800;
-            padding: .2rem;
-        }
-
-
-        .further-questions-container{
-        padding: .1rem;
-        }
-
-        .main-questions-container p{
-            font-size: 15px;
-        }
-
+    .further-questions-subcontainer h4 {
+      font-size: 15px;
+      font-weight: 800;
+      padding: 0.2rem;
     }
 
-    @media screen and (max-width: 1024px ){
-        .further-questions-subcontainer{
-            padding: 2rem;
-        }
+    .further-questions-container {
+      padding: 0.1rem;
     }
-    
 
+    .main-questions-container p {
+      font-size: 15px;
+    }
+
+    .further-questions-subcontainer {
+        padding: 4rem;
+      }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .further-questions-subcontainer {
+      padding: 2rem;
+    }
+
+    .faqheader .chatbot3_left {
+        object-position: 2px 62px;
+    }
+  }
 }
-
-
-
-

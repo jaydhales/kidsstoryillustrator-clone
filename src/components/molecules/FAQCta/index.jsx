@@ -16,7 +16,7 @@ export const FAQCta = () => {
     </div>
     <div className="action-container">
       <div className="action-subcontainer">
-        <input type='text' placeholder="Enter your email"/>
+        <input type='text' className="action-subcontainer_input" placeholder="Enter your email"/>
         <button>Subscribe</button>
       </div>
       <p>Sign up for our weekly update & be the first to know about our 

@@ -12,8 +12,8 @@ export const FAQHero = () => {
   return (
     <div className="faqheader">
       <div className="FAQHero">
-        <div>
-          <img src={Group4} alt="" className="chatbot3" />
+        <div className="FAQHero_chatbot3_left">
+          <img src={Group4} alt="" className="chatbot3 chatbot3_left" />
         </div>
         <div className="faqhero_mid-div">
           <h1>Hello, Need help?</h1>
@@ -29,7 +29,7 @@ export const FAQHero = () => {
           </div>
         </div>
 
-        <div>
+        <div className="FAQ_chatbot5_right">
           <img src={Group5} alt="" className="chatbot3 group_chatbot5"/>
         </div>
       </div>

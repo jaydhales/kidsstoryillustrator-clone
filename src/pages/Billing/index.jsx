@@ -150,7 +150,7 @@ export const Billing = () => {
             </div>
 
             <div className="form-control">
-              <Button>Proceed</Button>
+              <button id="billing-form-control-btn">Proceed</button>
             </div>
           </form>
         </section>
