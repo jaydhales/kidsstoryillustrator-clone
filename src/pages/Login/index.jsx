@@ -140,7 +140,7 @@ export const Login = () => {
 
             <p className="continue-with">Continue with</p>
 
-            <div className="auth-links">
+            {/* <div className="auth-links">
               <button className="btn-round" aria-label="login with google" id="google-login">
                 <img
                   src={googleLogo}
@@ -168,7 +168,7 @@ export const Login = () => {
                 />
                 <p>Continue with Apple</p>
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
