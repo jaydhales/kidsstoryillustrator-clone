@@ -58,7 +58,7 @@ const SignUp = () => {
       .then((res) => {
         setIsLoading(false);
         handleSignUp(res.data.data);
-        navigate("/userdashboard");
+        navigate("/users/dashboard");
       })
       .catch((err) => {
         setIsLoading(false);
