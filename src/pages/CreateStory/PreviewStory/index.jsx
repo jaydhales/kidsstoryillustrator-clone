@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { useNavigate } from "react-router-dom";
 import Button from "../../../components/atoms/Button";
+import backBtn from "../../../assets/img/arrow-left.png";
 
 const PreviewStory = ({ story, title, back, handleSave }) => {
   const totalPages = story.length - 1;
@@ -34,7 +35,7 @@ const PreviewStory = ({ story, title, back, handleSave }) => {
                 back(false);
               }}
             >
-              back
+              <img src={backBtn} alt="" />
             </button>
             <h2>Story Preview</h2>
           </div>

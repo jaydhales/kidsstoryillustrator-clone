@@ -222,18 +222,17 @@ const CreateStory = () => {
           return;
         }
 
-        console.log(response.data.links_array);
+        // console.log(response.data.links_array);
 
-        let new_Arry = [];
-        for (let i = 0; i < 9; i++) {
-          new_Arry.push(response.data.links_array[i]);
-        }
-        setGeneratedImages(new_Arry);
+        setGeneratedImages(response.data.links_array);
         setImageLoadingState(false);
         setImageGenerationState(false);
       })
       .catch((err) => {
         console.error(err);
+        setImageLoadingState(false);
+        setImageGenerationState(false);
+        setGeneratedImages([]);
       });
   };
 
