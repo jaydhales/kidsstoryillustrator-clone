@@ -120,7 +120,7 @@ export class User extends BaseHandler {
 
   static async getAllUsers(req: Request, res: Response) {
     try {
-      const allUsers = await UserModel.find();
+      const allUsers = await UserModel.find({isAdmin: {$ne: true}});
       if (!allUsers) {
         return res.status(400).json({
           success: false,
@@ -129,6 +129,7 @@ export class User extends BaseHandler {
       } else {
         return res.status(200).json({
           success: true,
+          count: allUsers.length,
           message: 'Users successfully fetched',
           data: allUsers
         });
