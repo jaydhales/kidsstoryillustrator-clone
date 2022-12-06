@@ -1,7 +1,5 @@
-import React, { useContext } from "react";
-import { useEffect } from "react";
-import { Routes, Route, Navigate, useNavigate } from "react-router-dom";
-import { AuthContext } from "./contexts/AuthContext";
+import React from "react";
+import { Routes, Route, Navigate } from "react-router-dom";
 
 import {
   About,
@@ -36,29 +34,13 @@ import {
   Account,
   Security,
   BillingPage,
-  UsersDashboard
+  UsersDashboard,
 } from "./pages";
 import AdminDashBoard from "./pages/Admin/Admin-Dashboard";
 import AdminLogin from "./pages/Admin/AdminLogin";
 import UserDetails from "./pages/Admin/UserDetails";
 
 const AppRoutes = () => {
-  const { myAuth, setAuth, initialAuth } = useContext(AuthContext);
-  const navigate = useNavigate();
-
-  const { isAdmin, isAuthenticated } = myAuth;
-
-  useEffect(() => {
-    const localAuth =
-      localStorage.getItem("authInfo") &&
-      JSON.parse(localStorage.getItem("authInfo"));
-    if (localAuth) {
-      setAuth(localAuth);
-    } else {
-      localStorage.setItem("authInfo", JSON.stringify(myAuth));
-    }
-  }, []);
-
   return (
     <Routes>
       <Route path="/" element={<Home />} />
@@ -69,12 +51,12 @@ const AppRoutes = () => {
       <Route path="/error" element={<Error />} />
       <Route path="/faq" element={<FAQ />} />
       <Route path="/howToUse" element={<HowToUse />} />
-      <Route path="/login" element={<Login />} />
+      <Route path="/login" element=<Red>{<Login />}</Red> />
       <Route path="/pricing" element={<Pricing />} />
       <Route path="/privacy" element={<Privacy />} />
       <Route path="/signup" element={<SignUp />} />
-      <Route path="/billing"  element={<Billing/>}/>
-     <Route path="/admin/login" element={<AdminLogin />} />
+      <Route path="/billing" element={<Billing />} />
+      <Route path="/admin/login" element={<AdminLogin />} />
       <Route path="/changePassword" element={<ChangePassword />} />
       <Route path="/forgotPassword" element={<ForgotPassword />} />
       <Route path="/createStory" element={<CreateStory />} />
@@ -135,7 +117,9 @@ const AppRoutes = () => {
 };
 
 const Protected = ({ children }) => {
-  const { isAuthenticated } = useContext(AuthContext).myAuth;
+  const { isAuthenticated } = JSON.parse(localStorage.getItem("authInfo"));
+
+  console.log(isAuthenticated);
   if (isAuthenticated === false) {
     return <Navigate replace to="/login" />;
   } else {
@@ -144,9 +128,22 @@ const Protected = ({ children }) => {
 };
 
 const Admin = ({ children }) => {
-  const { isAdmin, isAuthenticated } = useContext(AuthContext).myAuth;
+  const { isAdmin, isAuthenticated } = JSON.parse(
+    localStorage.getItem("authInfo")
+  );
   if (isAdmin === false && isAuthenticated === false) {
     return <Navigate replace to="/" />;
+  } else {
+    return <>{children}</>;
+  }
+};
+
+const Red = ({ children }) => {
+  const { isAuthenticated } = JSON.parse(localStorage.getItem("authInfo"));
+
+  console.log(isAuthenticated);
+  if (isAuthenticated) {
+    return <Navigate replace to="/users/dashboard" />;
   } else {
     return <>{children}</>;
   }
