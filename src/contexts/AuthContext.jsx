@@ -15,15 +15,16 @@ const AuthProvider = ({ children }) => {
   const [myAuth, setAuth] = useState(initialAuth);
 
   const saveToLocal = (data) => {
-    const initAuth = {
+    const newAuth = {
       user: data.email,
       token: data.token,
       isAuthenticated: true,
       isAdmin: data.isAdmin,
+      id: data._id,
     };
 
-    localStorage.setItem("authInfo", JSON.stringify(initAuth));
-    setAuth(initAuth);
+    localStorage.setItem("authInfo", JSON.stringify(newAuth));
+    setAuth(newAuth);
   };
 
   const handleSignUp = (data) => {

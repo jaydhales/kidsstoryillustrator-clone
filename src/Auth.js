@@ -51,7 +51,7 @@ const AppRoutes = () => {
       <Route path="/error" element={<Error />} />
       <Route path="/faq" element={<FAQ />} />
       <Route path="/howToUse" element={<HowToUse />} />
-      <Route path="/login" element=<Red>{<Login />}</Red> />
+      <Route path="/login" element={<Login />} />
       <Route path="/pricing" element={<Pricing />} />
       <Route path="/privacy" element={<Privacy />} />
       <Route path="/signup" element={<SignUp />} />
@@ -138,15 +138,15 @@ const Admin = ({ children }) => {
   }
 };
 
-const Red = ({ children }) => {
-  const { isAuthenticated } = JSON.parse(localStorage.getItem("authInfo"));
+// const Red = ({ children }) => {
+//   const { isAuthenticated } = JSON.parse(localStorage.getItem("authInfo"));
 
-  console.log(isAuthenticated);
-  if (isAuthenticated) {
-    return <Navigate replace to="/users/dashboard" />;
-  } else {
-    return <>{children}</>;
-  }
-};
+//   console.log(isAuthenticated);
+//   if (isAuthenticated) {
+//     return <Navigate replace to="/users/dashboard" />;
+//   } else {
+//     return <>{children}</>;
+//   }
+// };
 
 export default AppRoutes;
