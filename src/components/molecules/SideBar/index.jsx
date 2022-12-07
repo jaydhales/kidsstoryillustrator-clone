@@ -13,11 +13,20 @@ import archieve from "../../../assets/SideBar/user-octagon.png";
 import logout from "../../../assets/SideBar/logout.png";
 import {AuthContext} from "../../../contexts/AuthContext"
 import { AiOutlinePlus } from "react-icons/ai";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export const SideBar = () => {
 
-   const {handleLogOut} = useContext(AuthContext)
+   const {handleLogout} = useContext(AuthContext)
+   // console.log(handleLogout)
+   const navigate = useNavigate()
+
+   const logOutPath = (e) => {
+         e.preventDefault
+         // console.log(e.target)
+         handleLogout()
+         navigate("/")
+   }
   return (
     <div className="sideBar">
       <div className="sideBar__top">
@@ -67,7 +76,7 @@ export const SideBar = () => {
           <p>Admin</p>
         </div>
 
-        <button onClick={handleLogOut} className="btn-submit">
+        <button onClick={logOutPath} className="btn-submit">
           <div className="sideBar__signOut">
             <img src={logout} alt="/"  className="img-sign"/>
             <h3>Sign Out</h3>
