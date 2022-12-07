@@ -17,13 +17,8 @@ export const AccountInfo = () => {
         <Navbar />
       </div>
       <div className="UsersDashboard1">
-        <div>
-          <div className="side-bar3">
-            <SideBar />
-          </div>
-          <div className="side-bar4">
-            
-          </div>
+        <div className="side-bar3">
+          <SideBar />
         </div>
         <div className="wrap-content1">
           <h1 className="head">Dashboard</h1>

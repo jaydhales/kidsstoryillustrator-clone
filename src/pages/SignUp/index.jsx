@@ -8,7 +8,6 @@ import appleLogo from "../../assets/img/apple_logo.png";
 import logoWhite from "../../assets/img/logo_white.svg";
 import leftArrow from "../../assets/img/left-arrow.png";
 
-
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { AuthContext } from "../../contexts/AuthContext";
@@ -16,7 +15,8 @@ import { AuthContext } from "../../contexts/AuthContext";
 const SignUp = () => {
   const userRef = useRef();
   const errRef = useRef();
-  const { handleSignUp, apiUrl } = useContext(AuthContext);
+  const { handleSignUp, apiUrl, locationHistory, setLocationHistory } =
+    useContext(AuthContext);
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
   const [errors, setErrors] = React.useState([]);
@@ -58,7 +58,12 @@ const SignUp = () => {
       .then((res) => {
         setIsLoading(false);
         handleSignUp(res.data.data);
-        navigate("/userdashboard");
+        if (locationHistory.length === 0) {
+          navigate("/users/dashboard");
+        } else {
+          navigate(locationHistory);
+          setLocationHistory("");
+        }
       })
       .catch((err) => {
         setIsLoading(false);
@@ -69,16 +74,14 @@ const SignUp = () => {
   return (
     <div className="Signup">
       <div className="two-column">
-      
         <div className="branding">
-        <img
-     onClick={() => navigate('/')}
-                  src={leftArrow}
-                  alt="Facebook logo"
-                  className="back-arrow"
-                />
+          <img
+            onClick={() => navigate("/")}
+            src={leftArrow}
+            alt="Facebook logo"
+            className="back-arrow"
+          />
           <div className="content">
-         
             <img src={logoWhite} alt="logo" id="logo" />
             <div className="text">
               <h2>The easiest way to write kids story books </h2>
@@ -195,15 +198,15 @@ const SignUp = () => {
               </p>
             </form>
 
-            <div className="flex or">
+            {/* <div className="flex or">
               <div className="hLine"></div>
               <p>Or</p>
               <div className="hLine"></div>
             </div>
 
-            <p className="continue-with">Continue with</p>
+            <p className="continue-with">Continue with</p> */}
 
-            <div className="auth-links">
+            {/* <div className="auth-links">
               <button className="btn-round" aria-label="login with google" id="google-login">
                 <img
                   src={googleLogo}
@@ -233,7 +236,7 @@ const SignUp = () => {
                                 <p>Continue with Apple</p>
 
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

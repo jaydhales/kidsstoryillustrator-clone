@@ -1,19 +1,35 @@
+.Story-Container {
+  display: flex;
+
+  .sidebar {
+    width: max-content;
+  }
+}
+
 .CreateStory {
+  flex-grow: 2;
   .wrapper {
     display: grid;
     padding: 24px;
     gap: 2rem;
     background: #f7f8f8;
     min-height: 100vh;
+    height: 100%;
     position: relative;
 
     &.preview {
       .preview-main {
         padding: 24px;
+        max-width: 700px;
+        margin: auto;
 
         p {
           text-align: center;
           padding: 2rem;
+        }
+
+        .preview-text {
+          font-size: 30px;
         }
       }
 
@@ -65,6 +81,10 @@
 
       .input-error {
         color: #ec9410;
+
+        &.img {
+          padding: 0 2rem;
+        }
       }
 
       .form-action {
@@ -88,7 +108,7 @@
       .image-card-list {
         display: grid;
         padding: 2rem;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 28px;
       }
     }
@@ -112,6 +132,10 @@
       }
       p {
         color: #13131399;
+      }
+
+      .back-btn {
+        width: 35px;
       }
     }
   }

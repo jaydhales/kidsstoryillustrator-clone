@@ -8,15 +8,29 @@
     height: 100%;
   }
 
+  .FAQHero_chatbot3_left{
+    width: 20%;
+    margin-left: 42px;
+  }
+
+  .FAQ_chatbot5_right {
+    width: 25%;
+  }
+
+  .chatbot3_left{
+    object-position: 2px 100px;
+  }
+
 .group_chatbot5{
-    transform: rotate(-40deg);
-}
+  transform: rotate(-35deg);
+  object-position: 0px 26px;
 }
 
 .FAQHero {
   display: flex;
   width: 100%;
   background-color: #faf0f3;
+  justify-content: space-around;
 
   .faqhero_mid-div {
     display: flex;
@@ -71,7 +85,10 @@
   /* media queries */
   @media screen and (max-width: 900px) {
     width: 100%;
-    padding: 2rem;
+    // padding: 2rem;
+    .chatbot3{
+      display: none;
+    }
 
     h1 {
       font-size: 28px;
@@ -94,8 +111,16 @@
   }
 
   @media screen and (max-width: 480px) {
+    body {
+      width: 480px;
+    }
     .chatbot3 {
       display: none;
     }
+
+
+    
+    
   }
+}
 }

@@ -4,7 +4,8 @@ import PropTypes from "prop-types";
 
 import arrow from "../../../assets/Image/FAQ-asset/down-arrow.png";
 import bullet from "../../../assets/Image/FAQ-asset/bullet.png";
-import smallchatbot from "../../../assets/images/smallchatbot.png"
+import smallchatbot from "../../../assets/images/smallchatbot.png";
+import Group5 from "../../../assets/images/Group5.png";
 
 import "./FrequentlyAskedQuestions.scss";
 
@@ -29,7 +30,7 @@ export const GettingStartedQuestions = () => {
   return (
     <div className="FrequentlyAskedQuestions">
       <div className="smallchatbot">
-        <img src={smallchatbot} alt="" />
+        <img src={Group5} alt="" />
       </div>
       <div className="frqli_h3">
         <h3>Freqently asked questions</h3>
@@ -38,7 +39,7 @@ export const GettingStartedQuestions = () => {
         <div className="questions-container">
           <div className="main-questions-container">
             <img src={bullet} alt="Bullet" className="bullet-icon" />
-            <p>What is storyai ?</p>
+            <p>What is Magic Book Writer ?</p>
           </div>
 
           <img
@@ -63,7 +64,7 @@ export const GettingStartedQuestions = () => {
         <div className="questions-container">
           <div className="main-questions-container">
             <img src={bullet} alt="Bullet Icon" className="bullet-icon" />
-            <p>How do i get started?</p>
+            <p>How do I get started?</p>
           </div>
 
           <img
@@ -86,7 +87,7 @@ export const GettingStartedQuestions = () => {
         <div className="questions-container">
           <div className="main-questions-container">
             <img src={bullet} alt="Bullet ICon" className="bullet-icon" />
-            <p>Who can use storyai?</p>
+            <p>Who can use Magic Book Writer?</p>
           </div>
 
           <img

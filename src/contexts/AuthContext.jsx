@@ -13,17 +13,25 @@ const AuthProvider = ({ children }) => {
   const apiUrl = "https://api.magicbookwriter.hng.tech/";
 
   const [myAuth, setAuth] = useState(initialAuth);
+  const [locationHistory, setLocationHistory] = useState("");
+
+  useEffect(() => {
+    const localAuth = JSON.parse(localStorage.getItem("authInfo"));
+
+    if (localAuth) setAuth(localAuth);
+  }, []);
 
   const saveToLocal = (data) => {
-    const initAuth = {
+    const newAuth = {
       user: data.email,
       token: data.token,
       isAuthenticated: true,
       isAdmin: data.isAdmin,
+      id: data._id,
     };
 
-    localStorage.setItem("authInfo", JSON.stringify(initAuth));
-    setAuth(initAuth);
+    localStorage.setItem("authInfo", JSON.stringify(newAuth));
+    setAuth(newAuth);
   };
 
   const handleSignUp = (data) => {
@@ -48,6 +56,8 @@ const AuthProvider = ({ children }) => {
         handleSignUp,
         setAuth,
         apiUrl,
+        locationHistory,
+        setLocationHistory,
       }}
     >
       {children}

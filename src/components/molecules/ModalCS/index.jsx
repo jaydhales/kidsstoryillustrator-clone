@@ -1,27 +1,27 @@
 import React, { useEffect, useState } from "react";
 
-import './Modal.scss';
+import "./Modal.scss";
 
 import PropTypes from "prop-types";
 import { Fade } from "react-awesome-reveal";
 
-import greenCheck from './small-img/green-check.svg';
-import greenClose from './small-img/green-close.svg';
-import redCheck from './small-img/red-check.svg';
-import redClose from './small-img/red-close.svg';
+import greenCheck from "./small-img/green-check.svg";
+import greenClose from "./small-img/green-close.svg";
+import redCheck from "./small-img/red-check.svg";
+import redClose from "./small-img/red-close.svg";
 
 const ModalCS = ({ title, message, handleModDisplay, message_stat }) => {
   const [modal, setModal] = useState(true);
 
-  // useEffect(() => {
-  //   if (modal) {
-  //     document.getElementById('modalcs').classList.remove('modal-hidden');
-  //     document.body.classList.add("active-modal");
-  //   } else {
-  //     document.body.classList.remove("active-modal");
-  //     document.getElementById('modalcs').classList.add('modal-hidden');
-  //   }
-  // }, [])
+  useEffect(() => {
+    if (modal) {
+      document.getElementById("modalcs").classList.remove("modal-hidden");
+      document.body.classList.add("active-modal");
+    } else {
+      document.body.classList.remove("active-modal");
+      document.getElementById("modalcs").classList.add("modal-hidden");
+    }
+  }, []);
 
   return (
     <div className="modalcs" id="modalcs">

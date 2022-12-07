@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import { useEffect } from "react";
-import { Routes, Route, Navigate, useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { AuthContext } from "./contexts/AuthContext";
 
 import {
@@ -36,29 +36,13 @@ import {
   Account,
   Security,
   BillingPage,
-  UsersDashboard
+  UsersDashboard,
 } from "./pages";
 import AdminDashBoard from "./pages/Admin/Admin-Dashboard";
 import AdminLogin from "./pages/Admin/AdminLogin";
 import UserDetails from "./pages/Admin/UserDetails";
 
 const AppRoutes = () => {
-  const { myAuth, setAuth, initialAuth } = useContext(AuthContext);
-  const navigate = useNavigate();
-
-  const { isAdmin, isAuthenticated } = myAuth;
-
-  useEffect(() => {
-    const localAuth =
-      localStorage.getItem("authInfo") &&
-      JSON.parse(localStorage.getItem("authInfo"));
-    if (localAuth) {
-      setAuth(localAuth);
-    } else {
-      localStorage.setItem("authInfo", JSON.stringify(myAuth));
-    }
-  }, []);
-
   return (
     <Routes>
       <Route path="/" element={<Home />} />
@@ -73,11 +57,14 @@ const AppRoutes = () => {
       <Route path="/pricing" element={<Pricing />} />
       <Route path="/privacy" element={<Privacy />} />
       <Route path="/signup" element={<SignUp />} />
-      <Route path="/billing"  element={<Billing/>}/>
-     <Route path="/admin/login" element={<AdminLogin />} />
+      <Route path="/billing" element={<Billing />} />
+      <Route path="/admin/login" element={<AdminLogin />} />
       <Route path="/changePassword" element={<ChangePassword />} />
       <Route path="/forgotPassword" element={<ForgotPassword />} />
-      <Route path="/createStory" element={<CreateStory />} />
+      <Route
+        path="/createStory"
+        element=<Protected>{<CreateStory />}</Protected>
+      />
       <Route path="/users/dashboard" element={<UsersDashboard />} />
 
       {/* Protected */}
@@ -135,8 +122,16 @@ const AppRoutes = () => {
 };
 
 const Protected = ({ children }) => {
-  const { isAuthenticated } = useContext(AuthContext).myAuth;
-  if (isAuthenticated === false) {
+  const { locationHistory, setLocationHistory } = useContext(AuthContext);
+  const location = useLocation();
+
+  const localAuth = JSON.parse(localStorage.getItem("authInfo"));
+
+  if (!localAuth) {
+    setLocationHistory(location.pathname);
+    return <Navigate replace to="/login" />;
+  } else if (localAuth.isAuthenticated === false) {
+    setLocationHistory(location.pathname);
     return <Navigate replace to="/login" />;
   } else {
     return <>{children}</>;
@@ -144,12 +139,28 @@ const Protected = ({ children }) => {
 };
 
 const Admin = ({ children }) => {
-  const { isAdmin, isAuthenticated } = useContext(AuthContext).myAuth;
+  const localAuth = JSON.parse(localStorage.getItem("authInfo"));
+
+  if (!localAuth) return <Navigate replace to="/" />;
+
+  const { isAdmin, isAuthenticated } = localAuth;
+
   if (isAdmin === false && isAuthenticated === false) {
     return <Navigate replace to="/" />;
   } else {
     return <>{children}</>;
   }
 };
+
+// const Red = ({ children }) => {
+//   const { isAuthenticated } = JSON.parse(localStorage.getItem("authInfo"));
+
+//   console.log(isAuthenticated);
+//   if (isAuthenticated) {
+//     return <Navigate replace to="/users/dashboard" />;
+//   } else {
+//     return <>{children}</>;
+//   }
+// };
 
 export default AppRoutes;

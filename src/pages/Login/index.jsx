@@ -11,7 +11,8 @@ import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthContext";
 
 export const Login = () => {
-  const { handleLogIn, apiUrl } = useContext(AuthContext);
+  const { handleLogIn, apiUrl, locationHistory, setLocationHistory } =
+    useContext(AuthContext);
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
   const [errors, setErrors] = React.useState([]);
@@ -43,7 +44,12 @@ export const Login = () => {
       .then((res) => {
         setIsLoading(false);
         handleLogIn(res.data.data);
-        navigate("/users-dashboard");
+        if (locationHistory.length === 0) {
+          navigate("/users/dashboard");
+        } else {
+          navigate(locationHistory);
+          setLocationHistory("");
+        }
       })
       .catch((err) => {
         setIsLoading(false);
@@ -58,12 +64,12 @@ export const Login = () => {
     <div className="Login">
       <div className="two-column">
         <div className="branding">
-        <img
-     onClick={() => navigate('/')}
-                  src={leftArrow}
-                  alt="Facebook logo"
-                  className="back-arrow"
-                />
+          <img
+            onClick={() => navigate("/")}
+            src={leftArrow}
+            alt="Facebook logo"
+            className="back-arrow"
+          />
           <div className="content">
             <img src={logoWhite} alt="logo" id="logo" />
             <div className="text">
@@ -101,7 +107,8 @@ export const Login = () => {
                 name="email"
                 id="email"
                 value={email}
-                onChange={(e) => setEmail(e.target.value)} required
+                onChange={(e) => setEmail(e.target.value)}
+                required
               />
 
               <label htmlFor="pasword" className="label">
@@ -115,7 +122,8 @@ export const Login = () => {
                 name="password"
                 id="password"
                 value={password}
-                onChange={(e) => setPassword(e.target.value)} required
+                onChange={(e) => setPassword(e.target.value)}
+                required
               />
 
               {errors.map((error, index) => (
@@ -132,15 +140,15 @@ export const Login = () => {
               Forgot Password
             </a>
 
-            <div className="flex or">
+            {/* <div className="flex or">
               <div className="hLine"></div>
               <p>Or</p>
               <div className="hLine"></div>
             </div>
 
-            <p className="continue-with">Continue with</p>
+            <p className="continue-with">Continue with</p> */}
 
-            <div className="auth-links">
+            {/* <div className="auth-links">
               <button className="btn-round" aria-label="login with google" id="google-login">
                 <img
                   src={googleLogo}
@@ -168,7 +176,7 @@ export const Login = () => {
                 />
                 <p>Continue with Apple</p>
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
