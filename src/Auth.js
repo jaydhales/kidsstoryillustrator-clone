@@ -65,7 +65,14 @@ const AppRoutes = () => {
         path="/createStory"
         element=<Protected>{<CreateStory />}</Protected>
       />
-      <Route path="/users/dashboard" element={<UsersDashboard />} />
+      <Route
+        path="/users/dashboard"
+        element={
+          <Protected>
+            <UsersDashboard />
+          </Protected>
+        }
+      />
 
       {/* Protected */}
 
