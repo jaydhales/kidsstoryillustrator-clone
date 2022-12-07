@@ -45,7 +45,7 @@ ImageCardList.propTypes = {
 };
 
 const CreateStory = () => {
-  const { apiUrl } = useContext(AuthContext);
+  const { apiUrl, myAuth } = useContext(AuthContext);
   const initInput = {
     paragraph: "",
     keyword: "",
@@ -103,14 +103,14 @@ const CreateStory = () => {
     );
 
     const posData = {
-      decoded: { _id: "63836095dcec0b9a8d523767" },
+      decoded: { _id: myAuth.id },
       title: storyTitle,
       numberOfPages: story.length,
       scenes: pageContent,
     };
     axios({
       method: "post",
-      url: apiUrl + "post_story",
+      url: apiUrl + "story/post_story",
       data: posData,
     })
       .then((response) => {
@@ -242,10 +242,6 @@ const CreateStory = () => {
     console.log(pageInput.image);
   };
 
-  const generateMoreImages = (e) => {
-    e.preventDefault();
-  };
-
   const setModalDisplay = (title, message, modalStat) => {
     setModalTitle(title);
     setModalMessage(message);
@@ -345,7 +341,7 @@ const CreateStory = () => {
               </Button>
             </div>
 
-            {error.image && <p className="input-error">{error.image}</p>}
+            {error.image && <p className="input-error img">{error.image}</p>}
 
             {imageGenerationState ? (
               <div className="loading">
@@ -358,13 +354,6 @@ const CreateStory = () => {
                     list_of_image_urls={generatedImages}
                     returnImageLink={getPageImageLink}
                   />
-                  <a
-                    href=""
-                    onClick={(e) => generateMoreImages(e)}
-                    className="gen-btn"
-                  >
-                    Generate more images
-                  </a>
                 </Fade>
               )
             )}

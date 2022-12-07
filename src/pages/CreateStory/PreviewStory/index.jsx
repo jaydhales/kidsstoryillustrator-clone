@@ -34,6 +34,7 @@ const PreviewStory = ({ story, title, back, handleSave }) => {
               onClick={(e) => {
                 back(false);
               }}
+              className="back-btn"
             >
               <img src={backBtn} alt="" />
             </button>
@@ -67,7 +68,7 @@ const PreviewStory = ({ story, title, back, handleSave }) => {
             />
           </div>
 
-          <p>{story[currentPage].content.paragraph}</p>
+          <p className="preview-text">{story[currentPage].content.paragraph}</p>
 
           <Button clickFn={handleSave}> Save </Button>
         </div>

@@ -14,6 +14,12 @@ const AuthProvider = ({ children }) => {
 
   const [myAuth, setAuth] = useState(initialAuth);
 
+  useEffect(() => {
+    const localAuth = JSON.parse(localStorage.getItem("authInfo"));
+
+    if (localAuth) setAuth(localAuth);
+  }, []);
+
   const saveToLocal = (data) => {
     const newAuth = {
       user: data.email,
