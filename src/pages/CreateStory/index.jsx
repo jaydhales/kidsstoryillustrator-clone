@@ -224,7 +224,7 @@ const CreateStory = () => {
 
         // console.log(response.data.links_array);
 
-        setGeneratedImages(response.data.links_array);
+        setGeneratedImages(response.data.data);
         setImageLoadingState(false);
         setImageGenerationState(false);
       })
