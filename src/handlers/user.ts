@@ -72,7 +72,8 @@ export class User extends BaseHandler {
             firstName: user.firstName,
             lastName: user.lastName,
             email: user.email,
-            isAdmin: user.isAdmin
+            isAdmin: user.isAdmin,
+            avatar: user.avatar
           };
 
           if (!bcrypt.compareSync(password, user.hash)) {
