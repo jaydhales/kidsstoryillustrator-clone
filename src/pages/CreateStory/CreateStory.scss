@@ -1,10 +1,20 @@
+.Story-Container {
+  display: flex;
+
+  .sidebar {
+    width: max-content;
+  }
+}
+
 .CreateStory {
+  flex-grow: 2;
   .wrapper {
     display: grid;
     padding: 24px;
     gap: 2rem;
     background: #f7f8f8;
     min-height: 100vh;
+    height: 100%;
     position: relative;
 
     &.preview {

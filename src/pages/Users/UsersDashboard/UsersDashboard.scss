@@ -144,24 +144,25 @@
     .side-bar3 {
       display: none;
     }
-    
+
     .nav3 {
       display: block;
     }
 
-    .header-boxes1 { 
+    .header-boxes1 {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-gap: 15px;
     }
 
-    .cover1, .cover2, .cover3 {
+    .cover1,
+    .cover2,
+    .cover3 {
       width: 190px;
     }
 
     .footer-boxes {
       width: 400px;
-      
     }
     .header-boxes2 {
       display: flex;
