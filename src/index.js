@@ -7,6 +7,7 @@ import { BrowserRouter } from "react-router-dom";
 import { AuthProvider } from "./contexts/AuthContext";
 import * as Sentry from "@sentry/react";
 import { BrowserTracing } from "@sentry/tracing";
+import { UserProvider } from "./contexts/UserContext";
 
 Sentry.init({
   dsn: "https://665708396c8e41deab42b60e9fd1f698@o4504278112993280.ingest.sentry.io/4504278125838337",
@@ -23,9 +24,11 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <AuthProvider>
-      <BrowserRouter>
+      <UserProvider>
+        <BrowserRouter>
         <App />
       </BrowserRouter>
+      </UserProvider>
     </AuthProvider>
   </React.StrictMode>
 );

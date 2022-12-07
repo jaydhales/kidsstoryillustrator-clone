@@ -171,4 +171,20 @@
       align-items: center;
     }
   }
+
+  @media only screen and (max-width: 768px) {
+     .side-bar3 {
+      display: px;
+     }
+    
+     
+  }
+  @media only screen and (max-width: 1280px) {
+
+    .side-bar3 {
+      width: 200px;
+      
+    }
+     
+  }
 }

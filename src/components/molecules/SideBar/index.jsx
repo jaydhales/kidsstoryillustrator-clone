@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import PropTypes from "prop-types";
 
@@ -11,36 +11,39 @@ import myStory from "../../../assets/SideBar/user-octagon.png";
 import avatar from "../../../assets/SideBar/asia.png";
 import archieve from "../../../assets/SideBar/user-octagon.png";
 import logout from "../../../assets/SideBar/logout.png";
-import {AuthContext} from "../../../contexts/AuthContext"
+import { AuthContext } from "../../../contexts/AuthContext";
 import { AiOutlinePlus } from "react-icons/ai";
 import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
+import { UserContext } from "../../../contexts/UserContext";
 
 export const SideBar = () => {
+  const { handleLogout } = useContext(AuthContext);
+  const { userData } = useContext(UserContext)
+  const navigate = useNavigate();
+  
+    const logOutPath = (e) => {
+      e.preventDefault;
+      // console.log(e.target)
+      handleLogout();
+      navigate("/");
+    };
 
-   const {handleLogout} = useContext(AuthContext)
-   // console.log(handleLogout)
-   const navigate = useNavigate()
-
-   const logOutPath = (e) => {
-         e.preventDefault
-         // console.log(e.target)
-         handleLogout()
-         navigate("/")
-   }
+  if (!userData) return null;
   return (
     <div className="sideBar">
       <div className="sideBar__top">
         <div className="sideBar__logo">
           <img src={logo} alt="/" />
         </div>
-            <Link to="/createStory">
-              <div className="story">
-               <div className="icon1">
-                  <AiOutlinePlus />
-                <h3>New Story</h3>
-               </div>
-              </div>
-            </Link>
+        <Link to="/createStory">
+          <div className="story">
+            <div className="icon1">
+              <AiOutlinePlus />
+              <h3>New Story</h3>
+            </div>
+          </div>
+        </Link>
         <div className="sideBar__link">
           <Link to="/users/dashboard">
             <div className="sideBar__icon">
@@ -71,14 +74,13 @@ export const SideBar = () => {
 
       <div className="sideBar__Bottom">
         <div className="sideBar__adminSignature">
-          <img src={avatar} alt="/" />
-          <h3>Mark Essien</h3>
-          <p>Admin</p>
+          <img src={userData.avatar} alt="/" />
+          <h3>{`${userData.firstName} ${userData.lastName}`}</h3>
         </div>
 
         <button onClick={logOutPath} className="btn-submit">
           <div className="sideBar__signOut">
-            <img src={logout} alt="/"  className="img-sign"/>
+            <img src={logout} alt="/" className="img-sign" />
             <h3>Sign Out</h3>
           </div>
         </button>

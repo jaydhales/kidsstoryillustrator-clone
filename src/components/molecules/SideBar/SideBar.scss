@@ -113,21 +113,23 @@
 
   // media queries
   @media (max-width: 768px) {
+
     &__link {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      gap: 0.5rem;
+      gap: 2px;
+      font-size: 10px;
     }
 
     &__icon {
       padding: 0.5rem;
-      background: #aa0136;
-      border-radius: 56px;
+      
 
-      h3 {
-        color: #f7f8f8;
-      }
+    //   h3 {
+        
+    //   }
     }
 
     &__signOut {
