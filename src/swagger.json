@@ -482,7 +482,92 @@
         }
       }
     },
-
+    "/users/forgot-password": {
+      "post": {
+        "tags": ["User"],
+        "summary": "Forgotten Password",
+        "description": "Forgotten User Password.",
+        "operationId": "forgotPassword",
+        "requestBody": {
+          "description": "User Email Object",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/forgotPassword"
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/forgotPassword"
+              }
+            },
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "#/components/schemas/forgotPassword"
+              }
+            }
+          }
+        },
+        "responses": {
+          "default": {
+            "description": "successful operation"
+          }
+        }
+      }
+    },
+    "/users/reset-password/{id}/{token}": {
+      "post": {
+        "tags": ["User"],
+        "summary": "Resset Password",
+        "description": "Reset User Password.",
+        "operationId": "resetPassword",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id of Admin User",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "token",
+            "in": "path",
+            "description": "newly Created Token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "New Passwords",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/resetPassword"
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/resetPassword"
+              }
+            },
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "#/components/schemas/resetPassword"
+              }
+            }
+          }
+        },
+        "responses": {
+          "default": {
+            "description": "successful operation"
+          }
+        }
+      }
+    },
     "/api/get_images": {
       "post": {
         "tags": ["Images"],
@@ -638,6 +723,25 @@
         "type": "object",
         "properties": {
           "prompt": {
+            "type": "string"
+          }
+        }
+      },
+      "forgotPassword": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string"
+          }
+        }
+      },
+      "resetPassword": {
+        "type": "object",
+        "properties": {
+          "password1": {
+            "type": "string"
+          },
+          "password2": {
             "type": "string"
           }
         }
