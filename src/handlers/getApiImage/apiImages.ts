@@ -8,6 +8,7 @@ import { uploadImage } from "./cloudinary";
 class getApiImage extends BaseHandler {
   static async getApiImages(req: Request, res: Response) {
     const { userPrompt } = req.body;
+
     const samplesNo = 4;
 
     const imagePathArr: string[] = [];
