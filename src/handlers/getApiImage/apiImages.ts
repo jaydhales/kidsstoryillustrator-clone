@@ -10,12 +10,9 @@ class getApiImage extends BaseHandler {
     const { userPrompt } = req.body;
     const samplesNo = 4;
 
-    console.log(userPrompt, typeof userPrompt);
     const imagePathArr: string[] = [];
 
     if (userPrompt != null && userPrompt.length > 4) {
-      console.log(process.env.DREAMSTUDIO_API_KEY);
-
       if (process.env.DREAMSTUDIO_API_KEY) {
         const api = generate({
           width: 512,
