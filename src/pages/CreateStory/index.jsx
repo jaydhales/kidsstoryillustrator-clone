@@ -69,7 +69,6 @@ const CreateStory = () => {
   const [modalMessage, setModalMessage] = useState("");
   const [modalStat, setModalStat] = useState("");
   const [pageCount, setPageCount] = useState(1);
-  const [pageContent, setPageContent] = useState([]);
   const [story, setStory] = useState([]);
   const [storyPosting, setStoryPosting] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -93,15 +92,13 @@ const CreateStory = () => {
 
   const handleSave = () => {
     setStoryPosting(true);
-    setPageContent(
-      story.map(({ content }) => {
-        const { paragraph, image } = content;
-        return {
-          pageParagraphText: paragraph,
-          pageImglinkUri: image,
-        };
-      })
-    );
+    const pageContent = story.map(({ content }) => {
+      const { paragraph, image } = content;
+      return {
+        caption: paragraph,
+        imageURL: image,
+      };
+    });
 
     const posData = {
       decoded: { _id: myAuth.id },
@@ -109,6 +106,8 @@ const CreateStory = () => {
       numberOfPages: story.length,
       scenes: pageContent,
     };
+
+    console.log(posData);
     axios({
       method: "post",
       url: apiUrl + "story/post_story",
