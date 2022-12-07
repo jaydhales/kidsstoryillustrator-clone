@@ -8,7 +8,7 @@
   flex-direction: column;
   justify-content: space-between;
   margin: auto 0;
-  border-right: 1px solid #E3E3E3;
+  border-right: 1px solid #e3e3e3;
 
   &__logo img {
     width: 80%;
@@ -24,15 +24,14 @@
   }
 
   .story {
-    border: 1px solid #FAF0F3;
+    border: 1px solid #faf0f3;
     width: 160px;
     // height: 50px;
     padding: 10px;
     margin-left: 30px;
-    background: #FAF0F3;
+    background: #faf0f3;
     border-radius: 56px;
-   }
-
+  }
 
   &__icon {
     display: flex;
@@ -55,8 +54,8 @@
   }
 
   &__icon:hover {
-    color: #AA0136;
-    border-right: 3px solid #AA0136;
+    color: #aa0136;
+    border-right: 3px solid #aa0136;
   }
 
   &__adminSignature {
@@ -92,7 +91,7 @@
 
     img {
       width: 20%;
-      background-color: #AA0136;
+      background-color: #aa0136;
       border-radius: 56px;
       padding: 6px;
       text-align: center;
@@ -100,17 +99,16 @@
 
     h3 {
       font-size: 16px;
-      color: #AA0136;
+      color: #aa0136;
     }
-    
+
     .btn-submit {
-        width: 100px;
-    }  
-    
-    .btn-submit:hover {
-        cursor: pointer;
+      width: 100px;
     }
-    
+
+    .btn-submit:hover {
+      cursor: pointer;
+    }
   }
 
   // media queries

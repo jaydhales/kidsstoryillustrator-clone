@@ -13,6 +13,7 @@ const AuthProvider = ({ children }) => {
   const apiUrl = "https://api.magicbookwriter.hng.tech/";
 
   const [myAuth, setAuth] = useState(initialAuth);
+  const [locationHistory, setLocationHistory] = useState("");
 
   useEffect(() => {
     const localAuth = JSON.parse(localStorage.getItem("authInfo"));
@@ -55,6 +56,8 @@ const AuthProvider = ({ children }) => {
         handleSignUp,
         setAuth,
         apiUrl,
+        locationHistory,
+        setLocationHistory,
       }}
     >
       {children}

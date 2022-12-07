@@ -1,5 +1,7 @@
-import React from "react";
-import { Routes, Route, Navigate } from "react-router-dom";
+import React, { useContext } from "react";
+import { useState } from "react";
+import { Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { AuthContext } from "./contexts/AuthContext";
 
 import {
   About,
@@ -59,7 +61,10 @@ const AppRoutes = () => {
       <Route path="/admin/login" element={<AdminLogin />} />
       <Route path="/changePassword" element={<ChangePassword />} />
       <Route path="/forgotPassword" element={<ForgotPassword />} />
-      <Route path="/createStory" element={<CreateStory />} />
+      <Route
+        path="/createStory"
+        element=<Protected>{<CreateStory />}</Protected>
+      />
       <Route path="/users/dashboard" element={<UsersDashboard />} />
 
       {/* Protected */}
@@ -117,17 +122,16 @@ const AppRoutes = () => {
 };
 
 const Protected = ({ children }) => {
+  const { locationHistory, setLocationHistory } = useContext(AuthContext);
+  const location = useLocation();
+
   const localAuth = JSON.parse(localStorage.getItem("authInfo"));
 
-   console.log(localAuth);
-
-
-  if (!localAuth) return <Navigate replace to="/login" />;
-
-  const { isAuthenticated } = localAuth;
- 
-  console.log(isAuthenticated);
-  if (isAuthenticated === false) {
+  if (!localAuth) {
+    setLocationHistory(location.pathname);
+    return <Navigate replace to="/login" />;
+  } else if (localAuth.isAuthenticated === false) {
+    setLocationHistory(location.pathname);
     return <Navigate replace to="/login" />;
   } else {
     return <>{children}</>;
