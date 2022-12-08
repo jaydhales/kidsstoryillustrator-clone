@@ -1,5 +1,6 @@
 .Story {
   padding: 2rem;
+  margin-left: 200px;
   section {
     padding: 24px 0;
   }
@@ -20,8 +21,18 @@
     margin: 1rem 0 3rem;
   }
 
-  .content p {
-    max-width: 90%;
+  .content {
+    .scenes {
+      max-width: 400px;
+      margin: auto;
+    }
+
+    .caption {
+      margin: 12px auto;
+      width: 70%;
+      text-align: center;
+      font-size: 22px;
+    }
   }
 
   .page-nav {

@@ -1,0 +1,33 @@
+.ViewStoryCard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 52px;
+  margin: 16px 0;
+
+  .button {
+    display: block;
+    border-radius: 9999px;
+    border: 1px solid #aa0136;
+    padding: 1rem 3rem;
+    width: max-content;
+    margin: 1rem auto;
+  }
+
+  img {
+    border-radius: 12px;
+    margin-bottom: 8px;
+  }
+
+  @media (max-width: 720px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+.EmptyCard {
+  background-color: rgba(128, 128, 128, 0.144);
+  width: 100%;
+  display: grid;
+  place-content: center;
+  height: 400px;
+}
