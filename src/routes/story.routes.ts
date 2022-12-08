@@ -14,12 +14,20 @@ router
   .delete(StoryLookUp.deleteAStory)
 
 router
+  .route('/:id/archive')
+  .post(StoryLookUp.archiveAStory)
+
+router
+  .route('/:id/unarchive')
+  .post(StoryLookUp.unArchiveAStory)
+
+router
   .route('/:email')
   .get(StoryLookUp.getStoryByEmail)
 
 router
   .route('/post_story')
   .post(StoryLookUp.postStory)
-  
+
 
 export default router

@@ -25,7 +25,15 @@ export interface IStorybook {
     caption: string;
     imageURL: string;
   }[];
+  isArchived: boolean,
   createdAt: Date;
+}
+
+export interface IStorybookDocument extends IStorybook {
+  data: any;
+  save: any;
+  limit: any;
+  skip: any
 }
 
 export interface IContact {

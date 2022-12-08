@@ -23,7 +23,6 @@ export class User extends BaseHandler {
         const { email, username, firstName, lastName, password } = req.body;
 
         const avi = generateAvatar(firstName, lastName)
-        console.log(avi)
 
         if (password.length < 7) {
           return res
@@ -42,10 +41,10 @@ export class User extends BaseHandler {
               firstName: firstName,
               lastName: lastName,
               email: email,
-              hash: bcrypt.hashSync(password, 10),
-              avatar: avi
+              avatar: avi,
+              hash: bcrypt.hashSync(password, 10)
             }).then((user) => {
-              const { hash, createdAt, updatedAt, __v, ...payload } = user._doc;
+              const { hash, ...payload } = user._doc;
 
               return res.status(200).send({
                 success: true,
