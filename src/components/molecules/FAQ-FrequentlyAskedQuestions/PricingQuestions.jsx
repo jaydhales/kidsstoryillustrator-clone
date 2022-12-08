@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 import "./FrequentlyAskedQuestions.scss";
 import arrow from "../../../assets/Image/FAQ-asset/down-arrow.png";
 import bullet from "../../../assets/Image/FAQ-asset/bullet.png";
-import smallchatbot from "../../../assets/images/smallchatbot.png"
+import smallchatbot from "../../../assets/images/smallchatbot.png";
 export const PricingQuestions = (props) => {
   const [pricingOne, setPricingOne] = useState(true);
   const [pricingTwo, setPricingTwo] = useState(true);
@@ -35,7 +35,7 @@ export const PricingQuestions = (props) => {
         <div className="questions-container">
           <div className="main-questions-container">
             <img src={bullet} alt="Bullet" className="bullet-icon" />
-            <p>How can i subscribe to storyai ?</p>
+            <p>How can i subscribe to Magic Book Writer ?</p>
           </div>
 
           <img

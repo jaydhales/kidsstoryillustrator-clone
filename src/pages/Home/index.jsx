@@ -9,21 +9,16 @@ import HomeCarousel from "../../components/molecules/HomeCarousel";
 import Illustration from "../../components/molecules/homeillustrationflex";
 import Foursteps from "../../components/molecules/foursteps";
 
-
 export const Home = () => {
   // const navigate = useNavigate();
 
   return (
     <Layout>
-      <Homegrid/>
-      <HomeTestimonial/>
-      <HomeCarousel/>
-      <Illustration/>
-      <Foursteps/>
-
-
-
-
+      <Homegrid />
+      <HomeTestimonial />
+      <HomeCarousel />
+      <Illustration />
+      <Foursteps />
 
       {/* <div className="Home">
         <header>
@@ -42,7 +37,7 @@ export const Home = () => {
           </section>
         </header>
         <h3 style={{ textAlign: "center" }} className='h3-header'>
-          Why You Love Using <span className="span">story.ai</span>
+          Why You Love Using <span className="span">Magic Book Writer</span>
         </h3>
         <section className="reasons--grid">
           <div className="grid--one">
@@ -166,7 +161,7 @@ export const Home = () => {
             <p>
               Using this platform has saved me a ton of stress. I finished
               writing my book with the illustrations generated to the last
-              detail within 40 minutes. I totally recommend story.ai for every
+              detail within 40 minutes. I totally recommend Magic Book Writer for every
               children story writers
             </p>
             <div className="avatar--profile">
@@ -181,7 +176,7 @@ export const Home = () => {
             <p>
               Using this platform has saved me a ton of stress. I finished
               writing my book with the illustrations generated to the last
-              detail within 40 minutes. I totally recommend story.ai for every
+              detail within 40 minutes. I totally recommend Magic Book Writer for every
               children story writers
             </p>
             <div className="avatar--profile">

@@ -52,9 +52,9 @@ export const GettingStartedQuestions = () => {
         {!questionOne ? (
           <p>
             A kid illustrator using AI. It helps to design the scene and
-            illustrates the scene for you in a kid storybook style. StoryAI uses
-            diffusion or DALL-E. You can write a story for kids, and the drawing
-            and imagery are generated for you.
+            illustrates the scene for you in a kid storybook style. Magic Book
+            Writer uses diffusion or DALL-E. You can write a story for kids, and
+            the drawing and imagery are generated for you.
           </p>
         ) : (
           " "
@@ -99,8 +99,8 @@ export const GettingStartedQuestions = () => {
         </div>
         {!questionThree ? (
           <p>
-            Anyone aged 12 years and above is eligible to use our website.
-            StoryAi is an interesting website which encourages children and
+            Anyone aged 12 years and above is eligible to use our website. Magic
+            Book Writer is an interesting website which encourages children and
             adult to write stories.
           </p>
         ) : (

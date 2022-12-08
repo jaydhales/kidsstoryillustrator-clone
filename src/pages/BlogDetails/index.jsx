@@ -14,7 +14,9 @@ export const BlogDetails = () => {
       <div className="BlogDetails">
         <div className="BlogDetails__heading">
           <p className="BlogDetails_para ">Nov 12, 2022</p>
-          <h1 className="BlogDetails__headerone">Fun ways to improve Your kids learning culture</h1>
+          <h1 className="BlogDetails__headerone">
+            Fun ways to improve Your kids learning culture
+          </h1>
         </div>
         <img src={pics1} alt="blog card" className="BlogDetails__img" />
         <div className="BlogDetails__content">
@@ -33,12 +35,12 @@ export const BlogDetails = () => {
               learning.
             </p>
             <p className="Blogcontent_list">
-              This is what StoryAi will help you achieve for your kid as a
-              teacher and as a parent.
+              This is what Magic Book Writer will help you achieve for your kid
+              as a teacher and as a parent.
             </p>
           </p>
           <h3 className="BlogDetails__sub-heading">
-            Reasons you should use StoryAi for your kids
+            Reasons you should use Magic Book Writer for your kids
           </h3>
           <ul className="BlogDetails__ul">
             <li>
@@ -58,10 +60,10 @@ export const BlogDetails = () => {
             </li>
 
             <li>
-              <b>It improves reading interest</b>: StoryAi makes reading fun for
-              your kid even for the kids who seem to have low interest in
-              reading. This is a good way to improve yor kid’s interest in
-              reading
+              <b>It improves reading interest</b>: Magic Book Writer makes
+              reading fun for your kid even for the kids who seem to have low
+              interest in reading. This is a good way to improve yor kid’s
+              interest in reading
             </li>
           </ul>
         </div>

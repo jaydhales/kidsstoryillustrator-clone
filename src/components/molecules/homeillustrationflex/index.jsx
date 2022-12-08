@@ -11,38 +11,38 @@ const Illustration = () => {
   return (
     <div className="Illustration_flex_wrapper">
       <h3 className="illustration_text_header">
-        Why You’ll Love Using <span className="illustration_span">magicbookwriter</span>
+        Why You’ll Love Using{" "}
+        <span className="illustration_span">magicbookwriter</span>
       </h3>
 
       <div className="illustrastion_flex_wrapper">
         <div className="illustration_first_column">
-        <div className="fast_scalable_wrapper">
-          <div className="fast_scalable_header">
-            <img src={lustrate1} alt="lustrate" />
-            <p className="illustration_header">Fast & Sustainable</p>
+          <div className="fast_scalable_wrapper">
+            <div className="fast_scalable_header">
+              <img src={lustrate1} alt="lustrate" />
+              <p className="illustration_header">Fast & Sustainable</p>
+            </div>
+            <div className="illustration_text">
+              Magicbookwriter provides the fastest way to generate animated
+              pictorial depictions from written stories. It also allows you to
+              download and save your animated stories for later.
+            </div>
           </div>
-          <div className="illustration_text">
-            Magicbookwriter provides the fastest way to generate animated
-            pictorial depictions from written stories. It also allows you to
-            download and save your animated stories for later.
-          </div>
-        </div>
 
-        <div className="fast_scalable_wrapper">
-          <div className="fast_scalable_header">
-            <img src={lustrate3} alt="lustrate" />
-            <p className="illustration_header">Easy to Use</p>
+          <div className="fast_scalable_wrapper">
+            <div className="fast_scalable_header">
+              <img src={lustrate3} alt="lustrate" />
+              <p className="illustration_header">Easy to Use</p>
+            </div>
+            <div className="illustration_text">
+              You do not need to be a graphics designer or a highly skilled
+              illustrator. With Magic Book Writer, you can generate animated
+              story books for children in less than 5 minutes.
+            </div>
           </div>
-          <div className="illustration_text">
-            You do not need to be a graphics designer or a highly skilled
-            illustrator. With story.ai, you can generate animated story books
-            for children in less than 5 minutes.
-          </div>
-        </div>
         </div>
         <div className="illustration_img_wrap">
-            <img src={illustration} alt="girlillustration" />
-
+          <img src={illustration} alt="girlillustration" />
         </div>
 
         <div className="illustration_first_column">
@@ -65,8 +65,8 @@ const Illustration = () => {
             </div>
             <div className="illustration_text">
               Have fun creating, sharing and reading stories by other story
-              creators and learn new tips, get latest animation updates on
-              story.ai as well as network with other story creators.
+              creators and learn new tips, get latest animation updates on Magic
+              Book Writer as well as network with other story creators.
             </div>
           </div>
         </div>

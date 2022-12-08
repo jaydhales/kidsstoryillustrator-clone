@@ -4,7 +4,7 @@ import "./BlogDetails.scss";
 
 import PropTypes from "prop-types";
 import pic3 from "./pic3.png";
-import pics from "./pics.png"
+import pics from "./pics.png";
 // import "./Blog.scss";
 import { Layout } from "../../components/molecules";
 
@@ -35,11 +35,11 @@ export const BlogPage = () => {
             focus while learning and even lose the fun part of learning.
           </p>
           <p className="Blogcontent_para">
-            This is what StoryAi will help you achieve for your kid as a teacher
-            and as a parent.
+            This is what Magic Book Writer will help you achieve for your kid as
+            a teacher and as a parent.
           </p>
           <h3 className="BlogDetails__sub-heading">
-            Reasons you should use StoryAi for your kids
+            Reasons you should use Magic Book Writer for your kids
           </h3>
           <ul className="BlogDetails__ul">
             <li className="Blogcontent_list">
@@ -59,10 +59,10 @@ export const BlogPage = () => {
             </li>
 
             <li className="Blogcontent_list">
-              <b>It improves reading interest</b>: StoryAi makes reading fun for
-              your kid even for the kids who seem to have low interest in
-              reading. This is a good way to improve yor kid’s interest in
-              reading
+              <b>It improves reading interest</b>: Magic Book Writer makes
+              reading fun for your kid even for the kids who seem to have low
+              interest in reading. This is a good way to improve yor kid’s
+              interest in reading
             </li>
           </ul>
         </div>

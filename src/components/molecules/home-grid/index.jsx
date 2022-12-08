@@ -12,11 +12,13 @@ const Homegrid = () => {
           Create animated story books for children.
         </h1>
         <p className="hero_text">
-          Now you can simply describe a story and watch story.ai generate
-          engaging animated illustrations your kids would love.
+          Now you can simply describe a story and watch Magic Book Writer
+          generate engaging animated illustrations your kids would love.
         </p>
         <div className="button--grid">
-          <Link to={"/createStory"} className="hero_button">Create Story</Link>
+          <Link to={"/createStory"} className="hero_button">
+            Create Story
+          </Link>
         </div>
       </div>
       <div className="hero_img_container">

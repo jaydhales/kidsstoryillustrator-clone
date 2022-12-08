@@ -32,7 +32,9 @@ export const CancelSubscription = () => {
 
               <div className="form-group">
                 <input type="checkbox" name="select2" id="select2" />
-                <label htmlFor="select2">I did’nt use story AI enough</label>
+                <label htmlFor="select2">
+                  I did’nt use Magic Book Writer enough
+                </label>
               </div>
 
               <div className="form-group">
@@ -52,7 +54,7 @@ export const CancelSubscription = () => {
               <div className="form-group">
                 <input type="checkbox" name="select5" id="select5" />
                 <label htmlFor="select5">
-                  Story AI has served it’s purpose so i’m done.
+                  Magic Book Writer has served it’s purpose so i’m done.
                 </label>
               </div>
 
