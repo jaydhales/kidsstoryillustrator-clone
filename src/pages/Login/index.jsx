@@ -7,7 +7,7 @@ import facebookLogo from "../../assets/img/facebook-icon.png";
 import appleLogo from "../../assets/img/apple-icon.png";
 import leftArrow from "../../assets/img/left-arrow.png";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthContext";
 
 export const Login = () => {
@@ -61,20 +61,18 @@ export const Login = () => {
   };
 
   return (
-    <div className="Login">
-      <div className="two-column">
+    <div className="User_Login">
         <div className="branding">
-          <img
-            onClick={() => navigate("/")}
-            src={leftArrow}
-            alt="Facebook logo"
-            className="back-arrow"
-          />
-          <div className="content">
-            <img src={logoWhite} alt="logo" id="logo" />
-            <div className="text">
-              <h2>The easiest way to write kids story books </h2>
-              <p>
+          <div className="user_content">
+            <img
+              onClick={() => navigate("/")}
+              src={logoWhite}
+              alt="logo"
+              id="logo"
+            />
+            <div className="user_text">
+              <h4 className="user_text_header">The easiest way to write kids story books </h4>
+              <p className="user_text_paragraph">
                 Write your stories and generate amazing pictures with the help
                 of our ai technologies.
               </p>
@@ -82,56 +80,61 @@ export const Login = () => {
           </div>
         </div>
         <div>
-          <div id="auth">
-            <header className="center-align">
-              <img src={logo} alt="logo" id="logo2" />
-              <nav className="auth-nav">
-                <a href="/login" className="link tab-link active">
+          <div id="user_auth">
+            <header className="user_center-align">
+              <nav className="user_auth-nav">
+                <a href="/login" className="user_link tab-link active">
                   Login
                 </a>
-                <a href="/signup" className="link tab-link">
+                <a href="/signup" className="user_link tab-link">
                   Create Account
                 </a>
               </nav>
             </header>
 
-            <form onSubmit={handleFormSubmit} className="form" id="login-form">
-              <label htmlFor="email" className="label">
+            <p>Welcome back! Please enter your details</p>
+
+            <form onSubmit={handleFormSubmit} className="user_form" id="login-form">
+
+
+              <label htmlFor="email" className="user_login_label">
                 Email
-              </label>
+              
               <br />
               <input
                 type="text"
                 placeholder="Enter Email Address"
-                className="input"
+                className="user_input"
                 name="email"
                 id="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
               />
-
-              <label htmlFor="pasword" className="label">
-                Password
               </label>
+              
+              <label htmlFor="pasword" className="user_login_label">
+                Password
               <br />
               <input
                 type="password"
                 placeholder="Enter Password"
-                className="input input-password"
+                className="user_input"
                 name="password"
                 id="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
               />
+               </label>
+
 
               {errors.map((error, index) => (
                 <p key={index} className="error">
                   {error}
                 </p>
               ))}
-              <button className="btn btn-primary">
+              <button className="user_login_btn btn-primary">
                 {isLoading ? "Logging in..." : "Log In"}
               </button>
             </form>
@@ -139,48 +142,13 @@ export const Login = () => {
             <a href="/forgotPassword" id="reset-password">
               Forgot Password
             </a>
-
-            {/* <div className="flex or">
-              <div className="hLine"></div>
-              <p>Or</p>
-              <div className="hLine"></div>
-            </div>
-
-            <p className="continue-with">Continue with</p> */}
-
-            {/* <div className="auth-links">
-              <button className="btn-round" aria-label="login with google" id="google-login">
-                <img
-                  src={googleLogo}
-                  alt="Google logo"
-                  className="btn-round-img"
-                />
-                 <p>Continue with Google</p>
-                </button>
-
-              <button className="btn-round" aria-label="login with google" id="facebook-login">
-                <img
-                  src={facebookLogo}
-                  alt="Facebook logo"
-                  className="btn-round-img"
-                />
-               <p>Continue with Facebook</p>
-
-              </button>
-
-              <button className="btn-round" aria-label="login with google" id="apple-login">
-                <img
-                  src={appleLogo}
-                  alt="Apple logo"
-                  className="btn-round-img"
-                />
-                <p>Continue with Apple</p>
-              </button>
-            </div> */}
+            <p className="usersignup_option">
+              Don&apos;t have an account?{" "}
+              <span className="usersignup_span" onClick={() => navigate("/signup")}>Sign up</span>
+            </p>
           </div>
         </div>
       </div>
-    </div>
   );
 };
 
