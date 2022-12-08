@@ -10,6 +10,10 @@ import sendEmail from '../utils/sendMail';
 const secret = process.env.SECRET as string;
 const base_url = process.env.BASE_URL as string;
 
+const generateAvatar = (x: string, y: string) => {
+  return `https://ui-avatars.com/api/?name=${x}+${y}&background=aa0136&rounded=true&bold=false&color=ffffff`
+}
+
 export class User extends BaseHandler {
   static async signup(req: Request, res: Response) {
     try {
@@ -35,7 +39,8 @@ export class User extends BaseHandler {
               firstName: firstName,
               lastName: lastName,
               email: email,
-              hash: bcrypt.hashSync(password, 10)
+              hash: bcrypt.hashSync(password, 10),
+              avatar: generateAvatar(firstName, lastName)
             }).then((user) => {
               const { hash, createdAt, updatedAt, __v, ...payload } = user._doc;
 
