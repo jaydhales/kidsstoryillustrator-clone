@@ -1,51 +1,21 @@
-import api from "@serverless/cloud";
-import * as Sentry from "@sentry/node";
-import * as Tracing from "@sentry/tracing";
+const Sentry = require("@sentry/node");
+// or use es6 import statements
+// import * as Sentry from '@sentry/node';
 
-// or using CommonJS
-// const api = require("@serverless/cloud");
-// const Sentry = require('@sentry/node');
-// const Tracing = require("@sentry/tracing");
+const Tracing = require("@sentry/tracing");
+// or use es6 import statements
+// import * as Tracing from '@sentry/tracing';
 
 Sentry.init({
-  dsn: "https://dc075b72c6394c41a87bd877a3a89d17@o4504278112993280.ingest.sentry.io/4504278125772800",
-  // or pull from params
-  // dsn: params.SENTRY_DSN,
-  environment: params.INSTANCE_NAME,
-  integrations: [
-    // enable HTTP calls tracing
-    new Sentry.Integrations.Http({ tracing: true }),
-    // enable Express.js middleware tracing
-    new Tracing.Integrations.Express({ app }),
-  ],
+  dsn: "https://5e78f8f26ebd4d8fb35eb960499035c1@o4504278112993280.ingest.sentry.io/4504278125838336",
 
-  
- // Set tracesSampleRate to 1.0 to capture 100%
+  // Set tracesSampleRate to 1.0 to capture 100%
   // of transactions for performance monitoring.
   // We recommend adjusting this value in production
   tracesSampleRate: 1.0,
-  // or pull from params
-  // tracesSampleRate: parseFloat(params.SENTRY_TRACES_SAMPLE_RATE),
 });
 
-// RequestHandler creates a separate execution context using domains, so that every
-// transaction/span/breadcrumb is attached to its own Hub instance
-api.use(Sentry.Handlers.requestHandler());
-// TracingHandler creates a trace for every incoming request
-api.use(Sentry.Handlers.tracingHandler());
-
-// All controllers should live here
-api.get("/", function rootHandler(req, res) {
-  res.end("Hello world!");
-});
-
-// The error handler must be before any other error middleware and after all controllers
-api.use(Sentry.Handlers.errorHandler());
-
-// Optional fallthrough error handler
-api.use(function onError(err, req, res, next) {
-  // The error id is attached to `res.sentry` to be returned
-  // and optionally displayed to the user for support.
-  res.statusCode = 500;
-  res.end(res.sentry + "\n");
+const transaction = Sentry.startTransaction({
+  op: "test",
+  name: "My First Test Transaction",
 });
