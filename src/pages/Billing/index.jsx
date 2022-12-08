@@ -123,10 +123,10 @@ export const Billing = () => {
                       required
                     />
                   </div>{" "}
-                  <div className="form-group">
-                    <label htmlFor="exp-month">Expiry month</label>
+                  <div className="form-group expired">
+                    <label htmlFor="exp-month">Expiry month/year</label>
                     <input
-                      type="number"
+                      type="month"
                       name="exp-month"
                       id="exp-month"
                       onChange={handleChange}
@@ -134,7 +134,7 @@ export const Billing = () => {
                       required
                     />
                   </div>
-                  <div className="form-group">
+                  {/* <div className="form-group">
                     <label htmlFor="exp-year">Expiry year</label>
                     <input
                       type="number"
@@ -144,7 +144,7 @@ export const Billing = () => {
                       placeholder="year"
                       required
                     />
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
