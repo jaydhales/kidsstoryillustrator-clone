@@ -1,21 +1,16 @@
 .UsersDashboard {
   .UsersDashboard1 {
-    display: flex;
     font-family: "Nunito";
     font-style: normal;
-    gap: 30px;
   }
-  .side-bar3 {
-    width: 240px;
-    height: 100vh;
-  }
-
   .nav3 {
     display: none;
   }
 
   .wrap-content1 {
-    width: 73%;
+    margin-left: 200px;
+    min-height: 100vh;
+    padding: 2rem;
   }
 
   .wrap-content1 > h1 {
@@ -23,18 +18,11 @@
   }
 
   .header-boxes1 {
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     margin: 15px 0;
     width: 100%;
-  }
-
-  .header-boxes2 {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    margin: 15px 0;
   }
 
   .head {
@@ -72,7 +60,6 @@
 
   .cover1 {
     border: 1px solid #fff6df;
-    width: 339px;
     background: #fff6df;
     border-radius: 12px;
     padding: 32px 24px;
@@ -80,7 +67,6 @@
 
   .cover2 {
     border: 1px solid #e0dfff;
-    width: 339px;
     background: #e0dfff;
     border-radius: 12px;
     padding: 32px 24px;
@@ -88,7 +74,6 @@
 
   .cover3 {
     border: 1px solid #e0ffdf;
-    width: 339px;
     background: #e0ffdf;
     border-radius: 12px;
     padding: 32px 24px;
@@ -170,21 +155,5 @@
       justify-content: center;
       align-items: center;
     }
-  }
-
-  @media only screen and (max-width: 768px) {
-     .side-bar3 {
-      display: px;
-     }
-    
-     
-  }
-  @media only screen and (max-width: 1280px) {
-
-    .side-bar3 {
-      width: 200px;
-      
-    }
-     
   }
 }

@@ -1,13 +1,8 @@
 .Story-Container {
-  display: flex;
-
-  .sidebar {
-    width: max-content;
-  }
 }
 
 .CreateStory {
-  flex-grow: 2;
+  margin-left: 200px;
   .wrapper {
     display: grid;
     padding: 24px;

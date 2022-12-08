@@ -3,16 +3,19 @@
 .sideBar {
   background-color: white;
   font-family: "Nunito";
-  flex: 1.5;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: auto 0;
   border-right: 1px solid #e3e3e3;
+  width: 200px;
+  padding: 1rem;
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
 
-  &__logo img {
-    width: 80%;
-    padding: 2rem;
+  .sideBar__top {
+    display: grid;
+    gap: 1rem;
   }
 
   .icon1 {
@@ -25,10 +28,9 @@
 
   .story {
     border: 1px solid #faf0f3;
-    width: 160px;
     // height: 50px;
     padding: 10px;
-    margin-left: 30px;
+
     background: #faf0f3;
     border-radius: 56px;
   }
@@ -36,9 +38,10 @@
   &__icon {
     display: flex;
     align-items: center;
-    padding-left: 3rem;
     margin-top: 1rem;
-    padding-top: 0.5rem;
+    position: relative;
+    left: 1rem;
+    // padding-top: 0.5rem;
 
     img {
       display: block;
@@ -50,6 +53,11 @@
       font-weight: 500;
       font-size: 16px;
       padding-left: 0.5rem;
+    }
+
+    &.active {
+      color: #aa0136;
+      border-right: 3px solid #aa0136;
     }
   }
 
@@ -82,12 +90,10 @@
 
   &__signOut {
     display: flex;
-    justify-content: center;
     align-items: center;
+    margin: 1rem 2rem;
+    width: max-content;
     gap: 8px;
-    margin: 2rem;
-    position: relative;
-    left: 30px;
 
     img {
       width: 20%;
@@ -112,38 +118,36 @@
   }
 
   // media queries
-  @media (max-width: 768px) {
+  // @media (max-width: 768px) {
+  //   &__link {
+  //     display: flex;
+  //     flex-direction: column;
+  //     justify-content: center;
+  //     align-items: center;
+  //     gap: 2px;
+  //     font-size: 10px;
+  //   }
 
-    &__link {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 2px;
-      font-size: 10px;
-    }
+  //   &__icon {
+  //     padding: 0.5rem;
 
-    &__icon {
-      padding: 0.5rem;
-      
+  //     //   h3 {
 
-    //   h3 {
-        
-    //   }
-    }
+  //     //   }
+  //   }
 
-    &__signOut {
-      padding: 1rem;
+  //   &__signOut {
+  //     padding: 1rem;
 
-      img {
-        width: 10%;
-      }
-    }
+  //     img {
+  //       width: 10%;
+  //     }
+  //   }
 
-    &__adminSignature {
-      padding-top: 1rem;
-    }
-  }
+  //   &__adminSignature {
+  //     padding-top: 1rem;
+  //   }
+  // }
 }
 
 // .adminSignature{
