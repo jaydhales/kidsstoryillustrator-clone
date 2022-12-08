@@ -20,6 +20,10 @@ const storybookSchema = new Schema<IStorybook>({
             imageURL: String
         }
     ],
+    isArchived: {
+        type: Boolean,
+        default: false
+    },
     createdAt: {
         type: Date,
         immutable: true,

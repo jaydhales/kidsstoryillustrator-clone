@@ -1,13 +1,13 @@
 import { Request, Response } from 'express';
 import { Types } from 'mongoose';
-import { BaseHandler } from '../interfaces';
+import { BaseHandler, IStorybook, IStorybookDocument } from '../interfaces';
 import StorybookModel from '../model/storybook.model';
 
 export class StoryLookUp extends BaseHandler {
 
   static async getAllStories(req: Request, res: Response) {
     try {
-      const allStories = await StorybookModel.find({}).populate({
+      const allStories = await StorybookModel.find({isArchived: false}).populate({
         path: 'author',
         select: 'username _id'
       });
@@ -72,7 +72,7 @@ export class StoryLookUp extends BaseHandler {
       // const { email } = req.params
 
       const story = await StorybookModel.find({}).populate('author');
-      
+
       if (!story) {
         return res.status(404).json({
           success: false,
@@ -148,6 +148,93 @@ export class StoryLookUp extends BaseHandler {
         message: 'server error'
       });
     }
+  }
+
+  static archiveAStory(req: Request, res: Response) {
+
+    const storyId = req.params.id
+
+    try {
+
+      if (Types.ObjectId.isValid(storyId)) {
+
+        StorybookModel.findById({ _id: storyId }, (error: Error, document: IStorybookDocument) => {
+          if (error) return res.send({ success: false, message: 'Failed to archive story: ' + error })
+
+          if (document && document.isArchived == false) {
+            document.isArchived = true
+            document.save().then(async (_story: IStorybookDocument) => {
+
+              return res.status(200).send({
+                success: true,
+                message: 'Story Archived Successfully'
+              })
+            }).catch((error: Error) => {
+              throw new Error(error.message);
+            })
+          } else {
+            return res.status(404).send(
+              {
+                success: false,
+                message: 'Story not found'
+              })
+          }
+        })
+      } else {
+        return res.status(404).send(
+          {
+            success: false,
+            message: 'Invalid ID'
+          })
+      }
+    } catch (error) {
+      throw new Error((error as Error).message);
+    }
+
+  }
+
+
+  static unArchiveAStory(req: Request, res: Response) {
+
+    const storyId = req.params.id
+
+    try {
+
+      if (Types.ObjectId.isValid(storyId)) {
+
+        StorybookModel.findById({ _id: storyId }, (error: Error, document: IStorybookDocument) => {
+          if (error) return res.send({ success: false, message: 'Failed to unarchive story: ' + error })
+
+          if (document && document.isArchived == true) {
+            document.isArchived = false
+            document.save().then(async (_story: IStorybookDocument) => {
+
+              return res.status(200).send({
+                success: true,
+                message: 'Story Unarchived Successfully'
+              })
+            }).catch((error: Error) => {
+              throw new Error(error.message);
+            })
+          } else {
+            return res.status(404).send(
+              {
+                success: false,
+                message: 'Story not found'
+              })
+          }
+        })
+      } else {
+        return res.status(404).send(
+          {
+            success: false,
+            message: 'Invalid ID'
+          })
+      }
+    } catch (error) {
+      throw new Error((error as Error).message);
+    }
+
   }
 
   static async deleteAStory(req: Request, res: Response) {
