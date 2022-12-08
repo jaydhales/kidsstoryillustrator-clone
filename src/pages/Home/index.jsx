@@ -3,22 +3,29 @@ import PropTypes from "prop-types";
 
 import "./Home.scss";
 import { Layout } from "../../components/molecules";
-import illustration from "./Images/illustration.svg";
-import redlogo from "./Images/Red Rectangle.svg";
-import greenlogo from "./Images/Green Rectangle.svg";
-import orangelogo from "./Images/Orange Rectangle.svg";
-import bluelogo from "./Images/Blue Rectangle.svg";
-import AI from "./Images/artificial intelligence.svg";
-import avatar from "./Images/brazil.svg";
-import { useNavigate } from "react-router-dom";
+import Homegrid from "../../components/molecules/home-grid";
+import HomeTestimonial from "../../components/molecules/HomeTestimonial";
+import HomeCarousel from "../../components/molecules/HomeCarousel";
+import Illustration from "../../components/molecules/homeillustrationflex";
+import Foursteps from "../../components/molecules/foursteps";
 
 
 export const Home = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   return (
     <Layout>
-      <div className="Home">
+      <Homegrid/>
+      <HomeTestimonial/>
+      <HomeCarousel/>
+      <Illustration/>
+      <Foursteps/>
+
+
+
+
+
+      {/* <div className="Home">
         <header>
           <section className="text home-container-01">
             <h1 className="header-text">Generate Story Illustrations</h1>
@@ -185,7 +192,7 @@ export const Home = () => {
             </div>
           </div>
         </section>
-      </div>
+      </div> */}
     </Layout>
   );
 };

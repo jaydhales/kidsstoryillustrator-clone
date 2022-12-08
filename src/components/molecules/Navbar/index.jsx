@@ -16,10 +16,7 @@ const navLinks = [
     text: 'Home',
     to: '/',
   },
-  {
-    text: 'Stories',
-    to: '/mystories',
-  },
+  
   {
     text: 'About',
     to: '/about',
