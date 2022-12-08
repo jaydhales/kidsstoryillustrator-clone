@@ -4,8 +4,15 @@ import PropTypes from "prop-types";
 
 import "./ViewStoryCard.scss";
 import { Link } from "react-router-dom";
+import empty from "../../../assets/Connectlost.png";
 
 export const ViewStoryCard = ({ data }) => {
+  if (data && data.length === 0)
+    return (
+      <div className="EmptyCard">
+        <img src={empty} alt="" />
+      </div>
+    );
   return (
     <div className="ViewStoryCard">
       {data.map(({ _id, title, scenes }) => (

@@ -15,7 +15,6 @@ export const UsersDashboard = () => {
   useEffect(() => {
     fetchStories();
   }, []);
-  if (!userStories && userStories.length === 0) return null;
 
   return (
     <div className="UsersDashboard">
@@ -24,7 +23,7 @@ export const UsersDashboard = () => {
       </div>
       <div className="UsersDashboard1">
         <div className="side-bar3">
-          <SideBar/>
+          <SideBar />
         </div>
         <div className="wrap-content1">
           <h1 className="head">Dashboard</h1>
@@ -32,12 +31,12 @@ export const UsersDashboard = () => {
             <div className="cover1">
               <p>No of stories </p>
               <div className="fig-1">
-                <b>100</b>
+                <b>{userStories.length}</b>
                 <img src={vector} alt="" className="fig3" />
               </div>
               <p>created</p>
             </div>
-            <div className="cover2">
+            {/* <div className="cover2">
               <p>No of stories </p>
               <div className="fig-1">
                 <b>50</b>
@@ -52,7 +51,7 @@ export const UsersDashboard = () => {
                 <img src={vector2} alt="" className="fig3" />
               </div>
               <p>created</p>
-            </div>
+            </div> */}
           </div>
 
           <div className="footer-boxes">

@@ -34,53 +34,47 @@ body.active-modal {
 }
 .modal-content-success-sty {
   background-color: #edffeb;
-  border-left: 7px solid #009909;
+  border: 2px solid #009909;
+  border-radius: 8px;
 
-  .mod-content-header {
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    gap: 32px;
-
-    & > img {
-      width: 40px;
-    }
-    & > h2 {
-      font-size: 30px;
-      font-weight: 600;
-      color: #009909;
-    }
+  & > h2 {
+    color: #009909;
   }
 
   .message-text {
     color: #009909;
-    font-size: 20px;
-    padding-left: 10px;
   }
 }
 
 .modal-content-error-sty {
   background-color: #ffedf1;
-  border-left: 7px solid #c82d2c;
+  border: 2px solid #c82d2c;
+  border-radius: 8px;
 
-  .mod-content-header {
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    gap: 32px;
+  & > h2 {
+    color: #c82d2c;
+  }
 
-    & > img {
-      width: 40px;
-    }
-    & > h2 {
-      font-size: 30px;
-      font-weight: 600;
-      color: #c82d2c;
-    }
+  & > .message-text {
+    color: #c82d2c;
+  }
+}
+
+.mod-content-header {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 32px;
+
+  & > img {
+    width: 40px;
+  }
+  & > h2 {
+    font-size: 30px;
+    font-weight: 600;
   }
 
   .message-text {
-    color: #c82d2c;
     font-size: 20px;
     padding-left: 10px;
   }

@@ -23,13 +23,18 @@ const ModalCS = ({ title, message, handleModDisplay, message_stat }) => {
     }
   }, []);
 
+  const handleModal = (e) => {
+    handleModDisplay();
+    window.location.reload();
+  };
+
   return (
     <div className="modalcs" id="modalcs">
-      <div onClick={handleModDisplay} className="overlay_4fd3">
+      <div onClick={handleModal} className="overlay_4fd3">
         <Fade>
           {message_stat == "success" ? (
             <div className="modal-content modal-content-success-sty">
-              <button className="close-modal" onClick={handleModDisplay}>
+              <button className="close-modal" onClick={handleModal}>
                 <img src={greenClose} alt="" />
               </button>
               <div className="mod-content-header">
@@ -40,7 +45,7 @@ const ModalCS = ({ title, message, handleModDisplay, message_stat }) => {
             </div>
           ) : (
             <div className="modal-content modal-content-error-sty">
-              <button className="close-modal" onClick={handleModDisplay}>
+              <button className="close-modal" onClick={handleModal}>
                 <img src={redClose} alt="" />
               </button>
               <div className="mod-content-header">

@@ -21,8 +21,19 @@
     margin: 1rem 0 3rem;
   }
 
-  .content p {
-    max-width: 90%;
+  .content {
+    .story-illustration {
+      height: 500px;
+      object-fit: cover;
+      object-position: top;
+    }
+
+    .caption {
+      margin: 12px auto;
+      width: 70%;
+      text-align: center;
+      font-size: 22px;
+    }
   }
 
   .page-nav {
