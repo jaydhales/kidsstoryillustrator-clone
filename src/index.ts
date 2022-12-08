@@ -22,11 +22,11 @@ app.use(Sentry.Handlers.errorHandler());
 
 
 // Optional fallthrough error handler
-app.use(function onError(err, req, res, next) {
+//app.use(function onError(err, req, res, next) {
   // The error id is attached to `res.sentry` to be returned
   // and optionally displayed to the user for support.
   res.statusCode = 500;
   res.end(res.sentry + "\n");
 });
 
-app.listen(5000);
+//app.listen(5000);
