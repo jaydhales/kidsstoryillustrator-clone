@@ -21,16 +21,31 @@ background-color: #F7F7F7;
 }
 
 .fourstep_text{
-    font-size: 1rem;
+    display: none;
+
+    @media only screen and (min-width: 541px) {
+        font-size: 1rem;
     line-height: 40px;
     text-align: center; 
     padding-inline: 20%;
+
+    }
+
 }
 
 .fourstep_wrapper{
     display: flex;
+    flex-direction: column-reverse;
     align-items: center;
     gap: 2rem;
+    padding-block-start: 2rem;
+
+    @media only screen and (min-width: 915px) {
+        display: flex;
+        flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    }
 }
 
 .mickeymouse{

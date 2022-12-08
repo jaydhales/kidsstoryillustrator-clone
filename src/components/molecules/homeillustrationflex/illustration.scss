@@ -3,8 +3,17 @@
   flex-direction: column;
   align-items: center;
   padding-block-end: 10%;
+  padding-inline: 10%;
+  gap: 3rem;
+
+  @media only screen and (min-width: 1025px) {
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block-end: 10%;
   padding-inline: 15%;
   gap: 3rem;
+  }
 
   .illustration_text_header {
     font-weight: 400;
@@ -18,8 +27,15 @@
   }
 
   .illustrastion_flex_wrapper {
-    display: flex;
+    display: block;
     gap: 2rem;
+
+    @media only screen and (min-width: 1025px) {
+      display: flex;
+    gap: 2rem;
+
+    }
+
 
     .illustration_text{
         font-size: 1rem;
