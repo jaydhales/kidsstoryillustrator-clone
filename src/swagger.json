@@ -146,6 +146,88 @@
         }
       }
     },
+    "/story/{id}/archive": {
+      "post": {
+        "tags": ["Story"],
+        "summary": "Archive Story by Id",
+        "description": "Archive Story by Id.",
+        "operationId": "archiveStoryById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id of Story",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Story"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/Story"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/story/{id}/unarchive": {
+      "post": {
+        "tags": ["Story"],
+        "summary": "Unarchive Story by Id",
+        "description": "Unarchive Story by Id.",
+        "operationId": "unarchiveStoryById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id of Story",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Story"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/Story"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/story/post_story": {
       "post": {
         "tags": ["Story"],
@@ -621,6 +703,9 @@
           "numberOfPages": {
             "type": "integer"
           },
+          "isArchived": {
+            "type": "boolean"
+          },
           "scenes": [
             {
               "caption": {
@@ -650,6 +735,9 @@
             "type": "string"
           },
           "username": {
+            "type": "string"
+          },
+          "avatar": {
             "type": "string"
           },
           "hash": {

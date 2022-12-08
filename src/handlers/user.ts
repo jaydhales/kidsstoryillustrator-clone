@@ -10,10 +10,6 @@ import sendEmail from '../utils/sendMail';
 const secret = process.env.SECRET as string;
 const base_url = process.env.BASE_URL as string;
 
-const generateAvatar = (x: string, y: string) => {
-  return `https://ui-avatars.com/api/?name=${x}+${y}&background=aa0136&rounded=true&bold=false&color=ffffff`
-}
-
 export class User extends BaseHandler {
   static async signup(req: Request, res: Response) {
     try {
@@ -21,8 +17,6 @@ export class User extends BaseHandler {
         return res.status(400).send({ message: 'Email Invalid' });
       } else {
         const { email, username, firstName, lastName, password } = req.body;
-
-        const avi = generateAvatar(firstName, lastName)
 
         if (password.length < 7) {
           return res
@@ -41,10 +35,9 @@ export class User extends BaseHandler {
               firstName: firstName,
               lastName: lastName,
               email: email,
-              avatar: avi,
               hash: bcrypt.hashSync(password, 10)
             }).then((user) => {
-              const { hash, ...payload } = user._doc;
+              const { hash, createdAt, updatedAt, __v, ...payload } = user._doc;
 
               return res.status(200).send({
                 success: true,
@@ -79,8 +72,7 @@ export class User extends BaseHandler {
             firstName: user.firstName,
             lastName: user.lastName,
             email: user.email,
-            isAdmin: user.isAdmin,
-            avatar: user.avatar
+            isAdmin: user.isAdmin
           };
 
           if (!bcrypt.compareSync(password, user.hash)) {
@@ -241,6 +233,10 @@ export class User extends BaseHandler {
       if(password1 !== password2){
         return res.status(400).send({ message: 'Passwords don\'t match' });
       }
+
+      if(password1.length < 6){
+        return res.status(400).send({message: 'Password length must be 6 characters long'})
+      }
       const foundUser = await UserModel.findById(user._id)
       if(!foundUser){
         return res.status(400).send({ message: 'Token Expired!' });
@@ -276,6 +272,7 @@ static async forgotPassword(req: Request, res: Response) {
           const token = jwt.sign({ ...payload }, secret, { expiresIn: '15m' });
           const link = `${base_url}users/reset-password/${user._id}/${token}`;
           await sendEmail(user.email, 'Password Reset Link', link);
+          // console.log(link)
           res.send('Password reset link sent to your email account!')
       }
   } catch (error) {
