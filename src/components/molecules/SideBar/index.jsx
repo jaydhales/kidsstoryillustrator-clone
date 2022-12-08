@@ -29,6 +29,18 @@ export const SideBar = () => {
     navigate("/");
   };
 
+  const toSentenceCase = (str) => {
+    var splitStr = str.toLowerCase().split(" ");
+    for (var i = 0; i < splitStr.length; i++) {
+      // You do not need to check if i is larger than splitStr length, as your for does that for you
+      // Assign it back to the array
+      splitStr[i] =
+        splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
+    }
+    // Directly return the joined string
+    return splitStr.join(" ");
+  };
+
   if (!userData) return null;
   return (
     <div className="sideBar">
@@ -61,7 +73,9 @@ export const SideBar = () => {
       <div className="sideBar__Bottom">
         <div className="sideBar__adminSignature">
           <img src={userData.avatar} alt="/" />
-          <h3>{`${userData.firstName} ${userData.lastName}`}</h3>
+          <h3>
+            {toSentenceCase(`${userData.firstName} ${userData.lastName}`)}
+          </h3>
         </div>
 
         <button onClick={logOutPath} className="btn-submit">
