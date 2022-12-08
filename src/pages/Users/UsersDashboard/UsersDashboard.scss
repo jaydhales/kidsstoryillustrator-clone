@@ -218,16 +218,33 @@
       margin: 50px 0;
      } 
   }
-  @media only screen and (max-width: 1200px) {
-    // .side-bar3 {
-    //   display: block;
-    // }
-    // .wrap-content1 {
-    //   width: 0%;
-    //  }
-    // .cover1, .cover2, .cover3 {
-    //   width: 400px;
-    //  }
-     
+  @media only screen and ( max-width: 1200px) {
+    .side-bar3 {
+      width: 25%;
+    }
+    .wrap-content1 {
+      width: 80%;
+     }
+    .rig1 {
+      margin-right: 10px;
+    }
+    .vix1 {
+      width: 295px;
+     }
+     .header-boxes2 {
+      gap: 30px;
+     }
+
+     .btn-vix {
+      width: 230px;
+     }
+  }
+
+  @media only screen and (max-width: 1280px) {
+    .wrap-content1 {
+      width: 80%;
+    }
+
+    
   }
 }
