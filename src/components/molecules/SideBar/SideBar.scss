@@ -89,11 +89,13 @@
   }
 
   &__signOut {
+
     display: flex;
     align-items: center;
     margin: 1rem 2rem;
     width: max-content;
     gap: 8px;
+
 
     img {
       width: 20%;
