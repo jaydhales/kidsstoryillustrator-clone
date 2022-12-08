@@ -81,10 +81,10 @@
   }
 
   &__signOut {
-    display: flex;
-    justify-content: center;
+     display: flex;
+     justify-content: center;
     align-items: center;
-    gap: 8px;
+     gap: 8px;
     margin: 2rem;
     position: relative;
     left: 30px;
@@ -113,25 +113,48 @@
 
   // media queries
   @media (max-width: 768px) {
+
+    &__logo img {
+        width: 150px;
+    }
+
     &__link {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 0.5rem;
+      flex-direction: column;
+      gap: 2px;
+      margin-left: 10px;
+      font-size: 10px;
+    }
+
+    .text_1 {
+      font-size: 16px;
+    }
+
+    .story {
+      margin: 0;
+      width: 130px;
+      margin-left: 15px;
+    }
+
+    .icon1 {
+      font-size: 16px;
     }
 
     &__icon {
-      padding: 0.5rem;
-      background: #aa0136;
-      border-radius: 56px;
+      // padding-left: 1px;
+
+      img {
+        width: 50px;
+      }
 
       h3 {
-        color: #f7f8f8;
+        display: none;
       }
     }
 
     &__signOut {
       padding: 1rem;
+      margin: 5px;
 
       img {
         width: 10%;
@@ -140,6 +163,17 @@
 
     &__adminSignature {
       padding-top: 1rem;
+
+      h3 {
+         font-size: 16px;
+      }
+     
+    }
+
+    &__Bottom {
+        margin-top: 530px;
+        height: 100vh;
+      
     }
   }
 }

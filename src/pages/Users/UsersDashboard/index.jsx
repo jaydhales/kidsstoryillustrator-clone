@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { SlOptions } from "react-icons/si";
+import React, { useContext, useState } from "react";
 
 import Navbar from "../../../components/molecules/Navbar";
 import SideBar from "../../../components/molecules/SideBar";
@@ -8,9 +7,15 @@ import vector1 from "../../../assets/images/Vector-blue.png";
 import vector2 from "../../../assets/images/Vector-green.png";
 import circle from "../../../assets/images/Ellipse 4.png";
 import options from "../../../assets/images/more.png";
+import axios from "axios"
+import ViewStoryCard from "../../../components/atoms/ViewStoryCard";
 import "./UsersDashboard.scss";
 import PropTypes from "prop-types";
-export const AccountInfo = () => {
+import { AuthContext } from "../../../contexts/AuthContext";
+import { UserContext } from "../../../contexts/UserContext";
+export const UsersDashboard = () => {
+  const {userStories} = useContext(UserContext)
+   
   return (
     <div className="UsersDashboard">
       <div className="nav3">
@@ -18,7 +23,7 @@ export const AccountInfo = () => {
       </div>
       <div className="UsersDashboard1">
         <div className="side-bar3">
-          <SideBar />
+          <SideBar/>
         </div>
         <div className="wrap-content1">
           <h1 className="head">Dashboard</h1>
@@ -51,7 +56,7 @@ export const AccountInfo = () => {
 
           <div className="footer-boxes">
             <div className="rig1">
-              <h1 className="head">Top stories</h1>
+              <h1 className="head">Recent stories</h1>
               <button className="btnz" onClick={() => window.location.reload()}>
                 see all
               </button>
@@ -145,10 +150,10 @@ export const AccountInfo = () => {
 
 // These are the types of the props that are passed to the component
 
-AccountInfo.propTypes = {};
+UsersDashboard.propTypes = {};
 
 // These are their default values
 
-AccountInfo.defaultProps = {};
+UsersDashboard.defaultProps = {};
 
-export default AccountInfo;
+export default UsersDashboard;
