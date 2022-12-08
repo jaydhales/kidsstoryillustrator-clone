@@ -79,12 +79,21 @@ export const Story = () => {
       <div className="Story">
         <div className="content">
           <h3>{toSentenceCase(storyContent.title)}</h3>
-          <img
+
+          <div className="scenes">
+            <img
+              className="story-illustration"
+              src={storyContent.scenes[pageNum].imageURL}
+              alt=""
+            />
+            <p className="caption">{storyContent.scenes[pageNum].caption}</p>
+          </div>
+          {/* <img
             className="story-illustration"
             src={storyContent.scenes[pageNum].imageURL}
             alt=""
           />
-          <p className="caption">{storyContent.scenes[pageNum].caption}</p>
+          <p className="caption">{storyContent.scenes[pageNum].caption}</p> */}
         </div>
 
         <div className="page-nav">

@@ -22,10 +22,9 @@
   }
 
   .content {
-    .story-illustration {
-      height: 500px;
-      object-fit: cover;
-      object-position: top;
+    .scenes {
+      max-width: 400px;
+      margin: auto;
     }
 
     .caption {
