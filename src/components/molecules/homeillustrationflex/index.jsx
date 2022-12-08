@@ -1,5 +1,5 @@
 import "./illustration.scss";
-import React from "react";
+
 
 import lustrate1 from "./images/lustrate1.png";
 import lustrate2 from "./images/lustrate2.png";
