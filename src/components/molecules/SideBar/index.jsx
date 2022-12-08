@@ -40,7 +40,7 @@ export const SideBar = () => {
           <div className="story">
             <div className="icon1">
               <AiOutlinePlus />
-              <h3>New Story</h3>
+              <h3 className="text_1">New Story</h3>
             </div>
           </div>
         </Link>

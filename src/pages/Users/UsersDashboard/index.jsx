@@ -28,7 +28,7 @@ export const UsersDashboard = () => {
       </div>
       <div className="UsersDashboard1">
         <div className="side-bar3">
-          <SideBar />
+          <SideBar/>
         </div>
         <div className="wrap-content1">
           <h1 className="head">Dashboard</h1>
