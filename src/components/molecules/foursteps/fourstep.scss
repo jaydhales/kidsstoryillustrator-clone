@@ -38,6 +38,7 @@ background-color: #F7F7F7;
     flex-direction: column-reverse;
     align-items: center;
     gap: 2rem;
+    padding-block-start: 2rem;
 
     @media only screen and (min-width: 915px) {
         display: flex;
