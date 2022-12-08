@@ -76,13 +76,13 @@ const Contact = () => {
             <div className="flex-card">
               <p>Contact Information</p>
               <ul>
-                <a href="mailto:story.ai@gmail.com">
+                <a href="mailto:magicbook@gmail.com">
                   <img
                     src="/assets/images/sms.svg"
                     id="message_icon"
                     alt="message"
                   />
-                  story.ai@gmail.com
+                  magicbook@gmail.com
                 </a>
                 <a href="tel:0l-5478-9231">
                   {" "}
@@ -99,7 +99,7 @@ const Contact = () => {
                     id="global_icon"
                     alt="global"
                   />
-                  www.story.ai
+                  www.magicbook.com
                 </a>
               </ul>
               <div className="social-media-link_chatbot2">

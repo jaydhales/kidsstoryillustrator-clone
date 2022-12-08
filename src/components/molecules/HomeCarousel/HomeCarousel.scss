@@ -1,0 +1,54 @@
+.swipes{
+  padding-block: 15% 10%;
+
+.home_carousel_container {
+    display: flex;
+
+  }
+
+  .home_carousel_container:hover .home_carousel_container_item{
+    transform: translateX(-25%);
+ }
+  
+  .home_carousel_container_item{
+    flex: 0 0 19.7%;
+    text-align: center;
+    margin: 0 2px;
+    transition: transform 300ms ease 100ms;
+  }
+  .home_carousel_container_item:hover {
+    transform: scale(1.5) !important;
+  }
+
+  .home_carousel_container_item:hover ~ .home_carousel_container_item {
+    transform: translateX(25%);
+ }
+
+ .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+}
