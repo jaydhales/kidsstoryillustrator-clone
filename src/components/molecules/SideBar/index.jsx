@@ -23,10 +23,10 @@ export const SideBar = () => {
     fetchProfile();
   }, []);
   const logOutPath = (e) => {
-    e.preventDefault;
+    e.preventDefault();
     // console.log(e.target)
     handleLogout();
-    navigate("/");
+    navigate ("/");
   };
 
   const toSentenceCase = (str) => {

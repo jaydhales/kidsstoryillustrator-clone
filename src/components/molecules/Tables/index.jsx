@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import {useEffect, useState} from "react";
 import "./Tables.css"
-import TableRow from "../TableRow";
 import {CiSearch} from "react-icons/ci";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
