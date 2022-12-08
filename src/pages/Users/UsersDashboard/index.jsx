@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import Navbar from "../../../components/molecules/Navbar";
 import SideBar from "../../../components/molecules/SideBar";
@@ -10,16 +10,12 @@ import "./UsersDashboard.scss";
 import PropTypes from "prop-types";
 import { UserContext } from "../../../contexts/UserContext";
 export const UsersDashboard = () => {
-  const { userStories } = useContext(UserContext);
-  const [recent, setRecent] = useState([]);
-  if (!userStories && userStories.length === 0) return null;
+  const { userStories, fetchStories } = useContext(UserContext);
 
-  useState(() => {
-    const newArray = [];
-    console.log(new Date(userStories[0]));
-    // let sortedArray = userStories.sort((a, b) => Date(a.createdAt));
-    // for (let i = 0; i < 3; i++) {}
+  useEffect(() => {
+    fetchStories();
   }, []);
+  if (!userStories && userStories.length === 0) return null;
 
   return (
     <div className="UsersDashboard">
@@ -28,7 +24,7 @@ export const UsersDashboard = () => {
       </div>
       <div className="UsersDashboard1">
         <div className="side-bar3">
-          <SideBar/>
+          <SideBar />
         </div>
         <div className="wrap-content1">
           <h1 className="head">Dashboard</h1>

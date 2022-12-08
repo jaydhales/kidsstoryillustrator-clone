@@ -6,7 +6,6 @@ import "./ViewStoryCard.scss";
 import { Link } from "react-router-dom";
 
 export const ViewStoryCard = ({ data }) => {
-  console.log(data);
   return (
     <div className="ViewStoryCard">
       {data.map(({ _id, title, scenes }) => (

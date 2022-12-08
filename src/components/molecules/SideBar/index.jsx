@@ -8,20 +8,20 @@ import dashboard from "../../../assets/SideBar/category-2.png";
 import book from "../../../assets/SideBar/book.png";
 import settings from "../../../assets/SideBar/setting-2.png";
 import myStory from "../../../assets/SideBar/user-octagon.png";
-import avatar from "../../../assets/SideBar/asia.png";
-import archieve from "../../../assets/SideBar/user-octagon.png";
 import logout from "../../../assets/SideBar/logout.png";
 import { AuthContext } from "../../../contexts/AuthContext";
 import { AiOutlinePlus } from "react-icons/ai";
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import axios from "axios";
 import { UserContext } from "../../../contexts/UserContext";
 
 export const SideBar = () => {
   const { handleLogout } = useContext(AuthContext);
-  const { userData } = useContext(UserContext);
+  const { userData, fetchProfile } = useContext(UserContext);
   const navigate = useNavigate();
 
+  useEffect(() => {
+    fetchProfile();
+  }, []);
   const logOutPath = (e) => {
     e.preventDefault;
     // console.log(e.target)
@@ -47,7 +47,6 @@ export const SideBar = () => {
         <div className="sideBar__link">
           {[
             ["/users/dashboard", dashboard, "Dashboard"],
-            ["/myStories", book, "Stories"],
             ["/myStories", myStory, "My Stories"],
             ["/account-settings", settings, "Settings"],
           ].map(([path, src, title]) => (
