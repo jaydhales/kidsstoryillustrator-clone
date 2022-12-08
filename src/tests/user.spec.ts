@@ -15,6 +15,12 @@ const requester = chai.request(app).keepOpen()
 const mockObjectId = new mongoose.Types.ObjectId();
 const mockObjectDate = new Date();
 
+const generateAvatar = (x: string, y: string) => {
+	return `https://ui-avatars.com/api/?name=${x}+${y}&background=aa0136&rounded=true&bold=false&color=ffffff`
+  }
+
+
+
 const body: Ibody = {
 	email: 'ukanah15thdean@gmail.com',
 	username: 'deanuko',
@@ -32,6 +38,7 @@ const User: IUser = {
 	username: body.username,
 	email: body.email,
 	hash: body.hash,
+	avatar: generateAvatar(body.firstName, body.lastName),
 	createdAt: mockObjectDate,
 	updatedAt: mockObjectDate
 }
