@@ -549,8 +549,8 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   display: none;
-  height: 100vh;
-  // padding: 48px 0;
+  min-height: 100vh;
+  padding: 48px 0;
 }
 
 .AdminLogin-branding {
