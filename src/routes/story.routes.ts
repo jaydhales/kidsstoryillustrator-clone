@@ -1,6 +1,6 @@
 import express from 'express';
 import { StoryLookUp } from '../handlers/story';
-import { protect } from '../middleware/auth';
+import { authorizeAdmin } from '../middleware/auth';
 
 const router = express.Router();
 
@@ -15,11 +15,11 @@ router
 
 router
   .route('/:id/archive')
-  .post(StoryLookUp.archiveAStory)
+  .post(authorizeAdmin, StoryLookUp.archiveAStory)
 
 router
   .route('/:id/unarchive')
-  .post(StoryLookUp.unArchiveAStory)
+  .post(authorizeAdmin, StoryLookUp.unArchiveAStory)
 
 router
   .route('/:email')
