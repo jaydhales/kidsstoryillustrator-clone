@@ -650,6 +650,88 @@
         }
       }
     },
+    "/users/{id}/archive": {
+      "post": {
+        "tags": ["User"],
+        "summary": "Archive User by Id",
+        "description": "Archive User by Id.",
+        "operationId": "archiveUserById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id of User",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/User"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/User"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/users/{id}/unarchive": {
+      "post": {
+        "tags": ["User"],
+        "summary": "Unarchive User by Id",
+        "description": "Unarchive User by Id.",
+        "operationId": "unarchiveUserById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id of User",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/User"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/User"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/get_images": {
       "post": {
         "tags": ["Images"],
@@ -706,16 +788,20 @@
           "isArchived": {
             "type": "boolean"
           },
-          "scenes": [
-            {
-              "caption": {
-                "type": "string"
-              },
-              "imageUrl": {
-                "type": "string"
+          "scenes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "caption": {
+                  "type": "string"
+                },
+                "imageUrl": {
+                  "type": "string"
+                }
               }
             }
-          ]
+          }
         },
         "json": {
           "name": "Story"
@@ -800,7 +886,18 @@
             "type": "integer"
           },
           "scenes": {
-            "type": "string"
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "caption": {
+                  "type": "string"
+                },
+                "imageUrl": {
+                  "type": "string"
+                }
+              }
+            }
           }
         },
         "json": {
