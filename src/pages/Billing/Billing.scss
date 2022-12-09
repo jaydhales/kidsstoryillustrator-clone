@@ -32,7 +32,7 @@
     padding: 0 2rem;
 
     .icons {
-      width: 15%;
+      width: 10%;
     }
   }
 
@@ -69,14 +69,37 @@
       width: 100%;
 
       input {
-        padding: 1rem;
+        padding: 12px;
         border: 1px solid #bbbbbb;
-        border-radius: 30px;
+        border-radius: 20px;
         width: 100%;
       }
 
       input {
         background-color: #e8f0fe;
+      }
+
+      #exp-month,
+      #exp-year {
+        border: 1px solid #bbbbbb;
+        border-radius: 30px;
+        width: 100%;
+      }
+
+      option {
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        background-color: #f9f9f9;
+      }
+
+      #exp-year, #exp-month {
+        padding-block: 12px;
+        border-radius: 20px;
+        padding-inline: 8px;
+        
+      }
+
+      #label-tag {
+        width: 150%;
       }
 
       input:invalid {
@@ -90,7 +113,6 @@
       width: 100%;
       gap: 50px;
     }
-
   }
   .form-control {
     width: max-content;
@@ -101,14 +123,15 @@
     width: 230px;
     height: 50px;
     background-color: #aa0136;
-    color: #FFFFFF;
+    color: #ffffff;
     border: 1px solid #aa0136;
     border-radius: 56px;
     padding: 12px 24px;
   }
 
-  .expired {
+  #expired {
     width: 150%;
+    padding-right: 50px;
   }
 
   @media (max-width: 1200px) {
