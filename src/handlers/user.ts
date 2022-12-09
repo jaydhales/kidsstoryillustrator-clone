@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { BaseHandler, IUser } from '../interfaces';
+import { BaseHandler, IUser, IUserDocument } from '../interfaces';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import isEmail from 'validator/lib/isEmail';
@@ -63,7 +63,7 @@ export class User extends BaseHandler {
       if (!isEmail(email)) {
         return res.status(400).send({ message: 'Invalid Email' });
       } else {
-        const user = await UserModel.findOne({ email: email });
+        const user = await UserModel.findOne({ email: email, isArchived: {$ne: true}});
 
         if (user) {
           const payload = {
@@ -72,7 +72,8 @@ export class User extends BaseHandler {
             firstName: user.firstName,
             lastName: user.lastName,
             email: user.email,
-            isAdmin: user.isAdmin
+            isAdmin: user.isAdmin,
+            isArchived: user.isArchived
           };
 
           if (!bcrypt.compareSync(password, user.hash)) {
@@ -325,6 +326,93 @@ export class Admin extends BaseHandler {
     } catch (error) {
       throw new Error((error as Error).message);
     }
+  }
+
+  static archiveAUser(req: Request, res: Response) {
+
+    const userId = req.params.id
+
+    try {
+
+      if (Types.ObjectId.isValid(userId)) {
+
+        UserModel.findById({ _id: userId }, (error: Error, document: IUserDocument) => {
+          if (error) return res.send({ success: false, message: 'Failed to archive user: ' + error })
+
+          if (document && document.isArchived == false) {
+            document.isArchived = true
+            document.save().then(async (_story: IUserDocument) => {
+
+              return res.status(200).send({
+                success: true,
+                message: 'User Archived Successfully'
+              })
+            }).catch((error: Error) => {
+              throw new Error(error.message);
+            })
+          } else {
+            return res.status(404).send(
+              {
+                success: false,
+                message: 'User not found'
+              })
+          }
+        })
+      } else {
+        return res.status(404).send(
+          {
+            success: false,
+            message: 'Invalid ID'
+          })
+      }
+    } catch (error) {
+      throw new Error((error as Error).message);
+    }
+
+  }
+
+
+  static unArchiveAUser(req: Request, res: Response) {
+
+    const userId = req.params.id
+
+    try {
+
+      if (Types.ObjectId.isValid(userId)) {
+
+        UserModel.findById({ _id: userId }, (error: Error, document: IUserDocument) => {
+          if (error) return res.send({ success: false, message: 'Failed to unarchive user: ' + error })
+
+          if (document && document.isArchived == true) {
+            document.isArchived = false
+            document.save().then(async (_story: IUserDocument) => {
+
+              return res.status(200).send({
+                success: true,
+                message: 'User Unarchived Successfully'
+              })
+            }).catch((error: Error) => {
+              throw new Error(error.message);
+            })
+          } else {
+            return res.status(404).send(
+              {
+                success: false,
+                message: 'User not found'
+              })
+          }
+        })
+      } else {
+        return res.status(404).send(
+          {
+            success: false,
+            message: 'Invalid ID'
+          })
+      }
+    } catch (error) {
+      throw new Error((error as Error).message);
+    }
+
   }
 
 }

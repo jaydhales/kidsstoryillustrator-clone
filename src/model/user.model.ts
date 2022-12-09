@@ -29,6 +29,10 @@ const userSchema = new Schema<IUser>({
         type: String,
         default: ''
     },
+    isArchived: {
+        type: Boolean,
+        default: false
+    },
     createdAt: {
         type: Date,
         immutable: true,            
