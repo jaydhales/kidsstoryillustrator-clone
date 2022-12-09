@@ -34,3 +34,5 @@ root.render(
     </AuthProvider>
   </React.StrictMode>
 );
+
+atatus.notify(new Error('Test Atatus Setup'));
