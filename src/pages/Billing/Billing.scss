@@ -91,11 +91,15 @@
         background-color: #f9f9f9;
       }
 
-      #exp-year, #exp-month {
+      #exp-year,
+      #exp-month {
         padding-block: 12px;
         border-radius: 20px;
         padding-inline: 8px;
-        
+      }
+
+      select, option {
+        cursor: pointer;
       }
 
       #label-tag {
