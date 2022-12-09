@@ -39,6 +39,7 @@ const User: IUser = {
 	email: body.email,
 	hash: body.hash,
 	avatar: generateAvatar(body.firstName, body.lastName),
+	isArchived: false,
 	createdAt: mockObjectDate,
 	updatedAt: mockObjectDate
 }

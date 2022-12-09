@@ -13,8 +13,16 @@ export interface IUser {
   email: string;
   hash: string;
   avatar: string;
+  isArchived: boolean,
   createdAt: Date;
   updatedAt: Date;
+}
+
+export interface IUserDocument extends IUser {
+  data: any;
+  save: any;
+  limit: any;
+  skip: any
 }
 
 export interface IStorybook {
