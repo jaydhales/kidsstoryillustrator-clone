@@ -11,7 +11,7 @@ import PricingQuestions from "../FAQ-FrequentlyAskedQuestions/PricingQuestions";
 import FeaturesQuestions from "../FAQ-FrequentlyAskedQuestions/FeaturesQuestions";
 
 export const FAQCategories = () => {
-  const [startingQuestion, setStartingQuestion] = useState(false);
+  const [startingQuestion, setStartingQuestion] = useState(true);
   const [pricingQuestion, setPricingQuestion] = useState(false);
   const [featuresQuestion, setFeaturesQuestion] = useState(false);
 

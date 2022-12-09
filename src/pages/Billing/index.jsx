@@ -12,14 +12,13 @@ import mastercard from "../../assets/debit-card/mastercard.png";
 import { Button } from "../../components/atoms";
 
 export const Billing = () => {
-  const [message, setMessage] = useState('');
+  const [message, setMessage] = useState("");
 
-  const handleChange = event => {
+  const handleChange = (event) => {
     setMessage(event.target.value);
 
-    console.log('value is:', event.target.value);
+    console.log("value is:", event.target.value);
   };
-
 
   return (
     <Layout>
@@ -123,27 +122,39 @@ export const Billing = () => {
                       required
                     />
                   </div>{" "}
-                  <div className="form-group">
-                    <label htmlFor="exp-month">Expiry month</label>
-                    <input
-                      type="number"
-                      name="exp-month"
-                      id="exp-month"
-                      onChange={handleChange}
-                      placeholder="Month"
-                      required
-                    />
+                  <div className="form-group" id="expired">
+                    <label htmlFor="exp-month" id="label-tag">Expiry month</label>
+                    <select name="exp-month" id="exp-month" onChange={handleChange} required>
+                      <option selected>January</option>
+                      <option>February</option>
+                      <option>March</option>
+                      <option>April</option>
+                      <option>May</option>
+                      <option>June</option>
+                      <option>July</option>
+                      <option>August</option>
+                      <option>September</option>
+                      <option>October</option>
+                      <option>November</option>
+                      <option>December</option>
+                    </select>
                   </div>
                   <div className="form-group">
                     <label htmlFor="exp-year">Expiry year</label>
-                    <input
-                      type="number"
-                      name="exp-year"
-                      id="exp-year"
-                      onChange={handleChange}
-                      placeholder="year"
-                      required
-                    />
+                    <select name="exp-year" id="exp-year" onChange={handleChange} required>
+                      <option selected>2022</option>
+                      <option>2023</option>
+                      <option>2024</option>
+                      <option>2025</option>
+                      <option>2026</option>
+                      <option>2027</option>
+                      <option>2028</option>
+                      <option>2029</option>
+                      <option>2030</option>
+                      <option>2031</option>
+                      <option>2032</option>
+                      <option>2033</option>
+                    </select>
                   </div>
                 </div>
               </div>

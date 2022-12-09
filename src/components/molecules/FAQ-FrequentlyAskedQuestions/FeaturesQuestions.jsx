@@ -7,6 +7,7 @@ import "./FrequentlyAskedQuestions.scss";
 import arrow from "../../../assets/Image/FAQ-asset/down-arrow.png";
 import bullet from "../../../assets/Image/FAQ-asset/bullet.png";
 import smallchatbot from "../../../assets/images/smallchatbot.png"
+import Group5 from "../../../assets/images/Group5.png";
 
 export const FeaturesQuestions = () => {
   const [featureOne, setFeatureOne] = useState(true);
@@ -30,7 +31,7 @@ export const FeaturesQuestions = () => {
   return (
     <div className="FrequentlyAskedQuestions">
       <div className="smallchatbot">
-        <img src={smallchatbot} alt="" />
+        <img src={Group5} alt="" />
       </div>
       <div className="frqli_h3">
         <h3>Freqently asked questions</h3>
