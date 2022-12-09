@@ -16,6 +16,13 @@ import authRouter from './routes/auth.route';
 import apiImageRouter from './routes/apiImage.route';
 import swaggerDocs from './utils/swagger'
 import './db/mongodb'
+import * as atatus from 'atatus-nodejs/start'
+atatus.startMonitor();
+// atatus-config.js
+module.exports = {
+    licenseKey: "lic_apm_51db627dbb754cf0b0f818535b6bd0aa",
+    appName: "magicbookwriter api",
+}
 
 const app = express();
 
