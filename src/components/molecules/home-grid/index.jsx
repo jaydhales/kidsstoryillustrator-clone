@@ -9,7 +9,7 @@ const Homegrid = () => {
     <div className="home_hero">
       <div className="home_hero_text">
         <h1 className="hero_header">
-          Create animated stor books for children.
+          Create animated story books for children.
         </h1>
         <p className="hero_text">
           Now you can simply describe a story and watch Magic Book Writer
