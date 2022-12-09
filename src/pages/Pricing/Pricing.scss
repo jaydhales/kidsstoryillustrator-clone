@@ -44,7 +44,7 @@
       justify-content: center;
       padding: 30px 0;
       position: relative;
-      width: 380px;
+      width: 350px;
 
       .head p {
         text-align: center;
@@ -56,7 +56,7 @@
       }
 
       .amount {
-        font-size: 36px;
+        font-size: 30px;
         text-transform: uppercase;
         color: var(--primary-color);
       }
@@ -71,7 +71,7 @@
         padding: 24px 0;
 
         li {
-          font-size: 20px;
+          font-size: 15px;
           list-style-image: url("../../assets/Pricing/tick-primary.png");
           margin-left: 2rem;
           padding: 10px 8px;
@@ -100,7 +100,7 @@
 
       .amount {
         color: #fff;
-        font-size: 43px;
+        font-size: 40px;
         margin-top: -10px;
       }
 
